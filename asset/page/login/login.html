@@ -1,29 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="stylesheet" href="asset/css/bootstrap.css">
-    <link rel="stylesheet" href="asset/css/theme.css">
-    <!-- icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- aos link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- swiper  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/bootstrap.css" />
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <!-- aos link -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- swiper  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
-    
+  <main>
+    <section class="login d-flex align-items-center">
+      <div class="container-lg my-5">
+        <div class="row flex-row">
+          <div class="col-12 col-lg-6 col-md-6">
+            <form action="" target="_blank" method="post" class="px-2 wow animate__animated animate__fadeInLeft">
+              <div class="card border-0 bg-transparent">
+                <div class="card-header bg-transparent border-0">
+                  <span class="fs-3 fw-medium">ចូលគណនី</span>
+                </div>
+                <div class="card-body">
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="អ៊ីម៉ែល" aria-label="" required />
+                    <label for="email" class="form-label pb-1"><i class="bi bi-envelope-fill pe-1"></i>សូមបញ្ចូលអ៊ីម៉ែល</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="password" placeholder="Password" aria-label=""
+                      required />
+                    <label for="password" class="form-label"><i class="fa-solid fa-lock"></i>សូមបញ្ចូលលេខសម្ងាត់</label>
+                  </div>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <div class="d-flex check-box justify-content-between mb-4">
+                    <div class="form-check">
+                      <input class="form-check-input" id="Remember" type="checkbox" name="lang" value="Remember"
+                        aria-label="Password" />
+                      <label for="Remember" class="form-check-label">ចងចាំខ្ញុំ</label>
+                    </div>
+                    <a href="recover_acc.html">ភ្លេចពាក្យសម្ងាត់?</a>
+                  </div>
+                  <a href="home.html" type="submit" class="btn btn-primary d-flex justify-content-center submit mb-3">
+                    ចូលគណនី
+                  </a>
+                  <div class="connect-login">
+                    <p class="mb-3">
+                      មិនទាន់មានគណនីមែនទេ?<span class="connext"><a href="register.html"
+                          class="text-primary fw-normal">បង្កើតគណនី</a></span>
+                    </p>
+                    <div class="line text-center">
+                      <p class="fs-6 line-login">Or login with</p>
+                    </div>
+                    <div class="image d-flex justify-content-center text-center align-items-center">
+                      <a href="#" class="box-image me-1 me-md-0">
+                        <img src="../assets/image/img/login_img/google.png" alt="" />
+                      </a>
+                      <a href="#" class="box-image me-1 me-md-0">
+                        <img src="../assets/image/img/login_img/facebook.png" alt="" />
+                      </a>
+                      <a href="#" class="box-image">
+                        <img src="../assets/image/img/login_img/telegram.webp" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-6 col-md-6 d-none d-md-block">
+            <div class="layout wow animate__animated animate__fadeInLeft animate__fadeInRight">
+              <div class="image">
+                <img src="../assets/image/img/login_img/login.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 <script src="asset/js/bootstrap.bundle.min.js"></script>
 <!-- aos link -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="asset/js/srcipt.js"></script>
+
 </html>
