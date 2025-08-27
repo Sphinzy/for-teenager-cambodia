@@ -8,27 +8,36 @@
 
 body {
     font-family: "Poppins", "Kantumruy Pro" !important;
-    /* background-color: #f2f2f2 !important; */
+    /* background-color: #e6e6e6 !important; */
+    line-height: 1.6 !important;
 }
 
 /* our color  */
 .bg-footer {
     background-color: #1d263e !important;
 }
+
+/* Light mode */
 body[data-bs-theme="light"] {
-  background-color: #e6e6e6 !important; /* changed from #ffffff to #e6e6e6 */
-  color: #000000; /* text color */
-}
-:root {
-  --bs-body-bg: #e6e6e6; /* light mode background */
-  --bs-body-color: #000000;
+    --bs-body-bg: #e6e6e6;
+    --bs-body-color: #212529 ;
 }
 
-[data-bs-theme="dark"] {
-  --bs-body-bg: #121212;
-  --bs-body-color: #ffffff;
+/* Dark mode */
+body[data-bs-theme="dark"] {
+    --bs-body-bg: #212529 ;
+    --bs-body-color: #e6e6e6;
 }
 
+/* Apply */
+/* class="bg-body-theme" data-bs-theme="light" */
+.bg-body-theme {
+    background-color: var(--bs-body-bg) !important;
+}
+
+.text-body-theme {
+    color: var(--bs-body-color) !important;
+}
 
 [data-bs-theme="blue"] {
     --bs-body-color: var(--bs-white);
@@ -56,9 +65,10 @@ body[data-bs-theme="light"] {
 
 /* Icon animation */
 .icon-animate {
-  display: inline-block;
-  transition: transform 0.6s ease, opacity 0.3s ease;
+    display: inline-block;
+    transition: transform 0.6s ease, opacity 0.3s ease;
 }
+
 .clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -82,6 +92,7 @@ body[data-bs-theme="light"] {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 @media screen and (min-width: 100px) {
     .img-app {
         width: 200px !important;
@@ -120,21 +131,26 @@ body[data-bs-theme="light"] {
     height: 100%;
     object-fit: cover;
 }
-.media{
+
+.media {
     transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .bi-facebook:hover {
     transform: scale(1.1) !important;
     color: #320ded !important;
 }
+
 .bi-youtube:hover {
     transform: translateY(-5px) !important;
     color: #ff0000 !important;
 }
+
 .bi-tiktok:hover {
     transform: translateY(-5px) !important;
     color: #0b0b0b !important;
 }
+
 .bi-github:hover {
     transform: translateY(-5px) !important;
     color: #171515 !important;
