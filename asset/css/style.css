@@ -19,7 +19,7 @@ body {
 
 /* Light mode */
 body[data-bs-theme="light"] {
-  --bs-body-bg: #e6e6e6;    /* Body background */
+  --bs-body-bg: #f8f8f8;    /* Body background */
   --bs-body-color: #212529; /* Text color */
   --bs-card-bg: #ffffff;    /* Card = white */
   --bs-card-color: #212529; /* Card text */
@@ -28,7 +28,7 @@ body[data-bs-theme="light"] {
 /* Dark mode */
 body[data-bs-theme="dark"] {
   --bs-body-bg: #212529;    /* Body background */
-  --bs-body-color: #e6e6e6; /* Text color */
+  --bs-body-color: #f2f2f2; /* Text color */
   --bs-card-bg: #212529;    /* Card = dark like body */
   --bs-card-color: #e6e6e6; /* Card text = white */
 }
