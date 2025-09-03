@@ -54,6 +54,10 @@
         height: 3px;
         background-color: var(--secondary-color);
     }
+    .nav-pills .nav-link.active{
+        background-color: var(--secondary-color);
+        color: #fff;
+    }
 </style>
 
 <body class="bg-body-theme" data-bs-theme="light">
@@ -316,7 +320,7 @@
                         <h1 class="mt-5 mb-4">ស្វែងរកអាហារូបករណ៏ក្នុងស្រុក</h1>
                         <p class="mb-4">អាហារូបករណ៍គឺជាការឧបត្ថម្ភហិរញ្ញវត្ថុដែលផ្តល់ឱ្យសិស្សានុសិស្សដើម្បីជួយពួកគេក្នុងការសិក្សា។ អាហារូបករណ៍អាចមានទ្រង់ទ្រាយផ្សេងៗគ្នា ដូចជា ការផ្តល់ប្រាក់, ការដកថ្លៃសិក្សា, ឬការផ្តល់សម្ភារៈសិក្សា។ អាហារូបករណ៍អាចផ្តល់ដោយរដ្ឋាភិបាល, ស្ថាប័នឯកជន, ឬអង្គការមិនមែនរដ្ឋាភិបាល។</p>
                         <p class="mb-4">ដើម្បីស្វែងរកអាហារូបករណ៍ដែលសមស្រប សិស្សានុសិស្សគួរតែពិចារណាពីលក្ខខណ្ឌនានា ដូចជា កម្រិតសិក្សា, វិស័យសិក្សា, និងស្ថានភាពហិរញ្ញវត្ថុ។ ការស្វែងរកអាហារូបករណ៍ត្រូវបានធ្វើតាមរយៈគេហទំព័រសាលា, វេបសាយអាហារូបករណ៍, និងការទំនាក់ទំនងជាមួយមន្ត្រីសាលា។</p>
-                        <button class="btn btn-primary mb-5">ស្វែងរកអាហារូបករណ៍</button>
+                        <button class="btn bg-footer text-light mb-5">ស្វែងរកអាហារូបករណ៍</button>
                     </div>
 
                     <div class="col-lg-6 d-block d-lg-none">
@@ -357,23 +361,38 @@
             <div class="container">
                 <h2 class="text-center mb-5 section-title">ប្រភេទអាហារូបករណ៏</h2>
                 <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="card shadow-sm bg-card-theme">
-                            <div class="card-body text-center">
-                                <i class="bi bi-mortarboard-fill display-1 mb-3 text-secondary"></i>
-                                <h5 class="card-title mb-3">អាហារូបករណ៍តាមរយៈការស្នើសុំ</h5>
-                                <p class="card-text">អាហារូបករណ៍តាមរយៈការស្នើសុំត្រូវបានផ្តល់ឱ្យសិស្សានុសិស្សដែលបានដាក់ពាក្យសុំ និងបំពេញលក្ខខណ្ឌដែលបានកំណត់។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                    <div class="col-md-4">
+                        <a href="#benefits">
+                            <div class="card shadow-sm bg-card-theme">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-mortarboard-fill display-1 mb-3 text-secondary"></i>
+                                    <h5 class="card-title mb-3">អាហារូបករណ៍តាមរយៈការស្នើសុំ</h5>
+                                    <p class="card-text">អាហារូបករណ៍តាមរយៈការស្នើសុំត្រូវបានផ្តល់ឱ្យសិស្សានុសិស្សដែលបានដាក់ពាក្យសុំ និងបំពេញលក្ខខណ្ឌដែលបានកំណត់។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card shadow-sm bg-card-theme">
-                            <div class="card-body text-center">
-                                <i class="bi bi-globe display-1 mb-3 text-secondary"></i>
-                                <h5 class="card-title mb-3">អាហារូបករណ៍ប្រឡងប្រជែង</h5>
-                                <p class="card-text">អាហារូបករណ៍ប្រឡងប្រជែងត្រូវបានផ្តល់ឱ្យសិស្សានុសិស្សដែលបង្ហាញពីសមត្ថភាពខ្ពស់ក្នុងការប្រឡងប្រជែង។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                    <div class="col-md-4">
+                        <a href="#benefits">
+                            <div class="card shadow-sm bg-card-theme">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-globe display-1 mb-3 text-secondary"></i>
+                                    <h5 class="card-title mb-3">អាហារូបករណ៍ប្រឡងប្រជែង</h5>
+                                    <p class="card-text">អាហារូបករណ៍ប្រឡងប្រជែងត្រូវបានផ្តល់ឱ្យសិស្សានុសិស្សដែលបង្ហាញសមត្ថភាពខ្ពស់ក្នុងការប្រឡងប្រជែង។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា,ការផ្តល់ឱកាសសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#benefits">
+                            <div class="card shadow-sm bg-card-theme text-decoration-none">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-people-fill display-1 mb-3 text-secondary"></i>
+                                    <h5 class="card-title mb-3">អត្ថប្រយោជន៍នៃអាហារូបករណ៍</h5>
+                                    <p class="card-text">អាហារូបករណ៍ផ្តល់អត្ថប្រយោជន៍ជាច្រើនដល់សិស្សានុសិស្ស, រួមមានការកាត់បន្ថយបន្ទុកហិរញ្ញវត្ថុ, ការផ្តល់ឱកាសសិក្សា, និងការលើកកម្ពស់សមត្ថភាព។ អាហារូបករណ៍អាចជួយសិស្សានុសិស្សក្នុងការសម្រេចបានគោលបំណងសិក្សារបស់ពួកគេ។</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -381,6 +400,7 @@
         <section class="mt-15">
             <div class="container">
                 <h2 class="text-center mb-5 section-title">អាហារូបករណ៍តាមរយៈការស្នើសុំ</h2>
+                <h4 >អាហារូបករណ៏</h4>
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">អាហារូបករណ៍រាជរដ្ឋាភិបាល</button>
@@ -409,7 +429,7 @@
                                             <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                         </div>
                                         <div>
-                                            <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                            <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                                         </div>
                                     </div>
                                 </div>
@@ -425,7 +445,7 @@
                                     </div>
                                     <div class="card-footer justify-content-between d-flex align-items-center">
                                         <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                        <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                                     </div>
                                 </div>
                             </div>
@@ -440,7 +460,7 @@
                                     </div>
                                     <div class="card-footer justify-content-between d-flex align-items-center">
                                         <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                        <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                                     </div>
                                 </div>
                             </div>
@@ -462,7 +482,7 @@
                                             <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                         </div>
                                         <div>
-                                            <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                            <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                                         </div>
                                     </div>
                                 </div>
@@ -478,7 +498,7 @@
                                     </div>
                                     <div class="card-footer justify-content-between d-flex align-items-center">
                                         <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                        <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                                     </div>
                                 </div>
                             </div>
@@ -493,7 +513,7 @@
                                     </div>
                                     <div class="card-footer justify-content-between d-flex align-items-center">
                                         <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                        <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                                     </div>
                                 </div>
                             </div>
@@ -502,6 +522,9 @@
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
                 </div>
             </div>
+        </section>
+        <section class="mt-15">
+
         </section>
         <!-- <section class="mt-15">
             <div class="container">
@@ -590,7 +613,7 @@
                                     <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                 </div>
                                 <div>
-                                    <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                    <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                                 </div>
                             </div>
                         </div>
@@ -606,7 +629,7 @@
                             </div>
                             <div class="card-footer justify-content-between d-flex align-items-center">
                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                             </div>
                         </div>
 
@@ -622,7 +645,7 @@
                             </div>
                             <div class="card-footer justify-content-between d-flex align-items-center">
                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                             </div>
                         </div>
                     </div>
@@ -637,7 +660,7 @@
                             </div>
                             <div class="card-footer justify-content-between d-flex align-items-center">
                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                             </div>
                         </div>
                     </div>
@@ -652,7 +675,7 @@
                             </div>
                             <div class="card-footer justify-content-between d-flex align-items-center">
                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                <button class="btn bg-footer text-light end-0">ព័ត៌មានលម្អិត</button>
                             </div>
                         </div>
                     </div>
@@ -667,7 +690,7 @@
                             </div>
                             <div class="card-footer justify-content-between d-flex align-items-center">
                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                <button class="btn bg-footer text-light end-0" id="benefits">ព័ត៌មានលម្អិត</button>
                             </div>
                         </div>
                     </div>
@@ -705,29 +728,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="d-flex justify-content-center my-4">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </section>
