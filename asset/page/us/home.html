@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- aos link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- swiper  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+    .program:hover {
+        transform: translateY(-8px);
+    }
+
+    .btn-1 {
+        background-color: #1d263e !important;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border: 2px solid #1d263e;
+    }
+
+    .btn-1:hover {
+        background-color: transparent !important;
+        color: #1d263e !important;
+        transform: translateY(-5px);
+        border: 2px solid #1d263e;
+    }
+
+    .skill {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .skill:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        transform: translateY(-0.125rem);
+    }
+    .progress-bar{
+        background-color: #979090 !important;
+    }
+
+    
+</style>
+
+<body>
+
+    <header class="sticky-top z-3">
+        <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" src="../../image/project-logo/logo01.png" alt="Logo" style="width: 75px;">
+                </a>
+                <div class="d-flex">
+                    <!-- profile lg-none  -->
+                    <div class="d-flex justify-content-end align-items-center d-flex d-lg-none bg-body-theme">
+                        <button id="themeToggle" class="theme-toggle border-0 bg-transparent">
+                            <i id="themeIcon" class="bi bi-brightness-high-fill icon-animate"></i>
+                        </button>
+                        <!-- notification  -->
+                        <div class="dropdown">
+                            <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-bell px-2 position-relative fs-5">
+                                    <span
+                                        class="position-absolute translate-middle bg-danger border border-light rounded-circle"
+                                        style="left: 21px; padding: 3px; top: 1px;">
+                                        <span class="visually-hidden">New
+                                            alerts</span>
+                                    </span>
+                                </i>
+                            </a>
+
+                            <ul class="dropdown-menu ms-n20 border-0 shadow-sm">
+                                <li>
+                                    <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
+                                        style="width: 320px;">
+                                        <div class="p-2">
+                                            <h5>សារជូនដំណឹង</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- list notification  -->
+                                <li>
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt>
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Unde,
+                                                molestiae!
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt>
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Unde,
+                                                molestiae!
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt>
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Unde,
+                                                molestiae!
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <div>
+                                    <a href="../profile/notification.html"
+                                        class="nav-link text-end text-primary p-2 pe-4">See
+                                        all</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <!-- profile  -->
+                        <div class="profile">
+                            <a href="../profile/proflie.html">
+                                <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
+                                    class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                    alt />
+                            </a>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- silde bar  -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <div class="d-flex justify-content-end align-items-center d-flex d-lg-none" role="search">
+                            <!-- profile  -->
+                            <div class="profile">
+                                <a href="../profile/proflie.html">
+                                    <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
+                                        class="img-fluid rounded-circle object-fit-cover"
+                                        style="width: 40px; height: 40px;" alt />
+                                </a>
+                            </div>
+                            <h5 class="pt-3 ps-2">សួស្តី!​​ តុលា</h5>
+                        </div>
+
+                        <h5 class="offcanvas-title bg-body-theme" id="offcanvasNavbarLabel">
+                            <a class="navbar-brand" href="#"><img src="assets/image/logo.png" class="img-fluid"
+                                    style="width: 60px" alt /></a>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body bg-body-theme align-items-center">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link px-3" aria-current="page" href="../home.html"><i
+                                        class="bi bi-house-fill mx-1"></i>ទំព័រដើម</a>
+                            </li>
+                            <div class="dropdown">
+                                <a class="nav-link active px-3 dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-lightbulb-fill mx-1"></i>តម្រង់ទិស
+                                </a>
+
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href="#    ">មុខជំនាញ</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="university.html">សកលវិទ្យាល័យ</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-mortarboard-fill mx-1"></i>អាហារូបករណ៍
+                                </a>
+
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item"
+                                            href="../schoolarship/schoolarship-in.html">អាហារូបករណ៍ក្នងស្រុក</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="../schoolarship/schoolarship-out.html">អាហារូបករណ៍ក្រៅស្រុក</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-buildings-fill me-1"></i>ឱកាសការងារ
+                                </a>
+
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងាររដ្ឋ</a></li>
+                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងារឯកជន</a></li>
+                                    <li><a class="dropdown-item" href="../work/volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- profile lg-flex  -->
+                <div class="d-flex justify-content-end align-items-center d-none d-lg-flex">
+                    <button id="themeToggle2" class="theme-toggle border-0 bg-transparent">
+                        <i id="themeIcon2" class="bi bi-brightness-high-fill icon-animate"></i>
+                    </button>
+                    <!-- notification  -->
+                    <div class="dropdown">
+                        <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-bell px-2 position-relative fs-5">
+                                <span
+                                    class="position-absolute translate-middle bg-danger border border-light rounded-circle"
+                                    style="left: 21px; padding: 4px; top: 1px;">
+                                    <span class="visually-hidden">New
+                                        alerts</span>
+                                </span>
+                            </i>
+                        </a>
+
+                        <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-body-theme" data-bs-theme="light">
+                            <li>
+                                <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
+                                    style="width: 320px;">
+                                    <div class="p-2">
+                                        <h5>សារជូនដំណឹង</h5>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- list notification  -->
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Unde, molestiae!
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Unde, molestiae!
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Unde, molestiae!
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <div>
+                                <a href="../profile/notification.html"
+                                    class="nav-link text-end text-primary p-2 pe-4">See
+                                    all</a>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- profile  -->
+                    <div class="profile">
+                        <a href="../profile/proflie.html">
+                            <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
+                                class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                alt />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="mt-15">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                        <h1 class="pb-3">ស្វែងរកអនាគតរបស់អ្នក ជ្រើសរើសជំនាញសិក្សាដែលស័ក្តិសមជាមួយអ្នក</h1>
+                        <p class="pb-2">កុំបារម្ភទៀត! យើងជួយអ្នកស្វែងយល់ពីចំណង់ចំណូលចិត្ត ជំនាញ
+                            និងជំនាញការងារដែលទីផ្សារត្រូវការ
+                            ដើម្បីកសាងអាជីពដ៏ភ្លឺស្វាង។</p>
+                        <div class="d-flex justify-content-around align-items-center text-center pb-5">
+                            <div class=" mb-4 mb-md-0">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span class="display-5 fw-bolder">86%</span>
+                                    <span class="fw-bold">អត្រាការងារ</span>
+                                </div>
+                            </div>
+
+                            <div class=" mb-4 mb-md-0">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span class="display-5 fw-bolder">8790+</span>
+                                    <span class="fw-bold">ការស្វែងរកជំនាញ</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 mb-md-0">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span class="display-5 fw-bolder">5261+</span>
+                                    <span class="fw-bold">អាហារូបករណ៍</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="../direction/major.html" class="btn btn-1 rounded-pill text-white">ចាប់ផ្តើមឥឡូវនេះ</a>
+                    </div>
+                    <div class="col-lg-6 " data-aos="zoom-in" data-aos-delay="200">
+                        <img src="../../image/lending-img/scolarship.jpg" alt="Education"
+                            class="img-fluid shadow-sm rounded-3 position-relative">
+                        <div class="card-img-overlay "></div>
+                        <div class="image-overlay">
+                            <div class="badge position-absolute bg-dark p-3 rounded-pill"
+                                style="bottom:-15px; right: -12px;">
+                                <i class="bi bi-patch-check-fill fs-6 px-1"></i>
+                                <span class="fs-5">ឆ្ពោះទៅរកឧត្តមភាព</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-15">
+            <div class="" data-aos="fade-up" data-aos-delay="300">
+                <div class="container ">
+                    <div class="row gy-4">
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card bg-white border-0 shadow-sm p-2 bg-card-theme">
+                                <div class="card-body d-flex">
+                                    <div class="fs-1">
+                                        <i class="bi bi-book-fill ps-1 pe-2 "></i>
+                                    </div>
+                                    <div class="">
+                                        <h3 class="fw-bold pt-3">ជំនាញលើគ្រប់វិស័យ</h3>
+                                        <p>ជំនាញបច្ចេកវិទ្យាព័ត៌មាន,
+                                            ទីផ្សារឌីជីថល,
+                                            វិស្វកម្ម,
+                                            ទំនាក់ទំនង និងភាសាបរទេស,
+                                            សិល្បៈឌីជីថល និងរចនា</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card bg-white border-0 shadow-sm p-2 bg-card-theme">
+                                <div class="card-body d-flex">
+                                    <div class="fs-1">
+                                        <i class="bi bi-laptop-fill ps-1 pe-2 "></i>
+                                    </div>
+                                    <div class="">
+                                        <h3 class="fw-bold pt-3">ជំនាញលើគ្រប់វិស័យ</h3>
+                                        <p>ជំនាញបច្ចេកវិទ្យាព័ត៌មាន,
+                                            ទីផ្សារឌីជីថល,
+                                            វិស្វកម្ម,
+                                            ទំនាក់ទំនង និងភាសាបរទេស,
+                                            សិល្បៈឌីជីថល និងរចនា</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card bg-white border-0 shadow-sm p-2 bg-card-theme">
+                                <div class="card-body d-flex">
+                                    <div class="fs-1">
+                                        <i class="bi bi-people-fill  ps-1 pe-2"></i>
+                                    </div>
+                                    <div class="">
+                                        <h3 class="fw-bold pt-3">ជំនាញលើគ្រប់វិស័យ</h3>
+                                        <p>ជំនាញបច្ចេកវិទ្យាព័ត៌មាន,
+                                            ទីផ្សារឌីជីថល,
+                                            វិស្វកម្ម,
+                                            ទំនាក់ទំនង និងភាសាបរទេស,
+                                            សិល្បៈឌីជីថល និងរចនា</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- skills-section -->
+        <section class="mt-15">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="card mb-5 mb-lg-0 border-0 ">
+                            <div class="card-body">
+                                <h3 class="text-3xl font-bold mb-4">ជំនាញដែលកំពុងពេញនិយមនាពេលបច្ចុប្បន្ន
+                                </h3>
+                                <p class="mb-6 text-body-theme">
+                                    We deliver exceptional results through our comprehensive skill set and years of
+                                    industry experience. Our team's expertise spans across multiple disciplines to
+                                    provide comprehensive solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 mt-5 mt-lg-0">
+                        <div class="" data-aos="fade-left" data-aos-delay="200">
+                            <!-- Skill Item -->
+                            <div class="row gy-3">
+                                <div class="col-lg-6">
+                                    <div class="card bg-white px-6 pb-1 pt-3 rounded-3 border-0 shadow-sm skill bg-card-theme">
+                                        <div class="d-flex justify-content-between  ">
+                                            <h6 class="fw-bold ">Project Management
+                                            </h6>
+                                            <span class="fw-bold ">95%</span>
+                                        </div>
+                                        <div class="progress rounded-full overflow-hidden mb-3 ">
+                                            <div class="progress-bar " role="progressbar" style="width: 0;"
+                                                aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="text-sm">ផែនការយុទ្ធសាស្ត្រ និងការអនុវត្ត</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="card bg-white px-6 pb-1 pt-3 rounded-3 border-0 shadow-sm skill bg-card-theme">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="fw-bold">Web Development</h6>
+                                            <span class="fw-bold">88%</span>
+                                        </div>
+                                        <div class="progress rounded-full overflow-hidden mb-3">
+                                            <div class="progress-bar" role="progressbar" style="width: 0;"
+                                                aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="text-sm ">គ្រោងការណ៍ និងបច្ចេកវិទ្យាទំនើប</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="card bg-white px-6 pb-1 pt-3 rounded-3 border-0 shadow-sm skill bg-card-theme">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="fw-bold">Data Analysis</h6>
+                                            <span class="fw-bold">82%</span>
+                                        </div>
+                                        <div class="progress rounded-full overflow-hidden mb-3">
+                                            <div class="progress-bar" role="progressbar" style="width: 0;"
+                                                aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="text-sm ">បញ្ញាពាណិជ្ជកម្ម និងការយល់ដឹង</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="card bg-white px-6 pb-1 pt-3 rounded-3 border-0 shadow-sm skill bg-card-theme">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="fw-bold ">Digital Marketing</h6>
+                                            <span class="fw-bold">78%</span>
+                                        </div>
+                                        <div class="progress rounded-full overflow-hidden mb-3">
+                                            <div class="progress-bar" role="progressbar" style="width: 0;"
+                                                aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="text-sm ">ការគ្រប់គ្រងយុទ្ធនាការពហុប៉ុស្តិ៍</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="card bg-white px-6 pb-1 pt-3 rounded-3 border-0 shadow-sm skill bg-card-theme">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="fw-bold ">Quality Assurance</h6>
+                                            <span class="fw-bold">92%</span>
+                                        </div>
+                                        <div class="progress rounded-full overflow-hidden mb-3">
+                                            <div class="progress-bar" role="progressbar" style="width: 0;"
+                                                aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="text-sm">ពិធីការសាកល្បងដ៏ទូលំទូលាយ</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="card bg-white px-6 pb-1 pt-3 rounded-3 border-0 shadow-sm skill bg-card-theme">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="fw-bold ">Client Relations</h6>
+                                            <span class="fw-bold">96%</span>
+                                        </div>
+                                        <div class="progress rounded-full overflow-hidden mb-3 ">
+                                            <div class="progress-bar" role="progressbar" style="width: 0;"
+                                                aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="text-sm">ការកសាងភាពជាដៃគូរយៈពេលវែង</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8">
+            <div class="container" data-aos="fade-up">
+                <h2>យើងមានអាហារូបករណ៍ជាច្រើនដែលអ្នកអាចស្វែងរកបាន</h2>
+                <p>អាហារូបករណ៍ដែលអ្នកអាចស្វែងរកបាននៅទីនេះមានទាំងក្នុងស្រុក​ និង​ ក្រៅស្រុកទៅតាមជំនាញដែលអ្នកត្រូវការ</p>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-5">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                        <div class="card border-0 rounded-2 overflow-hidden shadow-sm program bg-card-theme"
+                            style=" transition: transform 0.4s ease, box-shadow 0.4s ease;">
+                            <img src="../../image/lending-img/Engineering & Technology.webp" alt="Program"
+                                class="img-fluid position-relative overflow-hidden h-50">
+                            <div class="card-body">
+                                <div class="position-absolute top-50">
+                                    <span class="badge text-bg-danger">ពេញនិយម</span>
+                                </div>
+                                <div class="">
+                                    <h3 class="card-title">វិស្វកម្ម និង បច្ចេកវិទ្យា</h3>
+                                    <div class="card-text">
+                                        <span><i class="bi bi-people-fill px-1"></i> 450+ និស្សិត</span>
+                                        <span><i class="bi bi-award-fill px-1"></i> 95% អត្រានៃភាពជោគជ័យ</span>
+                                    </div>
+                                </div>
+                                <p class="card-text pt-2">វិស្វកម្ម និងបច្ចេកវិទ្យា ជាមុខជំនាញដ៏សំខាន់សម្រាប់យុវជនបច្ចុប្បន្ន។ ជំនាញទាំងនេះមិនត្រឹមតែជួយដល់ការអភិវឌ្ឍប្រទេសទេ ថែមទាំងផ្តល់ឱកាសការងារខ្ពស់ និងប្រាក់ខែល្អទៀតផង។</p>
+                                <div class="mb-3">
+                                    <div class="fw-bold">
+                                        <i class="bi bi-calendar-check px-1"></i>
+                                        <span>រយះពេល: 4 ឆ្នាំ</span>
+                                    </div>
+                                    <div class="fw-bold">
+                                        <i class="bi bi-mortarboard-fill px-1"></i>
+                                        <span>បរិញ្ញាប័ត្រ</span>
+                                    </div>
+                                </div>
+                                <a href="../schoolarship/schoolarship-in.html" class="btn btn-1 rounded-pill text-white">ស្វែងយល់បន្ថែម</a>
+                            </div>
+                        </div>
+                    </div><!-- End Program Banner -->
+
+                    <div class="col-lg-6">
+                        <div class="programs-grid">
+                            <div class="row g-3">
+                                <div class="col-12" data-aos="fade-left" data-aos-delay="200">
+                                    <div class="program-item">
+                                        <div class="item-icon">
+                                            <img src="assets/img/education/education-4.webp" alt="Program"
+                                                class="img-fluid ">
+                                        </div>
+                                        <div class="item-content">
+                                            <h4>Business Management</h4>
+                                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                                                fugit.</p>
+                                            <div class="meta-info">
+                                                <span>3 Years</span>
+                                                <span>Master's Degree</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-arrow">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12" data-aos="fade-left" data-aos-delay="300">
+                                    <div class="program-item">
+                                        <div class="item-icon">
+                                            <img src="assets/img/education/education-6.webp" alt="Program"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="item-content">
+                                            <h4>Digital Marketing</h4>
+                                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                                praesentium.</p>
+                                            <div class="meta-info">
+                                                <span>2 Years</span>
+                                                <span>Certificate</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-arrow">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12" data-aos="fade-left" data-aos-delay="400">
+                                    <div class="program-item">
+                                        <div class="item-icon">
+                                            <img src="assets/img/education/education-8.webp" alt="Program"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="item-content">
+                                            <h4>Health Sciences</h4>
+                                            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                                necessitatibus saepe.</p>
+                                            <div class="meta-info">
+                                                <span>5 Years</span>
+                                                <span>Bachelor's Degree</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-arrow">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12" data-aos="fade-left" data-aos-delay="500">
+                                    <div class="program-item">
+                                        <div class="item-icon">
+                                            <img src="assets/img/education/education-10.webp" alt="Program"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="item-content">
+                                            <h4>Creative Arts</h4>
+                                            <p>Et harum quidem rerum facilis est et expedita distinctio nam libero
+                                                tempore.</p>
+                                            <div class="meta-info">
+                                                <span>3 Years</span>
+                                                <span>Bachelor's Degree</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-arrow">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Programs Grid -->
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <footer class="bg-footer ">
+        <div class="container py-5">
+            <div class="row text-white">
+                <div class="col-11 col-lg-5 col-xl-4">
+                    <a class="navbar-brand" href="#">
+                        <img src="../../image/project-logo/logo02.png" alt="Logo" style="width: 75px;">
+                    </a>
+                    <p class="footer-text clamp-3">
+                        "ប្រធានបទ “សម្រាប់យុវជនកម្ពុជា” ត្រូវបានជ្រើសរើស
+                        ដោយសារនិស្សិតបរិញ្ញាបត្រកើនឡើង
+                        ប៉ុន្តែមានបញ្ហាក្នុងការជ្រើសរើសជំនាញ។
+                        ដើម្បីដោះស្រាយ បញ្ហានេះ
+                        គេបង្កើតគេហទំព័រមួយដែលអាចប្រើប្រាស់បានលើ Browser
+                        និងទូរស័ព្ទចល័ត។
+                        គេហទំព័រនេះផ្តល់ព័ត៌មានអំពីមុខជំនាញ
+                        វិស័យការងារ សាកលវិទ្យា អាហារូបករណ៍ និងឱកាសការងារ
+                        ដើម្បីជួយសិស្សសម្រេចចិត្តជ្រើសរើសជំនាញដែលខ្លួនចូលចិត្ត
+                        និងរកការងារផ្ទាល់ខ្លួនបន្ទាប់ពីបញ្ចប់ការសិក្សា។"
+                    </p>
+                    <a href="#"><i class="bi bi-facebook media fs-3 text-white"></i></a>
+                    <a href="#"><i class="bi bi-youtube media fs-3 ps-2 text-white"></i></a>
+                    <a href="#"><i class="bi bi-tiktok media fs-3 ps-2 text-white"></i></a>
+                    <a href="#"><i class="bi bi-github media fs-3 ps-2 text-white"></i></a>
+                </div>
+
+                <div class="col-6 col-lg-3 col-xl-2 py-4">
+                    <ul class="navbar-nav">
+                        <h5 class="nav-title fw-bold">ព័ត៌មានអំពីយើង</h5>
+                        <li class="nav-item">
+                            <a href="../about.html" class="nav-link text-white">អំពីយើង</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../contact.html" class="nav-link text-white">ទំទាក់ទំទងមកយើង</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../direction/major.html" class="nav-link text-white">ការតម្រង់ទិស</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white">ព្រឹត្តិការណ៏</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-3 col-xl-2 py-4">
+                    <ul class="navbar-nav">
+                        <h5 class="nav-title fw-bold">ព័ត៌មាន</h5>
+                        <li class="nav-item">
+                            <a href="../schoolarship/schoolarship-in.html"
+                                class="nav-link text-white">អាហារូបករណ៏ក្នុងស្រុក</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../schoolarship/schoolarship-out.html"
+                                class="nav-link text-white">អាហារូបករណ៏ក្រៅស្រុក</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../work/volunteer.html" class="nav-link text-white">ការងារស័គ្ម្រចិត្ត</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-6 col-xl-4 py-xl-4">
+                    <ul class="navbar-nav">
+                        <h5 class="nav-title fw-bold">អាស័យដ្ឋានរបស់យើង</h5>
+                        <li class="nav-item">
+                            <a href="https://www.google.com/maps/search/%2386B,+Street+313+corner+606,+Sangkat+Boeungk%C3%A2k+2,+Khan+Toulkok,+Phnom+Penh/@11.5659433,104.8975444,15z/data=!3m1!4b1?entry=ttu&g_ep=Egoy3rounded-3I1MDgyNC4wIKXMDSoASAFQAw%3D%3D"
+                                class="nav-link text-white">#86B, Street 313
+                                corner 606, Sangkat Boeungkâk 2, Khan
+                                Toulkok, Phnom Penh</a>
+                        </li>
+                        <li class="nav-item">
+                            <p class="nav-link text-white">Email: <a href="mailto:freeteenagercambodia@gmail.com"
+                                    class="text-decoration-none text-white">freeteenagercambodia@gmail.com</a></p>
+                        </li>
+                        <li class="nav-item">
+                            <p class="nav-link text-white">លេខទូរស័ព្ទ: <a
+                                    class="fw-bold text-decoration-none text-white" href="tel:+11234567890">(+885) 456
+                                    7890</a></p>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#" class="nav-item"><img src="assets/image/app1 (1).png" class="img-fluid img-app"
+                                    alt></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="text-white py-1">
+            <div class="row">
+                <div class="col-12 footer-copyright d-flex justify-content-between">
+                    <p class="text-white">&copy; រក្សាសិទ្ធិដោយ: FTC
+                        2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<!-- aos link -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../js/script-folder.js"></script>
+<script>
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.progress-bar').forEach(el => {
+            const value = el.getAttribute('aria-valuenow');
+            el.style.width = value + '%';
+        });
+    });
+</script>
+
+</html>
