@@ -8,8 +8,7 @@
 
 body {
     font-family: "Poppins", "Kantumruy Pro" !important;
-    /* background-color: #e6e6e6 !important; */
-    line-height: 1.6 !important;
+    /* background-color: #f2f2f2 !important; */
 }
 
 /* our color  */
@@ -19,33 +18,64 @@ body {
 
 /* Light mode */
 body[data-bs-theme="light"] {
+<<<<<<< HEAD
   --bs-body-bg: #f8f8f8;    /* Body background */
   --bs-body-color: #212529; /* Text color */
   --bs-card-bg: #ffffff;    /* Card = white */
   --bs-card-color: #212529; /* Card text */
+=======
+    --bs-body-bg: #e6e6e6;
+    /* Body background */
+    --bs-body-color: #212529;
+    /* Text color */
+    --bs-card-bg: #ffffff;
+    /* Card = white */
+    --bs-card-color: #212529;
+    /* Card text */
+>>>>>>> ab4148273d869675e059fb0051e7301b23a06b22
 }
 
 /* Dark mode */
 body[data-bs-theme="dark"] {
+<<<<<<< HEAD
   --bs-body-bg: #212529;    /* Body background */
   --bs-body-color: #f2f2f2; /* Text color */
   --bs-card-bg: #212529;    /* Card = dark like body */
   --bs-card-color: #e6e6e6; /* Card text = white */
+=======
+    --bs-body-bg: #212529;
+    /* Body background */
+    --bs-body-color: #e6e6e6;
+    /* Text color */
+    --bs-card-bg: #212529;
+    /* Card = dark like body */
+    --bs-card-color: #e6e6e6;
+    /* Card text = white */
+>>>>>>> ab4148273d869675e059fb0051e7301b23a06b22
 }
 
 /* Custom theme for cards */
 body[data-bs-theme="light"] .bg-card-theme {
-  background-color: #ffffff !important;  /* White in light mode */
-  color: #212529 !important;             /* Dark text */
+    background-color: #ffffff !important;
+    /* White in light mode */
+    color: #212529 !important;
+    /* Dark text */
 }
 
 body[data-bs-theme="dark"] .bg-card-theme {
+<<<<<<< HEAD
 <<<<<<< HEAD
   background-color: #212529 !important;  /* Dark in dark mode */
 =======
   background-color: #1d263e !important;  /* Dark in dark mode */
 >>>>>>> acb1c6a3af499262dd14f95b1826eeb4111c2b39
   color: #e6e6e6 !important;             /* White text */
+=======
+    background-color: #212529 !important;
+    /* Dark in dark mode */
+    color: #e6e6e6 !important;
+    /* White text */
+>>>>>>> ab4148273d869675e059fb0051e7301b23a06b22
 }
 
 
@@ -55,6 +85,7 @@ body[data-bs-theme="dark"] .bg-card-theme {
 .bg-body-theme {
     background-color: var(--bs-body-bg) !important;
 }
+
 .bg-card-theme {
     background-color: var(--bs-card-bg) !important;
     color: var(--bs-card-color) !important;
@@ -267,6 +298,7 @@ body[data-bs-theme="dark"] .btn-outline-dark-blue:hover{
     transform: translateY(-5px) !important;
     color: #171515 !important;
 }
+<<<<<<< HEAD
     /* Default (inactive) bullets */
 .swiper-pagination-bullet {
   background: #ccc !important; /* gray for inactive */
@@ -283,4 +315,11 @@ body[data-bs-theme="dark"] .swiper-pagination-bullet{
 }
 body[data-bs-theme="dark"] .swiper-pagination-bullet-active {
   background: #ccc !important; /* Bootstrap "danger" red */
+=======
+
+@media screen and (max-width: 768px) {
+    .aside {
+        display: none !important;
+    }
+>>>>>>> ab4148273d869675e059fb0051e7301b23a06b22
 }
