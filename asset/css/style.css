@@ -19,20 +19,56 @@ body {
 /* Light mode */
 body[data-bs-theme="light"] {
     --bs-body-bg: #e6e6e6;
+    /* Body background */
     --bs-body-color: #212529;
+    /* Text color */
+    --bs-card-bg: #ffffff;
+    /* Card = white */
+    --bs-card-color: #212529;
+    /* Card text */
 }
 
 /* Dark mode */
 body[data-bs-theme="dark"] {
     --bs-body-bg: #212529;
+    /* Body background */
     --bs-body-color: #e6e6e6;
+    /* Text color */
+    --bs-card-bg: #212529;
+    /* Card = dark like body */
+    --bs-card-color: #e6e6e6;
+    /* Card text = white */
 }
+
+/* Custom theme for cards */
+body[data-bs-theme="light"] .bg-card-theme {
+    background-color: #ffffff !important;
+    /* White in light mode */
+    color: #212529 !important;
+    /* Dark text */
+}
+
+body[data-bs-theme="dark"] .bg-card-theme {
+    background-color: #212529 !important;
+    /* Dark in dark mode */
+    color: #e6e6e6 !important;
+    /* White text */
+}
+
+
 
 /* Apply */
 /* class="bg-body-theme" data-bs-theme="light" */
 .bg-body-theme {
     background-color: var(--bs-body-bg) !important;
 }
+
+.bg-card-theme {
+    background-color: var(--bs-card-bg) !important;
+    color: var(--bs-card-color) !important;
+    border-radius: 12px !important;
+}
+
 
 .text-body-theme {
     color: var(--bs-body-color) !important;
@@ -165,4 +201,10 @@ body[data-bs-theme="dark"] {
 .bi-github:hover {
     transform: translateY(-5px) !important;
     color: #171515 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .aside {
+        display: none !important;
+    }
 }
