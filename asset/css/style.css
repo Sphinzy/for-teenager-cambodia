@@ -19,7 +19,7 @@ body {
 
 /* Light mode */
 body[data-bs-theme="light"] {
-  --bs-body-bg: #e6e6e6;    /* Body background */
+  --bs-body-bg: #f8f8f8;    /* Body background */
   --bs-body-color: #212529; /* Text color */
   --bs-card-bg: #ffffff;    /* Card = white */
   --bs-card-color: #212529; /* Card text */
@@ -28,7 +28,7 @@ body[data-bs-theme="light"] {
 /* Dark mode */
 body[data-bs-theme="dark"] {
   --bs-body-bg: #212529;    /* Body background */
-  --bs-body-color: #e6e6e6; /* Text color */
+  --bs-body-color: #f2f2f2; /* Text color */
   --bs-card-bg: #212529;    /* Card = dark like body */
   --bs-card-color: #e6e6e6; /* Card text = white */
 }
@@ -40,7 +40,7 @@ body[data-bs-theme="light"] .bg-card-theme {
 }
 
 body[data-bs-theme="dark"] .bg-card-theme {
-  background-color: #212529 !important;  /* Dark in dark mode */
+  background-color: #1d263e !important;  /* Dark in dark mode */
   color: #e6e6e6 !important;             /* White text */
 }
 
@@ -57,6 +57,79 @@ body[data-bs-theme="dark"] .bg-card-theme {
     border-radius: 12px !important;
 }
 
+/* button  */
+/* btn-dark-blue
+btn-outline-dark-blue  */
+
+/* dark blue btn light mode  */
+body[data-bs-theme="light"] .btn-dark-blue{
+    width: fit-content;
+    border-radius: 5px !important;
+    background-color: #1d263e !important;
+    color: #ffffff !important;
+    font-weight: 500;
+
+}
+body[data-bs-theme="light"] .btn-dark-blue:hover{
+    width: fit-content;
+    background-color: #343c53 !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+body[data-bs-theme="light"] .btn-outline-dark-blue{
+    width: fit-content;
+    border: 1px solid #1d263e !important;
+    border-radius: 5px !important;
+    background-color: transparent !important;
+    color: #1d263e !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+body[data-bs-theme="light"] .btn-outline-dark-blue:hover{
+    width: fit-content;
+    border: 1px solid #1d263e !important;
+    border-radius: 5px !important;
+    background-color: #1d263e !important;
+    color: #fff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* dark blue btn dark mode*/
+body[data-bs-theme="dark"] .btn-dark-blue{
+    width: fit-content;
+    border-radius: 5px !important;
+    background-color: #212529 !important;
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+body[data-bs-theme="dark"] .btn-dark-blue:hover{
+    width: fit-content;
+    border-radius: 5px !important;
+    background-color: #33373b !important;
+    color: #fff !important;
+    font-weight: 500;
+
+}
+body[data-bs-theme="dark"] .btn-outline-dark-blue{
+    width: fit-content;
+    border: 1px solid #fff !important;
+    border-radius: 5px !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+body[data-bs-theme="dark"] .btn-outline-dark-blue:hover{
+    width: fit-content;
+    border: 1px solid #fff !important;
+    border-radius: 5px !important;
+    background-color: #fff !important;
+    color: #1d263e !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
 
 .text-body-theme {
     color: var(--bs-body-color) !important;
@@ -189,4 +262,21 @@ body[data-bs-theme="dark"] .bg-card-theme {
 .bi-github:hover {
     transform: translateY(-5px) !important;
     color: #171515 !important;
+}
+    /* Default (inactive) bullets */
+.swiper-pagination-bullet {
+  background: #ccc !important; /* gray for inactive */
+  opacity: 1 !important;       /* make sure it's visible */
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  background: #212529 !important; /* Bootstrap "danger" red */
+}
+body[data-bs-theme="dark"] .swiper-pagination-bullet{
+    background: #1d263e !important; /* gray for inactive */
+    opacity: 1 !important; 
+}
+body[data-bs-theme="dark"] .swiper-pagination-bullet-active {
+  background: #ccc !important; /* Bootstrap "danger" red */
 }
