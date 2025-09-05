@@ -18,12 +18,6 @@ body {
 
 /* Light mode */
 body[data-bs-theme="light"] {
-<<<<<<< HEAD
-  --bs-body-bg: #f8f8f8;    /* Body background */
-  --bs-body-color: #212529; /* Text color */
-  --bs-card-bg: #ffffff;    /* Card = white */
-  --bs-card-color: #212529; /* Card text */
-=======
     --bs-body-bg: #e6e6e6;
     /* Body background */
     --bs-body-color: #212529;
@@ -32,26 +26,14 @@ body[data-bs-theme="light"] {
     /* Card = white */
     --bs-card-color: #212529;
     /* Card text */
->>>>>>> ab4148273d869675e059fb0051e7301b23a06b22
 }
 
 /* Dark mode */
 body[data-bs-theme="dark"] {
-<<<<<<< HEAD
   --bs-body-bg: #212529;    /* Body background */
   --bs-body-color: #f2f2f2; /* Text color */
   --bs-card-bg: #212529;    /* Card = dark like body */
   --bs-card-color: #e6e6e6; /* Card text = white */
-=======
-    --bs-body-bg: #212529;
-    /* Body background */
-    --bs-body-color: #e6e6e6;
-    /* Text color */
-    --bs-card-bg: #212529;
-    /* Card = dark like body */
-    --bs-card-color: #e6e6e6;
-    /* Card text = white */
->>>>>>> ab4148273d869675e059fb0051e7301b23a06b22
 }
 
 /* Custom theme for cards */
@@ -63,19 +45,8 @@ body[data-bs-theme="light"] .bg-card-theme {
 }
 
 body[data-bs-theme="dark"] .bg-card-theme {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #212529 !important;  /* Dark in dark mode */
-=======
   background-color: #1d263e !important;  /* Dark in dark mode */
->>>>>>> acb1c6a3af499262dd14f95b1826eeb4111c2b39
   color: #e6e6e6 !important;             /* White text */
-=======
-    background-color: #212529 !important;
-    /* Dark in dark mode */
-    color: #e6e6e6 !important;
-    /* White text */
->>>>>>> ab4148273d869675e059fb0051e7301b23a06b22
 }
 
 
