@@ -8,8 +8,7 @@
 
 body {
     font-family: "Poppins", "Kantumruy Pro" !important;
-    /* background-color: #e6e6e6 !important; */
-    line-height: 1.6 !important;
+    /* background-color: #f2f2f2 !important; */
 }
 
 /* our color  */
@@ -43,6 +42,10 @@ body[data-bs-theme="dark"] {
 
 /* Custom theme for cards */
 body[data-bs-theme="light"] .bg-card-theme {
+    background-color: #ffffff !important;
+    /* White in light mode */
+    color: #212529 !important;
+    /* Dark text */
     background-color: #ffffff !important;
     /* White in light mode */
     color: #212529 !important;
