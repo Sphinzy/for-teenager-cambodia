@@ -17,6 +17,7 @@
         }
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
+    
 
     const setTheme = theme => {
         if (theme === 'auto') {
@@ -119,5 +120,4 @@ function setThemeCustom(theme) {
         logo.src = "asset/image/project-logo/logo02.png";
     }
 }
-
 AOS.init();
