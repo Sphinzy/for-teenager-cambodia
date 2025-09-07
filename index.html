@@ -19,43 +19,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <style>
-    .btn-1 {
-        background-color: #1d263e !important;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        border: 2px solid #1d263e;
-    }
-
-    .btn-1:hover {
-        background-color: transparent !important;
-        color: #1d263e !important;
-        transform: translateY(-5px);
-        border: 2px solid #1d263e;
-    }
-
-    .btn-2 {
-        border: 2px solid #1d263e;
-        transition: 0.3s ease, color 0.3s ease;
-    }
-
-    .btn-2:hover {
-        color: white;
-        transform: translateY(-5px);
-        background-color: #1d263e !important;
-    }
-
     .content-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
-        gap: 40px;
     }
 
     .text-list {
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 10px;
     }
 
     .text-item {
@@ -87,7 +60,7 @@
 
     .custom-swiper-container {
         flex: 1;
-        max-width: 650px;
+        max-width: 850px;
         height: 350px;
         border-radius: 9px;
         overflow: hidden;
@@ -95,7 +68,7 @@
 
     .custom-swiper-slide {
         background-size: cover;
-        background-position: center;
+        background-position: end;
     }
 
     .we-have {
@@ -131,14 +104,10 @@
         color: #1d263e !important;
     }
 
-    .we-have:hover .icon-social {
-        opacity: 1 !important;
-        bottom: 0px !important;
-        z-index: 100 !important;
-        background-color: aliceblue;
-        padding: 5px 15px;
-        transition: 0.3s;
-    }
+    .card .img {
+    width: 100%;
+    height: 100%;
+}
 </style>
 
 <body>
@@ -150,14 +119,14 @@
                 </a>
                 <div class="d-flex">
                     <!-- profile lg-none  -->
-                    <div class="d-flex justify-content-end align-items-center d-flex d-lg-none bg-body-theme">
+                    <div class="d-flex justify-content-end align-items-center d-flex d-lg-none bg-body-theme d-none d-md-block">
                         <a href="asset/page/login/login.html" class="text-white text-decoration-none">
-                            <button class="btn btn-1 text-white rounded-pill">
+                            <button class="btn btn-dark-blue ">
                                 ចូលគណនី
                             </button>
                         </a>
                         <a href="asset/page/login/register.html" class="ps-2 text-white text-decoration-none">
-                            <button class="btn btn-2 btn-outline-dark rounded-pill">
+                            <button class="btn btn-outline-dark-blue">
                                 បង្កើតគណនី
                             </button>
                         </a>
@@ -172,18 +141,8 @@
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <div class="d-flex justify-content-end align-items-center d-flex d-lg-none" role="search">
-                            <!-- profile  -->
-                            <div class="profile">
-                                <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
-                                    class="img-fluid rounded-circle object-fit-cover mt-2"
-                                    style="width: 40px; height: 40px" alt />
-                            </div>
-                            <h5 class="pt-3 ps-2">សួស្តី!​​ តុលា</h5>
-                        </div>
-
                         <h5 class="offcanvas-title bg-body-theme" id="offcanvasNavbarLabel">
-                            <a class="navbar-brand" href="#"><img src="assets/image/logo.png" class="img-fluid"
+                            <a class="navbar-brand" href="#"><img src="asset/image/project-logo/logo01.png" class="img-fluid"
                                     style="width: 60px" alt /></a>
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -241,16 +200,28 @@
                                 </ul>
                             </div>
                         </ul>
+                        <div class="d-flex justify-content-center pt-5 align-items-center d-flex d-lg-none bg-body-theme d-md-none ">
+                        <a href="asset/page/login/login.html" class="text-white text-decoration-none">
+                            <button class="btn btn-dark-blue ">
+                                ចូលគណនី
+                            </button>
+                        </a>
+                        <a href="asset/page/login/register.html" class="ps-2 text-white text-decoration-none">
+                            <button class="btn btn-outline-dark-blue">
+                                បង្កើតគណនី
+                            </button>
+                        </a>
+                    </div>
                     </div>
                 </div>
 
                 <!-- profile lg-flex  -->
                 <div class="d-flex justify-content-end align-items-center d-none d-lg-flex">
                     <a href="asset/page/login/login.html" class="text-white text-decoration-none">
-                        <button class="btn btn-1 text-white rounded-pill">ចូលគណនី</button>
+                        <button class="btn btn-dark-blue">ចូលគណនី</button>
                     </a>
                     <a href="asset/page/login/register.html" class="ps-2 text-white text-decoration-none">
-                        <button class="btn btn-2 btn-outline-dark rounded-pill">
+                        <button class="btn btn-outline-dark-blue">
                             បង្កើតគណនី
                         </button>
                     </a>
@@ -262,10 +233,27 @@
     <main>
         <section class="mt-12">
             <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2" data-aos="fade-up" data-aos-delay="400">
-                        <div class="swiper mySwiper w-75 rounded-3">
-                            <div class="swiper-wrapper">
+                <div class="row gx-5">
+                    <div class="col-lg-5">
+                        <span class=" fs-5 clamp-1" data-aos="fade-up">សូមស្វាគមន៍</span>
+                        <h1 class="my-4 fs-2 clamp-2" data-aos="fade-up">
+                            " រៀនជំនាញដែលទីផ្សារការងារត្រូវការ កសាងអនាគតភ្លឺស្វាងរបស់អ្នក "
+                        </h1>
+                        <p class="clamp-2" data-aos="fade-up">
+                            កុំរៀនត្រឹមតែយកសញ្ញាបត្រ តែត្រូវរៀនដើម្បីទទួលបានការងារល្អ
+                            និងប្រាក់ខែខ្ពស់។ យើងនឹងជួយអ្នកជ្រើសរើសជំនាញដែលស័ក្តិសម
+                            និងមានតម្រូវការខ្ពស់ក្នុងពេលបច្ចុប្បន្ន។
+                        </p>
+                        <p class="mt-5" data-aos="fade-up">
+                            <a href="asset/page/login/login.html"
+                                class="btn btn-dark-blue">ស្វែងរកជំនាញដែលពេញនិយមឥឡូវនេះ!</a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="400">
+                        <div class=" mb-5 mb-lg-0">
+                            <div class="swiper mySwiper rounded-3">
+                            <div class="swiper-wrapper ">
                                 <div class="swiper-slide">
                                     <img src="asset/image/lending-img/job_search.jpg" alt="Image" class="img-fluid" />
                                 </div>
@@ -278,31 +266,17 @@
                                         class="img-fluid" />
                                 </div>
                             </div>
-                            <div class="swiper-pagination opacity-50 position-absolute"></div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 order-lg-1">
-                        <span class="section-subtitle fs-5" data-aos="fade-up">សូមស្វាគមន៍</span>
-                        <h1 class="my-4" data-aos="fade-up">
-                            "រៀនជំនាញដែលទីផ្សារការងារត្រូវការ កសាងអនាគតភ្លឺស្វាងរបស់អ្នក"
-                        </h1>
-                        <p data-aos="fade-up">
-                            កុំរៀនត្រឹមតែយកសញ្ញាបត្រ តែត្រូវរៀនដើម្បីទទួលបានការងារល្អ
-                            និងប្រាក់ខែខ្ពស់។ យើងនឹងជួយអ្នកជ្រើសរើសជំនាញដែលស័ក្តិសម
-                            និងមានតម្រូវការខ្ពស់ក្នុងពេលបច្ចុប្បន្ន។
-                        </p>
-                        <p class="mt-5" data-aos="fade-up">
-                            <a href="asset/page/login/login.html"
-                                class="btn text-white btn-1 rounded-pill py-2 px-4">ស្វែងរកជំនាញដែលពេញនិយមឥឡូវនេះ!</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mt-12">
+        <section class="mt-15">
             <div class="container" data-aos="fade-up">
-                <h2 class="text-center pb-8">ជំនាញពេញនិយម</h2>
+                <h2 class="text-center pb-8 clamp-1">ជំនាញពេញនិយម</h2>
                 <div class="row gy-4">
                     <div class="col-md-6 col-lg-4 we-have">
                         <div class="card shadow-sm border-0 bg-white" data-aos="fade-up" data-aos-delay="100">
@@ -313,9 +287,9 @@
                             <div class="card-body we-have">
                                 <h3 class="card-title">
                                     <a href="asset/page/login/login.html"
-                                        class="text-decoration-none text-dark fw-bold">ព័ត៌មានវិទ្យា​</a>
+                                        class="text-decoration-none text-dark fw-bold clamp-1">ព័ត៌មានវិទ្យា​</a>
                                 </h3>
-                                <p class="card-text">
+                                <p class="card-text clamp-4">
                                     ពិភពលោកបច្ចុប្បន្នដំណើរការដោយបច្ចេកវិទ្យា។ ការរៀនជំនាញ IT
                                     ដូចជា Software Development, Web Development ឬ Data Science
                                     នឹងផ្តល់ឱកាសការងារមិនចេះរីងស្ងួត។
@@ -333,9 +307,9 @@
                             <div class="card-body we-have">
                                 <h3 class="card-title">
                                     <a href="asset/page/login/login.html"
-                                        class="text-decoration-none text-dark fw-bold">ទីផ្សារឌីជីថល​</a>
+                                        class="text-decoration-none text-dark fw-bold clamp-1">ទីផ្សារឌីជីថល​</a>
                                 </h3>
-                                <p class="card-text">
+                                <p class="card-text clamp-4">
                                     ជំនាញទីផ្សារឌីជីថលចាំបាច់សម្រាប់គ្រប់អាជីវកម្មទាំងអស់។
                                     រៀនពីរបៀបបង្កើតយុទ្ធសាស្ត្រ Content Marketing, Social Media
                                     Marketing និង SEO ដើម្បីជួយក្រុមហ៊ុនរីកចម្រើន។
@@ -352,9 +326,9 @@
                             <div class="card-body we-have">
                                 <h3 class="card-title">
                                     <a href="asset/page/login/login.html"
-                                        class="text-decoration-none text-dark fw-bold">ការគ្រប់គ្រងអាជីវកម្ម​</a>
+                                        class="text-decoration-none text-dark fw-bold clamp-1">ការគ្រប់គ្រងអាជីវកម្ម​</a>
                                 </h3>
-                                <p class="card-text">
+                                <p class="card-text clamp-4">
                                     គ្រប់ក្រុមហ៊ុនត្រូវការអ្នកមានសមត្ថភាពគ្រប់គ្រង។
                                     ជំនាញនេះបង្រៀនអ្នកពីរបៀបដឹកនាំក្រុម, ធ្វើផែនការអាជីវកម្ម
                                     និងវិភាគហិរញ្ញវត្ថុ ដើម្បីក្លាយជាអ្នកដឹកនាំដ៏ល្អនៅថ្ងៃអនាគត។
@@ -366,24 +340,24 @@
             </div>
         </section>
 
-        <section class="mt-12 d-none d-md-block">
+        <section class="mt-15 d-none d-lg-block ">
             <div class="container ">
-                <h2 class="text-center mb-lg-n15 d-none d-md-block d-lg-block">
+                <h2 class="text-center pb-8 clamp-1">
                     សកលវិទ្យាល័យ
                 </h2>
                 <div class="content-wrapper">
                     <div class="row gy-2" data-aos="fade-up">
-                        <div class="d-none d-md-block d-lg-block col-md-12 col-lg-4">
-                            <div class="text-list" id="textList">
+                        <div class="col-md-12 col-lg-5">
+                            <div class="text-list pb-5" id="textList">
                                 <div class="text-item active">
                                     <div class="bg"></div>
-                                    <a href="asset/page/login/login.html" class="d-flex active text-decoration-none">
+                                    <a href="asset/page/login/login.html" class="d-flex active text-decoration-none pb-2">
                                         <div class="card-body text-dark" data-bs-theme="light " data-aos="fade-left"
                                             data-aos-delay="0">
-                                            <h3 class="card-title text fs-5">
+                                            <h3 class="card-title fw-bold fs-4 clamp-1">
                                                 សកលវិទ្យាភូមិន្ទភ្នំពេញ​​ (RUPP)
                                             </h3>
-                                            <p class="card-text text pt-2 fs-7">
+                                            <p class="card-text pt-2 fs-6 clamp-2">
                                                 ជំនាញលេចធ្លោ: ផ្នែកគណិតវិទ្យា ព័ត៌មានវិទ្យា (IT)
                                                 ជីវវិទ្យា អក្សរសាស្ត្រអង់គ្លេស និងប្រព័ន្ធផ្សព្វផ្សាយ។
                                             </p>
@@ -393,13 +367,13 @@
 
                                 <div class="text-item">
                                     <div class="bg"></div>
-                                    <a href="asset/page/login/login.html" class="text-decoration-none d-flex"
+                                    <a href="asset/page/login/login.html" class="text-decoration-none d-flex pb-2"
                                         data-aos="fade-left" data-aos-delay="300">
                                         <div class="card-body text-dark" data-bs-theme="light ">
-                                            <h3 class="card-title text fs-5">
+                                            <h3 class="card-title fs-4 clamp-1 fw-bold">
                                                 សកលវិទ្យាល័យជាតិគ្រប់គ្រង (NUM)
                                             </h3>
-                                            <p class="card-text text pt-2 fs-7">
+                                            <p class="card-text pt-2 fs-6 clamp-1">
                                                 ជំនាញលេចធ្លោ: ហិរញ្ញវត្ថុ និងធនាគារ គណនេយ្យ
                                                 គ្រប់គ្រងអាជីវកម្ម និងទីផ្សារ។
                                             </p>
@@ -409,13 +383,13 @@
 
                                 <div class="text-item">
                                     <div class="bg"></div>
-                                    <a href="asset/page/login/login.html" class="d-flex text-decoration-none"
+                                    <a href="asset/page/login/login.html" class="d-flex text-decoration-none pb-2"
                                         data-aos="fade-left" data-aos-delay="100">
                                         <div class="card-body text-dark" data-bs-theme="light ">
-                                            <h3 class="card-title text fs-5">
+                                            <h3 class="card-title fs-4 fw-bold clamp-1">
                                                 វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា (ITC)
                                             </h3>
-                                            <p class="card-text text pt-2 fs-7">
+                                            <p class="card-text pt-2 fs-6 clamp-2">
                                                 ជំនាញលេចធ្លោ: វិស្វកម្មសំណង់ស៊ីវិល វិស្វកម្មអគ្គិសនី
                                                 វិស្វកម្មមេកានិក និងព័ត៌មានវិទ្យា។
                                             </p>
@@ -425,7 +399,7 @@
                             </div>
                         </div>
 
-                        <div class="d-none d-md-block d-lg-block col-md-12 col-lg-8">
+                        <div class="col-md-12 col-lg-7">
                             <div class="swiper mySwiper custom-swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide custom-swiper-slide">
@@ -445,13 +419,12 @@
             </div>
         </section>
 
-        <!-- អ្វីដែលអ្នកអាចស្វែងរកបាននៅទីនេះ error img  -->
-        <section>
+        <section class="mt-12">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="text-center pb-8">អ្វីដែលអ្នកអាចស្វែងរកបាននៅទីនេះ</h2>
+                <h2 class="text-center pb-8 clamp-1">អ្វីដែលអ្នកអាចស្វែងរកបាននៅទីនេះ</h2>
                 <div class="row gy-4">
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card border-0 shadow-sm rounded-3 overflow-hidden we-have">
+                        <div class="card border-0 shadow-sm rounded-3 we-have overflow-hidden">
                             <div class="row g-0">
                                 <!-- Image -->
                                 <div class="col-md-6">
@@ -461,20 +434,20 @@
                                 </div>
 
                                 <!-- Content -->
-                                <div class="col-md-6 d-flex flex-column">
+                                <div class=" col-md-6 d-flex flex-column">
                                     <div class="card-body bg-white">
                                         <a href="asset/page/login/login.html"
-                                            class="text-decoration-none badge text-bg-danger fw-light mb-2">
+                                            class="text-decoration-none badge text-bg-danger fw-light mb-2 clamp-1">
                                             មុខជំនាញ
                                         </a>
 
                                         <h5 class="card-title fw-bold">
-                                            <a href="" class="text-dark text-decoration-none">
+                                            <a href="" class="text-dark text-decoration-none clamp-1">
                                                 ស្វែងយល់ពីជំនាញនីមួយៗ
                                             </a>
                                         </h5>
 
-                                        <p class="card-text text-muted small mb-4">
+                                        <p class="card-text text-muted small mb-4 clamp-3">
                                             ការជ្រើសរើសជំនាញសិក្សាដែលត្រូវនឹងតម្រូវការទីផ្សារ
                                             គឺជាគន្លឹះដើម្បីធានាបាននូវឱកាសការងារខ្ពស់
                                             និងប្រាក់ខែល្អនៅពេលបញ្ចប់ការសិក្សា។
@@ -486,7 +459,7 @@
                     </div>
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card border-0 shadow-sm rounded-3 overflow-hidden we-have">
+                        <div class="card border-0 shadow-sm rounded-3 we-have overflow-hidden">
                             <div class="row g-0">
                                 <!-- Image -->
                                 <div class="col-md-6">
@@ -499,17 +472,17 @@
                                 <div class="col-md-6 d-flex flex-column">
                                     <div class="card-body bg-white">
                                         <a href="asset/page/login/login.html"
-                                            class="text-decoration-none badge text-bg-danger fw-light mb-2">
+                                            class="text-decoration-none badge text-bg-danger fw-light mb-2 clamp-1">
                                             សកលវិទ្យាល័យ
                                         </a>
 
                                         <h5 class="card-title fw-bold">
-                                            <a href="" class="text-dark text-decoration-none">
+                                            <a href="" class="text-dark text-decoration-none clamp-1">
                                                 ស្វែងរកសកលវិទ្យាល័យ
                                             </a>
                                         </h5>
 
-                                        <p class="card-text text-muted small mb-4">
+                                        <p class="card-text text-muted small mb-4 clamp-3">
                                             ការស្វែងយល់ពីសាកលវិទ្យាល័យក៏សំខាន់ដែរ។
                                             មានទាំងសាកលវិទ្យាល័យរដ្ឋ និងឯកជននៅកម្ពុជា
                                             ដែលនីមួយៗមានលក្ខណៈពិសេសរៀងៗខ្លួន។
@@ -521,7 +494,7 @@
                     </div>
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card border-0 shadow-sm rounded-3 overflow-hidden we-have">
+                        <div class="card border-0 shadow-sm rounded-3 we-have overflow-hidden">
                             <div class="row g-0">
                                 <!-- Image -->
                                 <div class="col-md-6">
@@ -534,17 +507,17 @@
                                 <div class="col-md-6 d-flex flex-column">
                                     <div class="card-body bg-white">
                                         <a href="asset/page/login/login.html"
-                                            class="text-decoration-none badge text-bg-danger fw-light mb-2">
+                                            class="text-decoration-none badge text-bg-danger fw-light mb-2 clamp-1">
                                             អាហារូបករណ៍
                                         </a>
 
                                         <h5 class="card-title fw-bold">
-                                            <a href="" class="text-dark text-decoration-none">
+                                            <a href="" class="text-dark text-decoration-none clamp-1">
                                                 ស្វែងរកអាហារូបករណ៍
                                             </a>
                                         </h5>
 
-                                        <p class="card-text text-muted small mb-4">
+                                        <p class="card-text text-muted small mb-4 clamp-3">
                                             អាហារូបករណ៍ត្រូវបានបែងចែកជាពីរប្រភេទធំៗ
                                             អាហារូបករណ៍សិក្សានៅក្នុងប្រទេស​ និង​
                                             អាហារូបករណ៍សិក្សានៅក្រៅប្រទេស។
@@ -568,17 +541,17 @@
                                 <div class="col-md-6 d-flex flex-column">
                                     <div class="card-body bg-white">
                                         <a href="asset/page/login/login.html"
-                                            class="text-decoration-none badge text-bg-danger fw-light mb-2">
+                                            class="text-decoration-none badge text-bg-danger fw-light mb-2 clamp-1">
                                             ការងារ
                                         </a>
 
                                         <h5 class="card-title fw-bold">
-                                            <a href="" class="text-dark text-decoration-none">
+                                            <a href="" class="text-dark text-decoration-none clamp-1">
                                                 ស្វែងរកការងារទៅលើវិស័យនីមួយៗ
                                             </a>
                                         </h5>
 
-                                        <p class="card-text text-muted small mb-4">
+                                        <p class="card-text text-muted small mb-4 clamp-3">
                                             យើងនឹងនាំយកមកនូវឱកាសការងារជាច្រើន
                                             ដែលត្រូវទៅតាមតម្រូវការចាំបាច់សម្រាប់អ្នកទាំងអស់គ្នា។
                                             ការងារមានទាំងក្នុងស្ថាប័នរដ្ធ និង ឯកជន។
@@ -592,35 +565,16 @@
             </div>
         </section>
 
-        <section class="mt-18">
+        <section class="mt-18 z-0">
             <div class="container">
                 <h2 class="text-center pb-5" data-aos="fade-up" data-aos-delay="100">សំណួរដែលសួរញឹកញាប់ ( FAQ )</h2>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne" data-aos="fade-up" data-aos-delay="200">
-                                ១. តើខ្ញុំគួរជ្រើសរើសជំនាញសិក្សាដោយរបៀបណា
-                                ប្រសិនបើខ្ញុំមិនទាន់ដឹងថាខ្លួនឯងចូលចិត្តអ្វី?
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                អ្នកអាចសាកល្បងធ្វើ Quiz ខ្លីៗនៅលើគេហទំព័ររបស់យើង
-                                ដែលត្រូវបានរៀបចំឡើងដើម្បីជួយអ្នកស្វែងយល់ពីទេពកោសល្យ
-                                និងចំណង់ចំណូលចិត្តរបស់អ្នក។ អ្នកក៏អាចអានអំពីជំនាញនានា
-                                ដើម្បីដឹងថាមួយណាទាក់ទាញចិត្តអ្នកជាងគេ។
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item bg-card-theme border-0 shadow-sm mt-2">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                 aria-controls="flush-collapseTwo" data-aos="fade-up" data-aos-delay="300">
-                                ២.
+                                ១.
                                 តើជំនាញអ្វីខ្លះដែលមានតម្រូវការខ្ពស់នៅក្នុងទីផ្សារការងារបច្ចុប្បន្ន?
                             </button>
                         </h2>
@@ -633,12 +587,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item bg-card-theme border-0 shadow-sm mt-2">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseThree" aria-expanded="false"
                                 aria-controls="flush-collapseThree" data-aos="fade-up" data-aos-delay="400">
-                                ៣. តើគួរជ្រើសរើសសាកលវិទ្យាល័យរដ្ឋ ឬឯកជន?
+                                ២. តើគួរជ្រើសរើសសាកលវិទ្យាល័យរដ្ឋ ឬឯកជន?
                             </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse"
@@ -652,12 +606,12 @@
                         </div>
                     </div>
 
-                    <div class="accordion-item">
+                    <div class="accordion-item bg-card-theme border-0 shadow-sm mt-2">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseFour" aria-expanded="false"
                                 aria-controls="flush-collapseFour" data-aos="fade-up" data-aos-delay="500">
-                                ៤. តើខ្ញុំអាចស្វែងរកអាហារូបករណ៍បានដោយរបៀបណា?
+                                ៣. តើខ្ញុំអាចស្វែងរកអាហារូបករណ៍បានដោយរបៀបណា?
                             </button>
                         </h2>
                         <div id="flush-collapseFour" class="accordion-collapse collapse"
@@ -671,12 +625,12 @@
                         </div>
                     </div>
 
-                    <div class="accordion-item">
+                    <div class="accordion-item bg-card-theme border-0 shadow-sm mt-2">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseFive" aria-expanded="false"
                                 aria-controls="flush-collapseFive" data-aos="fade-up" data-aos-delay="600">
-                                ៥. រៀនចប់ហើយ តើខ្ញុំត្រូវរៀបចំខ្លួនដើម្បីរកការងារដោយរបៀបណា?
+                                ៤. រៀនចប់ហើយ តើខ្ញុំត្រូវរៀបចំខ្លួនដើម្បីរកការងារដោយរបៀបណា?
                             </button>
                         </h2>
                         <div id="flush-collapseFive" class="accordion-collapse collapse"
@@ -696,20 +650,23 @@
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="text-center pb-5" data-aos="fade-up" data-aos-delay="100">ទំទាក់ទំទងមកយើង</h2>
                 <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class=" col-lg-6 ">
+                    <div class=" col-md-6 ">
                         <div class="card p-3 d-flex flex-row align-items-start shadow-sm border-0 bg-white we-have">
                             <div class="me-3 d-flex justify-content-center align-items-center rounded-3 text-dark">
                                 <i class="bi bi-geo-alt fs-5"></i>
                             </div>
                             <div>
+                                <a href="https://www.google.com/maps/search/%2386B,+Street+313+corner+606,+Sangkat+Boeungk%C3%A2k+2,+Khan+Toulkok,+Phnom+Penh/@11.5659433,104.8975444,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D"
+                                class="nav-link text-white">
                                 <h4 class="card-title fw-bold fs-6 mb-1 text-dark">អាស័យដ្ឋានរបស់យើង</h4>
-                                <p class="card-text text-secondary pb-2">#86B, ផ្លូវលេខ 313 កែង 606, សង្កាត់ បឹងកក់ ២, ខណ្ឌ
+                                <p class="card-text text-secondary pb-1 clamp-1">#86B, ផ្លូវលេខ 313 កែង 606, សង្កាត់ បឹងកក់ ២, ខណ្ឌ
                                 ទួលគោក, ភ្នំពេញ</p>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="card p-3 d-flex flex-row align-items-start shadow-sm border-0 bg-white we-have">
                             <div class="me-3 d-flex justify-content-center align-items-center rounded-3  text-dark">
                                 <i class="bi bi-envelope fs-5"></i>
@@ -725,7 +682,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="card p-3 d-flex flex-row align-items-start shadow-sm border-0 bg-white we-have">
                             <div class="me-3  d-flex justify-content-center align-items-center rounded-3  text-dark">
                                 <i class="bi bi-telephone fs-5"></i>
@@ -740,7 +697,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="card p-3 d-flex flex-row align-items-start shadow-sm border-0 bg-white we-have">
                             <div class="me-3 d-flex justify-content-center align-items-center rounded-3 text-dark">
                                 <i class="bi bi-clock fs-5"></i>
@@ -756,9 +713,9 @@
                         <div class="card mt-4 p-4 shadow-sm bg-white mb-18" data-aos="fade-up" data-aos-delay="400">
                             <div class="card-body we-have">
                                 <h3 class="mb-3 border-start border-primary border-4 ps-3 text-dark fw-bold">មានបញ្ហាទាក់ទងនឹងបច្ចេកទេសផ្សេងៗ​ ?</h3>
-                                <p class="text-secondary mb-4">ទាក់ទងមកយើងតាមរយ formខាងក្រោមនេះ ក្រុមការងាររបស់ពួកយើងនឹងទាក់ទងទៅអ្នកក្នុងរយពេល 24h</p>
+                                <p class="text-secondary mb-4">ទាក់ទងមកយើងតាមរយៈ formខាងក្រោមនេះ ក្រុមការងាររបស់ពួកយើងនឹងទាក់ទងទៅអ្នកក្នុងរយៈពេល 24h</p>
 
-                                <form action="forms/contact.php" method="post" class="php-email-form">
+                                <form action="" method="post" class="php-email-form">
                                     <div class="row g-3">
                                         <div class="col-md-6">
                                             <input type="text" name="name" class="form-control" id="name"
@@ -775,7 +732,7 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center flex-wrap mt-4">
-                                        <button type="submit" class="btn btn-1 rounded-pill px-4 py-2 text-white">បញ្ជូនសារ</button>
+                                        <button type="submit" class="btn btn-dark-blue">បញ្ជូនសារ</button>
                                         <div class="social-links d-flex gap-3">
                                             <a href="#" class="text-secondary"><i class="bi bi-twitter fs-5"></i></a>
                                             <a href="#" class="text-secondary"><i class="bi bi-facebook fs-5"></i></a>
