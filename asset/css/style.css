@@ -335,3 +335,61 @@ body[data-bs-theme="dark"] .swiper-pagination-bullet-active {
     background: #ccc !important;
     /* Bootstrap "danger" red */
 }
+/* ---------- Light mode ---------- */
+body[data-bs-theme="light"] .nav-link {
+    position: relative;
+    text-decoration: none;
+    /* remove default underline */
+    padding: 5px 0;
+}
+
+body[data-bs-theme="light"] .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* underline at bottom */
+    left: 15px;
+    width: 0;
+    height: 2px;
+    background-color: #212529;
+    /* underline color */
+    transition: width 0.3s ease;
+}
+
+body[data-bs-theme="light"] .nav-link:hover::before,
+body[data-bs-theme="light"] .nav-link:focus::before {
+    width: 83%;
+    color: #000 !important;
+}
+
+body[data-bs-theme="light"] .nav-link.active::before {
+    width: 83%;
+    /* always visible */
+}
+
+/* ---------- Dark mode ---------- */
+body[data-bs-theme="dark"] .nav-link {
+    position: relative;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+body[data-bs-theme="dark"] .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+body[data-bs-theme="dark"] .nav-link:hover::before,
+body[data-bs-theme="dark"] .nav-link:focus::before {
+    width: 83%;
+}
+
+body[data-bs-theme="dark"] .nav-link.active::before {
+    width: 83%;
+}

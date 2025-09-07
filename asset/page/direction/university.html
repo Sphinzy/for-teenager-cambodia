@@ -53,26 +53,312 @@
     }
 </style>
 
-<body>
+<body class="bg-body-theme" data-bs-theme="light">
+    <header class="sticky-top z-3">
+        <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" src="../../image/project-logo/logo01.png" alt="Logo" style="width: 75px;">
+                </a>
+                <div class="d-flex">
+                    <!-- profile lg-none  -->
+                    <div class="d-flex justify-content-end align-items-center d-flex d-lg-none bg-body-theme">
+                        <button id="themeToggle" class="theme-toggle border-0 bg-transparent">
+                            <i id="themeIcon" class="bi bi-brightness-high-fill icon-animate"></i>
+                        </button>
+                        <!-- notification  -->
+                        <div class="dropdown">
+                            <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-bell px-2 position-relative fs-5">
+                                    <span
+                                        class="position-absolute translate-middle bg-danger border border-light rounded-circle"
+                                        style="left: 21px; padding: 3px; top: 1px;">
+                                        <span class="visually-hidden">New
+                                            alerts</span>
+                                    </span>
+                                </i>
+                            </a>
+
+                            <ul class="dropdown-menu ms-n20 border-0 shadow-sm">
+                                <li>
+                                    <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
+                                        style="width: 320px;">
+                                        <div class="p-2">
+                                            <h5>សារជូនដំណឹង</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- list notification  -->
+                                <li>
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt>
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Unde,
+                                                molestiae!
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt>
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Unde,
+                                                molestiae!
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt>
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Unde,
+                                                molestiae!
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <div>
+                                    <a href="../profile/notification.html"
+                                        class="nav-link text-end text-primary p-2 pe-4">See
+                                        all</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <!-- profile  -->
+                        <div class="profile">
+                            <a href="../profile/proflie.html">
+                                <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
+                                    class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                    alt />
+                            </a>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- silde bar  -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <div class="d-flex justify-content-end align-items-center d-flex d-lg-none" role="search">
+                            <!-- profile  -->
+                            <div class="profile">
+                                <a href="../profile/proflie.html">
+                                    <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
+                                        class="img-fluid rounded-circle object-fit-cover"
+                                        style="width: 40px; height: 40px;" alt />
+                                </a>
+                            </div>
+                            <h5 class="pt-3 ps-2">សួស្តី!​​ តុលា</h5>
+                        </div>
+
+                        <h5 class="offcanvas-title bg-body-theme" id="offcanvasNavbarLabel">
+                            <a class="navbar-brand" href="#"><img src="assets/image/logo.png" class="img-fluid"
+                                    style="width: 60px" alt /></a>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body bg-body-theme align-items-center">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link px-3" aria-current="page" href="../home.html"><i
+                                        class="bi bi-house-fill mx-1"></i>ទំព័រដើម</a>
+                            </li>
+                            <div class="dropdown">
+                                <a class="nav-link active px-3 dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-lightbulb-fill mx-1"></i>តម្រង់ទិស
+                                </a>
+
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href="#    ">មុខជំនាញ</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="university.html">សកលវិទ្យាល័យ</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-mortarboard-fill mx-1"></i>អាហារូបករណ៍
+                                </a>
+
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item"
+                                            href="../schoolarship/schoolarship-in.html">អាហារូបករណ៍ក្នងស្រុក</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="../schoolarship/schoolarship-out.html">អាហារូបករណ៍ក្រៅស្រុក</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-buildings-fill me-1"></i>ឱកាសការងារ
+                                </a>
+
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងាររដ្ឋ</a></li>
+                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងារឯកជន</a></li>
+                                    <li><a class="dropdown-item" href="../work/volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- profile lg-flex  -->
+                <div class="d-flex justify-content-end align-items-center d-none d-lg-flex">
+                    <button id="themeToggle2" class="theme-toggle border-0 bg-transparent">
+                        <i id="themeIcon2" class="bi bi-brightness-high-fill icon-animate"></i>
+                    </button>
+                    <!-- notification  -->
+                    <div class="dropdown">
+                        <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-bell p  x-2 position-relative fs-5">
+                                <span
+                                    class="position-absolute translate-middle bg-danger border border-light rounded-circle"
+                                    style="left: 21px; padding: 4px; top: 1px;">
+                                    <span class="visually-hidden">New
+                                        alerts</span>
+                                </span>
+                            </i>
+                        </a>
+
+                        <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-body-theme" data-bs-theme="light">
+                            <li>
+                                <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
+                                    style="width: 320px;">
+                                    <div class="p-2">
+                                        <h5>សារជូនដំណឹង</h5>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- list notification  -->
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Unde, molestiae!
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Unde, molestiae!
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Unde, molestiae!
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <div>
+                                <a href="../profile/notification.html"
+                                    class="nav-link text-end text-primary p-2 pe-4">See
+                                    all</a>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- profile  -->
+                    <div class="profile">
+                        <a href="../profile/proflie.html">
+                            <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
+                                class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                alt />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <main>
         <section>
             <div class="container py-5">
                 <div class="row justify-content-center">
-                    <div class="col-lg-4"></div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-5">
+                        <div class="py-15">
+                            <h1 class="display-4 fw-medium">
+                                ការស្វែងយល់អំពីសកលវិទ្យាល័យ
+                            </h1>
+                            <p class="py-3">
+                                សាកលវិទ្យាល័យ ជាស្ថាប័នអប់រំខ្ពស់មួយនៅកម្ពុជា
+                                ដែលផ្តល់ការសិក្សាមានគុណភាព និងជំនាញអនុវត្តន៍ដល់និស្សិត។ ជាមួយគ្រូបង្រៀនមានបទពិសោធន៍
+                                និងកម្មវិធីសិក្សាចម្រុះ វាមានបេសកកម្មបណ្តុះបណ្តាលយុវជនឱ្យក្លាយជាអ្នកជំនាញ
+                                និងចូលរួមអភិវឌ្ឍសង្គម។    
+                            </p>
+                            <button class="btn btn-outline-dark-blue">វិទ្យាសាស្រ្ត</button>
+                            <button class="btn btn-dark-blue">សង្គម</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
                         <!-- University section -->
                         <section class="py-4">
-                            <h2 class="section-title">សកលវិទ្យាល័យ</h2>
+                            <!-- <h2 class="section-title">សកលវិទ្យាល័យ</h2>
                             <p class="section-description">សូមអញ្ជើញអានព័ត៌មានបន្ថែមអំពីការគ្រប់គ្រងអាជីវកម្ម
-                                និងវិស័យផ្សេងៗ។</p>
+                                និងវិស័យផ្សេងៗ។</p> -->
 
                             <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
+                                <div class="swiper-wrapper py-10">
 
                                     <!-- Card 1 -->
-                                    <div class="swiper-slide bg-card-theme">
-                                        <a href="majordetail.html" class="text-decoration-none bg-card-theme">
-                                            <div class="card">
+                                    <div class="swiper-slide bg-body-theme">
+                                        <a href="majordetail.html" class="text-decoration-none bg-body-theme">
+                                            <div class="card bg-body-theme border-0">
                                                 <img src="https://rupp.edu.kh/fs/image_banner/mainfaculty1.jpg" alt="">
 
                                             </div>
@@ -80,9 +366,9 @@
                                     </div>
 
                                     <!-- Card 2 -->
-                                    <div class="swiper-slide bg-card-theme">
+                                    <div class="swiper-slide bg-body-theme">
                                         <a href="majordetail.html" class="text-decoration-none">
-                                            <div class="card">
+                                            <div class="card bg-body-theme border-0">
                                                 <img src="https://www.puc.edu.kh/wp-content/uploads/2024/09/TK-scaled.jpg"
                                                     alt="">
                                             </div>
@@ -90,9 +376,9 @@
                                     </div>
 
                                     <!-- Card 3 -->
-                                    <div class="swiper-slide bg-card-theme">
+                                    <div class="swiper-slide bg-body-theme">
                                         <a href="majordetail.html" class="text-decoration-none">
-                                            <div class="card bg-card-theme">
+                                            <div class="card bg-body-theme border-0">
                                                 <img src="https://live.staticflickr.com/65535/53876310032_340251a972_b.jpg"
                                                     alt="">
                                             </div>
@@ -100,9 +386,9 @@
                                     </div>
 
                                     <!-- Card 4 -->
-                                    <div class="swiper-slide bg-card-theme">
+                                    <div class="swiper-slide bg-body-theme">
                                         <a href="majordetail.html" class="text-decoration-none">
-                                            <div class="card bg-card-theme">
+                                            <div class="card bg-body-theme border-0">
                                                 <img src="https://www.aupp.edu.kh/wp-content/uploads/AUPP-Building.jpg"
                                                     alt="">
                                             </div>
@@ -110,9 +396,9 @@
                                     </div>
 
                                     <!-- Card 5 -->
-                                    <div class="swiper-slide bg-card-theme">
+                                    <div class="swiper-slide bg-body-theme">
                                         <a href="majordetail.html" class="text-decoration-none">
-                                            <div class="card bg-card-theme">
+                                            <div class="card bg-body-theme border-0">
                                                 <img src="https://kirirominstituteoftechnology.wordpress.com/wp-content/uploads/2024/07/image-78.png?w=1024"
                                                     alt="">
                                             </div>
@@ -127,15 +413,15 @@
                 </div>
             </div>
         </section>
+        
 
-        <!-- Theme toggle button -->
-        <button class="theme-toggle" id="themeToggle">🌙</button>
     </main>
 </body>
 
-<script src="asset/js/bootstrap.bundle.min.js"></script>
+<script src="../../js/bootstrap.bundle.min.js"></script>
 <!-- aos link -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../js/script-folder.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- Initialize Swiper -->
 <script src="../js/script-folder.js"></script>
@@ -167,21 +453,7 @@
                 spaceBetween: 50,
             },
         },
-    });
-
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-
-    themeToggle.addEventListener('click', () => {
-        if (body.getAttribute('data-bs-theme') === 'light') {
-            body.setAttribute('data-bs-theme', 'dark');
-            themeToggle.textContent = '☀️';
-        } else {
-            body.setAttribute('data-bs-theme', 'light');
-            themeToggle.textContent = '🌙';
-        }
-    });
+    })  
 </script>
 
 </html>
