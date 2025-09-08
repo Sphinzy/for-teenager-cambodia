@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ស្វែងរកអាហារូបករណ៏ក្នុងស្រុក</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- aos link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- swiper  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- iconlogo -->
+    <link rel="icon" href="../../image/project-logo/logo02.png">
+</head>
+
+<body>
+    <header class="sticky-top z-3">
+        <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" src="../../image/project-logo/logo01.png" alt="Logo" style="width: 75px;">
+                </a>
+                <div class="d-flex">
+                    <!-- profile lg-none  -->
+                    <div class="d-flex justify-content-end align-items-center d-flex d-lg-none bg-body-theme">
+                        <button id="themeToggle" class="theme-toggle border-0 bg-transparent">
+                            <i id="themeIcon" class="bi bi-brightness-high-fill icon-animate"></i>
+                        </button>
+                        <!-- notification  -->
+                        <div class="dropdown">
+                            <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-bell px-2 position-relative fs-5">
+                                    <span
+                                        class="position-absolute translate-middle bg-danger border border-light rounded-circle"
+                                        style="left: 21px; padding: 3px; top: 1px;">
+                                        <span class="visually-hidden">New alerts</span>
+                                    </span>
+                                </i>
+                            </a>
+
+                            <ul class="dropdown-menu ms-n20 border-0 shadow-lg">
+                                <li>
+                                    <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
+                                        style="width: 320px;">
+                                        <div class="p-2">
+                                            <h5>សារជូនដំណឹង</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- list notification  -->
+                                <li>
+                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt="">
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
+                                                molestiae!
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt="">
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
+                                                molestiae!
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt="">
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
+                                                molestiae!
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <div>
+                                    <a href="../profile/notification.html"
+                                        class="nav-link text-end text-primary p-2 pe-4">See all</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <!-- profile  -->
+                        <div class="profile">
+                            <a href="../profile/proflie.html">
+                                <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
+                                    class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                    alt />
+                            </a>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- silde bar  -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <div class="d-flex justify-content-end align-items-center d-flex d-lg-none" role="search">
+                            <!-- profile  -->
+                            <div class="profile">
+                                <a href="../profile/proflie.html">
+                                    <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
+                                        class="img-fluid rounded-circle object-fit-cover"
+                                        style="width: 40px; height: 40px;" alt />
+                                </a>
+                            </div>
+                            <h5 class="pt-3 ps-2">សួស្តី!​​ តុលា</h5>
+                        </div>
+
+                        <h5 class="offcanvas-title bg-body-theme" id="offcanvasNavbarLabel">
+                            <a class="navbar-brand" href="#"><img src="assets/image/logo.png" class="img-fluid"
+                                    style="width: 60px" alt /></a>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body bg-body-theme align-items-center">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active px-3" aria-current="page" href="../home.html"><i
+                                        class="bi bi-house-fill mx-1"></i>ទំព័រដើម</a>
+                            </li>
+                            <div class="dropdown">
+                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-lightbulb-fill mx-1"></i>តម្រង់ទិស
+                                </a>
+
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href="../../page/direction/major.html">មុខជំនាញ</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="university.html">សកលវិទ្យាល័យ</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-mortarboard-fill mx-1"></i>អាហារូបករណ៍
+                                </a>
+
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item"
+                                            href="../schoolarship/schoolarship-in.html">អាហារូបករណ៍ក្នងស្រុក</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="../schoolarship/schoolarship-out.html">អាហារូបករណ៍ក្រៅស្រុក</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-buildings-fill me-1"></i>ឱកាសការងារ
+                                </a>
+
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងាររដ្ឋ</a></li>
+                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងារឯកជន</a></li>
+                                    <li><a class="dropdown-item" href="../work/volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- profile lg-flex  -->
+                <div class="d-flex justify-content-end align-items-center d-none d-lg-flex">
+                    <button id="themeToggle2" class="theme-toggle border-0 bg-transparent">
+                        <i id="themeIcon2" class="bi bi-brightness-high-fill icon-animate"></i>
+                    </button>
+                    <!-- notification  -->
+                    <div class="dropdown">
+                        <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-bell px-2 position-relative fs-5">
+                                <span
+                                    class="position-absolute translate-middle bg-danger border border-light rounded-circle"
+                                    style="left: 21px; padding: 4px; top: 1px;">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </i>
+                        </a>
+
+                        <ul class="dropdown-menu ms-n20 border-0 shadow-lg bg-body-theme" data-bs-theme="light">
+                            <li>
+                                <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
+                                    style="width: 320px;">
+                                    <div class="p-2">
+                                        <h5>សារជូនដំណឹង</h5>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- list notification  -->
+                            <li>
+                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <div>
+                                <a href="../profile/notification.html"
+                                    class="nav-link text-end text-primary p-2 pe-4">See all</a>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- profile  -->
+                    <div class="profile">
+                        <a href="../profile/proflie.html">
+                            <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
+                                class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                alt />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Scholarship Detail -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm bg-card-theme border-0">
+                        <div class="card-header bg-footer text-white">
+                            <h2 class="mb-0">អាហារូបករណ៍រដ្ឋាភិបាលអូស្ត្រាលី</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <span class="badge bg-success me-2">បរិញ្ញាបត្រ</span>
+                                <span class="badge bg-info me-2">វិស័យ: វិទ្យាសាស្ត្រ</span>
+                                <span class="badge bg-warning text-dark">បិទ: ៣០ មិថុនា</span>
+                            </div>
+
+                            <h4><i class="bi bi-info-circle"></i> ព័ត៌មានទូទៅ</h4>
+                            <p>អាហារូបករណ៍ពេញលេញសម្រាប់និស្សិតកម្ពុជាសិក្សានៅសាកលវិទ្យាល័យអូស្ត្រាលី។
+                                អាហារូបករណ៍នេះគ្របដណ្តប់ថ្លៃសិក្សា ថ្លៃជួលផ្ទះ និងប្រាក់ឧបត្ថម្ភរស់នៅប្រចាំខែ។</p>
+
+                            <h4><i class="bi bi-award"></i> តម្លៃអាហារូបករណ៍</h4>
+                            <ul>
+                                <li>ថ្លៃសិក្សាពេញលេញ</li>
+                                <li>ប្រាក់ឧបត្ថម្ភរស់នៅ: AUD$20,000 ក្នុងមួយឆ្នាំ</li>
+                                <li>ថ្លៃធ្វើបទភ្ជាប់វីសា</li>
+                                <li>ធានារ៉ាប់រងសុខភាព</li>
+                            </ul>
+
+                            <h4><i class="bi bi-clipboard-check"></i> លក្ខខណ្ឌសម្រាប់ដាក់ពាក្យ</h4>
+                            <ul>
+                                <li>ជានិស្សិតកម្ពុជា</li>
+                                <li>មានសញ្ញាបត្របរិញ្ញាបត្រ ឬស្មើនឹង</li>
+                                <li>មានលទ្ធភាពសិក្សានៅអូស្ត្រាលី</li>
+                                <li>មានលទ្ធភាពផ្តល់ឯកសារគាំទ្រ</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-end">
+                            <a href="#" class="btn btn-primary">ដាក់ពាក្យឥឡូវនេះ</a>
+                            <a href="../schoolarship/schoolarship-in.html" class="btn btn-secondary">ត្រឡប់ក្រោយ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="col-lg-12">
+                        <div class="card shadow-sm mb-4 bg-card-theme border-0">
+                            <div class="card-header bg-secondary text-white">
+                                <h5 class="mb-0">ព័ត៌មានទាក់ទង</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>អាសយដ្ឋាន:</strong> 123 ផ្លូវសាកលវិទ្យាល័យ, ភ្នំពេញ, កម្ពុជា</p>
+                                <p><strong>ទូរស័ព្ទ:</strong> +855 23 123 456</p>
+                                <!-- <p><strongអ៊ីមែល:</strong></p> -->
+                                <!-- <a href="mailto: -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-img" style="height: 400px;">
+                                <img src="https://collegeconfidential.com/wp-content/uploads/2025/02/a-scholarship-search-for-savvy-students-1024x408.webp"
+                                    alt="" class="img-fluid object-fit-cover"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-footer text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>អំពីពួកយើង</h5>
+                    <p>វេបសាយនេះមានគោលបំណងផ្តល់ព័ត៌មានអំពីអាហារូបករណ៍ និងឱកាសការងារសម្រាប់យុវជនកម្ពុជា។</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>ទំនាក់ទំនង</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt-fill me-2"></i>123 ផ្លូវសាកលវិទ្យាល័យ, ភ្នំពេញ, កម្ពុជា</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>+855 23 123 456</li>
+                        <li><i class="bi bi-envelope-fill me-2"> schoolarship@gmail.com </i></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>តាមដានពួកយើង</h5>
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<!-- aos link -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../js/script-folder.js"></script>
+
+</html>
