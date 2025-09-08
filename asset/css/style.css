@@ -30,10 +30,14 @@ body[data-bs-theme="light"] {
 
 /* Dark mode */
 body[data-bs-theme="dark"] {
-  --bs-body-bg: #212529;    /* Body background */
-  --bs-body-color: #f2f2f2; /* Text color */
-  --bs-card-bg: #212529;    /* Card = dark like body */
-  --bs-card-color: #e6e6e6; /* Card text = white */
+    --bs-body-bg: #212529;
+    /* Body background */
+    --bs-body-color: #e6e6e6;
+    /* Text color */
+    --bs-card-bg: #212529;
+    /* Card = dark like body */
+    --bs-card-color: #e6e6e6;
+    /* Card text = white */
 }
 
 /* Custom theme for cards */
@@ -45,8 +49,10 @@ body[data-bs-theme="light"] .bg-card-theme {
 }
 
 body[data-bs-theme="dark"] .bg-card-theme {
-  background-color: #1d263e !important;  /* Dark in dark mode */
-  color: #e6e6e6 !important;             /* White text */
+    background-color: #1d263e !important;
+    /* Dark in dark mode */
+    color: #e6e6e6 !important;
+    /* White text */
 }
 
 
@@ -68,7 +74,7 @@ body[data-bs-theme="dark"] .bg-card-theme {
 btn-outline-dark-blue  */
 
 /* dark blue btn light mode  */
-body[data-bs-theme="light"] .btn-dark-blue{
+body[data-bs-theme="light"] .btn-dark-blue {
     width: fit-content;
     border-radius: 5px !important;
     background-color: #1d263e !important;
@@ -76,13 +82,15 @@ body[data-bs-theme="light"] .btn-dark-blue{
     font-weight: 500;
 
 }
-body[data-bs-theme="light"] .btn-dark-blue:hover{
+
+body[data-bs-theme="light"] .btn-dark-blue:hover {
     width: fit-content;
     background-color: #343c53 !important;
     transition: all 0.3s ease;
     font-weight: 500;
 }
-body[data-bs-theme="light"] .btn-outline-dark-blue{
+
+body[data-bs-theme="light"] .btn-outline-dark-blue {
     width: fit-content;
     border: 1px solid #1d263e !important;
     border-radius: 5px !important;
@@ -91,7 +99,8 @@ body[data-bs-theme="light"] .btn-outline-dark-blue{
     font-weight: 500;
     transition: all 0.3s ease;
 }
-body[data-bs-theme="light"] .btn-outline-dark-blue:hover{
+
+body[data-bs-theme="light"] .btn-outline-dark-blue:hover {
     width: fit-content;
     border: 1px solid #1d263e !important;
     border-radius: 5px !important;
@@ -102,7 +111,7 @@ body[data-bs-theme="light"] .btn-outline-dark-blue:hover{
 }
 
 /* dark blue btn dark mode*/
-body[data-bs-theme="dark"] .btn-dark-blue{
+body[data-bs-theme="dark"] .btn-dark-blue {
     width: fit-content;
     border-radius: 5px !important;
     background-color: #212529 !important;
@@ -110,7 +119,8 @@ body[data-bs-theme="dark"] .btn-dark-blue{
     font-weight: 500;
     transition: all 0.3s ease;
 }
-body[data-bs-theme="dark"] .btn-dark-blue:hover{
+
+body[data-bs-theme="dark"] .btn-dark-blue:hover {
     width: fit-content;
     border-radius: 5px !important;
     background-color: #33373b !important;
@@ -118,7 +128,8 @@ body[data-bs-theme="dark"] .btn-dark-blue:hover{
     font-weight: 500;
 
 }
-body[data-bs-theme="dark"] .btn-outline-dark-blue{
+
+body[data-bs-theme="dark"] .btn-outline-dark-blue {
     width: fit-content;
     border: 1px solid #fff !important;
     border-radius: 5px !important;
@@ -127,7 +138,8 @@ body[data-bs-theme="dark"] .btn-outline-dark-blue{
     font-weight: 500;
     transition: all 0.3s ease;
 }
-body[data-bs-theme="dark"] .btn-outline-dark-blue:hover{
+
+body[data-bs-theme="dark"] .btn-outline-dark-blue:hover {
     width: fit-content;
     border: 1px solid #fff !important;
     border-radius: 5px !important;
@@ -183,6 +195,13 @@ body[data-bs-theme="dark"] .btn-outline-dark-blue:hover{
     font-size: 10px;
 }
 
+.clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -203,6 +222,27 @@ body[data-bs-theme="dark"] .btn-outline-dark-blue:hover{
     display: -webkit-box;
     -webkit-line-clamp: 4;
     /* Number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.clamp-5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.clamp-6 {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.clamp-7 {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -269,28 +309,26 @@ body[data-bs-theme="dark"] .btn-outline-dark-blue:hover{
     transform: translateY(-5px) !important;
     color: #171515 !important;
 }
-<<<<<<< HEAD
     /* Default (inactive) bullets */
 .swiper-pagination-bullet {
-  background: #ccc !important; /* gray for inactive */
-  opacity: 1 !important;       /* make sure it's visible */
+    background: #ccc !important;
+    /* gray for inactive */
+    opacity: 1 !important;
+    /* make sure it's visible */
 }
 
 /* Active bullet */
 .swiper-pagination-bullet-active {
-  background: #212529 !important; /* Bootstrap "danger" red */
+    background: #212529 !important;
+    /* Bootstrap "danger" red */
 }
-body[data-bs-theme="dark"] .swiper-pagination-bullet{
-    background: #1d263e !important; /* gray for inactive */
-    opacity: 1 !important; 
+
+body[data-bs-theme="dark"] .swiper-pagination-bullet {
+    background: #1d263e !important;
+    /* gray for inactive */
+    opacity: 1 !important;
 }
+
 body[data-bs-theme="dark"] .swiper-pagination-bullet-active {
   background: #ccc !important; /* Bootstrap "danger" red */
-=======
-
-@media screen and (max-width: 768px) {
-    .aside {
-        display: none !important;
-    }
->>>>>>> ab4148273d869675e059fb0051e7301b23a06b22
 }
