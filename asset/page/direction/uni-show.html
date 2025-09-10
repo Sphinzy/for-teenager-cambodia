@@ -18,40 +18,6 @@
     <!-- swiper  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<style>
-    /* Card style */
-    .swiper-slide .card {
-        width: 100%;
-        max-width: 250px;
-        height: 400px;
-        transform: scale(0.85);
-        opacity: 0.6;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    /* Active (center) card */
-    .swiper-slide-active .card {
-        transform: scale(1);
-        opacity: 1;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    }
-
-    /* Add padding for space on left/right */
-    .mySwiper {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    /* Make cards smaller on small screens */
-    @media (max-width: 576px) {
-        .swiper-slide .card {
-            max-width: 200px;
-            height: 320px;
-        }
-    }
-</style>
 
 <body class="bg-body-theme" data-bs-theme="light">
     <header class="sticky-top z-3">
@@ -234,7 +200,7 @@
                     <div class="dropdown">
                         <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <i class="bi bi-bell position-relative fs-5">
+                            <i class="bi bi-bell px-2 position-relative fs-5">
                                 <span
                                     class="position-absolute translate-middle bg-danger border border-light rounded-circle"
                                     style="left: 21px; padding: 4px; top: 1px;">
@@ -245,61 +211,58 @@
                         </a>
 
                         <ul class="dropdown-menu ms-n20 border-0 shadow-sm">
-                                <li>
-                                    <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
-                                        style="width: 320px;">
-                                        <div class="p-2">
-                                            <h5>សារជូនដំណឹង</h5>
-                                        </div>
+                            <li>
+                                <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
+                                    style="width: 320px;">
+                                    <div class="p-2">
+                                        <h5>សារជូនដំណឹង</h5>
                                     </div>
-                                </li>
-
-                                <!-- list notification  -->
-                                <li>
-                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="../../image/project-logo/pf-2.svg"
-                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt>
-                                        <div class="notification">
-                                            <p class="text clamp-2">
-                                                ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
-                                            </p>
-                                        </div>
-                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="../../image/project-logo/pf-3.jpg"
-                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt>
-                                        <div class="notification">
-                                            <p class="text clamp-2">
-                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
-                                            </p>
-                                        </div>
-                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="../../image/project-logo/pf-1.png"
-                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt>
-                                        <div class="notification">
-                                            <p class="text clamp-2">
-                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
-                                            </p>
-                                        </div>
-                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
-                                    </a>
-                                </li>
-                                <div>
-                                    <a href="../profile/notification.html"
-                                        class="nav-link text-end text-primary p-2 pe-4">See
-                                        all</a>
                                 </div>
-                            </ul>
+                            </li>
+
+                            <!-- list notification  -->
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-2.svg" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-3.jpg" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-1.png" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <div>
+                                <a href="../profile/notification.html"
+                                    class="nav-link text-end text-primary p-2 pe-4">See
+                                    all</a>
+                            </div>
+                        </ul>
                     </div>
                     <!-- profile  -->
                     <div class="profile">
@@ -315,244 +278,95 @@
     </header>
 
     <main>
-        <section>
-            <div class="container py-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5">
-                        <div class="py-15">
-                            <h1 class="display-4 fw-medium clamp-2">
-                                ការស្វែងយល់អំពីសកលវិទ្យាល័យ
-                            </h1>
-                            <p class="py-3 clamp-4">
-                                សាកលវិទ្យាល័យ ជាស្ថាប័នអប់រំខ្ពស់មួយនៅកម្ពុជា
-                                ដែលផ្តល់ការសិក្សាមានគុណភាព និងជំនាញអនុវត្តន៍ដល់និស្សិត។ ជាមួយគ្រូបង្រៀនមានបទពិសោធន៍
-                                និងកម្មវិធីសិក្សាចម្រុះ វាមានបេសកកម្មបណ្តុះបណ្តាលយុវជនឱ្យក្លាយជាអ្នកជំនាញ
-                                និងចូលរួមអភិវឌ្ឍសង្គម។
-                            </p>
-                            <button class="btn btn-outline-dark-blue">វិទ្យាសាស្រ្ត</button>
-                            <button class="btn bg-footer text-white px-4 fw-medium">សង្គម</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 d-none d-lg-block">
-                        <!-- University section -->
-                        <section class="py-4">
-                            <!-- <h2 class="section-title">សកលវិទ្យាល័យ</h2>
-                            <p class="section-description">សូមអញ្ជើញអានព័ត៌មានបន្ថែមអំពីការគ្រប់គ្រងអាជីវកម្ម
-                                និងវិស័យផ្សេងៗ។</p> -->
+        <section class="my-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hero-banner position-relative d-flex justify-content-center align-items-center">
 
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper py-10">
+                            <!-- Swiper -->
+                            <div class="swiper mySwiper autoSwiper">
+                                <div class="swiper-wrapper">
 
-                                    <!-- Card 1 -->
-                                    <div class="swiper-slide bg-body-theme">
-                                        <a href="majordetail.html" class="text-decoration-none bg-body-theme">
-                                            <div class="card bg-body-theme border-0">
-                                                <img src="https://rupp.edu.kh/fs/image_banner/mainfaculty1.jpg" alt="">
+                                    <!-- Slide 1 -->
+                                    <div class="swiper-slide rounded-4 overflow-hidden position-relative">
+                                        <!-- Image (lowest) -->
+                                        <img src="../../image/university/nu.jpg"
+                                            class="img-fluid object-fit-cover w-100 rounded-4 position-relative z-1"
+                                            style="width: 100%; height: 500px;" alt="">
 
-                                            </div>
-                                        </a>
+                                        <!-- Overlay (middle) -->
+                                        <div
+                                            class="overlay bg-black opacity-25 position-absolute top-0 start-0 w-100 h-100 rounded-4 z-2">
+                                        </div>
+
+                                        <!-- Title (top) -->
+                                        <h1
+                                            class="banner-title text-white display-5 fw-bold text-center position-absolute top-50 start-50 translate-middle z-3">
+                                            សាកលវិទ្យាល័យន័រតុន
+                                        </h1>
                                     </div>
 
-                                    <!-- Card 2 -->
-                                    <div class="swiper-slide bg-body-theme">
-                                        <a href="majordetail.html" class="text-decoration-none">
-                                            <div class="card bg-body-theme border-0">
-                                                <img src="https://www.puc.edu.kh/wp-content/uploads/2024/09/TK-scaled.jpg"
-                                                    alt="">
-                                            </div>
-                                        </a>
+                                    <!-- Slide 2 -->
+                                    <div class="swiper-slide rounded-4 overflow-hidden position-relative">
+                                        <img src="../../image/university/rupp.jpg"
+                                            class="img-fluid object-fit-cover w-100 rounded-4 position-relative z-1"
+                                            style="width: 100%; height: 500px;" alt="">
+
+                                        <div
+                                            class="overlay bg-black opacity-25 position-absolute top-0 start-0 w-100 h-100 rounded-4 z-2">
+                                        </div>
+
+                                        <h1
+                                            class="banner-title text-white display-5 fw-bold text-center position-absolute top-50 start-50 translate-middle z-3">
+                                            សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ
+                                        </h1>
                                     </div>
 
-                                    <!-- Card 3 -->
-                                    <div class="swiper-slide bg-body-theme">
-                                        <a href="majordetail.html" class="text-decoration-none">
-                                            <div class="card bg-body-theme border-0">
-                                                <img src="https://live.staticflickr.com/65535/53876310032_340251a972_b.jpg"
-                                                    alt="">
-                                            </div>
-                                        </a>
+                                    <!-- Slide 3 -->
+                                    <div class="swiper-slide rounded-4 overflow-hidden position-relative">
+                                        <img src="../../image/university/aupp.jpg"
+                                            class="img-fluid object-fit-cover w-100 rounded-4 position-relative z-1"
+                                            style="width: 100%; height: 500px;" alt="">
+
+                                        <div
+                                            class="overlay bg-black opacity-25 position-absolute top-0 start-0 w-100 h-100 rounded-4 z-2">
+                                        </div>
+
+                                        <h1
+                                            class="banner-title text-white display-5 fw-bold text-center position-absolute top-50 start-50 translate-middle z-3">
+                                            សាកលវិទ្យាល័យអាមេរិកាំងភ្នំពេញ
+                                        </h1>
                                     </div>
 
-                                    <!-- Card 4 -->
-                                    <div class="swiper-slide bg-body-theme">
-                                        <a href="majordetail.html" class="text-decoration-none">
-                                            <div class="card bg-body-theme border-0">
-                                                <img src="https://www.aupp.edu.kh/wp-content/uploads/AUPP-Building.jpg"
-                                                    alt="">
-                                            </div>
-                                        </a>
-                                    </div>
+                                    <!-- Slide 4 -->
+                                    <div class="swiper-slide rounded-4 overflow-hidden position-relative">
+                                        <img src="../../image/university/kit.jpeg"
+                                            class="img-fluid object-fit-cover w-100 rounded-4 position-relative z-1"
+                                            style="width: 100%; height: 500px;" alt="">
 
-                                    <!-- Card 5 -->
-                                    <div class="swiper-slide bg-body-theme">
-                                        <a href="majordetail.html" class="text-decoration-none">
-                                            <div class="card bg-body-theme border-0">
-                                                <img src="https://kirirominstituteoftechnology.wordpress.com/wp-content/uploads/2024/07/image-78.png?w=1024"
-                                                    alt="">
-                                            </div>
-                                        </a>
+                                        <div
+                                            class="overlay bg-black opacity-25 position-absolute top-0 start-0 w-100 h-100 rounded-4 z-2">
+                                        </div>
+
+                                        <h1
+                                            class="banner-title text-white display-5 fw-bold text-center position-absolute top-50 start-50 translate-middle z-3">
+                                            វិទ្យាស្ថានបច្ចេកវិទ្យាគិរីរម្យ
+                                        </h1>
                                     </div>
 
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
-                        </section>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
-
-        <section class="py-10">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card bg-card-theme border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="bi bi-mortarboard-fill display-4"></i>
-                                <h4 class="card-title clamp-1">
-                                    ការអប់រំមានគុណភាព
-                                </h4>
-                                <p class="card-text clamp-3">
-                                    ផ្តល់កម្មវិធីសិក្សាដែលមានរចនាបថល្អ និងបង្រៀនដោយគ្រូមានបទពិសោធន៍
-                                    ដើម្បីឲ្យនិស្សិតទទួលបានទាំងចំណេះដឹងទ្រឹស្តី និងជំនាញអនុវត្ត។
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card bg-card-theme border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="bi bi-search display-4"></i>
-                                <h4 class="card-title clamp-1">
-                                    ការស្រាវជ្រាវ និងច្នៃប្រឌិត
-                                </h4>
-                                <p class="card-text clamp-3">
-                                    ជំរុញឲ្យនិស្សិតមានការច្នៃប្រឌិត និងដោះស្រាយបញ្ហាតាមរយៈគម្រោងស្រាវជ្រាវ មន្ទីរពិសោធន៍
-                                    និងកិច្ចសហប្រតិបត្តិការជាមួយសង្គម។
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card bg-card-theme border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="bi bi-bar-chart-fill display-4"></i>
-                                <h4 class="card-title clamp-1">
-                                    ការអភិវឌ្ឍនិស្សិត និងឱកាសអនាគត
-                                </h4>
-                                <p class="card-text clamp-3">
-                                    សាកលវិទ្យាល័យក៏បណ្តុះបណ្តាលជំនាញដឹកនាំ ការធ្វើការជាក្រុម និងការទំនាក់ទំនង
-                                    ដើម្បីបង្កើតឱកាសសិក្សាបន្ត អាហារូបករណ៍ និងអាជីពអនាគត។
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-15">
-            <div class="container">
-                <div class="row g-5">
-                    <h4>អ្វីទៅជាជំនាញ</h4>
-
-                    <div class="col-lg-12">
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <a href="uni-show.html">
-                                    <div class="card bg-card-theme border-0 shadow-sm ">
-                                    <img src="../../image/university/science-major.png" class="card-img" style="width: 100%; height: 240px; object-fit: cover;" alt="">
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-md-8">
-                                <a href="uni-show.html" class="text-decoration-none bg-card-theme">
-                                    <div class="card bg-card-theme border-0 shadow-sm">
-                                    <div class="card-body py-6 px-5">
-                                        <h4 class="card-title clamp-1">
-                                            អ្វីទៅជាជំនាញវិទ្យាសាស្ត្រ?
-                                        </h4>
-                                        <p class="card-text clamp-3 my-3">
-                                            ជំនាញវិទ្យាសាស្ត្រ គឺជាវិស័យសិក្សានៅសាកលវិទ្យាល័យ ឬវិទ្យាស្ថាន3
-                                            ដែលផ្តោតលើការយល់ដឹងអំពី ធម្មជាតិ ពិភពលោក និងជីវិត តាមរយៈ ការសង្កេត
-                                            ការស្រាវជ្រាវ និងការពិសោធន៍។
-                                            វាជួយអោយនិស្សិតអភិវឌ្ឍ ជំនាញគិតវិភាគ ការដោះស្រាយបញ្ហា និងជំនាញស្រាវជ្រាវ។
-                                        </p>
-                                        <a href="uni-show.html" class="bg-card-theme">
-                                            មើលបន្ថែម
-                                            <i class="bi bi-arrow-right-short"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="row g-3">
-                            <div class="col-md-8">
-                                <a href="uni-show.html"  class="text-decoration-none bg-card-theme">
-                                    <div class="card bg-card-theme border-0 shadow-sm">
-                                    <div class="card-body py-8 px-5">
-                                        <h4 class="card-title clamp-1">
-                                            អ្វីទៅជាវិទ្យាសាស្ត្រសង្គម?
-                                        </h4>
-                                        <p class="card-text clamp-3 my-3">
-                                            វិទ្យាសាស្ត្រសង្គម គឺជាវិស័យសិក្សាដែលផ្តោតលើ មនុស្ស សង្គម
-                                            និងទំនាក់ទំនងរបស់មនុស្សក្នុងសង្គម។ វាអនុវត្តន៍ ការស្រាវជ្រាវ ការវិភាគ
-                                            និងការបកស្រាយ ដើម្បីយល់អំពីរបៀបរស់នៅ របៀបគិត និងអាកប្បកិរិយារបស់មនុស្ស។
-                                        </p>
-                                        <a href="uni-show.html" class="bg-card-theme">
-                                            មើលបន្ថែម
-                                            <i class="bi bi-arrow-right-short"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <a href="uni-show.html">
-                                    <div class="card bg-card-theme border-0 shadow-sm">
-                                    <img src="../../image/university/social.webp" class="card-img" style="width: 100%; height: 240px; object-fit: cover;" alt="">
-                                </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="pb-20">
-            <div class="container">
-                <div class="row bg-card-theme">
-                    <div class="col-lg-8">
-                        <div class="card border-0 bg-card-theme">
-                            <div class="py-10 px-10">
-                                <h5 class="card-title clamp-2 my-3">“ការអប់រំគឺជាអាវុធដ៏មានអំណាចបំផុត
-                                    ដែលអាចប្រើប្រាស់ដើម្បីផ្លាស់ប្ដូរពិភពលោកបាន។”</h5>
-                                <h5 class="card-title clamp-2 my-3">“សាកលវិទ្យាល័យ មិនមែនគ្រាន់តែជាកន្លែងរៀនទេ
-                                    ប៉ុន្តែជាកន្លែងដែលក្តីសុបិន្តកើតមាន និងអ្នកដឹកនាំត្រូវបានបង្កើត។”</h5>
-                                <h5 class="card-title clamp-2 my-3">“ចំណេះដឹងនឹងនាំឱ្យអ្នកមានឱកាសធ្វើឱ្យមានការផ្លាស់ប្ដូរ។”
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card align-items-center border-0 bg-card-theme">
-                            <img src="../../image/university/group.png" class="card-img w-75" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <footer class="bg-footer ">
+    <!-- <footer class="bg-footer ">
         <div class="container py-5">
             <div class="row text-white">
                 <div class="col-11 col-lg-5 col-xl-4">
@@ -646,7 +460,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 <script src="../../js/bootstrap.bundle.min.js"></script>
@@ -658,33 +472,22 @@
 <script src="../js/script-folder.js"></script>
 <script>
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
-        centeredSlides: true,
+        effect: "fade",
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 50,
-            },
-        },
-    })  
+    });
 </script>
 
 </html>
