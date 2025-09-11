@@ -1,4 +1,13 @@
 @import url("../css/bootstrap.css");
+
+.shadow {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow-inset {
+  box-shadow: 0 0 15px 0 rgb(from var(--bs-black) r g b / 0.1) inset;
+}
+
 .pfp {
   width: 100px;
   height: 100px;
@@ -32,12 +41,33 @@
   }
 }
 
-.shadow {
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1) !important;
+.setting {
+  height: fit-content;
+  position: relative;
 }
 
-.shadow-inset {
-  box-shadow: 0 0 15px 0 rgb(from var(--bs-black) r g b / 0.1) inset;
+.setting::after {
+  content: "Setting";
+  background-color: hsl(from #1d263e h s calc(l + 10));
+  color: white;
+  padding-inline: 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  transform: translateX(50%);
+  margin: auto;
+  transition: scale .1s ease-in-out;
+  scale: 0;
+}
+
+.setting:hover::after {
+  visibility: visible;
+  opacity: 1;
+  scale: 1;
 }
 
 .pfp-name {
