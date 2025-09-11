@@ -20,13 +20,51 @@
     <!-- iconlogo -->
     <link rel="icon" href="../../image/project-logo/logo02.png">
 </head>
-<style>
-    .swiper {
-      /* margin: 100px auto; */
-      width: 100%;
-      height: 250px;
-    }
 
+<div class="toast-container toast toast-body"></div>
+<style>
+        .required-field::after {
+            content: "*";
+            color: red;
+            margin-left: 3px;
+        }
+        .toast-container{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1055;
+        }
+        .success-icon {
+            font-size: 5rem;
+            color: #28a745;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .loading-spinner {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            vertical-align: -0.125em;
+            border: 0.2em solid currentColor;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: .75s linear infinite spinner-border;
+        }
+        @keyframes spinner-border {
+            to { transform: rotate(360deg); }
+        }
+        .btn-outline-dark-blue {
+            border-color: #1a5a9d;
+            color: #1a5a9d;
+        }
+        .btn-outline-dark-blue:hover {
+            background-color: #1a5a9d;
+            color: white;
+        }
 </style>
 <body class="bg-body-theme" data-bs-theme="light">
     <header class="sticky-top z-3">
@@ -337,92 +375,151 @@
                                     <li>មានលទ្ធភាពផ្តល់ឯកសារគាំទ្រ</li>
                                 </ul>
                             </div>
-                            <!-- <section>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                        <div class="mb-3">
-                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="message-text" class="col-form-label">Message:</label>
-                                            <textarea class="form-control" id="message-text"></textarea>
-                                        </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Send message</button>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </section> -->
-                            <div class="card-footer text-end">
+                            <div class="card-footer bg-card-theme">
+                                <div class="text-end">
                                     <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#scholarshipModal">
                                         ដាក់ពាក្យឥឡូវនេះ
                                     </button>
-                                <!-- <a href="#" class="btn btn-dark-blue">ដាក់ពាក្យឥឡូវនេះ</a> -->
-                                <a href="../schoolarship/schoolarship-in.html" class="btn btn-outline-dark-blue">ត្រឡប់ក្រោយ</a>
+                                    <!-- <a href="#" class="btn btn-dark-blue">ដាក់ពាក្យឥឡូវនេះ</a> -->
+                                    <a href="../schoolarship/schoolarship-in.html" class="btn btn-outline-dark-blue text-end">ត្រឡប់ក្រោយ</a>
+                                </div>
+
                                 <!-- Modal -->
                                 <div class="modal fade" id="scholarshipModal" tabindex="-1" aria-labelledby="scholarshipModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="scholarshipModalLabel">ពាក្យស្នើសុំអាហារូបករណ៍</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <form>
-                                    <div class="modal-body">
-                                        <div class="mb-3">
-                                            <label for="fullName" class="form-label">ឈ្មោះពេញ</label>
-                                            <input type="text" class="form-control" id="fullName" name="fullName" required />
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-footer text-white">
+                                                <h5 class="modal-title" id="scholarshipModalLabel"><i class="bi bi-mortarboard-fill me-2"></i>ទម្រង់ស្នើសុំអាហារូបករណ៍</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body bg-card-theme">
+                                                <form id="scholarshipForm">
+                                                    <div class="mb-4">
+                                                        <h5 class="section-title">ព័ត៌មានផ្ទាល់ខ្លួន</h5>
+                                                        <div class="row">
+                                                            <div class="col-md-6 mb-3">
+                                                                <label for="firstName" class="form-label required-field">នាម</label>
+                                                                <input type="text" class="form-control" id="firstName" required>
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label for="lastName" class="form-label required-field">គោត្តនាម</label>
+                                                                <input type="text" class="form-control" id="lastName" required>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-md-6 mb-3">
+                                                                <label for="dob" class="form-label required-field">ថ្ងៃខែឆ្នាំកំណើត</label>
+                                                                <input type="date" class="form-control" id="dob" required>
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label for="gender" class="form-label required-field">ភេទ</label>
+                                                                <select class="form-select" id="gender" required>
+                                                                    <option value="" selected disabled>សូមជ្រើសរើសភេទ</option>
+                                                                    <option value="male">ប្រុស</option>
+                                                                    <option value="female">ស្រី</option>
+                                                                    <option value="other">ផ្សេងៗ</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="mb-3">
+                                                            <label for="phone" class="form-label required-field">លេខទូរស័ព្ទ</label>
+                                                            <input type="tel" class="form-control" id="phone" pattern="[0-9]{9,10}" required>
+                                                            <div class="form-text">លេខទូរស័ព្ទត្រូវតែមាន ៩ ឬ ១០ ខ្ទង់</div>
+                                                        </div>
+                                                        
+                                                        <div class="mb-3">
+                                                            <label for="email" class="form-label required-field">អាស័យដ្ឋានអ៊ីមែល</label>
+                                                            <input type="email" class="form-control" id="email" required>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="mb-4">
+                                                        <h5 class="section-title">ព័ត៌មានការសិក្សា</h5>
+                                                        <div class="mb-3">
+                                                            <label for="institution" class="form-label required-field">ស្ថាប័នសិក្សា</label>
+                                                            <input type="text" class="form-control" id="institution" required>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-md-6 mb-3">
+                                                                <label for="faculty" class="form-label required-field">មហាវិទ្យាល័យ/ដេប៉ាតឺម៉ង់</label>
+                                                                <input type="text" class="form-control" id="faculty" required>
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label for="major" class="form-label required-field">ជំនាញ</label>
+                                                                <input type="text" class="form-control" id="major" required>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-md-6 mb-3">
+                                                                <label for="year" class="form-label required-field">ឆ្នាំសិក្សា</label>
+                                                                <select class="form-select" id="year" required>
+                                                                    <option value="" selected disabled>សូមជ្រើសរើសឆ្នាំ</option>
+                                                                    <option value="1">ឆ្នាំទី 1</option>
+                                                                    <option value="2">ឆ្នាំទី 2</option>
+                                                                    <option value="3">ឆ្នាំទី 3</option>
+                                                                    <option value="4">ឆ្នាំទី 4</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6 mb-3">
+                                                                <label for="gpa" class="form-label required-field">ពិន្ទុសមាជិកភាព (GPA)</label>
+                                                                <input type="number" step="0.01" min="0" max="4" class="form-control" id="gpa" required>
+                                                                <div class="form-text">ពិន្ទុត្រូវតែមានចន្លោះពី 0 ដល់ 4</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                         
+                                                    <div class="mb-4">
+                                                        <h5 class="section-title khmer-font">ព័ត៌មានអាហារូបករណ៍</h5>
+                                                        <div class="mb-3">
+                                                            <label for="scholarshipType" class="form-label required-field">ប្រភេទអាហារូបករណ៍</label>
+                                                            <select class="form-select" id="scholarshipType" required>
+                                                                <option value="" selected disabled>សូមជ្រើសរើសប្រភេទអាហារូបករណ៍</option>
+                                                                <option value="full">អាហារូបករណ៍ពេញលេញ</option>
+                                                                <option value="partial">អាហារូបករណ៍ផ្នែក</option>
+                                                                <option value="research">អាហារូបករណ៍ស្រាវជ្រាវ</option>
+                                                            </select>
+                                                        </div>
+                                                        
+                                                        <div class="mb-3">
+                                                            <label for="reason" class="form-label required-field">មូលហេតុស្នើសុំ</label>
+                                                            <textarea class="form-control" id="reason" rows="3" required></textarea>
+                                                            <div class="form-text">សូមរៀបរាប់ពីមូលហេតុដែលអ្នកត្រូវការអាហារូបករណ៍នេះ</div>
+                                                        </div>
+                                                        
+                                                        <div class="mb-3">
+                                                            <label for="file" class="form-label">ឯកសារភ្ជាប់</label>
+                                                            <input type="file" class="form-control" id="file" multiple>
+                                                            <div class="form-text">ជ្រើសរើសឯកសាររូបថត, សំបុត្របញ្ជាក់ការសិក្សា, និងឯកសារផ្សេងៗ</div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer bg-card-theme">
+                                                <button type="button" class="btn btn-outline-dark-blue" data-bs-dismiss="modal">បោះបង់</button>
+                                                <button type="button" class="btn btn-dark-blue" id="submitBtn">
+                                                    <span class="submit-text">ដាក់ស្នើ</span>
+                                                    <span class="loading-spinner" style="display: none;"></span>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label">អ៊ីមែល</label>
-                                            <input type="email" class="form-control" id="email" name="email" required />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="phone" class="form-label">លេខទូរសព្ទ</label>
-                                            <input type="tel" class="form-control" id="phone" name="phone" />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="address" class="form-label">អាសយដ្ឋាន</label>
-                                            <textarea class="form-control" id="address" name="address" rows="2"></textarea>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="studyLevel" class="form-label">កម្រិតសិក្សា</label>
-                                            <select class="form-select" id="studyLevel" name="studyLevel" required>
-                                                <option value="" selected>-- ជ្រើសរើស --</option>
-                                                <option value="highschool">វិទ្យាល័យ</option>
-                                                <option value="bachelor">បរិញ្ញាបត្រ</option>
-                                                <option value="master">បរិញ្ញាបត្រជាន់ខ្ពស់</option>
-                                                <option value="phd">ព័ត៌មានបណ្ឌិត</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="reason" class="form-label">ហេតុផលស្នើសុំអាហារូបករណ៍</label>
-                                            <textarea class="form-control" id="reason" name="reason" rows="3" required></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បោះបង់</button>
-                                        <button type="submit" class="btn btn-primary">ដាក់ពាក្យ</button>
-                                    </div>
-                                    </form>
                                     </div>
                                 </div>
+                                <!-- Success Toast -->
+                                <div class="toast-container">
+                                    <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                        <div class="toast-header">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                            <strong class="me-auto">ជោគជ័យ</strong>
+                                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                        </div>
+                                        <div class="toast-body">
+                                            <p>ការស្នើសុំអាហារូបករណ៍របស់អ្នកត្រូវបានដាក់ដោយជោគជ័យ!</p>
+                                            <p class="mb-0">យើងនឹងត្រឡប់ទៅរកអ្នកវិញក្នុងរយៈពេល ៧-១៤ថ្ងៃ។</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -430,7 +527,7 @@
                     <div class="col-lg-4">
                         <div class="col-lg-12">
                             <div class="card shadow-sm mb-4 bg-card-theme border-0">
-                                <div class="card-header bg-secondary text-white">
+                                <div class="card-header bg-footer text-white">
                                     <h5 class="mb-0">ព័ត៌មានទាក់ទង</h5>
                                 </div>
                                 <div class="card-body">
@@ -443,7 +540,7 @@
                         </div>
                         <div class="col-lg-12">
                             <!-- Swiper -->
-                            <div class="swiper mySwiper">
+                            <div class="swiper mySwiper" style="width: 100%;height: 250px;">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide"><img src="https://www.uudoon.in/about/images/scholarships/merit2.jpg"
                                         alt="" class="img-fluid object-fit-cover" /></div>
@@ -460,23 +557,16 @@
                             </div>
                         </div>
                         <div class="col-lg-12 mt-4">
-                              <!-- Swiper -->
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide" style="height: 130px;"><img src="https://www.uudoon.in/about/images/scholarships/merit2.jpg"
-                                        alt="" class="img-fluid object-fit-cover"/></div>
-                                    <div class="swiper-slide" style="height: 130px;"><img src="https://collegeconfidential.com/wp-content/uploads/2025/02/a-scholarship-search-for-savvy-students-1024x408.webp"
-                                        alt="" class="img-fluid object-fit-cover" /></div>
-                                    <div class="swiper-slide" style="height: 130px;"><img src="https://www.chase.com/content/services/rendition/image.large.jpg/unified-assets/photography/articles/student/student_how-many-scholarships-can-i-get.jpg"
-                                        alt="" class="img-fluid object-fit-cover" /></div>
-                                    <div class="swiper-slide" style="height: 130px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwcsjpHWDJhfXiONuclARhJQ1EqRpZWKf2NQfK_mrwXhznu5Le0iulaNQsP7Mq52GxRc&usqp=CAU"
-                                        alt="" class="img-fluid object-fit-cover" /></div>
-                                    <div class="swiper-slide" style="height: 130px;"><img src="https://storage-prtl-co.imgix.net/endor/articles/3278/images/1733144584_shutterstock_2239596767.jpg?w=800&h=532&q=40&auto=format&fit=crop&crop=faces"
-                                        alt="" class="img-fluid object-fit-cover" /></div>
-                                    <div class="swiper-slide" style="height: 130px;"><img src="https://ndscs.b-cdn.net/app/uploads/2025/07/scholarships.jpg" alt="" class="img-fluid object-fit-cover"></div>
-                                </div>
-                                <div class="swiper-pagination"></div>
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper_2">
+                            <div class="swiper-wrapper" style="height: 130px;">
+                            <!-- <div class="swiper-slide"><img src="https://image.thmeythmey.com/pictures/2018/12/14/141220181451untitled-1.jpg" alt=""></div> -->
+                            <div class="swiper-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwE7akAbahC8QEo0RREBv6s0PK0N89B1X7tw&s" alt="cs"></div>
+                            <div class="swiper-slide"><img src="https://asset.cambodia.gov.kh/mptc/2024/11/CBRD-Fund-Logo-Final1_white-03.png" class="bg-white" alt="ptc"></div>
+                            <div class="swiper-slide"><img src="https://play-lh.googleusercontent.com/PGwl8Bj_ZQ2kLM8pAX2gASniDQ_96eS7YEoDVy7G_1ymdxH-EUkWz3gw-XbLJZSPRKf4" alt=""></div>
+                            <div class="swiper-slide"><img src="https://dcc.gov.kh/uploads/companies/logo/cdJ5ZYFf6LRREX4KTXmA0nGeL03YKXZpqeRS9sZw.png" alt="ant"></div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -586,6 +676,56 @@
 
   <!-- Initialize Swiper -->
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const submitBtn = document.getElementById('submitBtn');
+        const submitText = submitBtn.querySelector('.submit-text');
+        const loadingSpinner = submitBtn.querySelector('.loading-spinner');
+        const successToast = document.getElementById('successToast');
+        const toast = new bootstrap.Toast(successToast);
+        const form = document.getElementById('scholarshipForm');
+        
+        // ត្រួតពិនិត្យ GPA
+        const gpaInput = document.getElementById('gpa');
+        gpaInput.addEventListener('change', function() {
+            if (this.value < 0) this.value = 0;
+            if (this.value > 4) this.value = 4;
+        });
+        
+        submitBtn.addEventListener('click', function() {
+            // Check if form is valid
+            if (form.checkValidity()) {
+                // Show loading state
+                submitText.textContent = 'កំពុងដាក់ស្នើ...';
+                loadingSpinner.style.display = 'inline-block';
+                submitBtn.disabled = true;
+                
+                // Simulate 3 seconds waiting time
+                setTimeout(function() {
+                    // Hide loading state
+                    submitText.textContent = 'ដាក់ស្នើ';
+                    loadingSpinner.style.display = 'none';
+                    submitBtn.disabled = false;
+                    
+                    // Show success toast
+                    toast.show();
+                    
+                    // Close modal after 2 seconds
+                    setTimeout(function() {
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('scholarshipModal'));
+                        modal.hide();
+                        
+                        // Reset form
+                        form.reset();
+                    }, 2000);
+                }, 3000);
+            } else {
+                // Trigger browser native validation UI
+                form.reportValidity();
+            }
+        });
+    });
+
+
     var swiper = new Swiper(".mySwiper", {
       grabCursor: true,
       effect: "creative",
@@ -602,6 +742,19 @@
           translate: ["100%", 0, 0],
         },
       },
+    });
+    var swiper = new Swiper(".mySwiper_2",{
+      slidesPerView: 3,
+      spaceBetween: 10,
+      loop: true,
+      freeMode: true, // smooth free scrolling
+      speed: 15000,    // higher = slower smooth scroll
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      },
+      allowTouchMove: false, // disable dragging
     });
 
     
