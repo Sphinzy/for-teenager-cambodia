@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <style>
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
     .hero-image {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(https://rupp.edu.kh/iispp/image_banner/Render%20flag.jpg) center/cover no-repeat;
         height: 600px;
@@ -322,26 +326,14 @@
     </header>
     <main>
         <!-- Header Section -->
-        <section class="hero-image h-96 flex flex-col justify-center items-center text-white">
+        <section class="hero-image h-90 flex flex-col justify-center items-center text-white">
             <div class="max-w-4xl mx-auto text-center px-4">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">ស្វែងរកអាហារូបករណ៏ក្រៅស្រុក</h1>
                 <p class="text-xl md:text-2xl">សិក្សានៅក្រៅប្រទេសសម្រាប់សិស្សានុសិស្សខ្មែរ</p>
             </div>
         </section>
         <section>
-            <div class="container mt-5">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../home.html">ទំព័រដើម</a></li>
-                        <li class="breadcrumb-item"><a
-                                href="../schoolarship/schoolarship-in.html">អាហារូបករណ៍ក្នុងស្រុក</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">អាហារូបករណ៍ក្រៅស្រុក</li>
-                    </ol>
-                </nav>
-            </div>
-        </section>
-        <section class="py-4 bg-light">
-            <div class="container">
+            <div class="container bg-footer py-4" style="border-radius: 15px;">
                 <div class="row">
                     <div class="col-md-3">
                         <select class="form-select">
@@ -370,14 +362,26 @@
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <button class="btn btn-primary w-100"><i class="bi bi-funnel"></i> តម្រង</button>
+                        <button class="btn btn-dark-blue w-100" style="border: 1px solid white;"><i class="bi bi-funnel"></i> តម្រង</button>
                     </div>
                 </div>
             </div>
         </section>
         <section>
             <div class="container mt-5">
-                <h1 class="text-center">អាហារូបករណ៍ថ្នាក់ដឹកនាំ</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../home.html">ទំព័រដើម</a></li>
+                        <li class="breadcrumb-item"><a
+                                href="../schoolarship/schoolarship-in.html">អាហារូបករណ៍ក្នុងស្រុក</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">អាហារូបករណ៍ក្រៅស្រុក</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <section>
+            <div class="container mt-5 text-decoration-none">
+                <h1 class="text-center">អាហារូបករណ៍រដ្ឋាភិបាលនិងថ្នាក់ដឹក</h1>
                 <p class="text-center">អាហារូបករណ៍សម្រាប់សិស្សានុសិស្សដែលមានស្ថានភាពពិបាក</p>
                 <nav class="container mt-5">
                     <ul class="nav nav-pills mb-4 d-flex justify-content-center" id="pills-tab" role="tablist">
@@ -417,7 +421,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -434,7 +438,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -451,7 +455,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -468,7 +472,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -485,7 +489,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                               <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -506,7 +510,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -523,7 +527,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -540,7 +544,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -561,7 +565,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -578,7 +582,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -595,7 +599,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -612,7 +616,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -633,7 +637,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -650,7 +654,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -667,7 +671,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -684,7 +688,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -701,7 +705,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -718,7 +722,7 @@
                                                 <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                             </div>
                                             <div>
-                                                <button class="btn bg-footer end-0"><a href="detail.html" class="text-white text-decoration-none">ព័ត៌មានលម្អិត</a></button>
+                                                <button class="btn btn-outline-dark-blue text-light end-0"><a href="detail-out.html">ព័ត៌មានលម្អិត</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -729,17 +733,6 @@
                 </nav>
             </div>
         </section>
-        <section class="m-15">
-            <div class="container text-center mt-5">
-                <h1>អាហារូបករណ៍រាជរដ្ឋាភិបាល</h1>
-                <p class="mt-3">អាហារូបករណ៍រាជរដ្ឋាភិបាលត្រូវបានផ្តល់ជូនសិស្សានុសិស្សដែលមានសមត្ថភាពខ្ពស់
-                    និងមានស្ថានភាពហិរញ្ញវត្ថុពិបាក។
-                    អាហារូបករណ៍នេះគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyPOjxjl0l0xUIdDF8JbrVgPN8W4Wh79jpEy1YQYAtagSfZKVuwKkpJRQcFvNIiy36lgwMn56dN4oBdNqmsxHzKZzdXm630fkiNwnSzwpsds_uetpWB6jAsCGSuAqUEFooGPftVy387jM/s1600/rupp.jpg"
-                    alt="" class="img-fluid mt-3" style="max-height: 400px; width: auto;">
-            </div>
-        </section>
-
         <section class=" mt-15">
             <div class="container">
                 <h2 class="text-center mb-4">របៀបស្នើរសុំអាហារូបករណ៍</h2>
