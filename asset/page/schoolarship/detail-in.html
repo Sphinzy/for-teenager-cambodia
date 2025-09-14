@@ -379,7 +379,6 @@
                                     <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#scholarshipModal">
                                         ដាក់ពាក្យឥឡូវនេះ
                                     </button>
-                                    <!-- <a href="#" class="btn btn-dark-blue">ដាក់ពាក្យឥឡូវនេះ</a> -->
                                     <a href="../schoolarship/schoolarship-in.html" class="btn btn-outline-dark-blue text-end">ត្រឡប់ក្រោយ</a>
                                 </div>
 
@@ -397,11 +396,11 @@
                                                         <h5 class="section-title">ព័ត៌មានផ្ទាល់ខ្លួន</h5>
                                                         <div class="row">
                                                             <div class="col-md-6 mb-3">
-                                                                <label for="firstName" class="form-label required-field">នាម</label>
+                                                                <label for="firstName" class="form-label required-field">ឈ្មោះភាសាខ្មែរ</label>
                                                                 <input type="text" class="form-control" id="firstName" required>
                                                             </div>
                                                             <div class="col-md-6 mb-3">
-                                                                <label for="lastName" class="form-label required-field">គោត្តនាម</label>
+                                                                <label for="lastName" class="form-label required-field">ឈ្មោះឡាតាំង</label>
                                                                 <input type="text" class="form-control" id="lastName" required>
                                                             </div>
                                                         </div>
@@ -432,53 +431,16 @@
                                                             <label for="email" class="form-label required-field">អាស័យដ្ឋានអ៊ីមែល</label>
                                                             <input type="email" class="form-control" id="email" required>
                                                         </div>
-                                                    </div>
-                                                    
-                                                    <div class="mb-4">
-                                                        <h5 class="section-title">ព័ត៌មានការសិក្សា</h5>
-                                                        <div class="mb-3">
-                                                            <label for="institution" class="form-label required-field">មកពីវិទ្យាល័យ</label>
-                                                            <input type="text" class="form-control" id="institution" required>
-                                                        </div>
-                                                        
-                                                        <div class="row">
-                                                            <div class="col-md-6 mb-3">
-                                                                <label for="faculty" class="form-label required-field">មហាវិទ្យាល័យ/ដេប៉ាតឺម៉ង់</label>
-                                                                <input type="text" class="form-control" id="faculty" required>
-                                                            </div>
-                                                            <div class="col-md-6 mb-3">
-                                                                <label for="major" class="form-label required-field">ជំនាញ</label>
-                                                                <input type="text" class="form-control" id="major" required>
-                                                            </div>
-                                                        </div>
-                                                        
-                                                        <div class="row">
-                                                            <div class="col-md-6 mb-3">
-                                                                <label for="year" class="form-label required-field">ឆ្នាំសិក្សា</label>
-                                                                <select class="form-select" id="year" required>
-                                                                    <option value="" selected disabled>សូមជ្រើសរើសឆ្នាំ</option>
-                                                                    <option value="1">ឆ្នាំទី 1</option>
-                                                                    <option value="2">ឆ្នាំទី 2</option>
-                                                                    <option value="3">ឆ្នាំទី 3</option>
-                                                                    <option value="4">ឆ្នាំទី 4</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-md-6 mb-3">
-                                                                <label for="gpa" class="form-label required-field">ពិន្ទុសមាជិកភាព (GPA)</label>
-                                                                <input type="number" step="0.01" min="0" max="4" class="form-control" id="gpa" required>
-                                                                <div class="form-text">ពិន្ទុត្រូវតែមានចន្លោះពី 0 ដល់ 4</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>                                         
+                                                    </div>                                       
                                                     <div class="mb-4">
                                                         <h5 class="section-title khmer-font">ព័ត៌មានអាហារូបករណ៍</h5>
                                                         <div class="mb-3">
                                                             <label for="scholarshipType" class="form-label required-field">ប្រភេទអាហារូបករណ៍</label>
                                                             <select class="form-select" id="scholarshipType" required>
                                                                 <option value="" selected disabled>សូមជ្រើសរើសប្រភេទអាហារូបករណ៍</option>
-                                                                <option value="full">អាហារូបករណ៍ពេញលេញ</option>
-                                                                <option value="partial">អាហារូបករណ៍ផ្នែក</option>
-                                                                <option value="research">អាហារូបករណ៍ស្រាវជ្រាវ</option>
+                                                                <option value="full">អាហារូបករណ៍ពិសេស</option>
+                                                                <option value="partial">អាហារូបករណ៍១០០%</option>
+                                                                <option value="research">អាហារូបករណ៍៧០%</option>
                                                             </select>
                                                         </div>
                                                         
@@ -527,14 +489,12 @@
                         <div class="col-lg-12">
                             <div class="card shadow-sm mb-4 bg-card-theme border-0">
                                 <div class="card-header bg-footer text-white">
-                                    <h5 class="mb-0">កាលបរិច្ឆេទ និងកន្លែងទទួលពាក្យ</h5>
+                                    <h5 class="mb-0">ព័ត៌មានទាក់ទងនិងកន្លែងទទួលពាក្យ</h5>
                                 </div>
                                 <div class="card-body">
                                     <h6><strong>ការចុះឈ្មោះប្រឡងធ្វើឡើងតាមគ្រឹះស្ថានដូចខាងក្រោម៖</strong></h6>
                                     <p><strong>សម្រាប់</strong> CADT, ITC, ភូមិន្ទភ្នំពេញ, ផារ៉ាហ្គន និង សាកលវិទ្យាល័យជាតិគ្រប់គ្រង ៖ ចុះឈ្មោះ អនឡាញ</p>
                                     <p><strong>ទូរស័ព្ទ:</strong> ០១៥ ៣៣៥ ៨៧៧ / ០៧៧ ៣៣៥ ៨៧៧</p>
-                                    <!-- <p><strongអ៊ីមែល:</strong></p> -->
-                                    <!-- <a href="mailto: -->
                                 </div>
                             </div>
                         </div>
@@ -569,7 +529,6 @@
                         <!-- Swiper -->
                         <div class="swiper mySwiper_2">
                             <div class="swiper-wrapper" style="height: 127px;">
-                            <!-- <div class="swiper-slide"><img src="https://image.thmeythmey.com/pictures/2018/12/14/141220181451untitled-1.jpg" alt=""></div> -->
                             <div class="swiper-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwE7akAbahC8QEo0RREBv6s0PK0N89B1X7tw&s" alt="cs"></div>
                             <div class="swiper-slide"><img src="https://asset.cambodia.gov.kh/mptc/2024/11/CBRD-Fund-Logo-Final1_white-03.png" class="bg-white" alt="ptc"></div>
                             <div class="swiper-slide"><img src="https://play-lh.googleusercontent.com/PGwl8Bj_ZQ2kLM8pAX2gASniDQ_96eS7YEoDVy7G_1ymdxH-EUkWz3gw-XbLJZSPRKf4" alt=""></div>
@@ -609,7 +568,7 @@
                     <a href="#"><i class="bi bi-github media fs-3 ps-2 text-white"></i></a>
                 </div>
 
-                <div class="col-6 col-lg-3 col-xl-2 py-4">
+                <div class="col-6 col-lg-3 col-xl-2 py-4"> 
                     <ul class="navbar-nav">
                         <h5 class="nav-title fw-bold">ព័ត៌មានអំពីយើង</h5>
                         <li class="nav-item">
@@ -693,13 +652,7 @@
         const toast = new bootstrap.Toast(successToast);
         const form = document.getElementById('scholarshipForm');
         
-        // ត្រួតពិនិត្យ GPA
-        const gpaInput = document.getElementById('gpa');
-        gpaInput.addEventListener('change', function() {
-            if (this.value < 0) this.value = 0;
-            if (this.value > 4) this.value = 4;
-        });
-        
+
         submitBtn.addEventListener('click', function() {
             // Check if form is valid
             if (form.checkValidity()) {
