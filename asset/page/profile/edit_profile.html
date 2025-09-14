@@ -248,28 +248,28 @@
                             <div class="card-body bg-card-theme border-0">
                               <form action class>
                                 <div class="row">
-                                  <div class="col-md-6 mb-3">
+                                  <div class="col-lg-6 mb-3">
                                     <label for="khmerName"
                                       class="form-label fw-medium">ឈ្មោះខ្មែរ</label>
                                     <input type="text"
                                       class="form-control border-secondary shadow-none"
                                       id="khmerName" value="តុលា">
                                   </div>
-                                  <div class="col-md-6 mb-3">
+                                  <div class="col-lg-6 mb-3">
                                     <label for="englishName"
                                       class="form-label fw-medium">ឈ្មោះអង់គ្លេស</label>
                                     <input type="text"
                                       class="form-control border-secondary shadow-none"
                                       id="englishName" value="Tola">
                                   </div>
-                                  <div class="col-md-6 mb-3">
+                                  <div class="col-lg-6 mb-3">
                                     <label for="email"
                                       class="form-label fw-medium">អ៊ីមែល</label>
                                     <input type="email"
                                       class="form-control border-secondary shadow-none"
                                       id="email" value="tola@gmail.com">
                                   </div>
-                                  <div class="col-md-6 mb-3">
+                                  <div class="col-lg-6 mb-3">
                                     <label for class="form-label fw-medium">ភេទ</label>
                                     <div class="d-flex gap-5">
                                       <div class="form-check mb-2">
@@ -288,14 +288,14 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="col-6 mb-3">
+                                  <div class="col-lg-6 mb-3">
                                     <label for="phone"
                                       class="form-label fw-medium">លេខទូរស័ព្ទ</label>
                                     <input type="number"
                                       class="form-control border-secondary shadow-none"
                                       id="phone" value="012987456">
                                   </div>
-                                  <div class="col-6 mb-3">
+                                  <div class="col-lg-6 mb-3">
                                     <label for="username"
                                       class="form-label fw-medium">@username</label>
                                     <div
@@ -623,14 +623,17 @@
 
       <!--* mobile -->
       <section class="">
-        <div class="container-fluid d-block d-md-none">
+        <div class="container-fluid d-block d-md-none overflow-hidden">
           <div class="row bg-card-theme rounded-0 p-3 animate__animated animate__fadeInDown">
             <div class="d-flex justify-content-between align-items-center animate__animated animate__fadeInUp">
               <h3 class="fw-semibold">ការកំណត់</h3>
               <a
                 href="proflie.html"
-                class="btn border border-2 border-secondary rounded-circle p-2 shadow-none btn-close"
-                target="_self"></a>
+                class="btn d-flex gap-1 btn-outline-dark-blue back-to-pfp"
+                target="_self">
+                <i class="btn btn-close shadow-none text-white"></i>
+                បិទការកំណត់
+              </a>
             </div>
           </div>
           <div class="row my-3 p-2">
@@ -674,16 +677,16 @@
                   </a>
                 </div>
               </aside>
-              <article class="option p-3 h-100 rounded overflow-y-scroll aside">
+              <article class="overflow-y-scroll">
                 <!--* profile -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="editProfile"
+                <div class="offcanvas offcanvas-end border-0 w-100" tabindex="-1" id="editProfile"
                   aria-labelledby="editProfile">
                   <div class="offcanvas-header">
                     <h5 class="offcanvas-title fw-semibold">ប្រវតិ្តរូប</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
                       aria-label="Close"></button>
                   </div>
-                  <div class="offcanvas-body">
+                  <div class="offcanvas-body article">
                     <div class="col-12">
                       <div class="card bg-transparent border-0">
                         <div
@@ -771,14 +774,14 @@
                   </div>
                 </div>
                 <!--* security -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="security"
+                <div class="offcanvas offcanvas-end border-0 w-100" tabindex="-1" id="security"
                   aria-labelledby="editProfile">
                   <div class="offcanvas-header">
                     <h5 class="offcanvas-title fw-semibold">ប្រព័ន្ធសុវត្ថិភាព & ការកំណត់</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
                       aria-label="Close"></button>
                   </div>
-                  <div class="offcanvas-body">
+                  <div class="offcanvas-body article">
                     <div class="row gap-3">
                       <div class="col-12">
                         <div class="card bg-card-theme">
@@ -906,15 +909,15 @@
                   </div>
                 </div>
                 <!--* notification -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="notification"
+                <div class="offcanvas offcanvas-end border-0 w-100" tabindex="-1" id="notification"
                   aria-labelledby="notification">
                   <div class="offcanvas-header">
                     <h5 class="offcanvas-title fw-semibold">
                       ការជូនដំណឹង</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
                       aria-label="Close"></button>
                   </div>
-                  <div class="offcanvas-body">
+                  <div class="offcanvas-body article">
                     <div class="row gap-3">
                       <div class="col-12">
                         <div class="card bg-card-theme">
@@ -1034,14 +1037,14 @@
                   </div>
                 </div>
                 <!--* password -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="password"
+                <div class="offcanvas offcanvas-end border-0 w-100" tabindex="-1" id="password"
                   aria-labelledby="password">
                   <div class="offcanvas-header">
                     <h5 class="offcanvas-title fw-semibold">ផ្លាស់ប្ដូរលេខសម្ងាត់</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
                       aria-label="Close"></button>
                   </div>
-                  <div class="offcanvas-body">
+                  <div class="offcanvas-body article">
                     <div class="row gap-3">
                       <form class="mt-2">
                         <div class="mb-3">
