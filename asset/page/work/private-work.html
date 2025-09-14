@@ -17,8 +17,21 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- swiper  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/profile.css">
 </head>
-
+<style>
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: var(--swiper-navigation-top-offset, 88%) !important;
+        color: #ccc !important;
+    }
+    body[data-bs-theme="dark"] .swiper-button-next,
+    .swiper-button-prev {
+        top: var(--swiper-navigation-top-offset, 88%) !important;
+        color: #ccc !important;
+    }
+</style>
 <body class="bg-body-theme" data-bs-theme="light">
     <header class="sticky-top" style="z-index: 1030;">
         <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
@@ -269,298 +282,12 @@
     <main>
         <img class="img-fluid" src="../../image/job-img/jobsearch-02.png" alt=""
             style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
-        <!-- <section>
+        <section>
             <div class="container">
                 <div class="row g-3">
                     <div class="col-lg-6 z-1 bg-body-theme rounded-start" style="margin-top: -10%;">
                         <nav>
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                    aria-selected="true">ផ្នែកបច្ចេកវិទ្យា</button>
-                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                    aria-selected="false">ផ្នែករដ្ឋបាល</button>
-                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
-                                    aria-selected="false">វេជ្ជសាស្ត្រ</button>
-                                <button class="nav-link" id="nav-web-tab" data-bs-toggle="tab" data-bs-target="#nav-web"
-                                    type="button" role="tab" aria-controls="nav-web" aria-selected="false">Web
-                                    Development</button>
-                            </div>
-                        </nav>
-
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
-                                aria-labelledby="nav-home-tab" tabindex="0">
-                                <div class="row shadow-sm gy-4">
-                                    <h4 class="mt-6">ប្រព័ន្ធបច្ចេកវិទ្យា</h4>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/Woori bank.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">អ្នកអភិវឌ្ឍន៍កម្មវិធី (Software
-                                                            Developer)</h5>
-                                                        <p class="card-text">Woori Bank Cambodia</p>
-                                                        <p class="card-text">ទីតាំង​: ភ្នំពេញ</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $200</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/chip mong.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">អ្នកជំនាញសុវត្ថិភាពព័ត៌មានវិទ្យា
-                                                            (Cybersecurity Specialist)</h5>
-                                                        <p class="card-text">ក្រុមហ៊ុន​: Chip Mong Group</p>
-                                                        <p class="card-text">ទីតាំង​: ភ្នំពេញ</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $1400</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/PTC.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">ជំនួយការផ្នែកព័ត៌មានវិទ្យា (IT Support
-                                                            Specialist)</h5>
-                                                        <p class="card-text">ក្រសួងប្រៃសណីយ៍ និង ទូរគមនាគមន៍</p>
-                                                        <p class="card-text">ម៉ោងធ្វើការ​ 7:00 AM - 5:00 PM</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $1300</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/chip mong.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Graphic Designer</h5>
-                                                        <p class="card-text">Chip Mong Group</p>
-                                                        <p class="card-text">ម៉ោងធ្វើការ​ 7:00 AM - 5:00 PM</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $1300</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/PTC.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Programmer</h5>
-                                                        <p class="card-text">ក្រសួងប្រៃសណីយ៍ និង ទូរគមនាគមន៍</p>
-                                                        <p class="card-text">ម៉ោងធ្វើការ​ 7:00 AM - 12:00 PM</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $800</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
-                            tabindex="0">
-                            <div class="row shadow-sm gy-4">
-                                <h4 class="mt-6">រដ្ឋបាល</h4>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/Aupp.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">ជំនួយការរដ្ឋបាល (Administrative Assistant)
-                                                    </h5>
-                                                    <p class="card-text">ទីតាំង​: Aupp Co.,ltd</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1200</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/bluebird.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">អ្នកគ្រប់គ្រងរដ្ឋបាល (Administrative Manager)
-                                                    </h5>
-                                                    <p class="card-text">ទីតាំង​: Aupp Co.,ltd</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1500</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/total01.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">មន្ត្រីផ្នែកធនធានមនុស្ស និងរដ្ឋបាល (HR and
-                                                        Admin Officer)</h5>
-                                                    <p class="card-text">ទីតាំង​: TotalEnergies Marketing (Cambodia)
-                                                        Co., Ltd</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1200</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
-                            tabindex="0">
-                            <div class="row shadow-sm gy-4">
-                                <h4 class="mt-6">វេជ្ជសាស្ត្រ</h4>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/Aupp.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">គ្រូពេទ្យ (Medical Doctor)</h5>
-                                                    <p class="card-text">ទីតាំង​: មន្ទីរពេទ្យកាល់ម៉ែត</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1800</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/bluebird.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">គិលានុបដ្ឋាយិកា / គិលានុបដ្ឋាក (Nurse)</h5>
-                                                    <p class="card-text">ទីតាំង​: មន្ទីរពេទ្យកុមារជាតិ</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 12:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $600</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/total01.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">ឱសថការី (Pharmacist)</h5>
-                                                    <p class="card-text">ទីតាំង​: មន្ទីរពេទ្យ​ Royal</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1000</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-web" role="tabpanel" aria-labelledby="nav-web-tab"
-                            tabindex="0">kjfkhjgjfjg</div>
-                    </div>
-                    <div class="col-lg-6 bg-body-theme z-1 rounded-end" style="margin-top: -10%;">
-                        <div class="aside">
-                            <div class="row g-3 p-2 " style="top: 80px;">
-                                <div class="col-6">
-                                    <img src="../../image/job-img/01.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-right">
-                                </div>
-                                <div class="col-6">
-                                    <img src="../../image/job-img/02.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-down">
-                                </div>
-                                <div class="col-6">
-                                    <img src="../../image/job-img/03.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-up">
-                                </div>
-                                <div class="col-6">
-                                    <img src="../../image/job-img/04.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                                        data-aos-duration="500">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <section>
-            <div class="container">
-                <div class="row g-3">
-                    <div class="col-lg-6 z-1 bg-body-theme rounded-start mb-4" style="margin-top: -10%;">
-                        <nav>
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <div class="nav nav-tabs nav-pills" id="nav-tab" role="tablist">
                                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
                                     aria-selected="true">ផ្នែកបច្ចេកវិទ្យា</button>
@@ -575,14 +302,14 @@
                                     aria-selected="false">ផ្នែកលក់</button>
                             </div>
                         </nav>
-                        <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-content mb-3" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                 aria-labelledby="nav-home-tab" tabindex="0">
                                 <div class="row shadow-sm gy-4">
                                     <h4 class="mt-6">ប្រព័ន្ធបច្ចេកវិទ្យា</h4>
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-12 ">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/Woori bank.jpg" alt=""
@@ -602,7 +329,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/chip mong.jpg" alt=""
@@ -622,7 +349,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/PTC.jpg" alt=""
@@ -642,7 +369,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/chip mong.jpg" alt=""
@@ -661,7 +388,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/PTC.jpg" alt=""
@@ -686,7 +413,7 @@
                                     <h4 class="mt-6">រដ្ឋបាល</h4>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/Aupp.jpg" alt=""
@@ -707,7 +434,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/bluebird.jpg" alt=""
@@ -728,7 +455,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/total01.jpg" alt=""
@@ -756,7 +483,7 @@
                                     <h4 class="mt-6">វេជ្ជសាស្ត្រ</h4>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/HNA.jpg" alt=""
@@ -775,7 +502,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/N_children.jpeg" alt=""
@@ -795,7 +522,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/Royal.webp" alt=""
@@ -814,7 +541,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/Angkor PP.png" alt=""
@@ -841,7 +568,7 @@
                                     <h4 class="mt-6">ការលក់ទូទៅ</h4>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/tube.jpg" alt=""
@@ -860,7 +587,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/God.jpg" alt=""
@@ -880,7 +607,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/tj.jpg" alt=""
@@ -901,28 +628,83 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 bg-body-theme z-1 rounded-end" style="margin-top: -10%;">
-                        <div class="aside">
+                    <div class="col-lg-6 bg-body-theme z-1 rounded-end d-lg-block d-none" style="margin-top: -10%;">
+                        <div class="aside position-sticky" style="top: 100px;">
                             <div class="row g-3 p-2 " style="top: 80px;">
                                 <div class="col-6">
-                                    <img src="../../image/job-img/01.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-right">
+                                    <img src="../../image/job-img/01.jpg" alt="" class="img-fluid shadow-sm">
                                 </div>
                                 <div class="col-6">
-                                    <img src="../../image/job-img/02.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-down">
+                                    <img src="../../image/job-img/02.jpg" alt="" class="img-fluid shadow-sm">
                                 </div>
                                 <div class="col-6">
                                     <img src="../../image/job-img/03.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-up">
+                                        >
                                 </div>
                                 <div class="col-6">
                                     <img src="../../image/job-img/04.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                                        data-aos-duration="500">
+                                        >
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-15 pb-7 pt-9 shadow-sm bg-card-theme rounded-0">
+            <div class="container">
+                <div class="text-center pb-12">
+                    <h3 class="fs-3 text-center pb-3">
+                        អ្នកអាចស្វែងរកការងារទៅតាមស្ថាប័នជាច្រើននៅទីនេះ</h3>
+                    <p class="fs-5">
+                        ពួកយើងបានរៀបចំបែងចែកប្រភេទការងារទៅតាមស្ថាប័នរដ្ឋ និងឯកជនដើម្បីអោយអ្នកងាយស្វែងរក
+                        ហើយមិនចំណាយពេលយូរ
+                    </p>
+                </div>
+
+                <div class="swiper mySwiper pb-3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/Ministry_Dcc.png"
+                                class="img-fluid  h-75 w-75 object-fit-cover " alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/partner-ntr-logo.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/partner-Ministry of Commerce.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/partner-logo-debc.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/ministry_of_labour.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/partner-rma.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/Ministry-of-Economy-and-Finance.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/chip mong.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/acleda.png" class="img-fluid h-75 w-75 object-fit-cover"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="pt-18">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>
@@ -1018,11 +800,76 @@
         </div>
     </footer>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../../js/bootstrap.bundle.min.js"></script>
 <!-- aos link -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="../../js/script.js"></script>
 <script src="../../js/script-folder.js"></script>
-
+<script>
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.progress-bar').forEach(el => {
+            const value = el.getAttribute('aria-valuenow');
+            el.style.width = value + '%';
+        });
+    });
+</script>
+<script>
+    // Your provided JavaScript code
+    $(document).ready(function () { // Ensure DOM is ready
+        $(".counter").each(function () {
+            var $this = $(this),
+                countTo = $this.attr("data-countto");
+            countDuration = parseInt($this.attr("data-duration"));
+            $({ counter: $this.text() }).animate(
+                {
+                    counter: countTo
+                },
+                {
+                    duration: countDuration,
+                    easing: "linear",
+                    step: function () {
+                        $this.text(Math.floor(this.counter));
+                    },
+                    complete: function () {
+                        $this.text(this.counter);
+                    }
+                }
+            );
+        });
+    });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true, // This enables continuous looping
+        autoplay: {
+            delay: 2500, // Time in ms between slide transitions
+            disableOnInteraction: false, // Autoplay won't stop when the user interacts
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
 </html>

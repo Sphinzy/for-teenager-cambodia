@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Tabs</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/theme.css">
@@ -237,7 +237,7 @@
                             aria-selected="false">ការគ្រប់គ្រងអ្នកប្រើប្រាស់</button>
                         <button class="nav-link px-10" id="v-pills-disabled-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
-                            aria-selected="false">Disabled</button>
+                            aria-selected="false">ការស្នើរ</button>
                         <button class="nav-link px-10" id="v-pills-messages-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
                             aria-selected="false">Messages</button>
@@ -299,23 +299,24 @@
 
                                     <div class="col-lg-8">
                                         <div class="card p-3 bg-card-theme border-0 shadow-sm">
-                                            <h6>Recent Activity</h6>
+                                            <h6>សកម្មភាពថ្មីៗ</h6>
                                             <ul class="list-unstyled mb-0">
                                                 <li class="mb-2 d-flex justify-content-between">
-                                                    <span><strong>John Doe</strong> – Made a purchase</span>
-                                                    <small class="text-muted">2m ago</small>
+                                                    <span><strong>សុខា សុភា </strong> – ការស្នើរគណនី</span>
+                                                    <small class="text-muted">២ នាទីមុន</small>
                                                 </li>
                                                 <li class="mb-2 d-flex justify-content-between">
-                                                    <span><strong>Jane Smith</strong> – Updated profile</span>
-                                                    <small class="text-muted">5m ago</small>
+                                                    <span><strong>បូព៌ា សុភា</strong> –
+                                                        បានកែប្រែប្រវត្តិផ្ទាល់ខ្លួន</span>
+                                                    <small class="text-muted">៥ នាទីមុន</small>
                                                 </li>
                                                 <li class="mb-2 d-flex justify-content-between">
-                                                    <span><strong>Mike Johnson</strong> – Left a review</span>
-                                                    <small class="text-muted">10m ago</small>
+                                                    <span><strong>វិសាល សារុន</strong> – ចុះឈ្មោះចូលគណនី</span>
+                                                    <small class="text-muted">១០ នាទីមុន</small>
                                                 </li>
                                                 <li class="mb-2 d-flex justify-content-between">
-                                                    <span><strong>Sarah Wilson</strong> – Subscribed</span>
-                                                    <small class="text-muted">15m ago</small>
+                                                    <span><strong>ស្រីនិត មុនីរ័ត្ន</strong> – ចុះឈ្មោះចូលគណនី</span>
+                                                    <small class="text-muted">១៥ នាទីមុន</small>
                                                 </li>
                                             </ul>
                                         </div>
@@ -505,8 +506,10 @@
                                                 <td>Appeal Account</td>
                                                 <td>២០២៣-០៩-១៥</td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-success">អនុម័ត</button>
-                                                    <button class="btn btn-sm btn-danger">បដិសេធ</button>
+                                                    <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                        data-bs-target="#approveModal">អនុម័ត</button>
+                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#cancelModal">បដិសេធ</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -515,12 +518,64 @@
                                                 <td>Appeal Account</td>
                                                 <td>២០២៣-០៩-១៦</td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-success">អនុម័ត</button>
-                                                    <button class="btn btn-sm btn-danger">បដិសេធ</button>
+                                                    <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                        data-bs-target="#approveModal">អនុម័ត</button>
+                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#cancelModal">បដិសេធ</button>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <!-- Approve Modal -->
+                                    <div class="modal fade" id="approveModal" tabindex="-1"
+                                        aria-labelledby="approveModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-success text-white">
+                                                    <h5 class="modal-title" id="approveModalLabel">អនុម័តសំណើ</h5>
+                                                    <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    តើអ្នកពិតជាចង់ <strong>អនុម័ត</strong> សំណើរនេះមែនទេ?
+                                                    <br><small
+                                                        class="text-muted">សូមពិនិត្យមើលព័ត៌មានម្តងទៀតមុននឹងបន្ត។</small>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">បោះបង់</button>
+                                                    <button type="button" class="btn btn-success"
+                                                        data-bs-dismiss="modal">អនុម័ត</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cancel Modal -->
+                                    <div class="modal fade" id="cancelModal" tabindex="-1"
+                                        aria-labelledby="cancelModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-danger text-white">
+                                                    <h5 class="modal-title" id="cancelModalLabel">បដិសេធសំណើ</h5>
+                                                    <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    តើអ្នកពិតជាចង់ <strong>បដិសេធ</strong> សំណើរនេះមែនទេ?
+                                                    <br><small
+                                                        class="text-muted">សកម្មភាពនេះនឹងមិនអាចត្រឡប់ក្រោយបានទេ។</small>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">បោះបង់</button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal">បដិសេធ</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -549,10 +604,132 @@
                             </div>
                         </div>
 
-                        <!-- Disabled Tab -->
+                        <!-- schoolarship and job Tab -->
                         <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
                             aria-labelledby="v-pills-disabled-tab" tabindex="0">
-                            <h4>Disabled content here</h4>
+                            <h4 class="mt-3">ការស្នើរសុំអាហារូបករណ៍ និងការងារ</h4>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ឈ្មោះពេញ</th>
+                                        <th>Gmail</th>
+                                        <th>ប្រភេទស្នើសុំ</th>
+                                        <th>កាលបរិច្ឆេទស្នើសុំ</th>
+                                        <th>សកម្មភាព</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>លោក សុខា សុភា</td>
+                                        <td>sokha.sophea@gmail.com</td>
+                                        <td>អាហារូបករណ៍</td>
+                                        <td>២០២៣-០៩-០១</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>លោក ស្រីនាង មុនីរ័ត្ន</td>
+                                        <td>sreynang.mony@gmail.com</td>
+                                        <td>ការងារ</td>
+                                        <td>២០២៣-០៩-០២</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>លោក ដារា វិចិត្រា</td>
+                                        <td>dara.vichetr@gmail.com</td>
+                                        <td>អាហារូបករណ៍</td>
+                                        <td>២០២៣-០៩-០៣</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>លោក សុវណ្ណា ចន្ទ្រា</td>
+                                        <td>sovanna.chandra@gmail.com</td>
+                                        <td>ការងារ</td>
+                                        <td>២០២៣-០៩-០៤</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>លោក វិសាល សារុន</td>
+                                        <td>visal.sarun@gmail.com</td>
+                                        <td>អាហារូបករណ៍</td>
+                                        <td>២០២៣-០៩-០៥</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Approve Request Modal -->
+                            <div class="modal fade" id="approverequestModal" tabindex="-1"
+                                aria-labelledby="approveModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-success text-white">
+                                            <h5 class="modal-title" id="approverequestModalLabel">អនុម័តសំណើ</h5>
+                                            <button type="button" class="btn-close btn-close-white"
+                                                data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            តើអ្នកពិតជាចង់ <strong>អនុម័ត</strong> សំណើរនេះមែនទេ?
+                                            <br><small class="text-muted">សូមបញ្ចូលមូលហេតុ (បើចង់):</small>
+                                            <textarea class="form-control mt-2"
+                                                placeholder="សរសេរមូលហេតុ..."></textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">បោះបង់</button>
+                                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">អនុម័ត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Reject Request Modal -->
+                            <div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-danger text-white">
+                                            <h5 class="modal-title" id="rejectModalLabel">បដិសេធសំណើ</h5>
+                                            <button type="button" class="btn-close btn-close-white"
+                                                data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            តើអ្នកពិតជាចង់ <strong>បដិសេធ</strong> សំណើរនេះមែនទេ?
+                                            <br><small class="text-muted">សូមបញ្ចូលមូលហេតុ:</small>
+                                            <textarea class="form-control mt-2"
+                                                placeholder="សរសេរមូលហេតុ..."></textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">បោះបង់</button>
+                                            <button type="button" class="btn btn-danger">បដិសេធ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                         <!-- Messages Tab -->

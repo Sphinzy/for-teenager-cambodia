@@ -325,7 +325,7 @@
         <div class="modal fade" id="change-pfp" tabindex="-1" aria-labelledby="exampleModalLabel"
           aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content bg-card-theme">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">
                   ផ្លាស់ប្ដូររូបភាព</h1>
@@ -333,12 +333,26 @@
                   aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                
+                <div class="col-12">
+                  <h6 class="mb-3">ជ្រើសរើសរូបភាពដើម្បីផ្លាស់ប្ដូរ</h6>
+                  <div class="custom-file-wrapper small-file">
+                    <input type="file" class="custom-file-input" id="smallFile">
+                    <label for="smallFile" class="custom-file-label">
+                      <div class="file-icon">
+                        <i class="fa fa-plus"></i>
+                      </div>
+                      <div class="file-text">
+                        <h5>Add File</h5>
+                        <p>Compact version</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
+                <button type="button" class="btn btn-outline-dark-blue"
                   data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save
+                <button type="button" class="btn btn-dark-blue">Save
                   changes</button>
               </div>
             </div>
@@ -387,7 +401,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-outline-dark-blue"
                   data-bs-dismiss="modal">Close</button>
-                <a href="edit-profile.html" target="_blank" class="btn btn-dark-blue"><i
+                <a href="edit_profile.html" target="_blank" class="btn btn-dark-blue"><i
                     class="bi bi-pencil-fill"></i>&nbsp;
                   កែប្រែព័ត៌មានផ្ទាល់ខ្លួន</a>
               </div>
@@ -414,18 +428,25 @@
             <div class="col-lg-6">
               <div class="bg-card-theme shadow rounded-4 p-3">
                 <div class="card border-0 text-center text-lg-start bg-transparent">
-                  <div class="card-body pfp-name">
-                    <div class="card-img pfp m-auto m-lg-0">
-                      <img
-                        src="https://i.pinimg.com/1200x/28/34/c5/2834c52896d6855fa053277f89da0cb8.jpg"
-                        alt>
-                      <button type="button" class="btn shadow-none border-0 change-pfp p-0 fs-4"
-                        data-bs-toggle="modal"
-                        data-bs-target="#change-pfp" title="change profile">
-                        <i class="bi bi-camera-fill"></i>
-                      </button>
+                  <div class="card-header bg-transparent border-0">
+                    <div class="d-flex justify-content-between">
+                      <div class="card-img pfp m-auto m-lg-0">
+                        <img
+                          src="https://i.pinimg.com/1200x/28/34/c5/2834c52896d6855fa053277f89da0cb8.jpg"
+                          alt>
+                        <button type="button" class="btn shadow-none border-0 change-pfp p-0 fs-4"
+                          data-bs-toggle="modal"
+                          data-bs-target="#change-pfp" title="change profile">
+                          <i class="bi bi-camera-fill"></i>
+                        </button>
+                      </div>
+                      <a href="edit_profile.html" class="text-decoration-none nav-link fs-3 setting">
+                        <i class="bi bi-gear"></i>
+                      </a>
                     </div>
-                    <h4 class="card-title fw-semibold mt-4 mb-0">The Weeknd</h4>
+                  </div>
+                  <div class="card-body pfp-name">
+                    <h4 class="card-title fw-semibold mb-0">The Weeknd</h4>
                     <h6 class="card-title text-secondary"><span>@</span>the_weeknd</h6>
                     <p class="card-text my-3">និស្សិតឆ្នាំទី 2 - Information
                       Technology
@@ -444,6 +465,33 @@
                           ចម្លងតំណភ្ជាប់
                         </button>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-card-theme shadow rounded-4 p-3 my-4">
+                <div class="card border-0 bg-transparent">
+                  <div class="card-header border-0 bg-transparent">
+                    <h5 class="card-title fw-semibold m-0">ព័ត៌មានបន្ថែម</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      ជានិស្សិតឆ្នាំទី 3 នៃសកលវិទ្យាល័យភូមិន្ទភ្នំពេញ និងធ្លាប់ជាយុវជនស្ម័គ្រចិត្ត
+                      ផ្នែក IT Support នៅក្នុងព្រឺត្តិការណ៏ សុីហ្គេម រយៈពេល 2 ខែ។
+                      បច្ចុប្បន្នបានបញ្ចប់ការសិក្សាថ្នាក់ Web Frontend និង​ Nodejs ។
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent border-0">
+                    <h5 class="card-title fw-semibold m-0">
+                      ជំនាញ និងមុខវិជ្ជាសិក្សា
+                    </h5>
+                    <div class="mt-4 d-flex flex-wrap gap-2">
+                      <span class="badge bg-danger fw-medium" style="font-size: 14px;">Computer
+                        Science</span>
+                      <span class="badge bg-danger fw-medium" style="font-size: 14px;">Web
+                        Development</span>
+                      <span class="badge bg-danger fw-medium" style="font-size: 14px;">Mobile
+                        Development</span>
                     </div>
                   </div>
                 </div>
@@ -585,34 +633,7 @@
               </div>
             </div>
             <div class="col-lg-6 position-sticky" style="top: 120px">
-              <div class="bg-card-theme shadow rounded-4 p-3">
-                <div class="card border-0 bg-transparent">
-                  <div class="card-header border-0 bg-transparent">
-                    <h5 class="card-title fw-semibold m-0">ព័ត៌មានបន្ថែម</h5>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                      ជានិស្សិតឆ្នាំទី 3 នៃសកលវិទ្យាល័យភូមិន្ទភ្នំពេញ និងធ្លាប់ជាយុវជនស្ម័គ្រចិត្ត
-                      ផ្នែក IT Support នៅក្នុងព្រឺត្តិការណ៏ សុីហ្គេម រយៈពេល 2 ខែ។
-                      បច្ចុប្បន្នបានបញ្ចប់ការសិក្សាថ្នាក់ Web Frontend និង​ Nodejs ។
-                    </p>
-                  </div>
-                  <div class="card-footer bg-transparent border-0">
-                    <h5 class="card-title fw-semibold m-0">
-                      ជំនាញ និងមុខវិជ្ជាសិក្សា
-                    </h5>
-                    <div class="mt-4 d-flex flex-wrap gap-2">
-                      <span class="badge bg-danger fw-medium" style="font-size: 14px;">Computer
-                        Science</span>
-                      <span class="badge bg-danger fw-medium" style="font-size: 14px;">Web
-                        Development</span>
-                      <span class="badge bg-danger fw-medium" style="font-size: 14px;">Mobile
-                        Development</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="shadow rounded-4 p-3 bg-card-theme my-4">
+              <div class="shadow rounded-4 p-3 bg-card-theme">
                 <div class="card border-0 text-start bg-transparent">
                   <div class="card-header border-0 bg-transparent">
                     <h5 class="card-title fw-semibold m-0">ប្រវតិ្តនៃការអប់រំ</h5>
