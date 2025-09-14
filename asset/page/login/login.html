@@ -19,23 +19,83 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <style>
-  .form-floating .form-control:focus~label,
-  .form-floating .form-control:not(:placeholder-shown)~label {
-    background-color: #fff;
-    padding: 0 5px;
-    transform: translateY(-0.9rem) scale(0.85) translateX(20px);
-    font-size: 18px;
-
+ /* This section sets up the container for the floating label */
+  .form-floating {
+    position: relative;
   }
 
+  /* This styles the input field itself */
+  .form-floating .form-control {
+    height: 60px;
+    padding: 20px 15px 5px 15px;
+    border-color: #1d263e;
+    border-radius: 20px;
+    background-color: #fff; /* Default background */
+    transition: background-color 0.2s ease-in-out; 
+  }
+  
+  /* This changes the input background AFTER you type in it */
+  .form-floating .form-control:not(:placeholder-shown) {
+    background-color: #eef2fa; /* Current background for filled input */
+  }
+
+  /* This styles the label in its default position */
+  .form-floating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem .75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+  }
+
+  /* This styles the label WHEN it floats up */
+  .form-floating .form-control:focus~label,
+  .form-floating .form-control:not(:placeholder-shown)~label {
+    transform: scale(.85) translateY(-.9rem) translateX(20px);
+    background-color: #ffffff; 
+    padding: 0 5px;
+    height: auto;
+  }
+  
+  /* This styles the input field when you click on it */
   .form-floating .form-control:focus {
     border-color: #1d263e;
-    /* Adjust to match the primary button color */
     border-width: 2px;
+    box-shadow: none;
+  }
+  
+  /* This styles the input field when you click on it */
+  .form-floating .form-control:focus {
+    border-color: #1d263e;
+    border-width: 2px;
+    box-shadow: none;
+  }
+
+  /* This NEW rule fixes the TEXT position inside the input box */
+  .form-floating .form-control {
+    padding-left: 0.75rem; /* This fixes the text alignment */
+    border-color: #1d263e !important;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+  /* Your other styles */
+  .form-floating .form-control:focus {
+    border-color: #1d263e;
+    border-width: 2px;
+    border-radius: 20px;
     box-shadow: none !important;
   }
 
-  /* Style for the 'Forgot Password' link */
+  /* This new rule changes the input background AFTER you type */
+.form-floating .form-control:not(:placeholder-shown) {
+  background-color: #fff; /* Light blue example color */
+}
+
   .check-box a {
     text-decoration: none;
     color: #1d263e;
@@ -44,6 +104,8 @@
 
   .form-check-input {
     box-shadow: none !important;
+    border-color: #1d263e;
+    background-color: #fff;
   }
 
   .form-check-input:checked {
@@ -51,7 +113,6 @@
     border-color: #1d263e;
   }
 
-  /* Style for the line separating the login options */
   .line-login {
     position: relative;
     text-align: center;
@@ -76,12 +137,12 @@
   }
 </style>
 
-<body>
+<body style="background: #fff;">
   <main>
-    <section class="login d-flex align-items-center">
-      <div class="container-lg my-5">
+    <section class="d-flex align-items-center" style="height: 100vh;">
+      <div class="container">
         <div class="row flex-row">
-          <div class="col-12 col-lg-6 col-md-6">
+          <div class="col-lg-6">
             <form action="" target="_blank" method="post" class="px-2">
               <div class="card border-0 bg-transparent">
                 <div class="card-header bg-transparent border-0">
@@ -106,30 +167,24 @@
                         aria-label="Password" />
                       <label for="Remember" class="form-check-label">ចងចាំខ្ញុំ</label>
                     </div>
-                    <a href="OTP.html">ភ្លេចពាក្យសម្ងាត់?</a>
+                    <a href="verify_email.html">ភ្លេចពាក្យសម្ងាត់?</a>
                   </div>
                   <a href="../us/home.html" type="submit"
-                    class="btn btn-primary d-flex justify-content-center submit mb-3">
+                    class="btn btn-gunmetal w-100 d-flex justify-content-center mb-3">
                     ចូលគណនី
                   </a>
                   <div class="connect-login">
                     <p class="mb-3">
                       មិនទាន់មានគណនីមែនទេ?<span class="connext"><a href="register.html"
-                          class="text-primary fw-normal">បង្កើតគណនី</a></span>
+                          class="fw-normal px-1">បង្កើតគណនី</a></span>
                     </p>
-                    <div class="line text-center">
+                    <div class="text-center">
                       <p class="fs-6 line-login">Or login with</p>
                     </div>
-                    <div class="image d-flex justify-content-center text-center align-items-center">
-                      <a href="#" class="box-image me-1 me-md-0">
-                        <img src="../assets/image/img/login_img/google.png" alt="" />
-                      </a>
-                      <a href="#" class="box-image me-1 me-md-0">
-                        <img src="../assets/image/img/login_img/facebook.png" alt="" />
-                      </a>
-                      <a href="#" class="box-image">
-                        <img src="../assets/image/img/login_img/telegram.webp" alt="" />
-                      </a>
+                    <div class="d-flex justify-content-center">
+                      <a href="#"><i class="bi bi-facebook fs-3 text-dark px-5" ></i></a>
+                    <a href="#"><i class="bi bi-github fs-3 ps-2 text-dark px-5" ></i></a>
+                    <a href=""> <i class="bi bi-google fs-3 ps-2 text-dark px-5"></i></a>
                     </div>
                   </div>
                 </div>
@@ -137,12 +192,10 @@
             </form>
           </div>
 
-          <div class="col-lg-6 col-md-6 d-none d-md-block">
-            <div class="layout wow animate__animated animate__fadeInLeft animate__fadeInRight">
-              <div class="image">
-                <img src="../../image/login-img/login.png" alt="" />
-              </div>
-            </div>
+          <div class="col-lg-6 d-none d-lg-block">   
+            <div class="card border-0 bg-white">
+                <img src="../../image/login-img/login.png" class="img-fluid"  alt="" />
+            </div>   
           </div>
         </div>
       </div>
@@ -150,9 +203,9 @@
   </main>
 </body>
 
-<script src="asset/js/bootstrap.bundle.min.js"></script>
+<script src="../../js/bootstrap.bundle.min.js"></script>
 <!-- aos link -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="asset/js/srcipt.js"></script>
+<script src="../../js/srcipt.js"></script>
 
 </html>
