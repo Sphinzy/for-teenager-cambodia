@@ -125,38 +125,34 @@
     line-height: 1;
     }
 
+    .card-img {
+        overflow: hidden;
+        position: relative;
+    }
     
+    .card-img img{
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .card-img:hover img {
+        transform: scale(1.1);
+    }
 
-
-        
-        .card-img {
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .card-img img{
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .card-img:hover img {
-            transform: scale(1.1);
-        }
-   
 /*         
-        @media (max-width: 768px) {
-            .header {
-                padding: 15px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .lead {
-                font-size: 1rem;
-            }
-        } */
+    @media (max-width: 768px) {
+        .header {
+            padding: 15px;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+        }
+        
+        .lead {
+            font-size: 1rem;
+        }
+    } */
 </style>
 
 <body class="bg-body-theme" data-bs-theme="light">
@@ -447,7 +443,7 @@
                             
                             <div class="d-flex mt-10">
                                 <input type="text" class="form-control btn-outline-dark-blue form-control-lg me-2" placeholder="ស្វែងរកអាហារូបករណ៍ . . .">
-                                <button class="btn-outline-dark-blue text-light px-3"><i class="bi bi-search pe-2"></i>ស្វែងរក</button>
+                                <button class="btn btn-outline-dark-blue text-light px-3"><i class="bi bi-search pe-2"></i>ស្វែងរក</button>
                             </div>
                         </div>
                     </div>
@@ -525,6 +521,35 @@
                 <div id="benefits-1"></div>
             </div>
         </section>
+        <!-- <section>
+            <div class="container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')">
+                            <div class="slide-content">
+                                <h2 class="slide-title">Mountain Panorama</h2>
+                                <p class="slide-description">Breathtaking views of snow-capped peaks under a clear blue sky.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969')">
+                            <div class="slide-content">
+                                <h2 class="slide-title">City Skyline</h2>
+                                <p class="slide-description">Modern architecture and towering skyscrapers at dusk.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05')">
+                            <div class="slide-content">
+                                <h2 class="slide-title">Nature's Beauty</h2>
+                                <p class="slide-description">Lush green forests and misty mountains in the early morning.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section> -->
         <section class="mt-15">
             <div class="container">
                 <h2 class="text-center mb-5 section-title">អាហារូបករណ៍តាមរយៈការស្នើសុំ</h2>
