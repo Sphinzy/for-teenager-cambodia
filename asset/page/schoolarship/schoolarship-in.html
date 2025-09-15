@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/profile.css">
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -21,9 +22,24 @@
     <link rel="icon" href="../../image/project-logo/logo02.png">
 </head>
 <style>
-    img {
+    /* Hero Section */
+    .hero-section {
+        /* background: linear-gradient(135deg, var(--primary-color) 0%, #004085 100%); */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        object-fit: cover;
+        height: 100%;
+        background: url('https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg') no-repeat center center;
+        background-size: cover;
+        opacity: 0.1;
+        z-index: 0;
     }
 
     .hover {
@@ -60,43 +76,83 @@
         height: 3px;
         background-color: var(--secondary-color);
     }
-
-    .nav-pills .nav-link.active {
+    /* .nav-pills .nav-link.active {
         background-color: var(--secondary-color);
         color: #fff;
-    }
+    } */
 
     .nav-pills .nav-link {
-        color: var(--secondary-color);
-        border: 1px solid var(--secondary-color);
+        /* color: var(--secondary-color); */
+        border: 1px solid darkblue;
         margin-right: 10px;
     }
-
-    a {
+    a{
         color: inherit;
         text-decoration: none;
     }
 
-    .swiper {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-slide {
+    /* text-animation */
+    #app {
         text-align: center;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 50px;
+        background-image: linear-gradient(-225deg,
+                #231557 10%,
+                #44107a 39%,
+                #ff1361 67%,
+                #fff800 100%);
+        background-clip: border-box; 
+        text-fill-color: transparent;
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
     }
 
-    /* slider */
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
     }
+    
+    .swiper-button-next:after, .swiper-button-prev:after{
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+    }
+
+    .card-img {
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .card-img img{
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .card-img:hover img {
+        transform: scale(1.1);
+    }
+
+/*         
+    @media (max-width: 768px) {
+        .header {
+            padding: 15px;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+        }
+        
+        .lead {
+            font-size: 1rem;
+        }
+    } */
 </style>
 
 <body class="bg-body-theme" data-bs-theme="light">
@@ -120,12 +176,13 @@
                                     <span
                                         class="position-absolute translate-middle bg-danger border border-light rounded-circle"
                                         style="left: 21px; padding: 3px; top: 1px;">
-                                        <span class="visually-hidden">New alerts</span>
+                                        <span class="visually-hidden">New
+                                            alerts</span>
                                     </span>
                                 </i>
                             </a>
 
-                            <ul class="dropdown-menu ms-n20 border-0 shadow-lg">
+                            <ul class="dropdown-menu ms-n20 border-0 shadow-sm">
                                 <li>
                                     <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
                                         style="width: 320px;">
@@ -137,13 +194,15 @@
 
                                 <!-- list notification  -->
                                 <li>
-                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
                                         <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
                                             class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt="">
+                                            alt>
                                         <div class="notification">
                                             <p class="text clamp-2">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
+                                                Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Unde,
                                                 molestiae!
                                             </p>
                                         </div>
@@ -151,13 +210,15 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
                                         <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
                                             class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt="">
+                                            alt>
                                         <div class="notification">
                                             <p class="text clamp-2">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
+                                                Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Unde,
                                                 molestiae!
                                             </p>
                                         </div>
@@ -165,13 +226,15 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
                                         <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
                                             class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt="">
+                                            alt>
                                         <div class="notification">
                                             <p class="text clamp-2">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
+                                                Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing
+                                                elit. Unde,
                                                 molestiae!
                                             </p>
                                         </div>
@@ -180,7 +243,8 @@
                                 </li>
                                 <div>
                                     <a href="../profile/notification.html"
-                                        class="nav-link text-end text-primary p-2 pe-4">See all</a>
+                                        class="nav-link text-end text-primary p-2 pe-4">See
+                                        all</a>
                                 </div>
                             </ul>
                         </div>
@@ -226,7 +290,7 @@
                     <div class="offcanvas-body bg-body-theme align-items-center">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active px-3" aria-current="page" href="../home.html"><i
+                                <a class="nav-link px-3" aria-current="page" href="../../page/us/home.html"><i
                                         class="bi bi-house-fill mx-1"></i>ទំព័រដើម</a>
                             </li>
                             <div class="dropdown">
@@ -236,13 +300,13 @@
                                 </a>
 
                                 <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
-                                    <li><a class="dropdown-item" href="../../page/direction/major.html">មុខជំនាញ</a>
+                                    <li><a class="dropdown-item" href="#    ">មុខជំនាញ</a>
                                     </li>
                                     <li><a class="dropdown-item" href="university.html">សកលវិទ្យាល័យ</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown">
-                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
+                                <a class="nav-link active px-3 dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-mortarboard-fill mx-1"></i>អាហារូបករណ៍
                                 </a>
@@ -261,9 +325,12 @@
                                 </a>
 
                                 <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
-                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងាររដ្ឋ</a></li>
-                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងារឯកជន</a></li>
-                                    <li><a class="dropdown-item" href="../work/volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
+                                    <li><a class="dropdown-item" href="../../page/work/private-work.html">ការងាររដ្ឋ</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../../page/work/public-work.html">ការងារឯកជន</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="../../page/work/volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
                                     </li>
                                 </ul>
                             </div>
@@ -285,12 +352,13 @@
                                 <span
                                     class="position-absolute translate-middle bg-danger border border-light rounded-circle"
                                     style="left: 21px; padding: 4px; top: 1px;">
-                                    <span class="visually-hidden">New alerts</span>
+                                    <span class="visually-hidden">New
+                                        alerts</span>
                                 </span>
                             </i>
                         </a>
 
-                        <ul class="dropdown-menu ms-n20 border-0 shadow-lg bg-body-theme" data-bs-theme="light">
+                        <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-body-theme" data-bs-theme="light">
                             <li>
                                 <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
                                     style="width: 320px;">
@@ -302,36 +370,42 @@
 
                             <!-- list notification  -->
                             <li>
-                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
                                     <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
-                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt>
                                     <div class="notification">
                                         <p class="text clamp-2">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Unde, molestiae!
                                         </p>
                                     </div>
                                     <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
                                     <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
-                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt>
                                     <div class="notification">
                                         <p class="text clamp-2">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Unde, molestiae!
                                         </p>
                                     </div>
                                     <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
                                     <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
-                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt>
                                     <div class="notification">
                                         <p class="text clamp-2">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                            Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit.
+                                            Unde, molestiae!
                                         </p>
                                     </div>
                                     <i class="bi bi-dot text-danger display-6 mt-n2"></i>
@@ -339,7 +413,8 @@
                             </li>
                             <div>
                                 <a href="../profile/notification.html"
-                                    class="nav-link text-end text-primary p-2 pe-4">See all</a>
+                                    class="nav-link text-end text-primary p-2 pe-4">See
+                                    all</a>
                             </div>
                         </ul>
                     </div>
@@ -356,130 +431,56 @@
         </nav>
     </header>
     <main>
-        <section>
+        <!-- Hero Section -->
+        <section class="hero-section bg-gradient text-white py-9">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h1 class="mt-5 mb-4">ស្វែងរកអាហារូបករណ៏ក្នុងស្រុក</h1>
-                        <p class="mb-4">
-                            អាហារូបករណ៍គឺជាការឧបត្ថម្ភហិរញ្ញវត្ថុដែលផ្តល់ឱ្យសិស្សានុសិស្សដើម្បីជួយពួកគេក្នុងការសិក្សា។
-                            អាហារូបករណ៍អាចមានទ្រង់ទ្រាយផ្សេងៗគ្នា ដូចជា ការផ្តល់ប្រាក់, ការដកថ្លៃសិក្សា,
-                            ឬការផ្តល់សម្ភារៈសិក្សា។ អាហារូបករណ៍អាចផ្តល់ដោយរដ្ឋាភិបាល, ស្ថាប័នឯកជន,
-                            ឬអង្គការមិនមែនរដ្ឋាភិបាល។</p>
-                        <p class="mb-4">ដើម្បីស្វែងរកអាហារូបករណ៍ដែលសមស្រប សិស្សានុសិស្សគួរតែពិចារណាពីលក្ខខណ្ឌនានា ដូចជា
-                            កម្រិតសិក្សា, វិស័យសិក្សា, និងស្ថានភាពហិរញ្ញវត្ថុ។
-                            ការស្វែងរកអាហារូបករណ៍ត្រូវបានធ្វើតាមរយៈគេហទំព័រសាលា, វេបសាយអាហារូបករណ៍,
-                            និងការទំនាក់ទំនងជាមួយមន្ត្រីសាលា។</p>
-                        <button class="btn btn-outline-dark-blue text-light mb-5">ស្វែងរកអាហារូបករណ៍</button>
-                    </div>
-
-                    <div class="col-lg-6 d-block d-lg-none">
-                        <img src="https://collegeconfidential.com/wp-content/uploads/2025/02/a-scholarship-search-for-savvy-students-1024x408.webp"
-                            alt="" class="mt-8" style="border-radius: none; height: 300px;">
-
-                    </div>
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <img src="https://collegeconfidential.com/wp-content/uploads/2025/02/a-scholarship-search-for-savvy-students-1024x408.webp"
-                            alt="" class="mt-8" style="border-radius: none; height: 300px;">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="my-5">
-            <div class="container">
-                <div class="row">
+                <div class="row align-items-center g-4 g-md-3">
                     <div class="col-sm-12 col-md-6">
-                        <div class="card-img">
+                        <div class="mt-15">
+                            <div id="app" style="height: 145px;"></div>
+                            <!-- <h1 class="display-4 fw-bold">ស្វែងរកអាហារូបករណ៍សម្រាប់អនាគតរបស់អ្នក</h1> -->
+                            <!-- <p class="lead">រាប់ពាន់អាហារូបករណ៍ពីស្ថាប័នជាតិ និងអន្តរជាតិដែលរង់ចាំអ្នក</p> -->
+                            
+                            <div class="d-flex mt-10">
+                                <input type="text" class="form-control btn-outline-dark-blue form-control-lg me-2" placeholder="ស្វែងរកអាហារូបករណ៍ . . .">
+                                <button class="btn btn-outline-dark-blue text-light px-3"><i class="bi bi-search pe-2"></i>ស្វែងរក</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-lg-block col-md-6 text-center ps-4">
+                        <!-- Swiper -->
+                        <div class="card border-0 bg-transparent">
                             <!-- Swiper -->
                             <div class="swiper mySwiper">
-                                <div class="swiper-wrapper mb-4">
-                                    <div class="swiper-slide bg-body-theme">
-                                        <div class="col-md-6">
-                                            <div class="card p-3 border-0 bg-body-theme">
-                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRo8pMBe6WznXNWZCgifbq_WGsnfrDdxON93gazK_uC11t-WtLEt_wBNNgwCasPvryKt4&usqp=CAU"
-                                                    alt="" class="object-fit-cover" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card p-3 border-0 bg-transparent">
-                                                <img src="https://www.pepyempoweringyouth.org/wp-content/uploads/2025/07/FB_IMG_1750041454862-1024x683.jpg"
-                                                    alt="" class="object-fit-cover" />
-                                            </div>
-                                        </div>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide rounded-4">
+                                        <img src="https://www.pepyempoweringyouth.org/wp-content/uploads/2025/07/FB_IMG_1750041454862-1024x683.jpg" class="card-img-top rounded-4" style="height: 400px;"/>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="col-md-6">
-                                            <div class="card p-3 border-0 bg-transparent">
-                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPcUUgGAj_nQoj40hZ1ILRHnGhOsrmMlLu4YRhbs_Ws62iICIqRqltecMphKUYcHil1qQ&usqp=CAU"
-                                                    alt="" style="height: 200px;" class="object-fit-cover" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card p-3 border-0 bg-transparent">
-                                                <img src="https://www.pepyempoweringyouth.org/wp-content/uploads/2025/07/FB_IMG_1750041454862-1024x683.jpg"
-                                                    alt="" class="object-fit-cover" />
-                                            </div>
-                                        </div>
+                                    <div class="swiper-slide rounded-4">
+                                        <img src="https://successfulsunrise.com/wp-content/uploads/iStock-1313127400.jpg" class="card-img-top rounded-4" style="height: 400px;"/>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="col-md-6">
-                                            <div class="card p-3 border-0 bg-transparent">
-                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRo8pMBe6WznXNWZCgifbq_WGsnfrDdxON93gazK_uC11t-WtLEt_wBNNgwCasPvryKt4&usqp=CAU"
-                                                    alt="" class="object-fit-cover" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card p-3 border-0 bg-transparent">
-                                                <img src="https://www.pepyempoweringyouth.org/wp-content/uploads/2025/07/FB_IMG_1750041454862-1024x683.jpg"
-                                                    alt="" class="object-fit-cover" />
-                                            </div>
-                                        </div>
+                                    <div class="swiper-slide rounded-4">
+                                        <img src="https://scholarship-positions.com/wp-content/uploads/2022/06/DCU-Business-School.png" class="card-img-top rounded-4" style="height: 400px;"/>
                                     </div>
                                 </div>
-                                <!-- <div class="swiper-button-next"></div> -->
-                                <!-- <div class="swiper-button-prev"></div> -->
-                                <!-- <div class="swiper-pagination"></div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <section class="mt-15">
-            <div class="container mt-5 mb-5">
-                <h2 class="text-center mb-4">ស្វែងរកអាហារូបករណ៏</h2>
-                <div class="row gy-5 g-lg-0">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="https://rupp.edu.kh/iispp/image_banner/Render%20flag.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">អាហារូបករណ៍សម្រាប់សិស្សានុសិស្សដែលមានស្ថានភាពពិបាក</h5>
-                                <p class="card-text">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                                <h6>លក្ខខណ្ឌ:</h6>
-                                <ul>
-                                    <li>សិស្សានុសិស្សត្រូវមានស្ថានភាពពិបាកហិរញ្ញវត្ថុ</li>
-                                    <li>ត្រូវ មានកំណត់ត្រាសិក្សាល្អ</li>
-                                    <li>ត្រូវបំពេញពាក្យសុំអាហារូបករណ៍</li>
-                                </ul>
-                                <h6>របៀបដាក់ពាក្យ:</h6>
-                                <p>ដើម្បីដាក់ពាក្យសុំអាហារូបករណ៍នេះ សូមទំនាក់ទំនងមកកាន់សាលាដែលអ្នកកំពុងសិក្សា ឬចូលទៅកាន់គេហទំព័រផ្លូវការរបស់សាលា។</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <section class="mt-15">
+        <section class="mt-15" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             <div class="container">
-                <h2 class="text-center mb-5 section-title">ប្រភេទអាហារូបករណ៏</h2>
+                <h2 class="text-center mb-5 section-title bg-body-theme">ប្រភេទអាហារូបករណ៏</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
-                        <a href="#benefits" style="text-decoration: none;">
+                        <a href="#benefits-1">
                             <div class="card shadow-sm bg-card-theme border-0 hover">
                                 <div class="card-body text-center">
                                     <i class="bi bi-mortarboard-fill display-1 mb-3 text-secondary"></i>
-                                    <h5 class="card-title mb-3">អាហារូបករណ៍តាមរយៈការស្នើសុំ</h5>
-                                    <p class="card-text">
+                                    <h5 class="card-title mb-3 clamp-2">អាហារូបករណ៍តាមរយៈការស្នើសុំ</h5>
+                                    <p class="card-text clamp-4">
                                         អាហារូបករណ៍តាមរយៈការស្នើសុំត្រូវបានផ្តល់ឱ្យសិស្សានុសិស្សដែលបានដាក់ពាក្យសុំ
                                         និងបំពេញលក្ខខណ្ឌដែលបានកំណត់។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ,
                                         និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
@@ -488,12 +489,12 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#benefits" style="text-decoration: none;">
+                        <a href="#benefits-2">
                             <div class="card shadow-sm bg-card-theme border-0 hover">
                                 <div class="card-body text-center">
                                     <i class="bi bi-globe display-1 mb-3 text-secondary"></i>
                                     <h5 class="card-title mb-3">អាហារូបករណ៍ប្រឡងប្រជែង</h5>
-                                    <p class="card-text">
+                                    <p class="card-text clamp-4">
                                         អាហារូបករណ៍ប្រឡងប្រជែងត្រូវបានផ្តល់ឱ្យសិស្សានុសិស្សដែលបង្ហាញសមត្ថភាពខ្ពស់ក្នុងការប្រឡងប្រជែង។
                                         អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា,ការផ្តល់ឱកាសសិក្សា, សៀវភៅ,
                                         និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
@@ -502,12 +503,13 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#benefits">
+                        <a href="#benefits-3">
                             <div class="card shadow-sm bg-card-theme border-0 hover">
                                 <div class="card-body text-center">
                                     <i class="bi bi-people-fill display-1 mb-3 text-secondary"></i>
                                     <h5 class="card-title mb-3">អត្ថប្រយោជន៍នៃអាហារូបករណ៍</h5>
-                                    <p class="card-text">អាហារូបករណ៍ផ្តល់អត្ថប្រយោជន៍ជាច្រើនដល់សិស្សានុសិស្ស,
+                                    <p class="card-text clamp-4">
+                                        អាហារូបករណ៍ផ្តល់អត្ថប្រយោជន៍ជាច្រើនដល់សិស្សានុសិស្ស,
                                         រួមមានការកាត់បន្ថយបន្ទុកហិរញ្ញវត្ថុ, ការផ្តល់ឱកាសសិក្សា,
                                         និងការលើកកម្ពស់សមត្ថភាព។
                                         អាហារូបករណ៍អាចជួយសិស្សានុសិស្សក្នុងការសម្រេចបានគោលបំណងសិក្សារបស់ពួកគេ។</p>
@@ -516,25 +518,55 @@
                         </a>
                     </div>
                 </div>
+                <div id="benefits-1"></div>
             </div>
         </section>
+        <!-- <section>
+            <div class="container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')">
+                            <div class="slide-content">
+                                <h2 class="slide-title">Mountain Panorama</h2>
+                                <p class="slide-description">Breathtaking views of snow-capped peaks under a clear blue sky.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969')">
+                            <div class="slide-content">
+                                <h2 class="slide-title">City Skyline</h2>
+                                <p class="slide-description">Modern architecture and towering skyscrapers at dusk.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05')">
+                            <div class="slide-content">
+                                <h2 class="slide-title">Nature's Beauty</h2>
+                                <p class="slide-description">Lush green forests and misty mountains in the early morning.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section> -->
         <section class="mt-15">
             <div class="container">
                 <h2 class="text-center mb-5 section-title">អាហារូបករណ៍តាមរយៈការស្នើសុំ</h2>
-                <h4>អាហារូបករណ៏</h4>
+                <h4>ប្រភេទអាហារូបករណ៏</h4>
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        <button class="nav-link active my-2" id="pills-home-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                            aria-selected="true">អាហារូបករណ៍រាជរដ្ឋាភិបាល</button>
+                            aria-selected="true">រាជរដ្ឋាភិបាល</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        <button class="nav-link my-2" id="pills-profile-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                            aria-selected="false">អាហារូបករណ៍របស់ស្ថានប័នឬឯកជន</button>
+                            aria-selected="false">ស្ថានប័នឬឯកជន</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        <button class="nav-link my-2" id="pills-contact-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
                             aria-selected="false">អាហារូបករណ៍របស់សាលា</button>
                     </li>
@@ -544,169 +576,10 @@
                         aria-labelledby="pills-home-tab" tabindex="0">
                         <div class="row g-4 g-mb-3">
                             <div class="col-sm-6 col-md-4">
-                                <div class="card shadow-sm bg-card-theme border-0 hover">
-                                    <div class="card-img ">
-                                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyPOjxjl0l0xUIdDF8JbrVgPN8W4Wh79jpEy1YQYAtagSfZKVuwKkpJRQcFvNIiy36lgwMn56dN4oBdNqmsxHzKZzdXm630fkiNwnSzwpsds_uetpWB6jAsCGSuAqUEFooGPftVy387jM/s1600/rupp.jpg"
-                                            alt="" style="height: 300px;">
-                                    </div>
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start" data-aos="fade-up-right">
+                                    <div class="card-img"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyPOjxjl0l0xUIdDF8JbrVgPN8W4Wh79jpEy1YQYAtagSfZKVuwKkpJRQcFvNIiy36lgwMn56dN4oBdNqmsxHzKZzdXm630fkiNwnSzwpsds_uetpWB6jAsCGSuAqUEFooGPftVy387jM/s1600/rupp.jpg" alt="" style="width: 100%; height: 300px;"></div>
                                     <div class="card-body">
-                                        <h5 class="card-title clamp-2">សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ</h5>
-                                        <p class="card-text clamp-3">
-                                            អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                            អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                                    </div>
-                                    <div class="card-footer justify-content-between d-flex align-items-center">
-                                        <div>
-                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​
-                                                    ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        </div>
-                                        <div>
-                                            <button class="btn bg-footer end-0"><a href="detail.html"
-                                                    class="text-white">ព័ត៌មានលម្អិត</a></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="card shadow-sm bg-card-theme border-0 hover">
-                                    <div class="card-img">
-                                        <img src="https://cadt.edu.kh/wp-content/uploads/2024/06/Our-10th-Anniversary-Celebration-scaled.webp"
-                                            alt="" style="height: 300px;">
-                                    </div>
-                                    <div class="card-body bg-card-theme">
-                                        <h5 class="card-title clamp-2">សាកលវិទ្យាល័យ​ CADT</h5>
-                                        <p class="card-text clamp-3">
-                                            អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                            អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                                    </div>
-                                    <div class="card-footer justify-content-between d-flex align-items-center">
-                                        <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​
-                                                ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer end-0"><a href="detail.html"
-                                                class="text-white">ព័ត៌មានលម្អិត</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="card shadow-sm bg-card-theme border-0 hover">
-                                    <div class="card-img">
-                                        <img src="https://cdn.norton-u.com/nu/public_file/images/about/new%20campus.jpg"
-                                            alt="" style="height: 300px;">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title clamp-2">សាកលវិទ្យាល័យន័រតុន</h5>
-                                        <p class="card-text clamp-3">
-                                            អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                            អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                                    </div>
-                                    <div class="card-footer justify-content-between d-flex align-items-center">
-                                        <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​
-                                                ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer end-0"><a href="detail.html"
-                                                class="text-white">ព័ត៌មានលម្អិត</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
-                        tabindex="0">
-                        <div class="row g-4 g-mb-3">
-                            <div class="col-sm-6 col-md-4">
-                                <div class="card shadow-sm bg-card-theme border-0 hover">
-                                    <div class="card-img ">
-                                        <img src="https://lh3.googleusercontent.com/proxy/JelJVqqnuxD-5Q1NoRa4mBt3hVjqv_uPA1H0TTPMIut1r63l7eu8SwmlICtjmlPhzG2DoMi9J-w-ZzhfxkQ98gZQqvDqaaFsDW4_Mtqsn8MTCKpq4QYFBb16"
-                                            alt="" style="height: 300px;">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title clamp-2">សាកលវិទ្យាល័យអន្តរជាតិផារ៉ាហ្គន</h5>
-                                        <p class="card-text clamp-3">
-                                            អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                            អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                                    </div>
-                                    <div class="card-footer justify-content-between d-flex align-items-center">
-                                        <div>
-                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​
-                                                    ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        </div>
-                                        <div>
-                                            <button class="btn bg-footer end-0"><a href="detail.html"
-                                                    class="text-white">ព័ត៌មានលម្អិត</a></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="card shadow-sm bg-card-theme border-0 hover">
-                                    <div class="card-img">
-                                        <img src="https://westernuniversity.edu.kh/laravel-filemanager/photos/shares/map/Steung%20Mean%20Chey%20(1).png"
-                                            alt="" style="height: 300px;">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title clamp-2">សាកល​វិទ្យាល័យ​វេស្ទើន</h5>
-                                        <p class="card-text clamp-3">
-                                            អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                            អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                                    </div>
-                                    <div class="card-footer justify-content-between d-flex align-items-center">
-                                        <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​
-                                                ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer end-0"><a href="detail.html"
-                                                class="text-white">ព័ត៌មានលម្អិត</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="card shadow-sm bg-card-theme border-0 hover">
-                                    <div class="card-img">
-                                        <img src="https://ko.uni24k.com/media/CACHE/images/unis/building_schools_u364e4ca0_772c4f1e/0b614424a3c23214ee21e9bca7778dbf.jpg"
-                                            alt="" style="height: 300px;">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title clamp-2">សាកលវិទ្យាល័យកម្ពុជា</h5>
-                                        <p class="card-text clamp-3">
-                                            អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                            អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                                    </div>
-                                    <div class="card-footer justify-content-between d-flex align-items-center">
-                                        <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​
-                                                ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer end-0"><a href="detail.html"
-                                                class="text-white">ព័ត៌មានលម្អិត</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
-                        tabindex="0">...</div>
-                </div>
-            </div>
-        </section>
-        <section class="mt-15">
-
-        </section>
-        <!-- <section class="mt-15">
-            <div class="container">
-                <h2 class="text-center mb-5 section-title">អាហារូបករណ៍ប្រឡងប្រជែង</h2>
-                <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-home-tab2" data-bs-toggle="pill" data-bs-target="#pills-home2" type="button" role="tab" aria-controls="pills-home" aria-selected="true">អាហារូបករណ៍ថ្នាក់ដឹកនាំ</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-profile-tab2" data-bs-toggle="pill" data-bs-target="#pills-profile2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">អាហារូបករណ៍រាជរដ្ឋាភិបាល</button>
-                    </li>
-                </ul>
-                <div class="tab-content" id="pills-tabContent2">
-                    <div class="tab-pane fade show active" id="pills-home2" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                        <div class="row g-4 g-mb-3">
-                            <div class="col-sm-6 col-md-4">
-                                <div class="card shadow-sm bg-card-theme border-0">
-                                    <div class="card-img ">
-                                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyPOjxjl0l0xUIdDF8JbrVgPN8W4Wh79jpEy1YQYAtagSfZKVuwKkpJRQcFvNIiy36lgwMn56dN4oBdNqmsxHzKZzdXm630fkiNwnSzwpsds_uetpWB6jAsCGSuAqUEFooGPftVy387jM/s1600/rupp.jpg" alt="" style="height: 300px;">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title clamp-2">សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ</h5>
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ</h5>
                                         <p class="card-text clamp-3">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
                                     </div>
                                     <div class="card-footer justify-content-between d-flex align-items-center">
@@ -714,229 +587,345 @@
                                             <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
                                         </div>
                                         <div>
-                                            <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
-                                <div class="card shadow-sm bg-card-theme border-0">
-                                    <div class="card-img">
-                                        <img src="https://cadt.edu.kh/wp-content/uploads/2024/06/Our-10th-Anniversary-Celebration-scaled.webp" alt="" style="height: 300px;">
-                                    </div>
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start" data-aos="fade-up">
+                                    <div class="card-img"><img src="https://cadt.edu.kh/wp-content/uploads/2024/06/Our-10th-Anniversary-Celebration-scaled.webp" alt="" style="width: 100%; height: 300px;"></div>
                                     <div class="card-body">
-                                        <h5 class="card-title clamp-2">សាកលវិទ្យាល័យ​ CADT</h5>
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យ​ CADT</h5>
                                         <p class="card-text clamp-3">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
                                     </div>
                                     <div class="card-footer justify-content-between d-flex align-items-center">
-                                        <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4">
-                                <div class="card shadow-sm bg-card-theme border-0">
-                                    <div class="card-img">
-                                        <img src="https://cdn.norton-u.com/nu/public_file/images/about/new%20campus.jpg" alt="" style="height: 300px;">
-                                    </div>
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start" data-aos="fade-up-left">
+                                    <div class="card-img"><img src="https://image.freshnewsasia.com/2020/id-154/fn-2020-07-27-11-09-38-0.jpg" alt="" style="width: 100%; height: 300px;"></div>
                                     <div class="card-body">
-                                        <h5 class="card-title clamp-2">សាកលវិទ្យាល័យន័រតុន</h5>
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យអន្តរជាតិផារ៉ាហ្គន</h5>
                                         <p class="card-text clamp-3">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
                                     </div>
                                     <div class="card-footer justify-content-between d-flex align-items-center">
-                                        <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                        <button class="btn bg-footer text-light end-0">ដាក់ពាក្យឥឡូវនេះ</button>
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-profile2" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-                </div>
-            </div>
-        </section> -->
-        <section class="mt-15">
-            <div class="container">
-                <h2 class="text-center mb-5 section-title">អាហារូបករណ៍ប្រឡងប្រជែង</h2>
-                <div class="row g-4 g-mb-3">
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card shadow-sm bg-card-theme border-0 hover">
-                            <div class="card-img ">
-                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyPOjxjl0l0xUIdDF8JbrVgPN8W4Wh79jpEy1YQYAtagSfZKVuwKkpJRQcFvNIiy36lgwMn56dN4oBdNqmsxHzKZzdXm630fkiNwnSzwpsds_uetpWB6jAsCGSuAqUEFooGPftVy387jM/s1600/rupp.jpg"
-                                    alt="" style="height: 300px;">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title clamp-2">សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ</h5>
-                                <p class="card-text clamp-3">
-                                    អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                    អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                            </div>
-                            <div class="card-footer justify-content-between d-flex align-items-center">
-                                <div>
-                                    <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​
-                                            ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                </div>
-                                <div>
-                                    <button class="btn bg-footer end-0"><a href="detail.html"
-                                            class="text-white">ព័ត៌មានលម្អិត</a></button>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                        <div class="row g-4 g-mb-3">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start" data-aos="flip-left">
+                                    <div class="card-img"><img src="https://ko.uni24k.com/media/CACHE/images/unis/building_schools_u364e4ca0_772c4f1e/0b614424a3c23214ee21e9bca7778dbf.jpg" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យកម្ពុជា</h5>
+                                        <p class="card-text clamp-3">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card shadow-sm bg-card-theme border-0 hover">
-                            <div class="card-img">
-                                <img src="https://cadt.edu.kh/wp-content/uploads/2024/06/Our-10th-Anniversary-Celebration-scaled.webp"
-                                    alt="" style="height: 300px;">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start" data-aos="flip-left">
+                                    <div class="card-img"><img src="https://westernuniversity.edu.kh/laravel-filemanager/photos/shares/map/Steung%20Mean%20Chey%20(1).png" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកល​វិទ្យាល័យ​វេស្ទើន</h5>
+                                        <p class="card-text clamp-3">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title clamp-2">សាកលវិទ្យាល័យ​ CADT</h5>
-                                <p class="card-text clamp-3">
-                                    អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                    អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start" data-aos="flip-left">
+                                    <div class="card-img"><img src="https://image.freshnewsasia.com/2020/id-154/fn-2020-07-27-11-09-38-0.jpg" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យអន្តរជាតិផារ៉ាហ្គន</h5>
+                                        <p class="card-text clamp-3">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-footer justify-content-between d-flex align-items-center">
-                                <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២
-                                        ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer end-0"><a href="detail.html"
-                                        class="text-white">ព័ត៌មានលម្អិត</a></button>
-                            </div>
-                        </div>
 
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card shadow-sm bg-card-theme border-0 hover">
-                            <div class="card-img">
-                                <img src="https://cdn.norton-u.com/nu/public_file/images/about/new%20campus.jpg" alt=""
-                                    style="height: 300px;">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title clamp-2">សាកលវិទ្យាល័យន័រតុន</h5>
-                                <p class="card-text clamp-3">
-                                    អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                    អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                            </div>
-                            <div class="card-footer justify-content-between d-flex align-items-center">
-                                <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២
-                                        ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer end-0"><a href="detail.html"
-                                        class="text-white">ព័ត៌មានលម្អិត</a></button>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card shadow-sm bg-card-theme border-0 hover">
-                            <div class="card-img">
-                                <img src="https://upload.wikimedia.org/wikipedia/km/thumb/7/70/%E1%9E%9C%E1%9E%B7%E1%9E%91%E1%9F%92%E1%9E%99%E1%9E%B6%E1%9E%9F%E1%9F%92%E1%9E%90%E1%9E%B6%E1%9E%93%E1%9E%94%E1%9E%85%E1%9F%92%E1%9E%85%E1%9F%81%E1%9E%80%E1%9E%9C%E1%9E%B7%E1%9E%91%E1%9F%92%E1%9E%99%E1%9E%B6%E1%9E%80%E1%9E%98%E1%9F%92%E1%9E%96%E1%9E%BB%E1%9E%87%E1%9E%B6.jpg/330px-%E1%9E%9C%E1%9E%B7%E1%9E%91%E1%9F%92%E1%9E%99%E1%9E%B6%E1%9E%9F%E1%9F%92%E1%9E%90%E1%9E%B6%E1%9E%93%E1%9E%94%E1%9E%85%E1%9F%92%E1%9E%85%E1%9F%81%E1%9E%80%E1%9E%9C%E1%9E%B7%E1%9E%91%E1%9F%92%E1%9E%99%E1%9E%B6%E1%9E%80%E1%9E%98%E1%9F%92%E1%9E%96%E1%9E%BB%E1%9E%87%E1%9E%B6.jpg"
-                                    alt="" style="height: 300px;">
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0"> <div class="row g-4 g-mb-3">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start">
+                                    <div class="card-img"><img src="https://westernuniversity.edu.kh/laravel-filemanager/photos/shares/map/Steung%20Mean%20Chey%20(1).png" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកល​វិទ្យាល័យ​វេស្ទើន</h5>
+                                        <p class="card-text clamp-3">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title clamp-2">វិទ្យាស្ថាន បច្ចេកវិទ្យាកម្ពុជា</h5>
-                                <p class="card-text clamp-3">
-                                    អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                    អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start">
+                                    <div class="card-img"><img src="https://image.freshnewsasia.com/2020/id-154/fn-2020-07-27-11-09-38-0.jpg" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យអន្តរជាតិផារ៉ាហ្គន</h5>
+                                        <p class="card-text clamp-3">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-footer justify-content-between d-flex align-items-center">
-                                <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២
-                                        ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer end-0"><a href="detail.html"
-                                        class="text-white">ព័ត៌មានលម្អិត</a></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card shadow-sm bg-card-theme border-0 hover">
-                            <div class="card-img">
-                                <img src="https://www.setecu.com/images/announcement/2020/photo_2020-12-19_10-27-09.jpg"
-                                    alt="" style="height: 300px;">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title clamp-2">វិទ្យាស្ថានស៊ីតិក</h5>
-                                <p class="card-text clamp-3">
-                                    អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                    អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                            </div>
-                            <div class="card-footer justify-content-between d-flex align-items-center">
-                                <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២
-                                        ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer end-0"><a href="detail.html"
-                                        class="text-white">ព័ត៌មានលម្អិត</a></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="card shadow-sm bg-card-theme border-0 hover">
-                            <div class="card-img">
-                                <img src="data:image/jpeg;base64,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"
-                                    alt="" style="height: 300px;">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title clamp-2">សាកលវិទ្យាល័យ​វេស្ទីន</h5>
-                                <p class="card-text clamp-3">
-                                    អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។
-                                    អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
-                            </div>
-                            <div class="card-footer justify-content-between d-flex align-items-center">
-                                <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២
-                                        ខែធ្នូ ឆ្នាំ២០២៥</small></i>
-                                <button class="btn bg-footer end-0" id="benefits"><a href="detail.html"
-                                        class="text-white">ព័ត៌មានលម្អិត</a></button>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start">
+                                    <div class="card-img"><img src="https://ko.uni24k.com/media/CACHE/images/unis/building_schools_u364e4ca0_772c4f1e/0b614424a3c23214ee21e9bca7778dbf.jpg" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យកម្ពុជា</h5>
+                                        <p class="card-text clamp-3">អាហារូបករណ៍នេះមានគោលបំណងជួយសិស្សានុសិស្សដែលមានស្ថានភាពពិបាកក្នុងការសិក្សា។ អាហារូបករណ៍នេះអាចគ្របដណ្តប់លើថ្លៃសិក្សា, សៀវភៅ, និងសម្ភារៈសិក្សាផ្សេងៗ។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="m-15">
+        <div id="benefits-2"></div>
+        <section class="mt-15" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h2 class="text-center mb-5 section-title">អាហារូបករណ៍ប្រឡងប្រជែង</h2>
             <div class="container">
-                <h2 class="text-center mb-5 section-title">អត្ថប្រយោជន៍នៃអាហារូបករណ៍</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card shadow-sm bg-card-theme border-0 text-center">
-                            <div class="card-body">
-                                <i class="bi bi-currency-dollar display-1 mb-3 text-secondary"></i>
-                                <h5 class="card-title mb-3">ជួយសងថ្លៃសិក្សា</h5>
-                                <p class="card-text">អាហារូបករណ៍អាចជួយសិស្សានុសិស្សក្នុងការសងថ្លៃសិក្សា
-                                    ដែលជួយបន្ថយបន្ទុកហិរញ្ញវត្ថុរបស់ពួកគេ។</p>
+                <section class="bg-body-theme">
+                        <div class="swiper mySwiper-5">
+                        <div class="swiper-wrapper mb-4">
+                        <div class="swiper-slide bg-body-theme">
+                            <div class="col-12">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start">
+                                    <div class="card-img"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyPOjxjl0l0xUIdDF8JbrVgPN8W4Wh79jpEy1YQYAtagSfZKVuwKkpJRQcFvNIiy36lgwMn56dN4oBdNqmsxHzKZzdXm630fkiNwnSzwpsds_uetpWB6jAsCGSuAqUEFooGPftVy387jM/s1600/rupp.jpg" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ(៣០ កន្លែង)</h5>
+                                        <p class="card-text clamp-2">វិស្វកម្មទូរគមនាគមន៍, វិស្វកម្មនិងវិទ្យាសាស្ត្រទិន្នន័យ, ព័ត៌មានវិទ្យា។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm bg-card-theme border-0 text-center">
-                            <div class="card-body">
-                                <i class="bi bi-book display-1 mb-3 text-secondary"></i>
-                                <h5 class="card-title mb-3">ផ្តល់សម្ភារៈសិក្សា</h5>
-                                <p class="card-text">អាហារូបករណ៍អាចផ្តល់សម្ភារៈសិក្សា ដូចជា សៀវភៅ និងឧបករណ៍សិក្សាផ្សេងៗ
-                                    ដែលជួយសិស្សានុសិស្សក្នុងការសិក្សា។</p>
+                        <div class="swiper-slide bg-body-theme">
+                            <div class="col-12">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start">
+                                    <div class="card-img"><img src="https://cadt.edu.kh/wp-content/uploads/2024/06/Our-10th-Anniversary-Celebration-scaled.webp" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យ​ CADT(២០០ កន្លែង)</h5>
+                                        <p class="card-text clamp-2">វិស្វកម្មសុសវែរ, វិទ្យាសាស្ត្រទិន្នន័យ, ពាណិជ្ជកម្មអេឡិចត្រូនិក, វិស្វកម្មទូរគមនាគមន៍, សន្តិសុខសាយប័រ។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="swiper-slide bg-body-theme">
+                            <div class="col-12">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start">
+                                    <div class="card-img"><img src="https://upload.wikimedia.org/wikipedia/km/thumb/7/70/%E1%9E%9C%E1%9E%B7%E1%9E%91%E1%9F%92%E1%9E%99%E1%9E%B6%E1%9E%9F%E1%9F%92%E1%9E%90%E1%9E%B6%E1%9E%93%E1%9E%94%E1%9E%85%E1%9F%92%E1%9E%85%E1%9F%81%E1%9E%80%E1%9E%9C%E1%9E%B7%E1%9E%91%E1%9F%92%E1%9E%99%E1%9E%B6%E1%9E%80%E1%9E%98%E1%9F%92%E1%9E%96%E1%9E%BB%E1%9E%87%E1%9E%B6.jpg/330px-%E1%9E%9C%E1%9E%B7%E1%9E%91%E1%9F%92%E1%9E%99%E1%9E%B6%E1%9E%9F%E1%9F%92%E1%9E%90%E1%9E%B6%E1%9E%93%E1%9E%94%E1%9E%85%E1%9F%92%E1%9E%85%E1%9F%81%E1%9E%80%E1%9E%9C%E1%9E%B7%E1%9E%91%E1%9F%92%E1%9E%99%E1%9E%B6%E1%9E%80%E1%9E%98%E1%9F%92%E1%9E%96%E1%9E%BB%E1%9E%87%E1%9E%B6.jpg" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា(៤០ កន្លែង)</h5>
+                                        <p class="card-text clamp-2"> វិស្វកម្មសុសវែរ, វិស្វកម្មបញ្ញាសប្បនិម្មិត និងសន្តិសុខសាយប័រ។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-body-theme">
+                            <div class="col-12">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start">
+                                    <div class="card-img"><img src="https://s3.ams.com.kh/education/2021/12/1-6.jpg" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យ AUPP(២០០កន្លែង)</h5>
+                                        <p class="card-text clamp-2">ការគ្រប់គ្រងព័ត៌មានវិទ្យា/វិទ្យាសាស្ត្រកុំព្យូទ័រ, បច្ចេកវិទ្យាគមនាគមន៍, សន្តិសុខសាយប័រ, បញ្ញាសិប្បនិម្មិត, ការអភិវឌ្ឍសុសវែរ ជាដើម។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-body-theme">
+                            <div class="col-12">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start">
+                                    <div class="card-img"><img src="https://image.freshnewsasia.com/2021/id-024/fn-2021-10-21-14-55-50-0.jpg" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យជាតិគ្រប់គ្រង(១០ កន្លែង)</h5>
+                                        <p class="card-text clamp-3">សេដ្ឋកិច្ចបច្ចេកវិទ្យាឌីជីថល, បច្ចេកវិទ្យាហិរញ្ញវត្ថុ, សហគ្រិនភាពសកល។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-body-theme">
+                            <div class="col-12">
+                                <div class="card shadow-sm bg-card-theme border-0 hover text-start">
+                                    <div class="card-img"><img src="https://image.freshnewsasia.com/2020/id-154/fn-2020-07-27-11-09-38-0.jpg" alt="" style="width: 100%; height: 300px;"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title clamp-1">សាកលវិទ្យាល័យអន្តរជាតិផារ៉ាហ្គន(២០ កន្លែង)</h5>
+                                        <p class="card-text clamp-3">វិទ្យាសាស្ត្រកុំព្យូទ័រ, សន្តិសុខសាយប័រ, គ្រប់គ្រងប្រព័ន្ធព័ត៌មានវិទ្យា, រចនាប្លង់។</p>
+                                    </div>
+                                    <div class="card-footer justify-content-between d-flex align-items-center">
+                                        <div>
+                                            <i class="bi bi-calendar"><small class="text-body-secondary"> ថ្ងៃផុតកំណត់៖​ ថ្ងៃទី១២ ខែធ្នូ ឆ្នាំ២០២៥</small></i>
+                                        </div>
+                                        <div>
+                                            <a href="detail-in.html" class="btn bg-footer end-0 text-white">ព័ត៌មានលម្អិត</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="swiper-button-next"><i class="bi bi-arrow-right-circle-fill"></i></div>
+                        <div class="swiper-button-prev"><i class="bi bi-arrow-left-circle-fill"></i></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm bg-card-theme border-0 text-center">
-                            <div class="card-body">
-                                <i class="bi bi-people-fill display-1 mb-3 text-secondary"></i>
-                                <h5 class="card-title mb-3">បង្កើនឱកាសសិក្សា</h5>
-                                <p class="card-text">អាហារូបករណ៍អាចបង្កើនឱកាសសិក្សារបស់សិស្សានុសិស្ស
-                                    ដោយផ្តល់ឱ្យពួកគេមានសមត្ថភាពក្នុងការសិក្សា។</p>
+                </section>
+            </div>
+        </section>
+        <div id="benefits-3"></div>
+        <section class="bg-card-theme py-10 my-10 rounded-0" data-aos="fade-up" data-aos-anchor-placement="center-center">
+            <div class="container-fluid">
+                <div class="container">
+                    <h2 class="text-center mb-5 section-title">អត្ថប្រយោជន៍នៃអាហារូបករណ៍</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card bg-card-theme border-0 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-currency-dollar display-1 mb-3 text-secondary"></i>
+                                    <h5 class="card-title mb-3">ជួយសងថ្លៃសិក្សា</h5>
+                                    <p class="card-text">អាហារូបករណ៍អាចជួយសិស្សានុសិស្សក្នុងការសងថ្លៃសិក្សា
+                                        ដែលជួយបន្ថយបន្ទុកហិរញ្ញវត្ថុរបស់ពួកគេ។</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-card-theme border-0 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-book display-1 mb-3 text-secondary"></i>
+                                    <h5 class="card-title mb-3">ផ្តល់សម្ភារៈសិក្សា</h5>
+                                    <p class="card-text">អាហារូបករណ៍អាចផ្តល់សម្ភារៈសិក្សា ដូចជា សៀវភៅ
+                                        និងឧបករណ៍សិក្សាផ្សេងៗ
+                                        ដែលជួយសិស្សានុសិស្សក្នុងការសិក្សា។</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-card-theme border-0 text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-people-fill display-1 mb-3 text-secondary"></i>
+                                    <h5 class="card-title mb-3">បង្កើនឱកាសសិក្សា</h5>
+                                    <p class="card-text">អាហារូបករណ៍អាចបង្កើនឱកាសសិក្សារបស់សិស្សានុសិស្ស
+                                        ដោយផ្តល់ឱ្យពួកគេមានសមត្ថភាពក្នុងការសិក្សា។</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
-    <footer class="bg-footer mt-15">
+    <footer class="bg-footer ">
         <div class="container py-5">
             <div class="row text-white">
                 <div class="col-11 col-lg-5 col-xl-4">
                     <a class="navbar-brand" href="#">
-                        <img src="asset/image/project-logo/logo02.png" alt="Logo" style="width: 75px;">
+                        <img src="../../image/project-logo/logo02.png" alt="Logo" style="width: 75px;">
                     </a>
                     <p class="footer-text clamp-3">
-                        "ប្រធានបទ “សម្រាប់យុវជនកម្ពុជា” ត្រូវបានជ្រើសរើស ដោយសារនិស្សិតបរិញ្ញាបត្រកើនឡើង
+                        "ប្រធានបទ “សម្រាប់យុវជនកម្ពុជា” ត្រូវបានជ្រើសរើស
+                        ដោយសារនិស្សិតបរិញ្ញាបត្រកើនឡើង
                         ប៉ុន្តែមានបញ្ហាក្នុងការជ្រើសរើសជំនាញ។
-                        ដើម្បីដោះស្រាយ បញ្ហានេះ គេបង្កើតគេហទំព័រមួយដែលអាចប្រើប្រាស់បានលើ Browser និងទូរស័ព្ទចល័ត។
+                        ដើម្បីដោះស្រាយ បញ្ហានេះ
+                        គេបង្កើតគេហទំព័រមួយដែលអាចប្រើប្រាស់បានលើ Browser
+                        និងទូរស័ព្ទចល័ត។
                         គេហទំព័រនេះផ្តល់ព័ត៌មានអំពីមុខជំនាញ
                         វិស័យការងារ សាកលវិទ្យា អាហារូបករណ៍ និងឱកាសការងារ
                         ដើម្បីជួយសិស្សសម្រេចចិត្តជ្រើសរើសជំនាញដែលខ្លួនចូលចិត្ត
@@ -952,13 +941,13 @@
                     <ul class="navbar-nav">
                         <h5 class="nav-title fw-bold">ព័ត៌មានអំពីយើង</h5>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">អំពីយើង</a>
+                            <a href="../about.html" class="nav-link text-white">អំពីយើង</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">ទាក់ទងមកយើង</a>
+                            <a href="../contact.html" class="nav-link text-white">ទំទាក់ទំទងមកយើង</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">ការតម្រង់ទិស</a>
+                            <a href="../direction/major.html" class="nav-link text-white">ការតម្រង់ទិស</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link text-white">ព្រឹត្តិការណ៏</a>
@@ -970,13 +959,15 @@
                     <ul class="navbar-nav">
                         <h5 class="nav-title fw-bold">ព័ត៌មាន</h5>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">អាហារូបករណ៏ក្នុងស្រុក</a>
+                            <a href="../schoolarship/schoolarship-in.html"
+                                class="nav-link text-white">អាហារូបករណ៏ក្នុងស្រុក</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">អាហារូបករណ៏ក្រៅស្រុក</a>
+                            <a href="../schoolarship/schoolarship-out.html"
+                                class="nav-link text-white">អាហារូបករណ៏ក្រៅស្រុក</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">ការងារស័គ្ម្រចិត្ត</a>
+                            <a href="../work/volunteer.html" class="nav-link text-white">ការងារស័គ្ម្រចិត្ត</a>
                         </li>
                     </ul>
                 </div>
@@ -985,8 +976,10 @@
                     <ul class="navbar-nav">
                         <h5 class="nav-title fw-bold">អាស័យដ្ឋានរបស់យើង</h5>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">#86B, Street 313 corner 606, Sangkat Boeungkâk 2,
-                                Khan Toulkok, Phnom Penh</a>
+                            <a href="https://www.google.com/maps/search/%2386B,+Street+313+corner+606,+Sangkat+Boeungk%C3%A2k+2,+Khan+Toulkok,+Phnom+Penh/@11.5659433,104.8975444,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D"
+                                class="nav-link text-white">#86B, Street 313
+                                corner 606, Sangkat Boeungkâk 2, Khan
+                                Toulkok, Phnom Penh</a>
                         </li>
                         <li class="nav-item">
                             <p class="nav-link text-white">Email: <a href="mailto:freeteenagercambodia@gmail.com"
@@ -994,54 +987,98 @@
                         </li>
                         <li class="nav-item">
                             <p class="nav-link text-white">លេខទូរស័ព្ទ: <a
-                                    class="fw-bold text-decoration-none text-white" href="tel:+11234567890">(123) 456
+                                    class="fw-bold text-decoration-none text-white" href="tel:+11234567890">(+885) 456
                                     7890</a></p>
                         </li>
                         <li class="nav-link">
                             <a href="#" class="nav-item"><img src="assets/image/app1 (1).png" class="img-fluid img-app"
-                                    alt=""></a>
+                                    alt></a>
                         </li>
                     </ul>
                 </div>
             </div>
+
             <hr class="text-white py-1">
             <div class="row">
                 <div class="col-12 footer-copyright d-flex justify-content-between">
-                    <p class="text-white">&copy; រក្សាសិទ្ធិដោយ: FTC 2025</p>
+                    <p class="text-white">&copy; រក្សាសិទ្ធិដោយ: FTC
+                        2025</p>
                 </div>
             </div>
         </div>
     </footer>
-</body>
-<!-- Swiper JS -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
-
-
-
 <!-- bootstrap js -->
+
 <script src="../../js/bootstrap.bundle.min.js"></script>
 <!-- aos link -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="../../js/script-folder.js"></script>
+</body>
+<!-- text-animation js -->
+<script>
+    var app = document.getElementById('app');
+
+    var typewriter = new Typewriter(app, {
+        loop: true
+    });
+
+    typewriter.typeString('<strong>ស្វែងរកអាហារូបករណ៍សម្រាប់អនាគតរបស់អ្នក</strong>')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('<strong>អាហារូបករណ៍ក្នុងស្រុកនិងក្រៅស្រុក</strong>')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('<strong>ដាក់ពាក្យស្នើសុំ​ជាមួយើង ឥឡូវនេះចំនួនមានកំណត់</strong>')
+        .pauseFor(2500)
+        .start();
+    document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    loop: true,
+    effect: "fade",
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+});
+});
+
+    var swiper1 = new Swiper(".mySwiper-5",{
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+      autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+          navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    });
+
+</script>
+
+
 
 </html>
