@@ -50,6 +50,8 @@ body[data-bs-theme="light"] .bg-card-theme {
     /* White in light mode */
     color: #212529 !important;
     /* Dark text */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    border: none !important;
 }
 
 body[data-bs-theme="dark"] .bg-card-theme {
@@ -57,6 +59,8 @@ body[data-bs-theme="dark"] .bg-card-theme {
     /* Dark in dark mode */
     color: #e6e6e6 !important;
     /* White text */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    border: none !important;
 }
 
 
@@ -74,7 +78,7 @@ body[data-bs-theme="dark"] .bg-card-theme {
 }
 
 /* button  */
-/* btn-dark-blue
+/* btn-dark-blues
 btn-outline-dark-blue  */
 
 /* dark blue btn light mode  */
@@ -297,6 +301,57 @@ body[data-bs-theme="dark"] .btn-gunmetal:hover {
         width: 200px !important;
     }
 }
+/* Only for desktop (large screens) */
+@media (min-width: 992px) {
+    .navbar .dropdown .dropdown-menu {
+        display: block;
+        /* Keep block so we can animate */
+        opacity: 0;
+        /* Start invisible */
+        transform: translateY(-10px);
+        /* Start slightly above */
+        transition: all 0.4s ease;
+        /* Smooth transition */
+        pointer-events: none;
+        /* Prevent interaction when hidden */
+    }
+
+    .navbar .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        /* Fully visible */
+        transform: translateY(0);
+        /* Slide down to position */
+        pointer-events: auto;
+        /* Allow clicks */
+    }
+}
+@media (max-width: 991px) {
+    /* Smooth dropdown for all screens */
+        .navbar .dropdown .dropdown-menu {
+            display: block;
+            /* Always block for animation */
+            max-height: 0;
+            /* Start collapsed */
+            opacity: 0;
+            /* Invisible */
+            overflow: hidden;
+            /* Hide content when collapsed */
+            transform: translateY(-10px);
+            /* Slide slightly up */
+            transition: all 0.5s ease;
+            /* Smooth animation */
+        }
+    
+        /* When dropdown has .show class (Bootstrap toggles this on click) */
+        .navbar .dropdown .dropdown-menu.show {
+            max-height: 500px;
+            /* Large enough to show content */
+            opacity: 1;
+            /* Fully visible */
+            transform: translateY(0);
+            /* Slide to correct position */
+        }
+}
 
 
 .swiper {
@@ -417,10 +472,6 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link:focus::before,
 body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before {
     width: 83%;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 36e48c7d147c5b9571e03930a23abd973b293f92
 #logo{
     width: 50px !important;
 }
@@ -439,10 +490,4 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before 
     background-color: transparent !important;
     box-shadow: none !important;
     color: #1d263e !important;
-<<<<<<< HEAD
 }
-=======
-}
-=======
->>>>>>> 9861bf8c67472bcfbeac7ea77f8ed818e7fac981
->>>>>>> 36e48c7d147c5b9571e03930a23abd973b293f92

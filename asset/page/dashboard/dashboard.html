@@ -32,10 +32,18 @@
             border-radius: 5px;
             padding: 0 5px;
         }*/
+        .card .table-responsive {
+            overflow: visible;
+            /* allow dropdown to escape table */
+        }
+
+        .dropdown-hover:hover {
+            background-color: #d1d3d6 !important;
+        }
     </style>
 </head>
 
-<body data-bs-theme="light">
+<body data-bs-theme="light" style="position: relative;">
     <header class="sticky-top z-3">
         <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
             <div class="container">
@@ -227,8 +235,8 @@
             <div class="container-fluid">
                 <div class="d-flex align-items-start">
                     <!-- Vertical Nav -->
-                    <div class="nav flex-column nav-pills bg-card-theme shadow-sm position-sticky top-0 start-0 "
-                        style="height: 100vh;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="nav flex-column nav-pills bg-card-theme shadow-sm position-fixed top-0 start-0 z-4 pt-20"
+                        style="height: 100vh; z-index: 5;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="nav-link active px-10" id="v-pills-home-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                             aria-selected="true">Overview</button>
@@ -238,12 +246,12 @@
                         <button class="nav-link px-10" id="v-pills-disabled-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
                             aria-selected="false">ការស្នើរ</button>
-                        <button class="nav-link px-10" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        <button class="nav-link  px-10" id="v-pills-messages-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
-                            aria-selected="false">Messages</button>
+                            aria-selected="false">ព្រឺត្តិការណ៏</button>
                         <button class="nav-link px-10" id="v-pills-settings-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
-                            aria-selected="false">Settings</button>
+                            aria-selected="false">ការកំណត់</button>
                     </div>
 
                     <!-- Tab Content -->
@@ -328,276 +336,278 @@
                         <!-- manage user -->
                         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                             aria-labelledby="v-pills-profile-tab" tabindex="0">
-                            <!-- Navigation Tabs on Top Right -->
-                            <ul class="nav nav-pills justify-content-end" id="myTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="flex-sm-fill text-sm-center nav-link active" id="users-tab"
-                                        data-bs-toggle="tab" data-bs-target="#users" type="button" role="tab">
-                                        អ្នកប្រើប្រាស់
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="flex-sm-fill text-sm-center nav-link" id="requests-tab"
-                                        data-bs-toggle="tab" data-bs-target="#requests" type="button" role="tab">
-                                        សំណើរ Appeal
-                                    </button>
-                                </li>
-                            </ul>
+                            <div class="container">
+                                <!-- Navigation Tabs on Top Right -->
+                                <ul class="nav nav-pills justify-content-end" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="flex-sm-fill text-sm-center nav-link active" id="users-tab"
+                                            data-bs-toggle="tab" data-bs-target="#users" type="button" role="tab">
+                                            អ្នកប្រើប្រាស់
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="flex-sm-fill text-sm-center nav-link" id="requests-tab"
+                                            data-bs-toggle="tab" data-bs-target="#requests" type="button" role="tab">
+                                            សំណើរ Appeal
+                                        </button>
+                                    </li>
+                                </ul>
 
-                            <!-- Tab Content -->
-                            <div class="tab-content" id="myTabContent">
+                                <!-- Tab Content -->
+                                <div class="tab-content" id="myTabContent">
 
-                                <!-- Users Tab -->
-                                <div class="tab-pane fade show active" id="users" role="tabpanel">
-                                    <h3 class="mt-3">គ្រប់គ្រងអ្នកប្រើប្រាស់</h3>
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>ឈ្មោះពេញ</th>
-                                                <th>Gmail</th>
-                                                <th>ស្ថានភាព</th>
-                                                <th>កាលបរិច្ឆេទចូលចុងក្រោយ</th>
-                                                <th>សកម្មភាព</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>សុខា សុភា</td>
-                                                <td>sokha.sophea@gmail.com</td>
-                                                <td><span class="text-success">online</span></td>
-                                                <td>២០២៣-០៩-០១</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ស្រីនាង មុនីរ័ត្ន</td>
-                                                <td>sreynang.mony@gmail.com</td>
-                                                <td><span class="text-danger">offline</span></td>
-                                                <td>២០២៣-០៩-០២</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ដារា វិចិត្រា</td>
-                                                <td>dara.vichetr@gmail.com</td>
-                                                <td><span class="text-success">online</span></td>
-                                                <td>២០២៣-០៩-០៣</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>សុវណ្ណា ចន្ទ្រា</td>
-                                                <td>sovanna.chandra@gmail.com</td>
-                                                <td><span class="text-danger">offline</span></td>
-                                                <td>២០២៣-០៩-០៤</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>វិសាល សារុន</td>
-                                                <td>visal.sarun@gmail.com</td>
-                                                <td><span class="text-success">online</span></td>
-                                                <td>២០២៣-០៩-០៥</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ស្រីពៅ សុភាព</td>
-                                                <td>sreypov.sophap@gmail.com</td>
-                                                <td><span class="text-danger">offline</span></td>
-                                                <td>២០២៣-០៩-០៦</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>បូព៌ា សុភា</td>
-                                                <td>bopha.sophea@gmail.com</td>
-                                                <td><span class="text-success">online</span></td>
-                                                <td>២០២៣-០៩-០៧</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>វណ្ណា រិទ្ធ</td>
-                                                <td>vanna.rith@gmail.com</td>
-                                                <td><span class="text-danger">offline</span></td>
-                                                <td>២០២៣-០៩-០៨</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ចន្ទពោធិ៍ សុវណ្ណា</td>
-                                                <td>chanpov.sovanna@gmail.com</td>
-                                                <td><span class="text-success">online</span></td>
-                                                <td>២០២៣-០៩-០៩</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>មុនី សារ៉ាយ</td>
-                                                <td>mony.saray@gmail.com</td>
-                                                <td><span class="text-danger">offline</span></td>
-                                                <td>២០២៣-០៩-១០</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>សុភ័ក្ត្រ មករា</td>
-                                                <td>sopheap.makara@gmail.com</td>
-                                                <td><span class="text-success">online</span></td>
-                                                <td>២០២៣-០៩-១១</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ស្រីមុំ សុវណ្ណា</td>
-                                                <td>sreymom.sovanna@gmail.com</td>
-                                                <td><span class="text-danger">offline</span></td>
-                                                <td>២០២៣-០៩-១២</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ចន្ទ្រី សារុន</td>
-                                                <td>chantry.sarun@gmail.com</td>
-                                                <td><span class="text-success">online</span></td>
-                                                <td>២០២៣-០៩-១៣</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>សុខលីម ដារា</td>
-                                                <td>soklim.dara@gmail.com</td>
-                                                <td><span class="text-danger">offline</span></td>
-                                                <td>២០២៣-០៩-១៤</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ស្រីនិត មុនីរ័ត្ន</td>
-                                                <td>sreynit.mony@gmail.com</td>
-                                                <td><span class="text-success">online</span></td>
-                                                <td>២០២៣-០៩-១៥</td>
-                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    <!-- Users Tab -->
+                                    <div class="tab-pane fade show active" id="users" role="tabpanel">
+                                        <h3 class="mt-3">គ្រប់គ្រងអ្នកប្រើប្រាស់</h3>
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ឈ្មោះពេញ</th>
+                                                    <th>Gmail</th>
+                                                    <th>ស្ថានភាព</th>
+                                                    <th>កាលបរិច្ឆេទចូលចុងក្រោយ</th>
+                                                    <th>សកម្មភាព</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>សុខា សុភា</td>
+                                                    <td>sokha.sophea@gmail.com</td>
+                                                    <td><span class="text-success">online</span></td>
+                                                    <td>២០២៣-០៩-០១</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ស្រីនាង មុនីរ័ត្ន</td>
+                                                    <td>sreynang.mony@gmail.com</td>
+                                                    <td><span class="text-danger">offline</span></td>
+                                                    <td>២០២៣-០៩-០២</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ដារា វិចិត្រា</td>
+                                                    <td>dara.vichetr@gmail.com</td>
+                                                    <td><span class="text-success">online</span></td>
+                                                    <td>២០២៣-០៩-០៣</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>សុវណ្ណា ចន្ទ្រា</td>
+                                                    <td>sovanna.chandra@gmail.com</td>
+                                                    <td><span class="text-danger">offline</span></td>
+                                                    <td>២០២៣-០៩-០៤</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>វិសាល សារុន</td>
+                                                    <td>visal.sarun@gmail.com</td>
+                                                    <td><span class="text-success">online</span></td>
+                                                    <td>២០២៣-០៩-០៥</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ស្រីពៅ សុភាព</td>
+                                                    <td>sreypov.sophap@gmail.com</td>
+                                                    <td><span class="text-danger">offline</span></td>
+                                                    <td>២០២៣-០៩-០៦</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>បូព៌ា សុភា</td>
+                                                    <td>bopha.sophea@gmail.com</td>
+                                                    <td><span class="text-success">online</span></td>
+                                                    <td>២០២៣-០៩-០៧</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>វណ្ណា រិទ្ធ</td>
+                                                    <td>vanna.rith@gmail.com</td>
+                                                    <td><span class="text-danger">offline</span></td>
+                                                    <td>២០២៣-០៩-០៨</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ចន្ទពោធិ៍ សុវណ្ណា</td>
+                                                    <td>chanpov.sovanna@gmail.com</td>
+                                                    <td><span class="text-success">online</span></td>
+                                                    <td>២០២៣-០៩-០៩</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>មុនី សារ៉ាយ</td>
+                                                    <td>mony.saray@gmail.com</td>
+                                                    <td><span class="text-danger">offline</span></td>
+                                                    <td>២០២៣-០៩-១០</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>សុភ័ក្ត្រ មករា</td>
+                                                    <td>sopheap.makara@gmail.com</td>
+                                                    <td><span class="text-success">online</span></td>
+                                                    <td>២០២៣-០៩-១១</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ស្រីមុំ សុវណ្ណា</td>
+                                                    <td>sreymom.sovanna@gmail.com</td>
+                                                    <td><span class="text-danger">offline</span></td>
+                                                    <td>២០២៣-០៩-១២</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ចន្ទ្រី សារុន</td>
+                                                    <td>chantry.sarun@gmail.com</td>
+                                                    <td><span class="text-success">online</span></td>
+                                                    <td>២០២៣-០៩-១៣</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>សុខលីម ដារា</td>
+                                                    <td>soklim.dara@gmail.com</td>
+                                                    <td><span class="text-danger">offline</span></td>
+                                                    <td>២០២៣-០៩-១៤</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ស្រីនិត មុនីរ័ត្ន</td>
+                                                    <td>sreynit.mony@gmail.com</td>
+                                                    <td><span class="text-success">online</span></td>
+                                                    <td>២០២៣-០៩-១៥</td>
+                                                    <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
 
-                                <!-- Requests Tab -->
-                                <div class="tab-pane fade" id="requests" role="tabpanel">
-                                    <h3 class="mt-3">សំណើរ Appeal Accounts</h3>
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>ឈ្មោះពេញ</th>
-                                                <th>Gmail</th>
-                                                <th>ប្រភេទសំណើ</th>
-                                                <th>កាលបរិច្ឆេទ</th>
-                                                <th>សកម្មភាព</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>បូព៌ា សុខា</td>
-                                                <td>bopha.sokha@gmail.com</td>
-                                                <td>Appeal Account</td>
-                                                <td>២០២៣-០៩-១៥</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                                        data-bs-target="#approveModal">អនុម័ត</button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#cancelModal">បដិសេធ</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>វិសាល សារុន</td>
-                                                <td>visal.sarun@gmail.com</td>
-                                                <td>Appeal Account</td>
-                                                <td>២០២៣-០៩-១៦</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                                        data-bs-target="#approveModal">អនុម័ត</button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#cancelModal">បដិសេធ</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- Approve Modal -->
-                                    <div class="modal fade" id="approveModal" tabindex="-1"
-                                        aria-labelledby="approveModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header bg-success text-white">
-                                                    <h5 class="modal-title" id="approveModalLabel">អនុម័តសំណើ</h5>
-                                                    <button type="button" class="btn-close btn-close-white"
-                                                        data-bs-dismiss="modal" aria-label="បិទ"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    តើអ្នកពិតជាចង់ <strong>អនុម័ត</strong> សំណើរនេះមែនទេ?
-                                                    <br><small
-                                                        class="text-muted">សូមពិនិត្យមើលព័ត៌មានម្តងទៀតមុននឹងបន្ត។</small>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">បោះបង់</button>
-                                                    <button type="button" class="btn btn-success"
-                                                        data-bs-dismiss="modal">អនុម័ត</button>
+                                    <!-- Requests Tab -->
+                                    <div class="tab-pane fade" id="requests" role="tabpanel">
+                                        <h3 class="mt-3">សំណើរ Appeal Accounts</h3>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>ឈ្មោះពេញ</th>
+                                                    <th>Gmail</th>
+                                                    <th>ប្រភេទសំណើ</th>
+                                                    <th>កាលបរិច្ឆេទ</th>
+                                                    <th>សកម្មភាព</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>បូព៌ា សុខា</td>
+                                                    <td>bopha.sokha@gmail.com</td>
+                                                    <td>Appeal Account</td>
+                                                    <td>២០២៣-០៩-១៥</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#approveModal">អនុម័ត</button>
+                                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#cancelModal">បដិសេធ</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>វិសាល សារុន</td>
+                                                    <td>visal.sarun@gmail.com</td>
+                                                    <td>Appeal Account</td>
+                                                    <td>២០២៣-០៩-១៦</td>
+                                                    <td>
+                                                        <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#approveModal">អនុម័ត</button>
+                                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#cancelModal">បដិសេធ</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- Approve Modal -->
+                                        <div class="modal fade" id="approveModal" tabindex="-1"
+                                            aria-labelledby="approveModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header bg-success text-white">
+                                                        <h5 class="modal-title" id="approveModalLabel">អនុម័តសំណើ</h5>
+                                                        <button type="button" class="btn-close btn-close-white"
+                                                            data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        តើអ្នកពិតជាចង់ <strong>អនុម័ត</strong> សំណើរនេះមែនទេ?
+                                                        <br><small
+                                                            class="text-muted">សូមពិនិត្យមើលព័ត៌មានម្តងទៀតមុននឹងបន្ត។</small>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">បោះបង់</button>
+                                                        <button type="button" class="btn btn-success"
+                                                            data-bs-dismiss="modal">អនុម័ត</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Cancel Modal -->
-                                    <div class="modal fade" id="cancelModal" tabindex="-1"
-                                        aria-labelledby="cancelModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header bg-danger text-white">
-                                                    <h5 class="modal-title" id="cancelModalLabel">បដិសេធសំណើ</h5>
-                                                    <button type="button" class="btn-close btn-close-white"
-                                                        data-bs-dismiss="modal" aria-label="បិទ"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    តើអ្នកពិតជាចង់ <strong>បដិសេធ</strong> សំណើរនេះមែនទេ?
-                                                    <br><small
-                                                        class="text-muted">សកម្មភាពនេះនឹងមិនអាចត្រឡប់ក្រោយបានទេ។</small>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">បោះបង់</button>
-                                                    <button type="button" class="btn btn-danger"
-                                                        data-bs-dismiss="modal">បដិសេធ</button>
+                                        <!-- Cancel Modal -->
+                                        <div class="modal fade" id="cancelModal" tabindex="-1"
+                                            aria-labelledby="cancelModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header bg-danger text-white">
+                                                        <h5 class="modal-title" id="cancelModalLabel">បដិសេធសំណើ</h5>
+                                                        <button type="button" class="btn-close btn-close-white"
+                                                            data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        តើអ្នកពិតជាចង់ <strong>បដិសេធ</strong> សំណើរនេះមែនទេ?
+                                                        <br><small
+                                                            class="text-muted">សកម្មភាពនេះនឹងមិនអាចត្រឡប់ក្រោយបានទេ។</small>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">បោះបង់</button>
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-bs-dismiss="modal">បដិសេធ</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
 
                                 </div>
 
-                            </div>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">ការព្រមាន</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            តើអ្នកចង់បិទគណនីនេះមែនឬទេ​ សកម្មភាពនេះមិនអាចស្តារឡើងវិញបាន។
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-dark-blue"
-                                                data-bs-dismiss="modal">បោះបង់</button>
-                                            <button type="button" class="btn btn-danger"
-                                                data-bs-dismiss="modal">បិទគណនី</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">ការព្រមាន</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                តើអ្នកចង់បិទគណនីនេះមែនឬទេ​ សកម្មភាពនេះមិនអាចស្តារឡើងវិញបាន។
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-dark-blue"
+                                                    data-bs-dismiss="modal">បោះបង់</button>
+                                                <button type="button" class="btn btn-danger"
+                                                    data-bs-dismiss="modal">បិទគណនី</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -607,124 +617,127 @@
                         <!-- schoolarship and job Tab -->
                         <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
                             aria-labelledby="v-pills-disabled-tab" tabindex="0">
-                            <h4 class="mt-3">ការស្នើរសុំអាហារូបករណ៍ និងការងារ</h4>
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>ឈ្មោះពេញ</th>
-                                        <th>Gmail</th>
-                                        <th>ប្រភេទស្នើសុំ</th>
-                                        <th>កាលបរិច្ឆេទស្នើសុំ</th>
-                                        <th>សកម្មភាព</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>លោក សុខា សុភា</td>
-                                        <td>sokha.sophea@gmail.com</td>
-                                        <td>អាហារូបករណ៍</td>
-                                        <td>២០២៣-០៩-០១</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                                data-bs-target="#approverequestModal">អនុម័ត</button>
-                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                data-bs-target="#rejectModal">បដិសេធ</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>លោក ស្រីនាង មុនីរ័ត្ន</td>
-                                        <td>sreynang.mony@gmail.com</td>
-                                        <td>ការងារ</td>
-                                        <td>២០២៣-០៩-០២</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                                data-bs-target="#approverequestModal">អនុម័ត</button>
-                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                data-bs-target="#rejectModal">បដិសេធ</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>លោក ដារា វិចិត្រា</td>
-                                        <td>dara.vichetr@gmail.com</td>
-                                        <td>អាហារូបករណ៍</td>
-                                        <td>២០២៣-០៩-០៣</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                                data-bs-target="#approverequestModal">អនុម័ត</button>
-                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                data-bs-target="#rejectModal">បដិសេធ</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>លោក សុវណ្ណា ចន្ទ្រា</td>
-                                        <td>sovanna.chandra@gmail.com</td>
-                                        <td>ការងារ</td>
-                                        <td>២០២៣-០៩-០៤</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                                data-bs-target="#approverequestModal">អនុម័ត</button>
-                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                data-bs-target="#rejectModal">បដិសេធ</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>លោក វិសាល សារុន</td>
-                                        <td>visal.sarun@gmail.com</td>
-                                        <td>អាហារូបករណ៍</td>
-                                        <td>២០២៣-០៩-០៥</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                                data-bs-target="#approverequestModal">អនុម័ត</button>
-                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                                data-bs-target="#rejectModal">បដិសេធ</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!-- Approve Request Modal -->
-                            <div class="modal fade" id="approverequestModal" tabindex="-1"
-                                aria-labelledby="approveModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header bg-success text-white">
-                                            <h5 class="modal-title" id="approverequestModalLabel">អនុម័តសំណើ</h5>
-                                            <button type="button" class="btn-close btn-close-white"
-                                                data-bs-dismiss="modal" aria-label="បិទ"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            តើអ្នកពិតជាចង់ <strong>អនុម័ត</strong> សំណើរនេះមែនទេ?
-                                            <br><small class="text-muted">សូមបញ្ចូលមូលហេតុ (បើចង់):</small>
-                                            <textarea class="form-control mt-2"
-                                                placeholder="សរសេរមូលហេតុ..."></textarea>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">បោះបង់</button>
-                                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">អនុម័ត</button>
+                            <div class="container">
+                                <h4 class="mt-3">ការស្នើរសុំអាហារូបករណ៍ និងការងារ</h4>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ឈ្មោះពេញ</th>
+                                            <th>Gmail</th>
+                                            <th>ប្រភេទស្នើសុំ</th>
+                                            <th>កាលបរិច្ឆេទស្នើសុំ</th>
+                                            <th>សកម្មភាព</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>លោក សុខា សុភា</td>
+                                            <td>sokha.sophea@gmail.com</td>
+                                            <td>អាហារូបករណ៍</td>
+                                            <td>២០២៣-០៩-០១</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>លោក ស្រីនាង មុនីរ័ត្ន</td>
+                                            <td>sreynang.mony@gmail.com</td>
+                                            <td>ការងារ</td>
+                                            <td>២០២៣-០៩-០២</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>លោក ដារា វិចិត្រា</td>
+                                            <td>dara.vichetr@gmail.com</td>
+                                            <td>អាហារូបករណ៍</td>
+                                            <td>២០២៣-០៩-០៣</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>លោក សុវណ្ណា ចន្ទ្រា</td>
+                                            <td>sovanna.chandra@gmail.com</td>
+                                            <td>ការងារ</td>
+                                            <td>២០២៣-០៩-០៤</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>លោក វិសាល សារុន</td>
+                                            <td>visal.sarun@gmail.com</td>
+                                            <td>អាហារូបករណ៍</td>
+                                            <td>២០២៣-០៩-០៥</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- Approve Request Modal -->
+                                <div class="modal fade" id="approverequestModal" tabindex="-1"
+                                    aria-labelledby="approveModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-success text-white">
+                                                <h5 class="modal-title" id="approverequestModalLabel">អនុម័តសំណើ</h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                    data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                តើអ្នកពិតជាចង់ <strong>អនុម័ត</strong> សំណើរនេះមែនទេ?
+                                                <br><small class="text-muted">សូមបញ្ចូលមូលហេតុ (បើចង់):</small>
+                                                <textarea class="form-control mt-2"
+                                                    placeholder="សរសេរមូលហេតុ..."></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">បោះបង់</button>
+                                                <button type="button" class="btn btn-success"
+                                                    data-bs-dismiss="modal">អនុម័ត</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Reject Request Modal -->
-                            <div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header bg-danger text-white">
-                                            <h5 class="modal-title" id="rejectModalLabel">បដិសេធសំណើ</h5>
-                                            <button type="button" class="btn-close btn-close-white"
-                                                data-bs-dismiss="modal" aria-label="បិទ"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            តើអ្នកពិតជាចង់ <strong>បដិសេធ</strong> សំណើរនេះមែនទេ?
-                                            <br><small class="text-muted">សូមបញ្ចូលមូលហេតុ:</small>
-                                            <textarea class="form-control mt-2"
-                                                placeholder="សរសេរមូលហេតុ..."></textarea>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">បោះបង់</button>
-                                            <button type="button" class="btn btn-danger">បដិសេធ</button>
+                                <!-- Reject Request Modal -->
+                                <div class="modal fade" id="rejectModal" tabindex="-1"
+                                    aria-labelledby="rejectModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-danger text-white">
+                                                <h5 class="modal-title" id="rejectModalLabel">បដិសេធសំណើ</h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                    data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                តើអ្នកពិតជាចង់ <strong>បដិសេធ</strong> សំណើរនេះមែនទេ?
+                                                <br><small class="text-muted">សូមបញ្ចូលមូលហេតុ:</small>
+                                                <textarea class="form-control mt-2"
+                                                    placeholder="សរសេរមូលហេតុ..."></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">បោះបង់</button>
+                                                <button type="button" class="btn btn-danger">បដិសេធ</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -732,16 +745,561 @@
 
                         </div>
 
-                        <!-- Messages Tab -->
-                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        <!-- event post Tab -->
+                        <div class="tab-pane fade " id="v-pills-messages" role="tabpanel"
                             aria-labelledby="v-pills-messages-tab" tabindex="0">
-                            <h4>Messages content here</h4>
+                            <div class="container">
+                                <h4>ព្រឺត្តិការណ៏</h4>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="custom-file-wrapper small-file ">
+                                            <input type="file" class="custom-file-input" id="smallFile">
+                                            <label for="smallFile" class="custom-file-label">
+                                                <div class="file-icon">
+                                                    <i class="fa fa-plus"></i>
+                                                </div>
+                                                <div class="file-text">
+                                                    <h5>Add File</h5>
+                                                    <p>Compact version</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <h4 class="pt-3">ចំណងជើងព្រឹត្តិការណ៏</h4>
+                                        <textarea name="" id="" class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                            style="resize: vertical; min-height: 100px;"></textarea>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h4 class="pt-3">កាលបរិច្ឆេទ</h4>
+                                        <div class="card bg-card-theme border-0 shadow-sm mt-4">
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="datetime" class="form-label">ថ្ងៃខែឆ្នាំ​ និង
+                                                            ​ម៉ោង</label>
+                                                        <input type="datetime-local" class="form-control" id="datetime"
+                                                            name="datetime">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="container mt-4">
+                                            <label for="location" class="form-label">ទីតាំង</label>
+                                            <textarea name="" id="" class="w-100 border-0 shadow-sm rounded-3 p-3"
+                                                style="resize: vertical; min-height: 130px;"
+                                                placeholder="សូមជ្រើសរើសទីតាំង"></textarea>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <h4 class="pt-3">ខ្លឺមសារនៃព្រឹត្តិការណ៏</h4>
+                                        <textarea name="" id="" class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                            style="resize: vertical; min-height: 100px;"></textarea>
+                                    </div>
+                                    <div class="col-lg-12 text-end">
+                                        <button class="btn btn-dark-blue mt-4 mb-5" data-bs-toggle="modal"
+                                            data-bs-target="#eventModal">បញ្ចូនព្រឹត្តិការណ៍</button>
+                                    </div>
+
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content shadow-lg rounded-3 border-0">
+
+                                            <!-- Header -->
+                                            <div class="modal-header bg-footer text-white">
+                                                <h5 class="modal-title">បញ្ចូលព្រឹត្តិការណ៍ថ្មី</h5>
+                                                <button type="button" class="btn-close btn-close-white"
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+                                            <!-- Body -->
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="eventName"
+                                                            class="form-label">ឈ្មោះព្រឹត្តិការណ៍</label>
+                                                        <input type="text"
+                                                            class="form-control border border-1 border-dark"
+                                                            id="eventName" placeholder="បញ្ចូលឈ្មោះព្រឹត្តិការណ៍">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="eventDate" class="form-label">កាលបរិច្ឆេទ និង
+                                                            ម៉ោង</label>
+                                                        <input type="datetime-local"
+                                                            class="form-control border border-1 border-dark"
+                                                            id="eventDate">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="eventLocation" class="form-label">ទីកន្លែង</label>
+                                                        <input type="text"
+                                                            class="form-control  border border-1 border-dark"
+                                                            id="eventLocation" placeholder="សូមជ្រើសរើសទីតាំង">
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <!-- Footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-dark-blue"
+                                                    data-bs-dismiss="modal">បោះបង់</button>
+                                                <button type="button" class="btn btn-dark-blue"
+                                                    data-bs-dismiss="modal">រក្សាទុក</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
                         <!-- Settings Tab -->
                         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                             aria-labelledby="v-pills-settings-tab" tabindex="0">
-                            <h4>Settings content here</h4>
+                            <div class="container">
+                                <h4>ការកំណត់មាតិកានៅទីនេះ</h4>
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">កែប្រែ</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">កែប្រែគេហទំព័រ</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab" tabindex="0">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-end">
+                                                <hr>
+                                                <button class="btn btn-dark-blue" data-bs-toggle="offcanvas"
+                                                    data-bs-target="#offcanvasWithBothOptions"
+                                                    aria-controls="offcanvasWithBothOptions">បង្កើតថ្មី</button>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="card mt-3 pb-20 bg-card-theme border-0 shadow-sm">
+                                                    <div class="card-body">
+                                                        <div class="table-responsive border-0">
+                                                            <table class="table align-middle mb-0">
+                                                                <thead class="table-light">
+                                                                    <tr>
+                                                                        <th>រូបភាព</th>
+                                                                        <th>ចំណងជើង</th>
+                                                                        <th>Path</th>
+                                                                        <th>កាលបរិច្ឆេទ</th>
+                                                                        <th class="text-center">ជម្រើស</th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody class="border-0">
+                                                                    <tr>
+                                                                        <!-- Event Image -->
+                                                                        <td style="width:80px; height: 80px;">
+                                                                            <img src="../../image/eventt/ai.png"
+                                                                                class="img-fluid rounded w-100 h-100 object-fit-cover"
+                                                                                alt="Event">
+                                                                        </td>
+
+                                                                        <!-- Event Info -->
+                                                                        <td>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</td>
+                                                                        <td>/events/ai-conference</td>
+                                                                        <td>2025-09-20</td>
+
+                                                                        <!-- Options Dropdown -->
+                                                                        <td class="text-center">
+                                                                            <div class="dropdown">
+                                                                                <a class="nav-link active px-3" href="#"
+                                                                                    role="button"
+                                                                                    data-bs-toggle="dropdown"
+                                                                                    aria-expanded="false">
+                                                                                    <i
+                                                                                        class="bi bi-three-dots mx-1"></i>
+                                                                                </a>
+
+                                                                                <ul
+                                                                                    class="dropdown-menu border-0 shadow-sm bg-white">
+                                                                                    <li><button
+                                                                                            class="dropdown-item dropdown-hover"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="offcanvas"
+                                                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                                                            aria-controls="offcanvasWithBothOptions">កែប្រែ</button>
+                                                                                    </li>
+                                                                                    <li><button
+                                                                                            class="dropdown-item dropdown-hover"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#deleteModal">លុប</button>
+                                                                                    </li>
+                                                                                    <li><button
+                                                                                            class="dropdown-item dropdown-hover"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#viewModal">មើលមើលលម្អិត</button>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <!-- Add more rows here -->
+                                                                </tbody>
+
+                                                                <tbody class="border-0">
+                                                                    <tr>
+                                                                        <!-- Event Image -->
+                                                                        <td style="width:80px; height: 80px;">
+                                                                            <img src="../../image/eventt/robotics.jpg"
+                                                                                class="img-fluid rounded w-100 h-100 object-fit-cover"
+                                                                                alt="Event">
+                                                                        </td>
+
+                                                                        <!-- Event Info -->
+                                                                        <td>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</td>
+                                                                        <td>/events/ai-conference</td>
+                                                                        <td>2025-09-20</td>
+
+                                                                        <!-- Options Dropdown -->
+                                                                        <td class="text-center">
+                                                                            <div class="dropdown">
+                                                                                <a class="nav-link active px-3" href="#"
+                                                                                    role="button"
+                                                                                    data-bs-toggle="dropdown"
+                                                                                    aria-expanded="false">
+                                                                                    <i
+                                                                                        class="bi bi-three-dots mx-1"></i>
+                                                                                </a>
+
+                                                                                <ul
+                                                                                    class="dropdown-menu border-0 shadow-sm bg-white">
+                                                                                    <li><button
+                                                                                            class="dropdown-item dropdown-hover"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="offcanvas"
+                                                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                                                            aria-controls="offcanvasWithBothOptions">កែប្រែ</button>
+                                                                                    </li>
+                                                                                    <li><button
+                                                                                            class="dropdown-item dropdown-hover"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#deleteModal">លុប</button>
+                                                                                    </li>
+                                                                                    <li><button
+                                                                                            class="dropdown-item dropdown-hover"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#viewModal">មើលមើលលម្អិត</button>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <!-- Add more rows here -->
+                                                                </tbody>
+
+                                                                <tbody class="border-0">
+                                                                    <tr>
+                                                                        <!-- Event Image -->
+                                                                        <td style="width:80px; height: 80px;">
+                                                                            <img src="../../image/eventt/e1.jpg"
+                                                                                class="img-fluid rounded w-100 h-100 object-fit-cover"
+                                                                                alt="Event">
+                                                                        </td>
+
+                                                                        <!-- Event Info -->
+                                                                        <td>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</td>
+                                                                        <td>/events/ai-conference</td>
+                                                                        <td>2025-09-20</td>
+
+                                                                        <!-- Options Dropdown -->
+                                                                        <td class="text-center">
+                                                                            <div class="dropdown">
+                                                                                <a class="nav-link active px-3" href="#"
+                                                                                    role="button"
+                                                                                    data-bs-toggle="dropdown"
+                                                                                    aria-expanded="false">
+                                                                                    <i
+                                                                                        class="bi bi-three-dots mx-1"></i>
+                                                                                </a>
+
+                                                                                <ul
+                                                                                    class="dropdown-menu border-0 shadow-sm bg-white">
+                                                                                    <li><button
+                                                                                            class="dropdown-item dropdown-hover"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="offcanvas"
+                                                                                            data-bs-target="#offcanvasWithBothOptions"
+                                                                                            aria-controls="offcanvasWithBothOptions">កែប្រែ</button>
+                                                                                    </li>
+                                                                                    <li><button
+                                                                                            class="dropdown-item dropdown-hover"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#deleteModal">លុប</button>
+                                                                                    </li>
+                                                                                    <li><button
+                                                                                            class="dropdown-item dropdown-hover"
+                                                                                            type="button"
+                                                                                            data-bs-toggle="modal"
+                                                                                            data-bs-target="#viewModal">មើលមើលលម្អិត</button>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <!-- Add more rows here -->
+                                                                </tbody>
+
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- offcanvas with both options  -->
+                                                <div class="offcanvas offcanvas-end " data-bs-scroll="true"
+                                                    tabindex="-1" id="offcanvasWithBothOptions"
+                                                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                                                    <div class="offcanvas-header">
+                                                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                                                            កែប្រែ
+                                                        </h5>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="offcanvas-body">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="custom-file-wrapper small-file ">
+                                                                    <input type="file" class="custom-file-input" id="">
+                                                                    <label for="smallFile" class="custom-file-label">
+                                                                        <div class="file-icon">
+                                                                            <i class="fa fa-plus"></i>
+                                                                        </div>
+                                                                        <div class="file-text">
+                                                                            <h5>Add File</h5>
+                                                                            <p>Compact version</p>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <h4 class="pt-3">ចំណងជើងព្រឹត្តិការណ៏</h4>
+                                                                <textarea name="" id=""
+                                                                    class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                                                    style="resize: vertical; min-height: 100px;"></textarea>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <h4 class="pt-3">កាលបរិច្ឆេទ</h4>
+                                                                <div class="card bg-card-theme border-0 shadow-sm mt-4">
+                                                                    <div class="card-body">
+                                                                        <form>
+                                                                            <div class="mb-3">
+                                                                                <label for="datetime"
+                                                                                    class="form-label">ថ្ងៃខែឆ្នាំ​ និង
+                                                                                    ​ម៉ោង</label>
+                                                                                <input type="datetime-local"
+                                                                                    class="form-control" id=""
+                                                                                    name="datetime">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="container mt-4">
+                                                                    <label for="location"
+                                                                        class="form-label">Path</label>
+                                                                    <textarea name="" id=""
+                                                                        class="w-100 border-0 shadow-sm rounded-3 p-3"
+                                                                        style="resize: vertical; min-height: 130px;"
+                                                                        placeholder="សូមជ្រើសរើសទីតាំង"></textarea>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <h4 class="pt-3">ខ្លឺមសារនៃព្រឹត្តិការណ៏</h4>
+                                                                <textarea name="" id=""
+                                                                    class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                                                    style="resize: vertical; min-height: 100px;"></textarea>
+                                                            </div>
+                                                            <div class="col-lg-12 text-end">
+                                                                <button class="btn btn-dark-blue mt-4 mb-5"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#eventModal">ធ្វើបច្ចុប្បន្នភាព</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Delete Confirmation Modal -->
+                                                <div class="modal fade" id="deleteModal" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header bg-footer text-white">
+                                                                <h5 class="modal-title">លុបព្រឹត្តិការណ៍</h5>
+                                                                <button type="button" class="btn-close btn-close-white"
+                                                                    data-bs-dismiss="modal"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                តើអ្នកចង់លុបព្រឹត្តិការណ៍នេះមែនទេ?
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-outline-dark-blue"
+                                                                    data-bs-dismiss="modal">បោះបង់</button>
+                                                                <button type="button" class="btn btn-danger"
+                                                                    data-bs-dismiss="modal">លុប</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- View Details Modal -->
+                                                <div class="modal fade" id="viewModal" tabindex="-1" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header bg-footer text-white">
+                                                                <h5 class="modal-title">ព្រឹត្តិការណ៍</h5>
+                                                                <button type="button" class="btn-close btn-close-white"
+                                                                    data-bs-dismiss="modal"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <img src="../../image/eventt/ai.png"
+                                                                    class="img-fluid rounded w-100 mb-3"
+                                                                    alt="Event Image">
+                                                                <h3>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</h3>
+                                                                <p><strong>កាលបរិច្ឆេទ:</strong> 2025-09-20</p>
+                                                                <p><strong>ទីតាំង:</strong> ភ្នំពេញ, កម្ពុជា</p>
+                                                                <p>
+                                                                    ព្រឹត្តិការណ៍នេះនឹងពិភាក្សាអំពីការប្រើប្រាស់ AI
+                                                                    ក្នុងវិស័យវេជ្ជសាស្ត្រ
+                                                                    និងរបៀបដែលវាអាចជួយបង្កើនគុណភាពសេវាកម្មសុខាភិបាល។
+                                                                </p>
+                                                                <p>
+                                                                    អ្នកចូលរួមនឹងមានឱកាសស្តាប់ពីអ្នកជំនាញក្នុងវិស័យនេះ
+                                                                    និងចែករំលែកបទពិសោធន៍របស់ពួកគេ។
+                                                                </p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-dark-blue"
+                                                                    data-bs-dismiss="modal">បិទ</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab" tabindex="0">
+                                        <div class="container">
+                                            <div class="row pt-5 g-5">
+                                                <div class="col-lg-2">
+                                                    <h4>កែប្រែនិមិត្តសញ្ញា</h4>
+                                                    <div class="custom-file-wrapper small-file ">
+                                                        <input type="file" class="custom-file-input" id="">
+                                                        <label for="smallFile" class="custom-file-label">
+                                                            <div class="file-icon">
+                                                                <i class="fa fa-plus"></i>
+                                                            </div>
+                                                            <div class="file-text">
+                                                                <h5>Add File</h5>
+                                                                <p>Compact version</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <div class="row g-5">
+                                                        <div class="col-12">
+                                                            <input type="text"
+                                                                class="form-control bg-card-theme border-0 shadow-sm rounded-3 p-3"
+                                                                placeholder="កែប្រែឈ្មោះគេហទំព័រ">
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <input type="text"
+                                                                class="form-control bg-card-theme border-0 shadow-sm rounded-3 p-3"
+                                                                placeholder="កែប្រែឈ្មោះដែនគេហទំព័រ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 text-end">
+                                                    <button class="btn btn-dark-blue" data-bs-toggle="modal"
+                                                        data-bs-target="#change">ធ្វើបច្ចុប្បន្នភាព</button>
+                                                </div>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="change" tabindex="-1"
+                                                    aria-labelledby="changeLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header bg-footer text-white">
+                                                                <h1 class="modal-title fs-5" id="changeLabel">
+                                                                    តើអ្នកពិតជាចង់ធ្វើបច្ចុប្បន្នភាពមែនទេ?</h1>
+                                                                <button type="button" class="btn-close btn-close-white"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <h4>សូមធ្វើការបញ្ជាក់គណនី</h4>
+                                                                <form id="loginForm" action="" target="_blank"
+                                                                    method="post" class="px-2">
+                                                                    <div class="card border-0 bg-transparent">
+                                                                        <div class="card-body">
+                                                                            <div class="form-floating mb-3">
+                                                                                <input type="email"
+                                                                                    class="form-control border-0 bg-card-theme shadow-sm"
+                                                                                    id="email" placeholder="អ៊ីម៉ែល"
+                                                                                    aria-label="" />
+                                                                                <label for="email"
+                                                                                    class="form-label pb-1"><i
+                                                                                        class="bi bi-envelope-fill pe-1"></i>សូមបញ្ចូលអ៊ីម៉ែល</label>
+                                                                            </div>
+                                                                            <div class="form-floating">
+                                                                                <input type="password"
+                                                                                    class="form-control border-0 bg-card-theme shadow-sm"
+                                                                                    id="password" placeholder="Password"
+                                                                                    aria-label="" />
+                                                                                <label for="password"
+                                                                                    class="form-label"><i
+                                                                                        class="fa-solid fa-lock"></i>សូមបញ្ចូលលេខសម្ងាត់</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-outline-dark-blue"
+                                                                    data-bs-dismiss="modal">បិទ</button>
+                                                                <button type="button" class="btn btn-dark-blue"
+                                                                    data-bs-dismiss="modal">រក្សាទុក</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
