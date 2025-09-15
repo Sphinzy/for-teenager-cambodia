@@ -114,6 +114,21 @@ body[data-bs-theme="light"] .btn-outline-dark-blue:hover {
     transition: all 0.3s ease;
 }
 
+body[data-bs-theme="light"] .btn-gunmetal {
+    width: fit-content;
+    border-radius: 5px !important;
+    background-color: #1d263e !important;
+    color: #ffffff !important;
+    font-weight: 500;
+
+}
+
+body[data-bs-theme="light"] .btn-gunmetal:hover {
+    width: fit-content;
+    background-color: #434b64 !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
 /* dark blue btn dark mode*/
 body[data-bs-theme="dark"] .btn-dark-blue {
     width: fit-content;
@@ -152,7 +167,21 @@ body[data-bs-theme="dark"] .btn-outline-dark-blue:hover {
     font-weight: 500;
     transition: all 0.3s ease;
 }
+body[data-bs-theme="dark"] .btn-gunmetal {
+    width: fit-content;
+    border-radius: 5px !important;
+    background-color: #1d263e !important;
+    color: #ffffff !important;
+    font-weight: 500;
 
+}
+
+body[data-bs-theme="dark"] .btn-gunmetal:hover {
+    width: fit-content;
+    background-color: #434b64 !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
 .text-body-theme {
     color: var(--bs-body-color) !important;
 }
@@ -388,3 +417,32 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link:focus::before,
 body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before {
     width: 83%;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 36e48c7d147c5b9571e03930a23abd973b293f92
+#logo{
+    width: 50px !important;
+}
+.accordion-button {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.accordion-item {
+    border: none !important;
+    color: gray;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #1d263e !important;
+<<<<<<< HEAD
+}
+=======
+}
+=======
+>>>>>>> 9861bf8c67472bcfbeac7ea77f8ed818e7fac981
+>>>>>>> 36e48c7d147c5b9571e03930a23abd973b293f92
