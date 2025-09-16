@@ -18,7 +18,7 @@ body {
 
 /* Light mode */
 body[data-bs-theme="light"] {
-    --bs-body-bg: #e6e6e6;
+    --bs-body-bg: #e8e8e8;
     /* Body background */
     --bs-body-color: #212529;
     /* Text color */
@@ -55,7 +55,7 @@ body[data-bs-theme="light"] .bg-card-theme {
 }
 
 body[data-bs-theme="dark"] .bg-card-theme {
-    background-color: #1d263e !important;
+    background-color: #343a40 !important;
     /* Dark in dark mode */
     color: #e6e6e6 !important;
     /* White text */
