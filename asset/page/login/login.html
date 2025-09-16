@@ -33,33 +33,33 @@
       position: relative;
     }
 
-    /* This styles the input field itself */
-    .form-floating .form-control {
-      height: 60px;
-      padding: 20px 15px 5px 15px;
-      border-color: #1d263e;
-      border-radius: 20px;
-      background-color: #fff; /* Default background */
-      transition: background-color 0.5s ease-in-out;
-    }
+  /* This styles the input field itself */
+  .form-floating .form-control {
+    height: 60px;
+    padding: 20px 15px 5px 15px;
+    border-color: #1d263e;
+    border-radius: 20px;
+    background-color: #fff; /* Default background */
+    transition: background-color 0.5s ease-in-out; 
+  }
+  
+  /* This changes the input background AFTER you type in it */
+  .form-floating .form-control:not(:placeholder-shown) {
+    background-color: #eef2fa; /* Current background for filled input */
+  }
 
-    /* This changes the input background AFTER you type in it */
-    .form-floating .form-control:not(:placeholder-shown) {
-      background-color: #eef2fa; /* Current background for filled input */
-    }
-
-    /* This styles the label in its default position */
-    .form-floating label {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      padding: 1rem 0.75rem;
-      pointer-events: none;
-      border: 1px solid transparent;
-      transform-origin: 0 0;
-      transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
-    }
+  /* This styles the label in its default position */
+  .form-floating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem .75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+  }
 
     /* This styles the label WHEN it floats up */
     .form-floating .form-control:focus ~ label,
@@ -146,98 +146,60 @@
     }
   </style>
 
-  <body style="background: #fff">
-    <main>
-      <section class="d-flex align-items-center" style="height: 100vh">
-        <div class="container">
-          <div class="row flex-row">
-            <div class="col-lg-6">
-              <form action="" target="_blank" method="post" class="px-2">
-                <div class="card border-0 bg-transparent">
-                  <div class="card-header bg-transparent border-0">
-                    <span class="fs-3 fw-medium">ចូលគណនី</span>
+<body style="background: #fff;">
+  <main>
+    <section class="d-flex align-items-center" style="height: 100vh;">
+      <div class="container">
+        <div class="row flex-row">
+          <div class="col-lg-6">
+            <form id="loginForm" action="" target="_blank" method="post" class="px-2">
+              <div class="card border-0 bg-transparent">
+                <div class="card-header bg-transparent border-0">
+                  <span class="fs-3 fw-medium">ចូលគណនី</span>
+                </div>
+                <div class="card-body">
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="អ៊ីម៉ែល" aria-label="" />
+                    <label for="email" class="form-label pb-1"><i
+                        class="bi bi-envelope-fill pe-1"></i>សូមបញ្ចូលអ៊ីម៉ែល</label>
                   </div>
-                  <div class="card-body">
-                    <div class="form-floating mb-3">
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="អ៊ីម៉ែល"
-                        aria-label=""
-                        required
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="password" placeholder="Password" aria-label=""
                       />
-                      <label for="email" class="form-label pb-1"
-                        ><i class="bi bi-envelope-fill pe-1"></i
-                        >សូមបញ្ចូលអ៊ីម៉ែល</label
-                      >
-                    </div>
-                    <div class="form-floating">
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="password"
-                        placeholder="Password"
-                        aria-label=""
-                        required
-                      />
-                      <label for="password" class="form-label"
-                        ><i class="fa-solid fa-lock"></i
-                        >សូមបញ្ចូលលេខសម្ងាត់</label
-                      >
-                    </div>
+                    <label for="password" class="form-label"><i class="fa-solid fa-lock"></i>សូមបញ្ចូលលេខសម្ងាត់</label>
                   </div>
-                  <div class="card-footer bg-transparent border-0">
-                    <div class="d-flex check-box justify-content-between mb-4">
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          id="Remember"
-                          type="checkbox"
-                          name="lang"
-                          value="Remember"
-                          aria-label="Password"
-                        />
-                        <label for="Remember" class="form-check-label"
-                          >ចងចាំខ្ញុំ</label
-                        >
-                      </div>
-                      <a href="verify_email.html">ភ្លេចពាក្យសម្ងាត់?</a>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <div class="d-flex check-box justify-content-between mb-4">
+                    <div class="form-check">
+                      <input class="form-check-input" id="Remember" type="checkbox" name="lang" value="Remember"
+                        aria-label="Password" />
+                      <label for="Remember" class="form-check-label">ចងចាំខ្ញុំ</label>
                     </div>
-                    <a
-                      href="../us/home.html"
-                      type="submit"
-                      class="btn btn-gunmetal w-100 d-flex justify-content-center mb-3"
-                    >
-                      ចូលគណនី
-                    </a>
-                    <div class="connect-login">
-                      <p class="mb-3">
-                        មិនទាន់មានគណនីមែនទេ?<span class="connext"
-                          ><a href="register.html" class="fw-normal px-1"
-                            >បង្កើតគណនី</a
-                          ></span
-                        >
-                      </p>
-                      <div class="text-center">
-                        <p class="fs-6 line-login">Or login with</p>
-                      </div>
-                      <div class="d-flex justify-content-center">
-                        <a href="#"
-                          ><i class="bi bi-facebook fs-3 text-dark px-5"></i
-                        ></a>
-                        <a href="#"
-                          ><i class="bi bi-github fs-3 ps-2 text-dark px-5"></i
-                        ></a>
-                        <a href="">
-                          <i class="bi bi-google fs-3 ps-2 text-dark px-5"></i
-                        ></a>
-                      </div>
+                    <a href="verify_email.html">ភ្លេចពាក្យសម្ងាត់?</a>
+                  </div>
+                  <button id="loginBtn" type="submit" 
+                    class="btn btn-gunmetal w-100 d-flex justify-content-center mb-3">
+                    ចូលគណនី
+                  </button>
+                  <div class="connect-login">
+                    <p class="mb-3">
+                      មិនទាន់មានគណនីមែនទេ?<span class="connext"><a href="register.html"
+                          class="fw-normal px-1">បង្កើតគណនី</a></span>
+                    </p>
+                    <div class="text-center">
+                      <p class="fs-6 line-login">Or login with</p>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <a href="#"><i class="bi bi-facebook fs-3 text-dark px-5" ></i></a>
+                    <a href="#"><i class="bi bi-github fs-3 ps-2 text-dark px-5" ></i></a>
+                    <a href=""> <i class="bi bi-google fs-3 ps-2 text-dark px-5"></i></a>
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
+          </div>
 
             <div class="col-lg-6 d-none d-lg-block">
               <div class="card border-0 bg-white">
@@ -254,8 +216,26 @@
     </main>
   </body>
 
-  <script src="../../js/bootstrap.bundle.min.js"></script>
-  <!-- aos link -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="../../js/srcipt.js"></script>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<!-- aos link -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../../js/srcipt.js"></script>
+<script>
+  document.getElementById('loginBtn').addEventListener('click', function(e) {
+    e.preventDefault(); // prevent default link behavior
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    const correctEmail = "admin@gmail.com";
+    const correctPassword = "123";
+
+    if (email === correctEmail && password === correctPassword) {
+        window.location.href = '../dashboard/dashboard.html';
+    } else {
+        window.location.href = '../us/home.html';
+    }
+});
+</script>
+
 </html>

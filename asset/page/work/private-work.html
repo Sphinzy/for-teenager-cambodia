@@ -17,34 +17,49 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- swiper  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/profile.css">
 </head>
-
+<style>
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: var(--swiper-navigation-top-offset, 88%) !important;
+        color: #ccc !important;
+    }
+    body[data-bs-theme="dark"] .swiper-button-next,
+    .swiper-button-prev {
+        top: var(--swiper-navigation-top-offset, 88%) !important;
+        color: #ccc !important;
+    }
+</style>
 <body class="bg-body-theme" data-bs-theme="light">
-    <header class="sticky-top" style="z-index: 1030;">
+    <header class="sticky-top z-3">
         <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
             <div class="container">
-                <a class="navbar-brand" href="../home.html">
+                <a class="navbar-brand" href="../us/home.html">
                     <img id="logo" src="../../image/project-logo/logo01.png" alt="Logo" style="width: 75px;">
                 </a>
                 <div class="d-flex">
                     <!-- profile lg-none  -->
                     <div class="d-flex justify-content-end align-items-center d-flex d-lg-none bg-body-theme">
-                        <button id="themeToggle" class="theme-toggle border-0 bg-transparent">
+                        <button id="themeToggle" class="theme-toggle border-0 px-3 bg-transparent">
                             <i id="themeIcon" class="bi bi-brightness-high-fill icon-animate"></i>
                         </button>
                         <!-- notification  -->
                         <div class="dropdown">
-                            <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 <i class="bi bi-bell px-2 position-relative fs-5">
                                     <span
                                         class="position-absolute translate-middle bg-danger border border-light rounded-circle"
                                         style="left: 21px; padding: 3px; top: 1px;">
-                                        <span class="visually-hidden">New alerts</span>
+                                        <span class="visually-hidden">New
+                                            alerts</span>
                                     </span>
                                 </i>
                             </a>
-                            <ul class="dropdown-menu ms-n20 border-0 shadow-lg">
+
+                            <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-card-theme">
                                 <li>
                                     <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
                                         style="width: 320px;">
@@ -53,59 +68,61 @@
                                         </div>
                                     </div>
                                 </li>
+
                                 <!-- list notification  -->
                                 <li>
-                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="../../image/project-logo/pf-2.svg"
                                             class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt="">
+                                            alt>
                                         <div class="notification">
                                             <p class="text clamp-2">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
-                                                molestiae!
+                                                ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
                                             </p>
                                         </div>
                                         <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="../../image/project-logo/pf-3.jpg"
                                             class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt="">
+                                            alt>
                                         <div class="notification">
                                             <p class="text clamp-2">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
-                                                molestiae!
+                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
                                             </p>
                                         </div>
                                         <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="../../image/project-logo/pf-1.png"
                                             class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt="">
+                                            alt>
                                         <div class="notification">
                                             <p class="text clamp-2">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
-                                                molestiae!
+                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
                                             </p>
                                         </div>
                                         <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                     </a>
                                 </li>
                                 <div>
-                                    <a href="" class="nav-link text-end text-primary p-2 pe-4">See all</a>
+                                    <a href="../profile/notification.html"
+                                        class="nav-link text-end text-primary p-2 pe-4">See
+                                        all</a>
                                 </div>
                             </ul>
                         </div>
                         <!-- profile  -->
                         <div class="profile">
-                            <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
-                                class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
-                                alt />
+                            <a href="../profile/proflie.html">
+                                <img src="../../image/project-logo/profile-img.jpg"
+                                    class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                    alt />
+                            </a>
                         </div>
                     </div>
                     <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="offcanvas"
@@ -122,11 +139,13 @@
                         <div class="d-flex justify-content-end align-items-center d-flex d-lg-none" role="search">
                             <!-- profile  -->
                             <div class="profile">
-                                <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
-                                    class="img-fluid rounded-circle object-fit-cover mt-2"
-                                    style="width: 40px; height: 40px;" alt />
+                                <a href="../profile/proflie.html">
+                                    <img src="../../image/project-logo/profile-img.jpg"
+                                        class="img-fluid rounded-circle object-fit-cover"
+                                        style="width: 40px; height: 40px;" alt />
+                                </a>
                             </div>
-                            <h5 class="pt-3 ps-2">សួស្តី!​ តុលា</h5>
+                            <h5 class="pt-3 ps-2">សួស្តី!​​ តុលា</h5>
                         </div>
 
                         <h5 class="offcanvas-title bg-body-theme" id="offcanvasNavbarLabel">
@@ -139,9 +158,8 @@
                     <div class="offcanvas-body bg-body-theme align-items-center">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link px-3" aria-current="page" href="#"><i
-                                        class="bi bi-house-fill mx-1"></i>ទំព័រដើម
-                                </a>
+                                <a class="nav-link px-3" aria-current="page" href="../us/home.html"><i
+                                        class="bi bi-house-fill mx-1"></i>ទំព័រដើម</a>
                             </li>
                             <div class="dropdown">
                                 <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
@@ -149,11 +167,10 @@
                                     <i class="bi bi-lightbulb-fill mx-1"></i>តម្រង់ទិស
                                 </a>
 
-                                <ul class="dropdown-menu border-0 shadow-sm bg-white">
+                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
                                     <li><a class="dropdown-item" href="../direction/major.html">មុខជំនាញ</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="../direction/university.html">សកលវិទ្យាល័យ</a>
-                                    </li>
+                                    <li><a class="dropdown-item" href="../direction/university.html">សកលវិទ្យាល័យ</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown">
@@ -162,7 +179,7 @@
                                     <i class="bi bi-mortarboard-fill mx-1"></i>អាហារូបករណ៍
                                 </a>
 
-                                <ul class="dropdown-menu border-0 shadow-sm bg-white">
+                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
                                     <li><a class="dropdown-item"
                                             href="../schoolarship/schoolarship-in.html">អាហារូបករណ៍ក្នងស្រុក</a></li>
                                     <li><a class="dropdown-item"
@@ -170,17 +187,23 @@
                                 </ul>
                             </div>
                             <div class="dropdown">
-                                <a class="nav-link px-3 dropdown-toggle active" href="#" role="button"
+                                <a class="nav-link px-3 active dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-buildings-fill me-1"></i>ឱកាសការងារ
                                 </a>
 
-                                <ul class="dropdown-menu border-0 shadow-sm bg-white">
-                                    <li><a class="dropdown-item" href="#">ការងាររដ្ឋ</a></li>
-                                    <li><a class="dropdown-item" href="#">ការងារឯកជន</a></li>
-                                    <li><a class="dropdown-item" href="#">ការងារស័គ្ម្រចិត្ត</a></li>
+                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
+                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងាររដ្ឋ</a></li>
+                                    <li><a class="dropdown-item" href="../work/private-work.html">ការងារឯកជន</a></li>
+                                    <li><a class="dropdown-item" href="../work/volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
+                                    </li>
                                 </ul>
                             </div>
+                            <li class="nav-item">
+                                <a href="../us/event.html" class="nav-link px-3 ">
+                                    <i class="bi bi-calendar-event-fill me-1"></i>ព្រឹត្តិការណ៏
+                                </a>
+                            </li>
                         </ul>
 
                     </div>
@@ -188,23 +211,24 @@
 
                 <!-- profile lg-flex  -->
                 <div class="d-flex justify-content-end align-items-center d-none d-lg-flex">
-                    <button id="themeToggle2" class="theme-toggle border-0 bg-transparent">
+                    <button id="themeToggle2" class="theme-toggle border-0 px-3 bg-transparent">
                         <i id="themeIcon2" class="bi bi-brightness-high-fill icon-animate"></i>
                     </button>
                     <!-- notification  -->
                     <div class="dropdown">
-                        <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <i class="bi bi-bell px-2 position-relative fs-5">
+                            <i class="bi bi-bell position-relative fs-5">
                                 <span
                                     class="position-absolute translate-middle bg-danger border border-light rounded-circle"
                                     style="left: 21px; padding: 4px; top: 1px;">
-                                    <span class="visually-hidden">New alerts</span>
+                                    <span class="visually-hidden">New
+                                        alerts</span>
                                 </span>
                             </i>
                         </a>
 
-                        <ul class="dropdown-menu ms-n20 border-0 shadow-lg bg-white">
+                        <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-card-theme">
                             <li>
                                 <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
                                     style="width: 320px;">
@@ -216,51 +240,55 @@
 
                             <!-- list notification  -->
                             <li>
-                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
-                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-2.svg" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
                                     <div class="notification">
                                         <p class="text clamp-2">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                            ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
                                         </p>
                                     </div>
                                     <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
-                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-3.jpg" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
                                     <div class="notification">
                                         <p class="text clamp-2">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
                                         </p>
                                     </div>
                                     <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
-                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-1.png" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
                                     <div class="notification">
                                         <p class="text clamp-2">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
                                         </p>
                                     </div>
                                     <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                 </a>
                             </li>
                             <div>
-                                <a href="" class="nav-link text-end text-primary p-2 pe-4">See all</a>
+                                <a href="../profile/notification.html"
+                                    class="nav-link text-end text-primary p-2 pe-4">See
+                                    all</a>
                             </div>
                         </ul>
                     </div>
                     <!-- profile  -->
                     <div class="profile">
-                        <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
-                            class="img-fluid rounded-circle object-fit-cover" data-bs-toggle="dropdown"
-                            style="width: 40px; height: 40px;" alt />
+                        <a href="../profile/proflie.html">
+                            <img src="../../image/project-logo/profile-img.jpg"
+                                class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                alt />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -269,298 +297,12 @@
     <main>
         <img class="img-fluid" src="../../image/job-img/jobsearch-02.png" alt=""
             style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
-        <!-- <section>
+        <section>
             <div class="container">
                 <div class="row g-3">
                     <div class="col-lg-6 z-1 bg-body-theme rounded-start" style="margin-top: -10%;">
                         <nav>
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                    aria-selected="true">ផ្នែកបច្ចេកវិទ្យា</button>
-                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                    aria-selected="false">ផ្នែករដ្ឋបាល</button>
-                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
-                                    aria-selected="false">វេជ្ជសាស្ត្រ</button>
-                                <button class="nav-link" id="nav-web-tab" data-bs-toggle="tab" data-bs-target="#nav-web"
-                                    type="button" role="tab" aria-controls="nav-web" aria-selected="false">Web
-                                    Development</button>
-                            </div>
-                        </nav>
-
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
-                                aria-labelledby="nav-home-tab" tabindex="0">
-                                <div class="row shadow-sm gy-4">
-                                    <h4 class="mt-6">ប្រព័ន្ធបច្ចេកវិទ្យា</h4>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/Woori bank.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">អ្នកអភិវឌ្ឍន៍កម្មវិធី (Software
-                                                            Developer)</h5>
-                                                        <p class="card-text">Woori Bank Cambodia</p>
-                                                        <p class="card-text">ទីតាំង​: ភ្នំពេញ</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $200</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/chip mong.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">អ្នកជំនាញសុវត្ថិភាពព័ត៌មានវិទ្យា
-                                                            (Cybersecurity Specialist)</h5>
-                                                        <p class="card-text">ក្រុមហ៊ុន​: Chip Mong Group</p>
-                                                        <p class="card-text">ទីតាំង​: ភ្នំពេញ</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $1400</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/PTC.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">ជំនួយការផ្នែកព័ត៌មានវិទ្យា (IT Support
-                                                            Specialist)</h5>
-                                                        <p class="card-text">ក្រសួងប្រៃសណីយ៍ និង ទូរគមនាគមន៍</p>
-                                                        <p class="card-text">ម៉ោងធ្វើការ​ 7:00 AM - 5:00 PM</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $1300</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/chip mong.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Graphic Designer</h5>
-                                                        <p class="card-text">Chip Mong Group</p>
-                                                        <p class="card-text">ម៉ោងធ្វើការ​ 7:00 AM - 5:00 PM</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $1300</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
-                                            <div class="row g-0">
-                                                <div class="col-md-6">
-                                                    <img src="../../image/job-img/PTC.jpg" alt=""
-                                                        class="img-fluid rounded-3">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Programmer</h5>
-                                                        <p class="card-text">ក្រសួងប្រៃសណីយ៍ និង ទូរគមនាគមន៍</p>
-                                                        <p class="card-text">ម៉ោងធ្វើការ​ 7:00 AM - 12:00 PM</p>
-                                                        <p class="card-text">ប្រាក់ខែ​: $800</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
-                            tabindex="0">
-                            <div class="row shadow-sm gy-4">
-                                <h4 class="mt-6">រដ្ឋបាល</h4>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/Aupp.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">ជំនួយការរដ្ឋបាល (Administrative Assistant)
-                                                    </h5>
-                                                    <p class="card-text">ទីតាំង​: Aupp Co.,ltd</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1200</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/bluebird.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">អ្នកគ្រប់គ្រងរដ្ឋបាល (Administrative Manager)
-                                                    </h5>
-                                                    <p class="card-text">ទីតាំង​: Aupp Co.,ltd</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1500</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/total01.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">មន្ត្រីផ្នែកធនធានមនុស្ស និងរដ្ឋបាល (HR and
-                                                        Admin Officer)</h5>
-                                                    <p class="card-text">ទីតាំង​: TotalEnergies Marketing (Cambodia)
-                                                        Co., Ltd</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1200</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
-                            tabindex="0">
-                            <div class="row shadow-sm gy-4">
-                                <h4 class="mt-6">វេជ្ជសាស្ត្រ</h4>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/Aupp.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">គ្រូពេទ្យ (Medical Doctor)</h5>
-                                                    <p class="card-text">ទីតាំង​: មន្ទីរពេទ្យកាល់ម៉ែត</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1800</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/bluebird.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">គិលានុបដ្ឋាយិកា / គិលានុបដ្ឋាក (Nurse)</h5>
-                                                    <p class="card-text">ទីតាំង​: មន្ទីរពេទ្យកុមារជាតិ</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 12:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $600</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a href="private-detail.html"
-                                        class="card bg-transparent border-0 text-decoration-none">
-                                        <div class="row g-0">
-                                            <div class="col-md-6">
-                                                <img src="../../image/job-img/total01.jpg" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">ឱសថការី (Pharmacist)</h5>
-                                                    <p class="card-text">ទីតាំង​: មន្ទីរពេទ្យ​ Royal</p>
-                                                    <p class="card-text">ធ្វើការពេញម៉ោង 7:00 AM-5:00 PM</p>
-                                                    <p class="card-text">ប្រាក់ខែ​: $1000</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="nav-web" role="tabpanel" aria-labelledby="nav-web-tab"
-                            tabindex="0">kjfkhjgjfjg</div>
-                    </div>
-                    <div class="col-lg-6 bg-body-theme z-1 rounded-end" style="margin-top: -10%;">
-                        <div class="aside">
-                            <div class="row g-3 p-2 " style="top: 80px;">
-                                <div class="col-6">
-                                    <img src="../../image/job-img/01.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-right">
-                                </div>
-                                <div class="col-6">
-                                    <img src="../../image/job-img/02.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-down">
-                                </div>
-                                <div class="col-6">
-                                    <img src="../../image/job-img/03.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-up">
-                                </div>
-                                <div class="col-6">
-                                    <img src="../../image/job-img/04.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                                        data-aos-duration="500">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <section>
-            <div class="container">
-                <div class="row g-3">
-                    <div class="col-lg-6 z-1 bg-body-theme rounded-start mb-4" style="margin-top: -10%;">
-                        <nav>
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <div class="nav nav-tabs nav-pills" id="nav-tab" role="tablist">
                                 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
                                     aria-selected="true">ផ្នែកបច្ចេកវិទ្យា</button>
@@ -575,14 +317,14 @@
                                     aria-selected="false">ផ្នែកលក់</button>
                             </div>
                         </nav>
-                        <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-content mb-3" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                 aria-labelledby="nav-home-tab" tabindex="0">
                                 <div class="row shadow-sm gy-4">
                                     <h4 class="mt-6">ប្រព័ន្ធបច្ចេកវិទ្យា</h4>
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-12 ">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/Woori bank.jpg" alt=""
@@ -602,7 +344,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/chip mong.jpg" alt=""
@@ -622,7 +364,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/PTC.jpg" alt=""
@@ -642,7 +384,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/chip mong.jpg" alt=""
@@ -661,7 +403,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/PTC.jpg" alt=""
@@ -686,7 +428,7 @@
                                     <h4 class="mt-6">រដ្ឋបាល</h4>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/Aupp.jpg" alt=""
@@ -707,7 +449,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/bluebird.jpg" alt=""
@@ -728,7 +470,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/total01.jpg" alt=""
@@ -756,7 +498,7 @@
                                     <h4 class="mt-6">វេជ្ជសាស្ត្រ</h4>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/HNA.jpg" alt=""
@@ -775,7 +517,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/N_children.jpeg" alt=""
@@ -795,7 +537,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/Royal.webp" alt=""
@@ -814,7 +556,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/Angkor PP.png" alt=""
@@ -841,7 +583,7 @@
                                     <h4 class="mt-6">ការលក់ទូទៅ</h4>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/tube.jpg" alt=""
@@ -860,7 +602,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/God.jpg" alt=""
@@ -880,7 +622,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <a href="private-detail.html"
-                                            class="card bg-transparent border-0 text-decoration-none">
+                                            class="card bg-transparent border-0 text-decoration-none" data-aos="fade-up">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
                                                     <img src="../../image/job-img/tj.jpg" alt=""
@@ -901,28 +643,83 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 bg-body-theme z-1 rounded-end" style="margin-top: -10%;">
-                        <div class="aside">
+                    <div class="col-lg-6 bg-body-theme z-1 rounded-end d-lg-block d-none" style="margin-top: -10%;">
+                        <div class="aside position-sticky" style="top: 100px;">
                             <div class="row g-3 p-2 " style="top: 80px;">
                                 <div class="col-6">
-                                    <img src="../../image/job-img/01.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-right">
+                                    <img src="../../image/job-img/01.jpg" alt="" class="img-fluid shadow-sm">
                                 </div>
                                 <div class="col-6">
-                                    <img src="../../image/job-img/02.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-down">
+                                    <img src="../../image/job-img/02.jpg" alt="" class="img-fluid shadow-sm">
                                 </div>
                                 <div class="col-6">
                                     <img src="../../image/job-img/03.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-up">
+                                        >
                                 </div>
                                 <div class="col-6">
                                     <img src="../../image/job-img/04.jpg" alt="" class="img-fluid shadow-sm"
-                                        data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                                        data-aos-duration="500">
+                                        >
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-15 pb-7 pt-9 shadow-sm bg-card-theme rounded-0">
+            <div class="container">
+                <div class="text-center pb-12">
+                    <h3 class="fs-3 text-center pb-3">
+                        អ្នកអាចស្វែងរកការងារទៅតាមស្ថាប័នជាច្រើននៅទីនេះ</h3>
+                    <p class="fs-5">
+                        ពួកយើងបានរៀបចំបែងចែកប្រភេទការងារទៅតាមស្ថាប័នរដ្ឋ និងឯកជនដើម្បីអោយអ្នកងាយស្វែងរក
+                        ហើយមិនចំណាយពេលយូរ
+                    </p>
+                </div>
+
+                <div class="swiper mySwiper pb-3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/Ministry_Dcc.png"
+                                class="img-fluid  h-75 w-75 object-fit-cover " alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/partner-ntr-logo.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/partner-Ministry of Commerce.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/partner-logo-debc.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/ministry_of_labour.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/partner-rma.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/Ministry-of-Economy-and-Finance.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/chip mong.png"
+                                class="img-fluid h-75 w-75 object-fit-cover" alt="">
+                        </div>
+                        <div class="swiper-slide bg-card-theme">
+                            <img src="../../image/lending-img/acleda.png" class="img-fluid h-75 w-75 object-fit-cover"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="pt-18">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>
@@ -933,14 +730,15 @@
             <div class="row text-white">
                 <div class="col-11 col-lg-5 col-xl-4">
                     <a class="navbar-brand" href="#">
-                        <img src="../../image/project-logo/logo02.png" alt="Logo" style="width: 75px;">
+                        <img src="../../image/project-logo/logo02.png" alt="Logo" style="width: 75px" />
                     </a>
                     <p class="footer-text clamp-3">
-                        "ប្រធានបទ “សម្រាប់យុវជនកម្ពុជា” ត្រូវបានជ្រើសរើស ដោយសារនិស្សិតបរិញ្ញាបត្រកើនឡើង
-                        ប៉ុន្តែមានបញ្ហាក្នុងការជ្រើសរើសជំនាញ។
-                        ដើម្បីដោះស្រាយ បញ្ហានេះ គេបង្កើតគេហទំព័រមួយដែលអាចប្រើប្រាស់បានលើ Browser និងទូរស័ព្ទចល័ត។
-                        គេហទំព័រនេះផ្តល់ព័ត៌មានអំពីមុខជំនាញ
-                        វិស័យការងារ សាកលវិទ្យា អាហារូបករណ៍ និងឱកាសការងារ
+                        "ប្រធានបទ “សម្រាប់យុវជនកម្ពុជា” ត្រូវបានជ្រើសរើស
+                        ដោយសារនិស្សិតបរិញ្ញាបត្រកើនឡើង
+                        ប៉ុន្តែមានបញ្ហាក្នុងការជ្រើសរើសជំនាញ។ ដើម្បីដោះស្រាយ បញ្ហានេះ
+                        គេបង្កើតគេហទំព័រមួយដែលអាចប្រើប្រាស់បានលើ Browser និងទូរស័ព្ទចល័ត។
+                        គេហទំព័រនេះផ្តល់ព័ត៌មានអំពីមុខជំនាញ វិស័យការងារ សាកលវិទ្យា
+                        អាហារូបករណ៍ និងឱកាសការងារ
                         ដើម្បីជួយសិស្សសម្រេចចិត្តជ្រើសរើសជំនាញដែលខ្លួនចូលចិត្ត
                         និងរកការងារផ្ទាល់ខ្លួនបន្ទាប់ពីបញ្ចប់ការសិក្សា។"
                     </p>
@@ -954,16 +752,16 @@
                     <ul class="navbar-nav">
                         <h5 class="nav-title fw-bold">ព័ត៌មានអំពីយើង</h5>
                         <li class="nav-item">
-                            <a href="../about.html" class="nav-link text-white">អំពីយើង</a>
+                            <a href="../us/about.html" class="nav-link text-white">អំពីយើង</a>
                         </li>
                         <li class="nav-item">
-                            <a href="../contact.html" class="nav-link text-white">ទាក់ទងមកយើង</a>
+                            <a href="../us/contact.html" class="nav-link text-white">ទំទាក់ទំទងមកយើង</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">ការតម្រង់ទិស</a>
+                            <a href="../direction/major.html" class="nav-link text-white">ការតម្រង់ទិស</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">ព្រឹត្តិការណ៏</a>
+                            <a href="../us/event.html" class="nav-link text-white">ព្រឹត្តិការណ៏</a>
                         </li>
                     </ul>
                 </div>
@@ -989,27 +787,33 @@
                     <ul class="navbar-nav">
                         <h5 class="nav-title fw-bold">អាស័យដ្ឋានរបស់យើង</h5>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">#86B, Street 313 corner 606, Sangkat Boeungkâk 2,
-                                Khan Toulkok, Phnom Penh</a>
+                            <a href="https://www.google.com/maps/search/%2386B,+Street+313+corner+606,+Sangkat+Boeungk%C3%A2k+2,+Khan+Toulkok,+Phnom+Penh/@11.5659433,104.8975444,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D"
+                                class="nav-link text-white">#86B, ផ្លូវលេខ 313 កែង 606, សង្កាត់ បឹងកក់ ២, ខណ្ឌ
+                                ទួលគោក, ភ្នំពេញ</a>
                         </li>
                         <li class="nav-item">
-                            <p class="nav-link text-white">Email: <a href="mailto:freeteenagercambodia@gmail.com"
-                                    class="text-decoration-none text-white">freeteenagercambodia@gmail.com</a></p>
+                            <p class="nav-link text-white">
+                                Email:
+                                <a href="mailto:freeteenagercambodia@gmail.com"
+                                    class="text-decoration-none text-white">freeteenagercambodia@gmail.com</a>
+                            </p>
                         </li>
                         <li class="nav-item">
-                            <p class="nav-link text-white">លេខទូរស័ព្ទ: <a
-                                    class="fw-bold text-decoration-none text-white" href="tel:+11234567890">(123) 456
-                                    7890</a></p>
+                            <p class="nav-link text-white">
+                                លេខទូរស័ព្ទ:
+                                <a class="fw-bold text-decoration-none text-white" href="tel:+11234567890">(+885) 456
+                                    7890</a>
+                            </p>
                         </li>
                         <li class="nav-link">
                             <a href="#" class="nav-item"><img src="assets/image/app1 (1).png" class="img-fluid img-app"
-                                    alt=""></a>
+                                    alt="" /></a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <hr class="text-white py-1">
+            <hr class="text-white py-1" />
             <div class="row">
                 <div class="col-12 footer-copyright d-flex justify-content-between">
                     <p class="text-white">&copy; រក្សាសិទ្ធិដោយ: FTC 2025</p>
@@ -1018,11 +822,76 @@
         </div>
     </footer>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../../js/bootstrap.bundle.min.js"></script>
 <!-- aos link -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="../../js/script.js"></script>
 <script src="../../js/script-folder.js"></script>
-
+<script>
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.progress-bar').forEach(el => {
+            const value = el.getAttribute('aria-valuenow');
+            el.style.width = value + '%';
+        });
+    });
+</script>
+<script>
+    // Your provided JavaScript code
+    $(document).ready(function () { // Ensure DOM is ready
+        $(".counter").each(function () {
+            var $this = $(this),
+                countTo = $this.attr("data-countto");
+            countDuration = parseInt($this.attr("data-duration"));
+            $({ counter: $this.text() }).animate(
+                {
+                    counter: countTo
+                },
+                {
+                    duration: countDuration,
+                    easing: "linear",
+                    step: function () {
+                        $this.text(Math.floor(this.counter));
+                    },
+                    complete: function () {
+                        $this.text(this.counter);
+                    }
+                }
+            );
+        });
+    });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true, // This enables continuous looping
+        autoplay: {
+            delay: 2500, // Time in ms between slide transitions
+            disableOnInteraction: false, // Autoplay won't stop when the user interacts
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
 </html>

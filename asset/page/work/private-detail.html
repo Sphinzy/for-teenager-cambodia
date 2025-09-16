@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/profile.css">
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -19,32 +20,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body  class="bg-body-theme" data-bs-theme="light">
-    <header class="sticky-top" style="z-index: 1030;">
+<body class="bg-body-theme" data-bs-theme="light">
+    <header class="sticky-top z-3">
         <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
             <div class="container">
-                <a class="navbar-brand" href="../home.html">
+                <a class="navbar-brand" href="../us/home.html">
                     <img id="logo" src="../../image/project-logo/logo01.png" alt="Logo" style="width: 75px;">
                 </a>
                 <div class="d-flex">
                     <!-- profile lg-none  -->
                     <div class="d-flex justify-content-end align-items-center d-flex d-lg-none bg-body-theme">
-                        <button id="themeToggle" class="theme-toggle border-0 bg-transparent">
+                        <button id="themeToggle" class="theme-toggle border-0 px-3 bg-transparent">
                             <i id="themeIcon" class="bi bi-brightness-high-fill icon-animate"></i>
                         </button>
                         <!-- notification  -->
                         <div class="dropdown">
-                            <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 <i class="bi bi-bell px-2 position-relative fs-5">
                                     <span
                                         class="position-absolute translate-middle bg-danger border border-light rounded-circle"
                                         style="left: 21px; padding: 3px; top: 1px;">
-                                        <span class="visually-hidden">New alerts</span>
+                                        <span class="visually-hidden">New
+                                            alerts</span>
                                     </span>
                                 </i>
                             </a>
-                            <ul class="dropdown-menu ms-n20 border-0 shadow-lg">
+
+                            <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-card-theme">
                                 <li>
                                     <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
                                         style="width: 320px;">
@@ -53,59 +56,61 @@
                                         </div>
                                     </div>
                                 </li>
+
                                 <!-- list notification  -->
                                 <li>
-                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="../../image/project-logo/pf-2.svg"
                                             class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt="">
+                                            alt>
                                         <div class="notification">
                                             <p class="text clamp-2">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
-                                                molestiae!
+                                                ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
                                             </p>
                                         </div>
                                         <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="../../image/project-logo/pf-3.jpg"
                                             class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt="">
+                                            alt>
                                         <div class="notification">
                                             <p class="text clamp-2">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
-                                                molestiae!
+                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
                                             </p>
                                         </div>
                                         <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="../../image/project-logo/pf-1.png"
                                             class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt="">
+                                            alt>
                                         <div class="notification">
                                             <p class="text clamp-2">
-                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
-                                                molestiae!
+                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
                                             </p>
                                         </div>
                                         <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                     </a>
                                 </li>
                                 <div>
-                                    <a href="" class="nav-link text-end text-primary p-2 pe-4">See all</a>
+                                    <a href="../profile/notification.html"
+                                        class="nav-link text-end text-primary p-2 pe-4">See
+                                        all</a>
                                 </div>
                             </ul>
                         </div>
                         <!-- profile  -->
                         <div class="profile">
-                            <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
-                                class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
-                                alt />
+                            <a href="../profile/proflie.html">
+                                <img src="../../image/project-logo/profile-img.jpg"
+                                    class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                    alt />
+                            </a>
                         </div>
                     </div>
                     <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="offcanvas"
@@ -122,11 +127,13 @@
                         <div class="d-flex justify-content-end align-items-center d-flex d-lg-none" role="search">
                             <!-- profile  -->
                             <div class="profile">
-                                <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
-                                    class="img-fluid rounded-circle object-fit-cover mt-2"
-                                    style="width: 40px; height: 40px;" alt />
+                                <a href="../profile/proflie.html">
+                                    <img src="../../image/project-logo/profile-img.jpg"
+                                        class="img-fluid rounded-circle object-fit-cover"
+                                        style="width: 40px; height: 40px;" alt />
+                                </a>
                             </div>
-                            <h5 class="pt-3 ps-2">សួស្តី!​ តុលា</h5>
+                            <h5 class="pt-3 ps-2">សួស្តី!​​ តុលា</h5>
                         </div>
 
                         <h5 class="offcanvas-title bg-body-theme" id="offcanvasNavbarLabel">
@@ -139,9 +146,8 @@
                     <div class="offcanvas-body bg-body-theme align-items-center">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link px-3" aria-current="page" href="#"><i
-                                        class="bi bi-house-fill mx-1"></i>ទំព័រដើម
-                                </a>
+                                <a class="nav-link px-3" aria-current="page" href="../us/home.html"><i
+                                        class="bi bi-house-fill mx-1"></i>ទំព័រដើម</a>
                             </li>
                             <div class="dropdown">
                                 <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
@@ -149,11 +155,10 @@
                                     <i class="bi bi-lightbulb-fill mx-1"></i>តម្រង់ទិស
                                 </a>
 
-                                <ul class="dropdown-menu border-0 shadow-sm bg-white">
+                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
                                     <li><a class="dropdown-item" href="../direction/major.html">មុខជំនាញ</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="../direction/university.html">សកលវិទ្យាល័យ</a>
-                                    </li>
+                                    <li><a class="dropdown-item" href="../direction/university.html">សកលវិទ្យាល័យ</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown">
@@ -162,7 +167,7 @@
                                     <i class="bi bi-mortarboard-fill mx-1"></i>អាហារូបករណ៍
                                 </a>
 
-                                <ul class="dropdown-menu border-0 shadow-sm bg-white">
+                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
                                     <li><a class="dropdown-item"
                                             href="../schoolarship/schoolarship-in.html">អាហារូបករណ៍ក្នងស្រុក</a></li>
                                     <li><a class="dropdown-item"
@@ -170,17 +175,23 @@
                                 </ul>
                             </div>
                             <div class="dropdown">
-                                <a class="nav-link px-3 dropdown-toggle active" href="#" role="button"
+                                <a class="nav-link px-3 active dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-buildings-fill me-1"></i>ឱកាសការងារ
                                 </a>
 
-                                <ul class="dropdown-menu border-0 shadow-sm bg-white">
-                                    <li><a class="dropdown-item" href="#">ការងាររដ្ឋ</a></li>
-                                    <li><a class="dropdown-item" href="#">ការងារឯកជន</a></li>
-                                    <li><a class="dropdown-item" href="#">ការងារស័គ្ម្រចិត្ត</a></li>
+                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
+                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងាររដ្ឋ</a></li>
+                                    <li><a class="dropdown-item" href="../work/private-work.html">ការងារឯកជន</a></li>
+                                    <li><a class="dropdown-item" href="../work/volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
+                                    </li>
                                 </ul>
                             </div>
+                            <li class="nav-item">
+                                <a href="../us/event.html" class="nav-link px-3 ">
+                                    <i class="bi bi-calendar-event-fill me-1"></i>ព្រឹត្តិការណ៏
+                                </a>
+                            </li>
                         </ul>
 
                     </div>
@@ -188,23 +199,24 @@
 
                 <!-- profile lg-flex  -->
                 <div class="d-flex justify-content-end align-items-center d-none d-lg-flex">
-                    <button id="themeToggle2" class="theme-toggle border-0 bg-transparent">
+                    <button id="themeToggle2" class="theme-toggle border-0 px-3 bg-transparent">
                         <i id="themeIcon2" class="bi bi-brightness-high-fill icon-animate"></i>
                     </button>
                     <!-- notification  -->
                     <div class="dropdown">
-                        <a class="btn border-0 mt-1" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <i class="bi bi-bell px-2 position-relative fs-5">
+                            <i class="bi bi-bell position-relative fs-5">
                                 <span
                                     class="position-absolute translate-middle bg-danger border border-light rounded-circle"
                                     style="left: 21px; padding: 4px; top: 1px;">
-                                    <span class="visually-hidden">New alerts</span>
+                                    <span class="visually-hidden">New
+                                        alerts</span>
                                 </span>
                             </i>
                         </a>
 
-                        <ul class="dropdown-menu ms-n20 border-0 shadow-lg bg-white">
+                        <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-card-theme">
                             <li>
                                 <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
                                     style="width: 320px;">
@@ -216,51 +228,55 @@
 
                             <!-- list notification  -->
                             <li>
-                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
-                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-2.svg" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
                                     <div class="notification">
                                         <p class="text clamp-2">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                            ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
                                         </p>
                                     </div>
                                     <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
-                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-3.jpg" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
                                     <div class="notification">
                                         <p class="text clamp-2">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
                                         </p>
                                     </div>
                                     <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                    <img src="https://i.pinimg.com/736x/39/c1/81/39c181e549d0a1692a74d1a9fb88eb72.jpg"
-                                        class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;" alt="">
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-1.png" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
                                     <div class="notification">
                                         <p class="text clamp-2">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, molestiae!
+                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
                                         </p>
                                     </div>
                                     <i class="bi bi-dot text-danger display-6 mt-n2"></i>
                                 </a>
                             </li>
                             <div>
-                                <a href="" class="nav-link text-end text-primary p-2 pe-4">See all</a>
+                                <a href="../profile/notification.html"
+                                    class="nav-link text-end text-primary p-2 pe-4">See
+                                    all</a>
                             </div>
                         </ul>
                     </div>
                     <!-- profile  -->
                     <div class="profile">
-                        <img src="https://i.pinimg.com/1200x/ab/8b/11/ab8b1167d92e3ab2acd678ed68dcd894.jpg"
-                            class="img-fluid rounded-circle object-fit-cover" data-bs-toggle="dropdown"
-                            style="width: 40px; height: 40px;" alt />
+                        <a href="../profile/proflie.html">
+                            <img src="../../image/project-logo/profile-img.jpg"
+                                class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                alt />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -270,7 +286,7 @@
         <div>
             <div class="position-relative">
                 <div class="position-absolute"></div>
-                <img class="img-fluid" src="../../image/job-img/jobsearch-02.png" alt=""
+                <img class="img-fluid" src="../../image/job-img/job.png" alt=""
                     style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
             </div>
         </div>
@@ -280,12 +296,12 @@
                 <div>
                     <div class="row">
                         <div class="col-10 col-sm-12 col-lg-9 z-1" style="margin-top: -10%;">
-                            <div class="card mb-3 ">
+                            <div class="card mb-3 shadow-sm">
                                 <div class="row g-0">
                                     <div class=" col-10 col-md-4 d-flex align-items-center">
                                         <img class="image img-fluid " src="../../image/job-img/Woori bank.jpg" alt="">
                                     </div>
-                                    <div class=" col-md-8">
+                                    <div class="col-md-8">
                                         <div class="card-body">
                                             <h3 class="title fw-bold mb-3">
                                                 Software Developer</h3>
@@ -312,16 +328,16 @@
                                                     class="btn btn-dark-blue btn-sm btn-md btn-lg  me-2">ដាក់ពាក្យការងារ</button>
                                                 <button type="button"
                                                     class="btn btn-outline-dark-blue btn-sm btn-md btn-lg"><i
-                                                        class="fa-solid fa-floppy-disk me-2"></i>រក្សាទុក</button>
+                                                        class="bi bi-bookmark"></i>រក្សាទុក</button>
                                                 <button type="button"
                                                     class="btn btn-outline-dark-blue btn-sm btn-md btn-lg ms-2"><i
-                                                        class="fa-solid fa-share-from-square me-2"></i>ចែករំលែក</button>
+                                                        class="bi bi-arrow-90deg-right"></i>ចែករំលែក</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mt-4">
+                            <div class="card mt-4 mb-10 shadow-sm">
                                 <div class="card-header">
                                     <h3 class="fw-bold">អំពីការងារ</h3>
                                 </div>
@@ -331,7 +347,7 @@
                                             <p>ប្រភេទការងារ​ : ហាត់ការ</p>
                                         </li>
                                         <li>
-                                            <p>ប្រាក់ខែ​​​ : 200$</p>
+                                            <p>ហាត់ការចំនួន​ 3ខែជាមុនសិន</p>
                                         </li>
                                         <li>
                                             <p>ម៉ោងធ្វើការ : 7AM - 12AM</p>
@@ -373,8 +389,8 @@
                                             <p>រៀននិង អាចទទួលយកបច្ចេកវិទ្យាថ្មីៗ</p>
                                         </li>
                                     </ul>
-                                    <h4 class="fw-bold mb-4">អត្ថប្រយោជន៍</h4>
-                                    <ul class="detail">
+                                    <h4 class="fw-bold mb-4">គុណសម្បត្តិនៃការហាត់ការ</h4>
+                                    <ul>
                                         <li>
                                             <p>ទទូលបានប្រាក់ឧបត្ថម្ភ 100$</p>
                                         </li>
@@ -402,38 +418,38 @@
                                         មានចំណាប់អារម្មណ៍អាចធ្វើការទំនាក់ទំនង
                                     </p>
                                     <div class="onlin">
-                                        <p class="detail"><i class="fa-brands fa-telegram"></i> <a
-                                                href="">099960498</a>
+                                        <p class="detail"><i class="fa-brands fa-telegram"></i> <a href="#"
+                                                class="text-decoration-none">099960498</a>
                                             ទំនាក់ទំនងតាមតេលេក្រាម
                                         </p>
-                                        <p class="detail"><i class="fa-solid fa-envelope"></i> <a
-                                                href="">teenager@gmail.com</a>
-                                            ទំនាក់ទំនងតាម <a href="#"> Email</a></p>
+                                        <p class="detail"><i class="fa-solid fa-envelope"></i> <a href="#"
+                                                class="text-decoration-none">teenager@gmail.com</a>
+                                            ទំនាក់ទំនងតាម <a href="#" class="text-decoration-none"> Email</a></p>
                                     </div>
                                     <!--  apply for job with form here -->
                                     <h4 class="fw-bold">ដាក់ពាក្យការងារ</h4>
-                                    <form class="bg-light p-2" action="" method="post">
+                                    <form class=" p-2" action="" method="post">
                                         <div class="col-12 mt-3">
                                             <label for="validationCustom01"
                                                 class="form-label detail fw-medium">ឈ្មោះ</label>
                                             <input type="text"
-                                                class="form-control form-control-sm form-control-md form-control-lg p-2"
+                                                class="form-control shadow-sm form-control-sm form-control-md form-control-lg p-2"
                                                 id="validationCustom01" placeholder="ឈ្មោះរបស់អ្នក" required="">
                                         </div>
                                         <div class="col-12 mt-3">
                                             <label for="validationCustom02"
                                                 class="form-label  detail fw-medium">លេខទូរស័ព្ទ</label>
                                             <input type="text"
-                                                class="form-control form-control-sm form-control-md form-control-lg p-2"
+                                                class="form-control shadow-sm form-control-sm form-control-md form-control-lg p-2"
                                                 id="validationCustom02" placeholder="លេខទូរសព្ទ" required="">
                                         </div>
                                         <div class="col-12 mt-3">
                                             <label for="validationCustomUsername"
                                                 class="form-label detail fw-medium">Email</label>
-                                            <div class="input-group has-validation">
+                                            <div class="input-group">
                                                 <span class="input-group-text" id="inputGroupPrepend">@</span>
                                                 <input type="email "
-                                                    class="form-control form-control-sm form-control-md form-control-lg"
+                                                    class="form-control shadow-sm form-control-sm form-control-md form-control-lg"
                                                     id="validationCustomUsername" aria-describedby="inputGroupPrepend"
                                                     placeholder="Email" required="">
                                                 <div class="invalid-feedback">
@@ -444,35 +460,36 @@
                                         <div class="col-12 mt-3">
                                             <label for="formFileLg"
                                                 class="form-label detail fw-medium">កន្លែងបញ្ជូនឯកសារ</label>
-                                            <input class="form-control form-control-lg" id="formFileLg" type="file">
+                                            <input class="form-control shadow-sm form-control-lg" id="formFileLg" type="file">
+                                            
                                         </div>
-                                        <div class="form-floating col-12 mt-3">
-                                            <textarea class=" form-control  form-control-lg p-3 "
+                                        <div class=" col-12 mt-3">
+                                            <textarea class=" form-control shadow-sm  form-control-lg p-3 "
                                                 placeholder="សរសេរសាររបស់អ្នក..." id="floatingTextarea2"></textarea>
                                             <label for="floatingTextarea2"
-                                                class="detail fw-medium">សរសេរសាររបស់អ្នក...</label>
+                                                class=" shadow-sm fw-medium">សរសេរសាររបស់អ្នក...</label>
                                         </div>
                                         <div class="col-12 mt-3">
-                                            <button class="btn btn-dark-blue btn-md "
-                                                type="submit">ផ្ញើរសារ</button>
+                                            <button class="btn btn-dark-blue btn-md " type="submit">ផ្ញើរសារ</button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                         <!-- ------------- Job location -->
-                        <div class="col-10 col-sm-12 col-xl-3 mt-5 ">
-                            <div class="card position-sticky w-100">
+                        <div class="col-10 col-sm-12 col-xl-3 mt-5 mb-10">
+                            <div class="card position-sticky " style="top: 110px;">
                                 <div class="card-image d-flex m-auto align-items-center location-job">
-                                    <img class="image img-fluid" src="../../image/job-img/Woori bank.jpg" alt="">
+                                    <img class="card-img-top img-fluid" src="../../image/job-img/Woori bank.jpg" alt="">
                                 </div>
                                 <div class="card-body ">
                                     <h5 class="card-title fw-semibold">Woori Bank Cambodia</h5>
                                     <div class="location">
                                         <div class="location">
                                             <span style="text-decoration: none;">
-                                                <a href="https://www.google.com/maps/place/Woori+Bank-+Tuol+Kouk+-+Tuek+L'ak+Ti+Muoy/@11.5589869,104.8759119,14z/data=!4m10!1m2!2m1!1sWoori+Bank!3m6!1s0x310951386bf27de1:0x9a0faa7af54921e!8m2!3d11.5680244!4d104.8885815!15sCgpXb29yaSBCYW5rIgOIAQGSAQRiYW5rqgFdCg0vZy8xMWJjNmhuM3BmCgkvbS8wOWYwa2sQASoOIgp3b29yaSBiYW5rKAAyHxABIhsopEm8m7iaRH9n-npMMiAqhsQ-M2neXZIFgBAyDhACIgp3b29yaSBiYW5r4AEA!16s%2Fg%2F11yd01nq_7?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D">
-                                                    <i class="fa-solid fa-location-dot me-2"></i>
+                                                <a class="text-decoration-none text-dark d-flex"
+                                                    href="https://www.google.com/maps/place/Woori+Bank-+Tuol+Kouk+-+Tuek+L'ak+Ti+Muoy/@11.5589869,104.8759119,14z/data=!4m10!1m2!2m1!1sWoori+Bank!3m6!1s0x310951386bf27de1:0x9a0faa7af54921e!8m2!3d11.5680244!4d104.8885815!15sCgpXb29yaSBCYW5rIgOIAQGSAQRiYW5rqgFdCg0vZy8xMWJjNmhuM3BmCgkvbS8wOWYwa2sQASoOIgp3b29yaSBiYW5rKAAyHxABIhsopEm8m7iaRH9n-npMMiAqhsQ-M2neXZIFgBAyDhACIgp3b29yaSBiYW5r4AEA!16s%2Fg%2F11yd01nq_7?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D">
+                                                    <i class="fa-solid fa-location-dot me-2 fs-4"></i>
                                                     <p>អាស័យដ្ឋាន និង ទីតាំងការងារ</p>
                                                 </a>
                                             </span>
@@ -493,14 +510,15 @@
             <div class="row text-white">
                 <div class="col-11 col-lg-5 col-xl-4">
                     <a class="navbar-brand" href="#">
-                        <img src="../../image/project-logo/logo02.png" alt="Logo" style="width: 75px;">
+                        <img src="../../image/project-logo/logo02.png" alt="Logo" style="width: 75px" />
                     </a>
                     <p class="footer-text clamp-3">
-                        "ប្រធានបទ “សម្រាប់យុវជនកម្ពុជា” ត្រូវបានជ្រើសរើស ដោយសារនិស្សិតបរិញ្ញាបត្រកើនឡើង
-                        ប៉ុន្តែមានបញ្ហាក្នុងការជ្រើសរើសជំនាញ។
-                        ដើម្បីដោះស្រាយ បញ្ហានេះ គេបង្កើតគេហទំព័រមួយដែលអាចប្រើប្រាស់បានលើ Browser និងទូរស័ព្ទចល័ត។
-                        គេហទំព័រនេះផ្តល់ព័ត៌មានអំពីមុខជំនាញ
-                        វិស័យការងារ សាកលវិទ្យា អាហារូបករណ៍ និងឱកាសការងារ
+                        "ប្រធានបទ “សម្រាប់យុវជនកម្ពុជា” ត្រូវបានជ្រើសរើស
+                        ដោយសារនិស្សិតបរិញ្ញាបត្រកើនឡើង
+                        ប៉ុន្តែមានបញ្ហាក្នុងការជ្រើសរើសជំនាញ។ ដើម្បីដោះស្រាយ បញ្ហានេះ
+                        គេបង្កើតគេហទំព័រមួយដែលអាចប្រើប្រាស់បានលើ Browser និងទូរស័ព្ទចល័ត។
+                        គេហទំព័រនេះផ្តល់ព័ត៌មានអំពីមុខជំនាញ វិស័យការងារ សាកលវិទ្យា
+                        អាហារូបករណ៍ និងឱកាសការងារ
                         ដើម្បីជួយសិស្សសម្រេចចិត្តជ្រើសរើសជំនាញដែលខ្លួនចូលចិត្ត
                         និងរកការងារផ្ទាល់ខ្លួនបន្ទាប់ពីបញ្ចប់ការសិក្សា។"
                     </p>
@@ -514,16 +532,16 @@
                     <ul class="navbar-nav">
                         <h5 class="nav-title fw-bold">ព័ត៌មានអំពីយើង</h5>
                         <li class="nav-item">
-                            <a href="../about.html" class="nav-link text-white">អំពីយើង</a>
+                            <a href="../us/about.html" class="nav-link text-white">អំពីយើង</a>
                         </li>
                         <li class="nav-item">
-                            <a href="../contact.html" class="nav-link text-white">ទាក់ទងមកយើង</a>
+                            <a href="../us/contact.html" class="nav-link text-white">ទំទាក់ទំទងមកយើង</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">ការតម្រង់ទិស</a>
+                            <a href="../direction/major.html" class="nav-link text-white">ការតម្រង់ទិស</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">ព្រឹត្តិការណ៏</a>
+                            <a href="../us/event.html" class="nav-link text-white">ព្រឹត្តិការណ៏</a>
                         </li>
                     </ul>
                 </div>
@@ -549,27 +567,33 @@
                     <ul class="navbar-nav">
                         <h5 class="nav-title fw-bold">អាស័យដ្ឋានរបស់យើង</h5>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">#86B, Street 313 corner 606, Sangkat Boeungkâk 2,
-                                Khan Toulkok, Phnom Penh</a>
+                            <a href="https://www.google.com/maps/search/%2386B,+Street+313+corner+606,+Sangkat+Boeungk%C3%A2k+2,+Khan+Toulkok,+Phnom+Penh/@11.5659433,104.8975444,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D"
+                                class="nav-link text-white">#86B, ផ្លូវលេខ 313 កែង 606, សង្កាត់ បឹងកក់ ២, ខណ្ឌ
+                                ទួលគោក, ភ្នំពេញ</a>
                         </li>
                         <li class="nav-item">
-                            <p class="nav-link text-white">Email: <a href="mailto:freeteenagercambodia@gmail.com"
-                                    class="text-decoration-none text-white">freeteenagercambodia@gmail.com</a></p>
+                            <p class="nav-link text-white">
+                                Email:
+                                <a href="mailto:freeteenagercambodia@gmail.com"
+                                    class="text-decoration-none text-white">freeteenagercambodia@gmail.com</a>
+                            </p>
                         </li>
                         <li class="nav-item">
-                            <p class="nav-link text-white">លេខទូរស័ព្ទ: <a
-                                    class="fw-bold text-decoration-none text-white" href="tel:+11234567890">(123) 456
-                                    7890</a></p>
+                            <p class="nav-link text-white">
+                                លេខទូរស័ព្ទ:
+                                <a class="fw-bold text-decoration-none text-white" href="tel:+11234567890">(+885) 456
+                                    7890</a>
+                            </p>
                         </li>
                         <li class="nav-link">
                             <a href="#" class="nav-item"><img src="assets/image/app1 (1).png" class="img-fluid img-app"
-                                    alt=""></a>
+                                    alt="" /></a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <hr class="text-white py-1">
+            <hr class="text-white py-1" />
             <div class="row">
                 <div class="col-12 footer-copyright d-flex justify-content-between">
                     <p class="text-white">&copy; រក្សាសិទ្ធិដោយ: FTC 2025</p>
