@@ -4,26 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>ផ្ទាំងគ្រប់គ្រង</title>
     <!-- Light mode favicon -->
-    <link rel="icon" type="image/png" href="../../image/project-logo/logo01.png"
-        media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="../../image/project-logo/logo01.png" media="(prefers-color-scheme: light)">
 
     <!-- Dark mode favicon -->
-    <link rel="icon" type="image/png" href="../../image/project-logo/logo02.png"
-        media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="../../image/project-logo/logo02.png" media="(prefers-color-scheme: dark)">
 
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/theme.css">
     <link rel="stylesheet" href="../../css/profile.css">
-     <!-- Light mode favicon -->
-    <link rel="icon" type="image/png" href="../../image/project-logo/logo01.png"
-        media="(prefers-color-scheme: light)">
+    <!-- Light mode favicon -->
+    <link rel="icon" type="image/png" href="../../image/project-logo/logo01.png" media="(prefers-color-scheme: light)">
 
     <!-- Dark mode favicon -->
-    <link rel="icon" type="image/png" href="../../image/project-logo/logo02.png"
-        media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="../../image/project-logo/logo02.png" media="(prefers-color-scheme: dark)">
     <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -246,34 +242,239 @@
     </header>
 
     <main>
+        <!-- modal  -->
+        <section>
+            <div class="toast-container position-fixed top-0 end-0 start-0 m-auto p-3">
+                <div id="liveToast" class="toast bg-success-subtle text-success rounded-3 border border-success"
+                    role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-body">
+                        <i class="bi bi-check"></i>
+                        <span>ទទួលបានជោគជ័យ</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Error Toast -->
+            <div class="toast-container position-fixed top-0 end-0 start-0 m-auto p-3">
+                <div id="deleteToast" class="toast bg-danger-subtle text-danger rounded-3 border border-danger"
+                    role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-body text-danger">
+                        <i class="bi bi-check"></i>
+                        <span>ការលុបទទួលបានជោគជ័យ</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Delete Confirmation Modal -->
+            <div class="modal fade" id="deleteallModal1" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-footer text-white">
+                            <h5 class="modal-title">លុបព្រឹត្តិការណ៍</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            តើអ្នកចង់លុបព្រឹត្តិការណ៍នេះមែនទេ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark-blue"
+                                data-bs-dismiss="modal">បោះបង់</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">លុប</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View Details Modal -->
+            <div class="modal fade" id="viewallModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-footer text-white">
+                            <h5 class="modal-title">ព្រឹត្តិការណ៍</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="../../image/eventt/ai.png" class="img-fluid rounded w-100 mb-3" alt="Event Image">
+                            <h3>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</h3>
+                            <p><strong>កាលបរិច្ឆេទ:</strong> 2025-09-20</p>
+                            <p><strong>ទីតាំង:</strong> ភ្នំពេញ, កម្ពុជា</p>
+                            <p>
+                                ព្រឹត្តិការណ៍នេះនឹងពិភាក្សាអំពីការប្រើប្រាស់ AI
+                                ក្នុងវិស័យវេជ្ជសាស្ត្រ
+                                និងរបៀបដែលវាអាចជួយបង្កើនគុណភាពសេវាកម្មសុខាភិបាល។
+                            </p>
+                            <p>
+                                អ្នកចូលរួមនឹងមានឱកាសស្តាប់ពីអ្នកជំនាញក្នុងវិស័យនេះ
+                                និងចែករំលែកបទពិសោធន៍របស់ពួកគេ។
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal">បិទ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal make sure -->
+            <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content shadow-lg rounded-3 border-0">
+
+                        <!-- Header -->
+                        <div class="modal-header bg-footer text-white">
+                            <h5 class="modal-title">បញ្ចូលព្រឹត្តិការណ៍ថ្មី</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="createName" class="form-label">ឈ្មោះព្រឹត្តិការណ៍</label>
+                                    <input type="text" class="form-control border border-1 border-dark" id="createName"
+                                        placeholder="បញ្ចូលឈ្មោះព្រឹត្តិការណ៍">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="createDate" class="form-label">កាលបរិច្ឆេទ និង
+                                        ម៉ោង</label>
+                                    <input type="datetime-local" class="form-control border border-1 border-dark"
+                                        id="createDate">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="createLocation" class="form-label">ទីកន្លែង</label>
+                                    <input type="text" class="form-control  border border-1 border-dark"
+                                        id="createLocation" placeholder="សូមជ្រើសរើសទីតាំង">
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark-blue"
+                                data-bs-dismiss="modal">បោះបង់</button>
+                            <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal">រក្សាទុក</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal change -->
+            <div class="modal fade" id="change" tabindex="-1" aria-labelledby="changeLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-footer text-white">
+                            <h1 class="modal-title fs-5" id="changeLabel">
+                                តើអ្នកពិតជាចង់ធ្វើបច្ចុប្បន្នភាពមែនទេ?</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>សូមធ្វើការបញ្ជាក់គណនី</h4>
+                            <form id="loginForm" action="" target="_blank" method="post" class="px-2">
+                                <div class="card border-0 bg-transparent">
+                                    <div class="card-body">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control border-0 bg-card-theme shadow-sm"
+                                                id="email" placeholder="អ៊ីម៉ែល" aria-label="" />
+                                            <label for="email" class="form-label pb-1"><i
+                                                    class="bi bi-envelope-fill pe-1"></i>សូមបញ្ចូលអ៊ីម៉ែល</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control border-0 bg-card-theme shadow-sm"
+                                                id="password" placeholder="Password" aria-label="" />
+                                            <label for="password" class="form-label"><i
+                                                    class="fa-solid fa-lock"></i>សូមបញ្ចូលលេខសម្ងាត់</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark-blue" data-bs-dismiss="modal">បិទ</button>
+                            <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal">រក្សាទុក</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restore Confirmation Modal -->
+            <div class="modal fade" id="restoreModal" tabindex="-1" aria-labelledby="restoreModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+            
+                        <!-- Modal Header -->
+                        <div class="modal-header bg-footer text-white">
+                            <h5 class="modal-title" id="restoreModalLabel">ការបញ្ជាក់</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+            
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            តើអ្នកចង់ស្ដារពីគណនី/មាតិកានេះមែនទេ?
+                        </div>
+            
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark-blue" data-bs-dismiss="modal">បោះបង់</button>
+                            <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal">កំលាត់ឡើងវិញ</button>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </section>
         <section>
             <div class="container-fluid">
                 <div class="d-flex align-items-start">
                     <!-- Vertical Nav -->
                     <div class="nav flex-column nav-pills bg-card-theme shadow-sm position-fixed top-0 start-0 z-1 px-4 rounded-0 pt-20"
-                        style="height: 100vh; z-index: 5;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active px-10" id="v-pills-home-tab" data-bs-toggle="pill"
+                        style="width: 250px; height: 100vh; z-index: 5;" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <button class="nav-link text-start" id="v-pills-home-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
-                            aria-selected="true">Overview</button>
-                        <button class="nav-link " id="v-pills-profile-tab" data-bs-toggle="pill"
+                            aria-selected="true"><i class="bi bi-speedometer2 me-2"></i> ផ្ទាំងទូទៅ</button>
+                        <!-- Dashboard / Overview -->
+
+                        <button class="nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
-                            aria-selected="false">ការគ្រប់គ្រងអ្នកប្រើប្រាស់</button>
-                        <button class="nav-link px-10" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                            aria-selected="false"><i class="bi bi-journal-text me-2"></i> ការកក់ត្រា</button>
+                        <!-- Booking / Records -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active text-start" id="userManage-tab" data-bs-toggle="pill" data-bs-target="#tab-userManage" type="button"
+                                role="tab" aria-controls="tab-userManage" aria-selected="false">
+                                <i class="bi bi-people me-2"></i> អ្នកប្រើប្រាស់
+                            </button>
+                        </li>
+                        <!-- User Management -->
+
+                        <button class="nav-link text-start" id="v-pills-disabled-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
-                            aria-selected="false">ការស្នើរ</button>
-                        <button class="nav-link  px-10" id="v-pills-messages-tab" data-bs-toggle="pill"
+                            aria-selected="false"><i class="bi bi-inbox me-2"></i> ការស្នើរ</button>
+                        <!-- Requests -->
+
+                        <button class="nav-link text-start" id="v-pills-messages-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
-                            aria-selected="false">ព្រឺត្តិការណ៏</button>
-                        <button class="nav-link px-10" id="v-pills-settings-tab" data-bs-toggle="pill"
+                            aria-selected="false"><i class="bi bi-calendar-event me-2"></i> ព្រឹត្តិការណ៍</button>
+
+                        <!-- Events -->
+
+                        <button class="nav-link text-start" id="v-pills-settings-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
-                            aria-selected="false">ការកំណត់</button>
+                            aria-selected="false"><i class="bi bi-gear me-2"></i> ការកំណត់</button>
+                        <!-- Settings -->
+
+                        <button class="nav-link text-start" id="trashTab" data-bs-toggle="pill"
+                            data-bs-target="#trash" type="button" role="tab" aria-controls="trash"
+                            aria-selected="false"><i class="bi bi-trash me-2"></i> ធុងសម្រាម</button>
+                        <!-- trash -->
+
                     </div>
 
                     <!-- Tab Content -->
                     <div class="tab-content flex-grow-1 w-100 p-3" id="v-pills-tabContent">
                         <!-- Overview Tab -->
-                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                            aria-labelledby="v-pills-home-tab" tabindex="0">
+                        <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+                            tabindex="0">
                             <div class="container">
                                 <h1>Overview</h1>
                                 <p>សូមស្វាគមន៍ការត្រឡប់មកវិញ! នេះជាអ្វីដែលកំពុងកើតឡើងជាមួយគេហទ័ពររបស់អ្នកនៅថ្ងៃនេះ។</p>
@@ -307,6 +508,7 @@
 
                                     <!-- chart  -->
                                     <div class="col-lg-8">
+                                        <h3>ចំនួនអ្នកចូលប្រើ</h3>
                                         <div class="card bg-card-theme border-0 shadow-sm py-10">
                                             <canvas id="revenueChart" height="150"></canvas>
 
@@ -315,12 +517,14 @@
 
                                     <!-- total  -->
                                     <div class="col-lg-4">
+                                        <h3>អ្នកប្រើប្រាស់សរុប</h3>
                                         <div class="card bg-card-theme border-0 shadow-sm">
                                             <canvas id="userDistributionChart" width="257" height="257"></canvas>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-8">
+                                        <h3>សកម្មភាព</h3>
                                         <div class="card p-3 bg-card-theme border-0 shadow-sm">
                                             <h6>សកម្មភាពថ្មីៗ</h6>
                                             <ul class="list-unstyled mb-0">
@@ -348,7 +552,7 @@
                             </div>
                         </div>
 
-                        <!-- manage user -->
+                        <!-- booking user -->
                         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                             aria-labelledby="v-pills-profile-tab" tabindex="0">
                             <div class="container">
@@ -594,7 +798,7 @@
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">បោះបង់</button>
                                                         <button type="button" class="btn btn-danger"
-                                                            data-bs-dismiss="modal">បដិសេធ</button>
+                                                            data-bs-dismiss="modal" >បដិសេធ</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -620,12 +824,60 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-dark-blue"
                                                     data-bs-dismiss="modal">បោះបង់</button>
-                                                <button type="button" class="btn btn-danger"
-                                                    data-bs-dismiss="modal">បិទគណនី</button>
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                                    >បិទគណនី</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- user  -->
+                        <div class="tab-pane fade show active" id="tab-userManage" role="tabpanel" aria-labelledby="userManage-tab">
+                            <div class="container">
+                                <h4 class="pt-4">គ្រប់គ្រងអ្នកប្រើប្រាស់</h4>
+                                <table class="table table-striped mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th>ឈ្មោះពេញ</th>
+                                            <th>Gmail</th>
+                                            <th>ស្ថានភាព</th>
+                                            <th>កាលបរិច្ឆេទចូលចុងក្រោយ</th>
+                                            <th>ផ្លាស់ប្តូរពាក្យសម្ងាត់</th>
+                                            <th>សកម្មភាព</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>សុខា សុភា</td>
+                                            <td>sokha.sophea@gmail.com</td>
+                                            <td><span class="text-dark">ប្ដូរពាក្យសម្ងាត់</span></td>
+                                            <td>២០២៣-០៩-០១</td>
+                                            <td>ចុងក្រោយ: ២០២៥-០៨-២០</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteallModal1"
+                                                    data-username="សុខា សុភា">
+                                                    បិទគណនី
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ស្រីនាង មុនីរ័ត្ន</td>
+                                            <td>sreynang.mony@gmail.com</td>
+                                            <td><span class="text-dark">គណនីត្រូវបានលុប</span></td>
+                                            <td>២០២៣-០៩-០២</td>
+                                            <td>ចុងក្រោយ: ២០២៥-០៨-១៨</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteallModal1"
+                                                    data-username="ស្រីនាង មុនីរ័ត្ន">
+                                                    បិទគណនី
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- Add more users -->
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
 
@@ -726,8 +978,8 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">បោះបង់</button>
-                                                <button type="button" class="btn btn-success"
-                                                    data-bs-dismiss="modal">អនុម័ត</button>
+                                                <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                                                >អនុម័ត</button>
                                             </div>
                                         </div>
                                     </div>
@@ -764,114 +1016,396 @@
                         <div class="tab-pane fade " id="v-pills-messages" role="tabpanel"
                             aria-labelledby="v-pills-messages-tab" tabindex="0">
                             <div class="container">
-                                <h4>ព្រឺត្តិការណ៏</h4>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="custom-file-wrapper small-file ">
-                                            <input type="file" class="custom-file-input" id="smallFile">
-                                            <label for="smallFile" class="custom-file-label">
-                                                <div class="file-icon">
-                                                    <i class="fa fa-plus"></i>
+                                <h4>ព្រឹត្តិការណ៏</h4>
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">បង្កើតព្រឹត្តិការណ៍</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile"
+                                            aria-selected="false">បញ្ជីព្រឹត្តិការណ៍</button>
+                                    </li>
+                                </ul>
+                                <hr class="mt-6 mb-4">
+
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab" tabindex="0">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="custom-file-wrapper small-file ">
+                                                    <input type="file" class="custom-file-input" id="smallFile">
+                                                    <label for="smallFile" class="custom-file-label">
+                                                        <div class="file-icon">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="file-text">
+                                                            <h5>Add File</h5>
+                                                            <p>Compact version</p>
+                                                        </div>
+                                                    </label>
                                                 </div>
-                                                <div class="file-text">
-                                                    <h5>Add File</h5>
-                                                    <p>Compact version</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <h4 class="pt-3">ចំណងជើងព្រឹត្តិការណ៏</h4>
+                                                <textarea name="" id="" class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                                    style="resize: vertical; min-height: 100px;"></textarea>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <h4 class="pt-3">កាលបរិច្ឆេទ</h4>
+                                                <div class="card bg-card-theme border-0 shadow-sm mt-4">
+                                                    <div class="card-body">
+                                                        <form>
+                                                            <div class="mb-3">
+                                                                <label for="datetime" class="form-label">ថ្ងៃខែឆ្នាំ​
+                                                                    និង
+                                                                    ​ម៉ោង</label>
+                                                                <input type="datetime-local" class="form-control"
+                                                                    id="datetime" name="datetime">
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
-                                            </label>
+
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="container mt-4">
+                                                    <label for="location" class="form-label">ទីតាំង</label>
+                                                    <textarea name="" id=""
+                                                        class="w-100 border-0 shadow-sm rounded-3 p-3"
+                                                        style="resize: vertical; min-height: 130px;"
+                                                        placeholder="សូមជ្រើសរើសទីតាំង"></textarea>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <h4 class="pt-3">ខ្លឹមសារនៃព្រឹត្តិការណ៏</h4>
+                                                <textarea name="" id="" class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                                    style="resize: vertical; min-height: 100px;"></textarea>
+                                            </div>
+                                            <div class="col-lg-12 text-end">
+                                                <button class="btn btn-dark-blue mt-4 mb-5" data-bs-toggle="modal"
+                                                    data-bs-target="#eventModal">បញ្ចូនព្រឹត្តិការណ៍</button>
+                                            </div>
+
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <h4 class="pt-3">ចំណងជើងព្រឹត្តិការណ៏</h4>
-                                        <textarea name="" id="" class="w-100 border-1 shadow-sm rounded-3 p-3"
-                                            style="resize: vertical; min-height: 100px;"></textarea>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h4 class="pt-3">កាលបរិច្ឆេទ</h4>
-                                        <div class="card bg-card-theme border-0 shadow-sm mt-4">
-                                            <div class="card-body">
-                                                <form>
-                                                    <div class="mb-3">
-                                                        <label for="datetime" class="form-label">ថ្ងៃខែឆ្នាំ​ និង
-                                                            ​ម៉ោង</label>
-                                                        <input type="datetime-local" class="form-control" id="datetime"
-                                                            name="datetime">
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content shadow-lg rounded-3 border-0">
+
+                                                    <!-- Header -->
+                                                    <div class="modal-header bg-footer text-white">
+                                                        <h5 class="modal-title">បញ្ចូលព្រឹត្តិការណ៍ថ្មី</h5>
+                                                        <button type="button" class="btn-close btn-close-white"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
-                                                </form>
+
+                                                    <!-- Body -->
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="mb-3">
+                                                                <label for="eventName"
+                                                                    class="form-label">ឈ្មោះព្រឹត្តិការណ៍</label>
+                                                                <input type="text"
+                                                                    class="form-control border border-1 border-dark"
+                                                                    id="eventName"
+                                                                    placeholder="បញ្ចូលឈ្មោះព្រឹត្តិការណ៍">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="eventDate" class="form-label">កាលបរិច្ឆេទ
+                                                                    និង
+                                                                    ម៉ោង</label>
+                                                                <input type="datetime-local"
+                                                                    class="form-control border border-1 border-dark"
+                                                                    id="eventDate">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="eventLocation"
+                                                                    class="form-label">ទីកន្លែង</label>
+                                                                <input type="text"
+                                                                    class="form-control  border border-1 border-dark"
+                                                                    id="eventLocation" placeholder="សូមជ្រើសរើសទីតាំង">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                    <!-- Footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-dark-blue"
+                                                            data-bs-dismiss="modal">បោះបង់</button>
+                                                        <button type="button" class="btn btn-dark-blue"
+                                                            data-bs-dismiss="modal">រក្សាទុក</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="container mt-4">
-                                            <label for="location" class="form-label">ទីតាំង</label>
-                                            <textarea name="" id="" class="w-100 border-0 shadow-sm rounded-3 p-3"
-                                                style="resize: vertical; min-height: 130px;"
-                                                placeholder="សូមជ្រើសរើសទីតាំង"></textarea>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab" tabindex="0">
+                                        <div class="container">
+                                            <!-- Search & Filter -->
+                                            <div class="row g-2 mb-4">
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control bg-card-theme"
+                                                        placeholder="ស្វែងរកព្រឹត្តិការណ៍...">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <select class="form-select  bg-card-theme">
+                                                        <option selected>តម្រៀបតាម...</option>
+                                                        <option value="1">កាលបរិច្ឆេទថ្មី → ចាស់</option>
+                                                        <option value="2">កាលបរិច្ឆេទចាស់ → ថ្មី</option>
+                                                        <option value="3">ឈ្មោះ A → Z</option>
+                                                        <option value="4">ឈ្មោះ Z → A</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <select class="form-select bg-card-theme">
+                                                        <option selected>Filter តាមទីកន្លែង...</option>
+                                                        <option value="phnompenh">ភ្នំពេញ</option>
+                                                        <option value="siemreap">សៀមរាប</option>
+                                                        <option value="battambang">បាត់ដំបង</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-outline-dark-blue w-100"><i
+                                                            class="bi bi-funnel me-1"></i> Filter</button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Event Cards -->
+                                            <div class="row g-4">
+
+                                                <!-- Event Card 1 -->
+                                                <div class="col-lg-4">
+                                                    <div
+                                                        class="card bg-card-theme shadow-sm border-0 rounded-3 overflow-hidden">
+                                                        <img src="../../image/eventt/ani-evo.jpg"
+                                                            class="card-img-top card-event" alt="Event Image">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title mb-2">សិក្ខាសាលាអភិរក្សជីវចម្រុះ</h3>
+                                                            <p class="text-muted mb-2"><i
+                                                                    class="bi bi-calendar me-2"></i>២៥ តុលា ២០២៥</p>
+                                                            <p class="text-muted mb-3"><i
+                                                                    class="bi bi-geo-alt me-2"></i>មជ្ឈមណ្ឌលស្រាវជ្រាវ
+                                                                RUPP, រាជធានីភ្នំពេញ</p>
+                                                            <p class="card-text">
+                                                                សិក្ខាសាលានេះផ្តោតលើវិធីសាស្ត្រពាក់ព័ន្ធនឹងការស្ទង់មតិ
+                                                                និងការអភិរក្សប្រភេទសត្វនិងរុក្ខជាតិក្នុងសួនជាតិ
+                                                                និងតំបន់ធម្មជាតិ។ មានវាគ្មិនពី CBC និងអង្គការអន្តរជាតិ។
+                                                            </p>
+                                                            <div class="d-flex justify-content-end gap-2">
+                                                                <button class="btn btn-sm btn-outline-dark-blue"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#viewModal"><i
+                                                                        class="bi bi-eye"></i> មើល</button>
+                                                                <button class="btn btn-sm btn-outline-success"
+                                                                    data-bs-toggle="offcanvas" href="#eventoffcanvas"
+                                                                    role="button" aria-controls="eventoffcanvas"><i
+                                                                        class="bi bi-pencil-square"></i> កែប្រែ</button>
+                                                                <button class="btn btn-sm btn-outline-danger"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#deleteModal1"><i
+                                                                        class="bi bi-trash"></i> លុប</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Event Card 2 -->
+                                                <div class="col-lg-4">
+                                                    <div class="card bg-card-theme shadow-sm border-0 rounded-3 overflow-hidden">
+                                                        <img src="../../image/eventt/ai.png" class="card-img-top card-event" alt="Event Image">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title mb-2">សិក្ខាសាលាអភិរក្សជីវចម្រុះ</h3>
+                                                            <p class="text-muted mb-2"><i class="bi bi-calendar me-2"></i>២៥ តុលា ២០២៥</p>
+                                                            <p class="text-muted mb-3"><i class="bi bi-geo-alt me-2"></i>មជ្ឈមណ្ឌលស្រាវជ្រាវ
+                                                                RUPP, រាជធានីភ្នំពេញ</p>
+                                                            <p class="card-text">
+                                                                សិក្ខាសាលានេះផ្តោតលើវិធីសាស្ត្រពាក់ព័ន្ធនឹងការស្ទង់មតិ
+                                                                និងការអភិរក្សប្រភេទសត្វនិងរុក្ខជាតិក្នុងសួនជាតិ
+                                                                និងតំបន់ធម្មជាតិ។ មានវាគ្មិនពី CBC និងអង្គការអន្តរជាតិ។
+                                                            </p>
+                                                            <div class="d-flex justify-content-end gap-2">
+                                                                <button class="btn btn-sm btn-outline-dark-blue" data-bs-toggle="modal" data-bs-target="#viewModal"><i
+                                                                        class="bi bi-eye"></i> មើល</button>
+                                                                <button class="btn btn-sm btn-outline-success" data-bs-toggle="offcanvas" href="#eventoffcanvas"
+                                                                    role="button" aria-controls="eventoffcanvas"><i class="bi bi-pencil-square"></i> កែប្រែ</button>
+                                                                <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal1"><i
+                                                                        class="bi bi-trash"></i> លុប</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Event Card 3 -->
+                                                <div class="col-lg-4">
+                                                    <div class="card bg-card-theme shadow-sm border-0 rounded-3 overflow-hidden">
+                                                        <img src="../../image/eventt/bio.png" class="card-img-top card-event" alt="Event Image">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title mb-2">សិក្ខាសាលាអភិរក្សជីវចម្រុះ</h3>
+                                                            <p class="text-muted mb-2"><i class="bi bi-calendar me-2"></i>២៥ តុលា ២០២៥</p>
+                                                            <p class="text-muted mb-3"><i class="bi bi-geo-alt me-2"></i>មជ្ឈមណ្ឌលស្រាវជ្រាវ
+                                                                RUPP, រាជធានីភ្នំពេញ</p>
+                                                            <p class="card-text">
+                                                                សិក្ខាសាលានេះផ្តោតលើវិធីសាស្ត្រពាក់ព័ន្ធនឹងការស្ទង់មតិ
+                                                                និងការអភិរក្សប្រភេទសត្វនិងរុក្ខជាតិក្នុងសួនជាតិ
+                                                                និងតំបន់ធម្មជាតិ។ មានវាគ្មិនពី CBC និងអង្គការអន្តរជាតិ។
+                                                            </p>
+                                                            <div class="d-flex justify-content-end gap-2">
+                                                                <button class="btn btn-sm btn-outline-dark-blue" data-bs-toggle="modal" data-bs-target="#viewModal"><i
+                                                                        class="bi bi-eye"></i> មើល</button>
+                                                                <button class="btn btn-sm btn-outline-success" data-bs-toggle="offcanvas" href="#eventoffcanvas"
+                                                                    role="button" aria-controls="eventoffcanvas"><i class="bi bi-pencil-square"></i> កែប្រែ</button>
+                                                                <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal1"><i
+                                                                        class="bi bi-trash"></i> លុប</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- offcanvas with both options  -->
+                                                <div class="offcanvas offcanvas-end     " data-bs-scroll="true"
+                                                    tabindex="-1" id="eventoffcanvas"
+                                                    aria-labelledby="eventoffcanvasLabel">
+                                                    <div class="offcanvas-header">
+                                                        <h5 class="offcanvas-title" id="eventoffcanvasLabel">
+                                                            កែប្រែ
+                                                        </h5>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="offcanvas-body">
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="custom-file-wrapper small-file ">
+                                                                    <input type="file" class="custom-file-input" id="">
+                                                                    <label for="smallFile" class="custom-file-label">
+                                                                        <div class="file-icon">
+                                                                            <i class="fa fa-plus"></i>
+                                                                        </div>
+                                                                        <div class="file-text">
+                                                                            <h5>Add File</h5>
+                                                                            <p>Compact version</p>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <h4 class="pt-3">ចំណងជើងព្រឹត្តិការណ៏</h4>
+                                                                <textarea name="" id=""
+                                                                    class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                                                    style="resize: vertical; min-height: 100px;"></textarea>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <h4 class="pt-3">កាលបរិច្ឆេទ</h4>
+                                                                <div class="card bg-card-theme border-0 shadow-sm mt-4">
+                                                                    <div class="card-body">
+                                                                        <form>
+                                                                            <div class="mb-3">
+                                                                                <label for="datetime"
+                                                                                    class="form-label">ថ្ងៃខែឆ្នាំ​ និង
+                                                                                    ​ម៉ោង</label>
+                                                                                <input type="datetime-local"
+                                                                                    class="form-control" id=""
+                                                                                    name="datetime">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="container mt-4">
+                                                                    <label for="location"
+                                                                        class="form-label">ទីតាំង</label>
+                                                                    <textarea name="" id=""
+                                                                        class="w-100 border-0 shadow-sm rounded-3 p-3"
+                                                                        style="resize: vertical; min-height: 130px;"
+                                                                        placeholder="សូមជ្រើសរើសទីតាំង"></textarea>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <h4 class="pt-3">ខ្លឺមសារនៃព្រឹត្តិការណ៏</h4>
+                                                                <textarea name="" id=""
+                                                                    class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                                                    style="resize: vertical; min-height: 100px;"></textarea>
+                                                            </div>
+                                                            <div class="col-lg-12 text-end">
+                                                                <button class="btn btn-dark-blue mt-4 mb-5"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#eventModal">ធ្វើបច្ចុប្បន្នភាព</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Delete Confirmation Modal -->
+                                                <div class="modal fade" id="deleteModal1" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header bg-footer text-white">
+                                                                <h5 class="modal-title">លុបព្រឹត្តិការណ៍</h5>
+                                                                <button type="button" class="btn-close btn-close-white"
+                                                                    data-bs-dismiss="modal"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                តើអ្នកចង់លុបព្រឹត្តិការណ៍នេះមែនទេ?
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-outline-dark-blue"
+                                                                    data-bs-dismiss="modal">បោះបង់</button>
+                                                                <button type="button" class="btn btn-danger"
+                                                                    data-bs-dismiss="modal" id="failBtn">លុប</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- View Details Modal -->
+                                                <div class="modal fade" id="viewModal" tabindex="-1" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header bg-footer text-white">
+                                                                <h5 class="modal-title">ព្រឹត្តិការណ៍</h5>
+                                                                <button type="button" class="btn-close btn-close-white"
+                                                                    data-bs-dismiss="modal"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <img src="../../image/eventt/ai.png"
+                                                                    class="img-fluid rounded w-100 mb-3"
+                                                                    alt="Event Image">
+                                                                <h3>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</h3>
+                                                                <p><strong>កាលបរិច្ឆេទ:</strong> 2025-09-20</p>
+                                                                <p><strong>ទីតាំង:</strong> ភ្នំពេញ, កម្ពុជា</p>
+                                                                <p>
+                                                                    ព្រឹត្តិការណ៍នេះនឹងពិភាក្សាអំពីការប្រើប្រាស់ AI
+                                                                    ក្នុងវិស័យវេជ្ជសាស្ត្រ
+                                                                    និងរបៀបដែលវាអាចជួយបង្កើនគុណភាពសេវាកម្មសុខាភិបាល។
+                                                                </p>
+                                                                <p>
+                                                                    អ្នកចូលរួមនឹងមានឱកាសស្តាប់ពីអ្នកជំនាញក្នុងវិស័យនេះ
+                                                                    និងចែករំលែកបទពិសោធន៍របស់ពួកគេ។
+                                                                </p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-dark-blue"
+                                                                    data-bs-dismiss="modal">បិទ</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
-
                                     </div>
-                                    <div class="col-lg-12">
-                                        <h4 class="pt-3">ខ្លឺមសារនៃព្រឹត្តិការណ៏</h4>
-                                        <textarea name="" id="" class="w-100 border-1 shadow-sm rounded-3 p-3"
-                                            style="resize: vertical; min-height: 100px;"></textarea>
-                                    </div>
-                                    <div class="col-lg-12 text-end">
-                                        <button class="btn btn-dark-blue mt-4 mb-5" data-bs-toggle="modal"
-                                            data-bs-target="#eventModal">បញ្ចូនព្រឹត្តិការណ៍</button>
-                                    </div>
-
                                 </div>
-                                <!-- Modal -->
-                                <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content shadow-lg rounded-3 border-0">
-
-                                            <!-- Header -->
-                                            <div class="modal-header bg-footer text-white">
-                                                <h5 class="modal-title">បញ្ចូលព្រឹត្តិការណ៍ថ្មី</h5>
-                                                <button type="button" class="btn-close btn-close-white"
-                                                    data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-
-                                            <!-- Body -->
-                                            <div class="modal-body">
-                                                <form>
-                                                    <div class="mb-3">
-                                                        <label for="eventName"
-                                                            class="form-label">ឈ្មោះព្រឹត្តិការណ៍</label>
-                                                        <input type="text"
-                                                            class="form-control border border-1 border-dark"
-                                                            id="eventName" placeholder="បញ្ចូលឈ្មោះព្រឹត្តិការណ៍">
-                                                    </div>
-
-                                                    <div class="mb-3">
-                                                        <label for="eventDate" class="form-label">កាលបរិច្ឆេទ និង
-                                                            ម៉ោង</label>
-                                                        <input type="datetime-local"
-                                                            class="form-control border border-1 border-dark"
-                                                            id="eventDate">
-                                                    </div>
-
-                                                    <div class="mb-3">
-                                                        <label for="eventLocation" class="form-label">ទីកន្លែង</label>
-                                                        <input type="text"
-                                                            class="form-control  border border-1 border-dark"
-                                                            id="eventLocation" placeholder="សូមជ្រើសរើសទីតាំង">
-                                                    </div>
-                                                </form>
-                                            </div>
-
-                                            <!-- Footer -->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-outline-dark-blue"
-                                                    data-bs-dismiss="modal">បោះបង់</button>
-                                                <button type="button" class="btn btn-dark-blue"
-                                                    data-bs-dismiss="modal">រក្សាទុក</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
 
@@ -880,24 +1414,31 @@
                             aria-labelledby="v-pills-settings-tab" tabindex="0">
                             <div class="container">
                                 <h4>ការកំណត់មាតិកានៅទីនេះ</h4>
-                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <ul class="nav nav-pills mb-3" id="1" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-home" type="button" role="tab"
-                                            aria-controls="pills-home" aria-selected="true">កែប្រែ</button>
+                                        <button class="nav-link active" id="pills-1-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-1-home" type="button" role="tab"
+                                            aria-controls="pills-1-home" aria-selected="true">កែប្រែ</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-profile" type="button" role="tab"
-                                            aria-controls="pills-profile" aria-selected="false">កែប្រែគេហទំព័រ</button>
+                                        <button class="nav-link" id="pills-1-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-1-profile" type="button" role="tab"
+                                            aria-controls="pills-1-profile"
+                                            aria-selected="false">កែប្រែគេហទំព័រ</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="systemeTab" data-bs-toggle="pill"
+                                            data-bs-target="#systeme" type="button" role="tab" aria-controls="systeme"
+                                            aria-selected="false">ពិនិត្យមើលប្រព័ន្ធផ្សព្វផ្សាយ</button>
                                     </li>
                                 </ul>
-                                <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                <hr class="mt-6 mb-4">
+                                <div class="tab-content" id="1Content">
+                                    <div class="tab-pane fade show active" id="pills-1-home" role="tabpanel"
                                         aria-labelledby="pills-home-tab" tabindex="0">
                                         <div class="row">
                                             <div class="col-lg-12 text-end">
-                                                <hr>
+                                                
                                                 <button class="btn btn-dark-blue" data-bs-toggle="offcanvas"
                                                     data-bs-target="#offcanvasWithBothOptions"
                                                     aria-controls="offcanvasWithBothOptions">បង្កើតថ្មី</button>
@@ -956,7 +1497,7 @@
                                                             <div class="col-lg-6">
                                                                 <div class="container mt-4">
                                                                     <label for="location"
-                                                                        class="form-label">Path</label>
+                                                                        class="form-label">ទីតាំង</label>
                                                                     <textarea name="" id=""
                                                                         class="w-100 border-0 shadow-sm rounded-3 p-3"
                                                                         style="resize: vertical; min-height: 130px;"
@@ -965,7 +1506,7 @@
 
                                                             </div>
                                                             <div class="col-lg-12">
-                                                                <h4 class="pt-3">ខ្លឺមសារនៃព្រឹត្តិការណ៏</h4>
+                                                                <h4 class="pt-3">ខ្លឹមសារនៃព្រឹត្តិការណ៏</h4>
                                                                 <textarea name="" id=""
                                                                     class="w-100 border-1 shadow-sm rounded-3 p-3"
                                                                     style="resize: vertical; min-height: 100px;"></textarea>
@@ -1041,11 +1582,11 @@
                                                     <div class="card-body">
                                                         <div class="table-responsive border-0">
                                                             <table class="table align-middle mb-0">
-                                                                <thead class="table-light">
+                                                                <thead class="bg-card-theme">
                                                                     <tr>
                                                                         <th>រូបភាព</th>
                                                                         <th>ចំណងជើង</th>
-                                                                        <th>Path</th>
+                                                                        <th>ទីតាំង</th>
                                                                         <th>កាលបរិច្ឆេទ</th>
                                                                         <th class="text-center">ជម្រើស</th>
                                                                     </tr>
@@ -1062,7 +1603,7 @@
 
                                                                         <!-- Event Info -->
                                                                         <td>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</td>
-                                                                        <td>/events/ai-conference</td>
+                                                                        <td>វគ្គនេះនឹងបង្ហាញពីវិធីប្រើ AI ក្នុងការវិភាគទិន្នន័យវេជ្ជសាស្ត្រ និងគ្រប់គ្រងរូបភាពវេទិកា</td>
                                                                         <td>2025-09-20</td>
 
                                                                         <!-- Options Dropdown -->
@@ -1095,7 +1636,7 @@
                                                                                             class="dropdown-item dropdown-hover"
                                                                                             type="button"
                                                                                             data-bs-toggle="modal"
-                                                                                            data-bs-target="#viewModal">មើលមើលលម្អិត</button>
+                                                                                            data-bs-target="#viewsetModal">មើលមើលលម្អិត</button>
                                                                                     </li>
                                                                                 </ul>
                                                                             </div>
@@ -1117,7 +1658,7 @@
 
                                                                         <!-- Event Info -->
                                                                         <td>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</td>
-                                                                        <td>/events/ai-conference</td>
+                                                                        <td>វគ្គនេះនឹងបង្ហាញពីវិធីប្រើ AI ក្នុងការវិភាគទិន្នន័យវេជ្ជសាស្ត្រ និងគ្រប់គ្រងរូបភាពវេទិកា</td>
                                                                         <td>2025-09-20</td>
 
                                                                         <!-- Options Dropdown -->
@@ -1150,7 +1691,7 @@
                                                                                             class="dropdown-item dropdown-hover"
                                                                                             type="button"
                                                                                             data-bs-toggle="modal"
-                                                                                            data-bs-target="#viewModal">មើលមើលលម្អិត</button>
+                                                                                            data-bs-target="#viewsetModal">មើលមើលលម្អិត</button>
                                                                                     </li>
                                                                                 </ul>
                                                                             </div>
@@ -1172,7 +1713,7 @@
 
                                                                         <!-- Event Info -->
                                                                         <td>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</td>
-                                                                        <td>/events/ai-conference</td>
+                                                                        <td>វគ្គនេះនឹងបង្ហាញពីវិធីប្រើ AI ក្នុងការវិភាគទិន្នន័យវេជ្ជសាស្ត្រ និងគ្រប់គ្រងរូបភាពវេទិកា</td>
                                                                         <td>2025-09-20</td>
 
                                                                         <!-- Options Dropdown -->
@@ -1205,7 +1746,7 @@
                                                                                             class="dropdown-item dropdown-hover"
                                                                                             type="button"
                                                                                             data-bs-toggle="modal"
-                                                                                            data-bs-target="#viewModal">មើលមើលលម្អិត</button>
+                                                                                            data-bs-target="#viewsetModal">មើលមើលលម្អិត</button>
                                                                                     </li>
                                                                                 </ul>
                                                                             </div>
@@ -1274,7 +1815,7 @@
                                                             <div class="col-lg-6">
                                                                 <div class="container mt-4">
                                                                     <label for="location"
-                                                                        class="form-label">Path</label>
+                                                                        class="form-label">ទីតាំង</label>
                                                                     <textarea name="" id=""
                                                                         class="w-100 border-0 shadow-sm rounded-3 p-3"
                                                                         style="resize: vertical; min-height: 130px;"
@@ -1321,7 +1862,8 @@
                                                 </div>
 
                                                 <!-- View Details Modal -->
-                                                <div class="modal fade" id="viewModal" tabindex="-1" aria-hidden="true">
+                                                <div class="modal fade" id="viewsetModal" tabindex="-1"
+                                                    aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered modal-lg">
                                                         <div class="modal-content">
                                                             <div class="modal-header bg-footer text-white">
@@ -1359,7 +1901,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                    <div class="tab-pane fade" id="pills-1-profile" role="tabpanel"
                                         aria-labelledby="pills-profile-tab" tabindex="0">
                                         <div class="container">
                                             <div class="row pt-5 g-5">
@@ -1392,68 +1934,239 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-10 mt-3">
+                                                    <label for="formFileLg"
+                                                        class="form-label detail fs-3 fw-medium aos-init aos-animate"
+                                                        data-aos="fade-up">Favicon</label>
+                                                    <input
+                                                        class="form-control bg-card-theme shadow-sm form-control-lg aos-init aos-animate"
+                                                        id="formFileLg" type="file" data-aos="fade-up" required>
+
+                                                </div>
                                                 <div class="col-lg-12 text-end">
                                                     <button class="btn btn-dark-blue" data-bs-toggle="modal"
                                                         data-bs-target="#change">ធ្វើបច្ចុប្បន្នភាព</button>
                                                 </div>
-                                                <!-- Modal change -->
-                                                <div class="modal fade" id="change" tabindex="-1"
-                                                    aria-labelledby="changeLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header bg-footer text-white">
-                                                                <h1 class="modal-title fs-5" id="changeLabel">
-                                                                    តើអ្នកពិតជាចង់ធ្វើបច្ចុប្បន្នភាពមែនទេ?</h1>
-                                                                <button type="button" class="btn-close btn-close-white"
-                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <h4>សូមធ្វើការបញ្ជាក់គណនី</h4>
-                                                                <form id="loginForm" action="" target="_blank"
-                                                                    method="post" class="px-2">
-                                                                    <div class="card border-0 bg-transparent">
-                                                                        <div class="card-body">
-                                                                            <div class="form-floating mb-3">
-                                                                                <input type="email"
-                                                                                    class="form-control border-0 bg-card-theme shadow-sm"
-                                                                                    id="email" placeholder="អ៊ីម៉ែល"
-                                                                                    aria-label="" />
-                                                                                <label for="email"
-                                                                                    class="form-label pb-1"><i
-                                                                                        class="bi bi-envelope-fill pe-1"></i>សូមបញ្ចូលអ៊ីម៉ែល</label>
-                                                                            </div>
-                                                                            <div class="form-floating">
-                                                                                <input type="password"
-                                                                                    class="form-control border-0 bg-card-theme shadow-sm"
-                                                                                    id="password" placeholder="Password"
-                                                                                    aria-label="" />
-                                                                                <label for="password"
-                                                                                    class="form-label"><i
-                                                                                        class="fa-solid fa-lock"></i>សូមបញ្ចូលលេខសម្ងាត់</label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-outline-dark-blue"
-                                                                    data-bs-dismiss="modal">បិទ</button>
-                                                                <button type="button" class="btn btn-dark-blue"
-                                                                    data-bs-dismiss="modal">រក្សាទុក</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="systeme" role="tabpanel"
+                                        aria-labelledby="systeme-tab" tabindex="0">
+                                        <div class="container">
+                                            <h3 class="pt-3">ផ្លាស់ប្តូរូប្រព័ន្ធផ្សព្វផ្សាយ</h3>
+                                            <div class="row g-3">
+                                                <!-- Social Media Input Template -->
+                                                <div class="col-lg-12">
+                                                    <label class="form-label fs-5 fw-semibold pt-2"
+                                                        for="facebook">Facebook</label>
+                                                    <input type="url" id="facebook"
+                                                        class="form-control bg-card-theme border-0 shadow-sm rounded-3 p-3"
+                                                        placeholder="https://www.facebook.com/yourprofile">
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <label class="form-label fs-5 fw-semibold pt-2"
+                                                        for="youtube">YouTube</label>
+                                                    <input type="url" id="youtube"
+                                                        class="form-control bg-card-theme border-0 shadow-sm rounded-3 p-3"
+                                                        placeholder="https://www.youtube.com/yourchannel">
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <label class="form-label fs-5 fw-semibold pt-2"
+                                                        for="tiktok">TikTok</label>
+                                                    <input type="url" id="tiktok"
+                                                        class="form-control bg-card-theme border-0 shadow-sm rounded-3 p-3"
+                                                        placeholder="https://www.tiktok.com/@yourprofile">
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <label class="form-label fs-5 fw-semibold pt-2"
+                                                        for="github">GitHub</label>
+                                                    <input type="url" id="github"
+                                                        class="form-control bg-card-theme border-0 shadow-sm rounded-3 p-3"
+                                                        placeholder="https://github.com/yourusername">
+                                                </div>
+                                                <div class="col-lg-12 text-end">
+                                                    <button class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#change">ធ្វើបច្ចុប្បន្នភាព</button>
+                                                </div>
+
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
+
+                        <!-- trash  -->
+                        <div class="tab-pane fade" id="trash" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="container">
+                                <h4 class="pt-5">ធ្វើឡើងវិញ</h4>
+                            
+                                <!-- Nav Pills -->
+                                <ul class="nav nav-pills mb-3" id="event-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="tab-event-tab" data-bs-toggle="pill" data-bs-target="#tab-event"
+                                            type="button" role="tab" aria-controls="tab-event" aria-selected="true">ព្រឹត្តិការណ៍</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="tab-content-tab" data-bs-toggle="pill" data-bs-target="#tab-content"
+                                            type="button" role="tab" aria-controls="tab-content" aria-selected="false">មាតិកា</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="tab-user-tab" data-bs-toggle="pill" data-bs-target="#tab-user" type="button"
+                                            role="tab" aria-controls="tab-user" aria-selected="false">អ្នកប្រើប្រាស់</button>
+                                    </li>
+                                </ul>
+                                <hr class="mt-6 mb-4">
+                                <!-- Tab Content -->
+                                <div class="tab-content" id="tabContent">
+                                    <div class="tab-pane fade show active" id="tab-event" role="tabpanel" aria-labelledby="tab-event-tab">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-12 text-end mb-3">
+                                                    <button class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#restoreModal">កំលាត់ឡើងវិញ</button>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <table class="table align-middle mb-0">
+                                                        <thead class="bg-card-theme">
+                                                            <tr>
+                                                                <th>
+                                                                    <input type="checkbox" id="selectAll" />
+                                                                </th>
+                                                                <th>រូបភាព</th>
+                                                                <th>ចំណងជើង</th>
+                                                                <th>ខ្លឹមសារ</th>
+                                                                <th>កាលបរិច្ឆេទ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="border-0">
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" class="selectItem" />
+                                                                </td>
+                                                                <td style="width:80px; height: 80px;">
+                                                                    <img src="../../image/eventt/ai.png" class="img-fluid rounded w-100 h-100 object-fit-cover" alt="Event">
+                                                                </td>
+                                                                <td>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</td>
+                                                                <td>វគ្គនេះនឹងបង្ហាញពីវិធីប្រើ AI ក្នុងការវិភាគទិន្នន័យវេជ្ជសាស្ត្រ និងគ្រប់គ្រងរូបភាពវេទិកា</td>
+                                                                <td>២០២៣-០៩-០៥</td>
+                                                            </tr>
+                                                            <!-- Add more rows with the same structure -->
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-content" role="tabpanel" aria-labelledby="tab-content-tab">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-12 text-end mb-3">
+                                                    <button class="btn btn-dark-blue" data-bs-toggle="modal"
+                                                        data-bs-target="#restoreModal">កំលាត់ឡើងវិញ</button>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <table class="table align-middle mb-0">
+                                                        <thead class="bg-card-theme">
+                                                            <tr>
+                                                                <th>
+                                                                    <input type="checkbox" id="selectAll" />
+                                                                </th>
+                                                                <th>រូបភាព</th>
+                                                                <th>ចំណងជើង</th>
+                                                                <th>ខ្លឹមសារ</th>
+                                                                <th>កាលបរិច្ឆេទ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="border-0">
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" class="selectItem" />
+                                                                </td>
+                                                                <td style="width:80px; height: 80px;">
+                                                                    <img src="../../image/eventt/ai.png" class="img-fluid rounded w-100 h-100 object-fit-cover"
+                                                                        alt="Event">
+                                                                </td>
+                                                                <td>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</td>
+                                                                <td>វគ្គនេះនឹងបង្ហាញពីវិធីប្រើ AI ក្នុងការវិភាគទិន្នន័យវេជ្ជសាស្ត្រ និងគ្រប់គ្រងរូបភាពវេទិកា
+                                                                </td>
+                                                                <td>២០២៣-០៩-០១</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox" class="selectItem" />
+                                                                </td>
+                                                                <td style="width:80px; height: 80px;">
+                                                                    <img src="../../image/eventt/bio.png" class="img-fluid rounded w-100 h-100 object-fit-cover" alt="Event">
+                                                                </td>
+                                                                <td>មេឌីយ៉ា និង AI សម្រាប់វេជ្ជសាស្ត្រ</td>
+                                                                <td>វគ្គនេះនឹងបង្ហាញពីវិធីប្រើ AI ក្នុងការវិភាគទិន្នន័យវេជ្ជសាស្ត្រ និងគ្រប់គ្រងរូបភាពវេទិកា
+                                                                </td>
+                                                                <td>២០២៣-០៩-០៥</td>
+                                                            </tr>
+                                                            <!-- Add more rows with the same structure -->
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-user" role="tabpanel" aria-labelledby="tab-user-tab">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>ឈ្មោះពេញ</th>
+                                                                <th>Gmail</th>
+                                                                <th>ស្ថានភាព</th>
+                                                                <th>កាលបរិច្ឆេទចូលចុងក្រោយ</th>
+                                                                <th>សកម្មភាព</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>សុខា សុភា</td>
+                                                                <td>sokha.sophea@gmail.com</td>
+                                                                <td><span class="text-warning fw-medium">spam</span></td>
+                                                                <td>២០២៣-០៩-០១</td>
+                                                                <td>
+                                                                    <button class="btn btn-sm btn-dark-blue" data-bs-toggle="modal" data-bs-target="#restoreModal"
+                                                                        data-username="សុខា សុភា">
+                                                                        ស្ដារឡើងវិញ
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ស្រីនាង មុនីរ័ត្ន</td>
+                                                                <td>sreynang.mony@gmail.com</td>
+                                                                <td><span class="text-warning fw-medium">bot accout</span></td>
+                                                                <td>២០២៣-០៩-០២</td>
+                                                                <td>
+                                                                    <button class="btn btn-sm btn-dark-blue" data-bs-toggle="modal" data-bs-target="#restoreModal"
+                                                                        data-username="សុខា សុភា">
+                                                                        ស្ដារឡើងវិញ
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </section>
     </main>
 
@@ -1504,10 +2217,10 @@
             new Chart(ctx, {
                 type: "line",  // you can use 'bar', 'pie', 'doughnut', etc.
                 data: {
-                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], // X-axis labels
+                    labels: ["មករា", "កុម្ភៈ", "មីនា", "មេសា", "ឧសភា", "មិថុនា", "កក្កដា"], // X-axis labels
                     datasets: [{
-                        label: "មធ្យមភាគ",
-                        data: [1200, 1900, 3000, 2500, 3200, 4000, 4500], // Y-axis values
+                        label: "មធ្យមភាគប្រចាំខែ",
+                        data: [0, 25, 50, 75, 100, 200, 400], // Y-axis values
                         borderColor: "rgba(75, 192, 192, 1)",
                         backgroundColor: "rgba(75, 192, 192, 0.2)",
                         fill: true,
@@ -1549,7 +2262,30 @@
                 }
             });
         });
+        //     Toast
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        }
+
+        // Error toast
+        const errorBtn = document.getElementById('deleteToastBtn');
+        const errorToastEl = document.getElementById('deleteToast');
+
+        if (errorBtn) {
+            const errorToast = bootstrap.Toast.getOrCreateInstance(errorToastEl);
+            errorBtn.addEventListener('click', () => {
+                errorToast.show();
+            });
+        }
+
     </script>
+
 </body>
 
 </html>

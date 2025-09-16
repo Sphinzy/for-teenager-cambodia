@@ -137,8 +137,8 @@ body[data-bs-theme="light"] .btn-gunmetal:hover {
 body[data-bs-theme="dark"] .btn-dark-blue {
     width: fit-content;
     border-radius: 5px !important;
-    background-color: #212529 !important;
-    color: #ffffff !important;
+    background-color: #fff !important;
+    color: #212529 !important;
     font-weight: 500;
     transition: all 0.3s ease;
 }
@@ -146,8 +146,8 @@ body[data-bs-theme="dark"] .btn-dark-blue {
 body[data-bs-theme="dark"] .btn-dark-blue:hover {
     width: fit-content;
     border-radius: 5px !important;
-    background-color: #33373b !important;
-    color: #fff !important;
+    background-color: #c5c5c5 !important;
+    color: #212529 !important;
     font-weight: 500;
 
 }
