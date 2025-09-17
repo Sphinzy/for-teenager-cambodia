@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/profile.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /*.text-success {
+            background-color: #1a8754;
+            color: white !important;
+            border-radius: 5px;
+            padding: 0 5px;
+        }
+
+        .text-danger {
+            background-color: #db3545;
+            color: white !important;
+            border-radius: 5px;
+            padding: 0 5px;
+        }*/
+    </style>
+</head>
+
+<body data-bs-theme="light">
+    <header class="sticky-top z-3">
+        <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" src="../../image/project-logo/logo01.png" alt="Logo" style="width: 75px;">
+                </a>
+                <div class="d-flex">
+                    <!-- profile lg-none  -->
+                    <div class="d-flex justify-content-end align-items-center d-flex d-lg-none bg-body-theme">
+                        <button id="themeToggle" class="theme-toggle border-0 px-3 bg-transparent">
+                            <i id="themeIcon" class="bi bi-brightness-high-fill icon-animate"></i>
+                        </button>
+                        <!-- notification  -->
+                        <div class="dropdown">
+                            <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-bell px-2 position-relative fs-5">
+                                    <span
+                                        class="position-absolute translate-middle bg-danger border border-light rounded-circle"
+                                        style="left: 21px; padding: 3px; top: 1px;">
+                                        <span class="visually-hidden">New
+                                            alerts</span>
+                                    </span>
+                                </i>
+                            </a>
+
+                            <ul class="dropdown-menu ms-n20 border-0 shadow-sm">
+                                <li>
+                                    <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
+                                        style="width: 320px;">
+                                        <div class="p-2">
+                                            <h5>សារជូនដំណឹង</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- list notification  -->
+                                <li>
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="../../image/project-logo/pf-2.svg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt>
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="../../image/project-logo/pf-3.jpg"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt>
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                        <img src="../../image/project-logo/pf-1.png"
+                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
+                                            alt>
+                                        <div class="notification">
+                                            <p class="text clamp-2">
+                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
+                                            </p>
+                                        </div>
+                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                    </a>
+                                </li>
+                                <div>
+                                    <a href="../profile/notification.html"
+                                        class="nav-link text-end text-primary p-2 pe-4">See
+                                        all</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <!-- profile  -->
+                        <div class="profile">
+                            <a href="../profile/proflie.html">
+                                <img src="../../image/project-logo/profile-img.jpg"
+                                    class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                    alt />
+                            </a>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- profile lg-flex  -->
+                <div class="d-flex justify-content-end align-items-center d-none d-lg-flex">
+                    <button id="themeToggle2" class="theme-toggle border-0 px-3 bg-transparent">
+                        <i id="themeIcon2" class="bi bi-brightness-high-fill icon-animate"></i>
+                    </button>
+                    <!-- notification  -->
+                    <div class="dropdown">
+                        <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-bell position-relative fs-5">
+                                <span
+                                    class="position-absolute translate-middle bg-danger border border-light rounded-circle"
+                                    style="left: 21px; padding: 4px; top: 1px;">
+                                    <span class="visually-hidden">New
+                                        alerts</span>
+                                </span>
+                            </i>
+                        </a>
+
+                        <ul class="dropdown-menu ms-n20 border-0 shadow-sm">
+                            <li>
+                                <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
+                                    style="width: 320px;">
+                                    <div class="p-2">
+                                        <h5>សារជូនដំណឹង</h5>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- list notification  -->
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-2.svg" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-3.jpg" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
+                                    <img src="../../image/project-logo/pf-1.png" class="img-fluid rounded-circle me-3"
+                                        style="width: 50px; height: 50px;" alt>
+                                    <div class="notification">
+                                        <p class="text clamp-2">
+                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
+                                        </p>
+                                    </div>
+                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
+                                </a>
+                            </li>
+                            <div>
+                                <a href="../profile/notification.html"
+                                    class="nav-link text-end text-primary p-2 pe-4">See
+                                    all</a>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- profile  -->
+                    <div class="profile">
+                        <a href="../profile/proflie.html">
+                            <img src="../../image/project-logo/profile-img.jpg"
+                                class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;"
+                                alt />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container-fluid">
+                <div class="d-flex align-items-start">
+                    <!-- Vertical Nav -->
+                    <div class="nav flex-column nav-pills bg-card-theme shadow-sm position-sticky top-0 start-0 "
+                        style="height: 100vh;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active px-10" id="v-pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                            aria-selected="true">Overview</button>
+                        <button class="nav-link " id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">ការគ្រប់គ្រងអ្នកប្រើប្រាស់</button>
+                        <button class="nav-link px-10" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                            aria-selected="false">ការស្នើរ</button>
+                        <button class="nav-link px-10" id="v-pills-messages-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                            aria-selected="false">Messages</button>
+                        <button class="nav-link px-10" id="v-pills-settings-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                            aria-selected="false">Settings</button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content flex-grow-1 w-100 p-3" id="v-pills-tabContent">
+                        <!-- Overview Tab -->
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                            aria-labelledby="v-pills-home-tab" tabindex="0">
+                            <div class="container">
+                                <h1>Overview</h1>
+                                <p>សូមស្វាគមន៍ការត្រឡប់មកវិញ! នេះជាអ្វីដែលកំពុងកើតឡើងជាមួយគេហទ័ពររបស់អ្នកនៅថ្ងៃនេះ។</p>
+                                <div class="row g-5">
+                                    <div class="col-lg-4">
+                                        <div class="card bg-card-theme shadow-sm border-0">
+                                            <div class="card-body text-center">
+                                                <h4>អ្នក​មិនទាន់​បាន​បង្កើតគណនី</h4>
+                                                <h1 class="counter" data-countto="75" data-duration="2">0</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="card bg-card-theme shadow-sm border-0">
+                                            <div class="card-body text-center">
+                                                <h4>អ្នក​​បាន​បង្កើតគណនី</h4>
+                                                <h1 class="counter" data-countto="50" data-duration="2">0</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="card bg-card-theme shadow-sm border-0">
+                                            <div class="card-body text-center">
+                                                <h4>ចំនួនសរុប</h4>
+                                                <h1 class="counter" data-countto="125" data-duration="2">0</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- chart  -->
+                                    <div class="col-lg-8">
+                                        <div class="card bg-card-theme border-0 shadow-sm py-10">
+                                            <canvas id="revenueChart" height="150"></canvas>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- total  -->
+                                    <div class="col-lg-4">
+                                        <div class="card bg-card-theme border-0 shadow-sm">
+                                            <canvas id="userDistributionChart" width="257" height="257"></canvas>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-8">
+                                        <div class="card p-3 bg-card-theme border-0 shadow-sm">
+                                            <h6>សកម្មភាពថ្មីៗ</h6>
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-2 d-flex justify-content-between">
+                                                    <span><strong>សុខា សុភា </strong> – ការស្នើរគណនី</span>
+                                                    <small class="text-muted">២ នាទីមុន</small>
+                                                </li>
+                                                <li class="mb-2 d-flex justify-content-between">
+                                                    <span><strong>បូព៌ា សុភា</strong> –
+                                                        បានកែប្រែប្រវត្តិផ្ទាល់ខ្លួន</span>
+                                                    <small class="text-muted">៥ នាទីមុន</small>
+                                                </li>
+                                                <li class="mb-2 d-flex justify-content-between">
+                                                    <span><strong>វិសាល សារុន</strong> – ចុះឈ្មោះចូលគណនី</span>
+                                                    <small class="text-muted">១០ នាទីមុន</small>
+                                                </li>
+                                                <li class="mb-2 d-flex justify-content-between">
+                                                    <span><strong>ស្រីនិត មុនីរ័ត្ន</strong> – ចុះឈ្មោះចូលគណនី</span>
+                                                    <small class="text-muted">១៥ នាទីមុន</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- manage user -->
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                            aria-labelledby="v-pills-profile-tab" tabindex="0">
+                            <!-- Navigation Tabs on Top Right -->
+                            <ul class="nav nav-pills justify-content-end" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="flex-sm-fill text-sm-center nav-link active" id="users-tab"
+                                        data-bs-toggle="tab" data-bs-target="#users" type="button" role="tab">
+                                        អ្នកប្រើប្រាស់
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="flex-sm-fill text-sm-center nav-link" id="requests-tab"
+                                        data-bs-toggle="tab" data-bs-target="#requests" type="button" role="tab">
+                                        សំណើរ Appeal
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <!-- Tab Content -->
+                            <div class="tab-content" id="myTabContent">
+
+                                <!-- Users Tab -->
+                                <div class="tab-pane fade show active" id="users" role="tabpanel">
+                                    <h3 class="mt-3">គ្រប់គ្រងអ្នកប្រើប្រាស់</h3>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ឈ្មោះពេញ</th>
+                                                <th>Gmail</th>
+                                                <th>ស្ថានភាព</th>
+                                                <th>កាលបរិច្ឆេទចូលចុងក្រោយ</th>
+                                                <th>សកម្មភាព</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>សុខា សុភា</td>
+                                                <td>sokha.sophea@gmail.com</td>
+                                                <td><span class="text-success">online</span></td>
+                                                <td>២០២៣-០៩-០១</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ស្រីនាង មុនីរ័ត្ន</td>
+                                                <td>sreynang.mony@gmail.com</td>
+                                                <td><span class="text-danger">offline</span></td>
+                                                <td>២០២៣-០៩-០២</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ដារា វិចិត្រា</td>
+                                                <td>dara.vichetr@gmail.com</td>
+                                                <td><span class="text-success">online</span></td>
+                                                <td>២០២៣-០៩-០៣</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>សុវណ្ណា ចន្ទ្រា</td>
+                                                <td>sovanna.chandra@gmail.com</td>
+                                                <td><span class="text-danger">offline</span></td>
+                                                <td>២០២៣-០៩-០៤</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>វិសាល សារុន</td>
+                                                <td>visal.sarun@gmail.com</td>
+                                                <td><span class="text-success">online</span></td>
+                                                <td>២០២៣-០៩-០៥</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ស្រីពៅ សុភាព</td>
+                                                <td>sreypov.sophap@gmail.com</td>
+                                                <td><span class="text-danger">offline</span></td>
+                                                <td>២០២៣-០៩-០៦</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>បូព៌ា សុភា</td>
+                                                <td>bopha.sophea@gmail.com</td>
+                                                <td><span class="text-success">online</span></td>
+                                                <td>២០២៣-០៩-០៧</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>វណ្ណា រិទ្ធ</td>
+                                                <td>vanna.rith@gmail.com</td>
+                                                <td><span class="text-danger">offline</span></td>
+                                                <td>២០២៣-០៩-០៨</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ចន្ទពោធិ៍ សុវណ្ណា</td>
+                                                <td>chanpov.sovanna@gmail.com</td>
+                                                <td><span class="text-success">online</span></td>
+                                                <td>២០២៣-០៩-០៩</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>មុនី សារ៉ាយ</td>
+                                                <td>mony.saray@gmail.com</td>
+                                                <td><span class="text-danger">offline</span></td>
+                                                <td>២០២៣-០៩-១០</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>សុភ័ក្ត្រ មករា</td>
+                                                <td>sopheap.makara@gmail.com</td>
+                                                <td><span class="text-success">online</span></td>
+                                                <td>២០២៣-០៩-១១</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ស្រីមុំ សុវណ្ណា</td>
+                                                <td>sreymom.sovanna@gmail.com</td>
+                                                <td><span class="text-danger">offline</span></td>
+                                                <td>២០២៣-០៩-១២</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ចន្ទ្រី សារុន</td>
+                                                <td>chantry.sarun@gmail.com</td>
+                                                <td><span class="text-success">online</span></td>
+                                                <td>២០២៣-០៩-១៣</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>សុខលីម ដារា</td>
+                                                <td>soklim.dara@gmail.com</td>
+                                                <td><span class="text-danger">offline</span></td>
+                                                <td>២០២៣-០៩-១៤</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ស្រីនិត មុនីរ័ត្ន</td>
+                                                <td>sreynit.mony@gmail.com</td>
+                                                <td><span class="text-success">online</span></td>
+                                                <td>២០២៣-០៩-១៥</td>
+                                                <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">បិទគណនី</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                                <!-- Requests Tab -->
+                                <div class="tab-pane fade" id="requests" role="tabpanel">
+                                    <h3 class="mt-3">សំណើរ Appeal Accounts</h3>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>ឈ្មោះពេញ</th>
+                                                <th>Gmail</th>
+                                                <th>ប្រភេទសំណើ</th>
+                                                <th>កាលបរិច្ឆេទ</th>
+                                                <th>សកម្មភាព</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>បូព៌ា សុខា</td>
+                                                <td>bopha.sokha@gmail.com</td>
+                                                <td>Appeal Account</td>
+                                                <td>២០២៣-០៩-១៥</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                        data-bs-target="#approveModal">អនុម័ត</button>
+                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#cancelModal">បដិសេធ</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>វិសាល សារុន</td>
+                                                <td>visal.sarun@gmail.com</td>
+                                                <td>Appeal Account</td>
+                                                <td>២០២៣-០៩-១៦</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                        data-bs-target="#approveModal">អនុម័ត</button>
+                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                        data-bs-target="#cancelModal">បដិសេធ</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- Approve Modal -->
+                                    <div class="modal fade" id="approveModal" tabindex="-1"
+                                        aria-labelledby="approveModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-success text-white">
+                                                    <h5 class="modal-title" id="approveModalLabel">អនុម័តសំណើ</h5>
+                                                    <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    តើអ្នកពិតជាចង់ <strong>អនុម័ត</strong> សំណើរនេះមែនទេ?
+                                                    <br><small
+                                                        class="text-muted">សូមពិនិត្យមើលព័ត៌មានម្តងទៀតមុននឹងបន្ត។</small>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">បោះបង់</button>
+                                                    <button type="button" class="btn btn-success"
+                                                        data-bs-dismiss="modal">អនុម័ត</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cancel Modal -->
+                                    <div class="modal fade" id="cancelModal" tabindex="-1"
+                                        aria-labelledby="cancelModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-danger text-white">
+                                                    <h5 class="modal-title" id="cancelModalLabel">បដិសេធសំណើ</h5>
+                                                    <button type="button" class="btn-close btn-close-white"
+                                                        data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    តើអ្នកពិតជាចង់ <strong>បដិសេធ</strong> សំណើរនេះមែនទេ?
+                                                    <br><small
+                                                        class="text-muted">សកម្មភាពនេះនឹងមិនអាចត្រឡប់ក្រោយបានទេ។</small>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">បោះបង់</button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal">បដិសេធ</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">ការព្រមាន</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            តើអ្នកចង់បិទគណនីនេះមែនឬទេ​ សកម្មភាពនេះមិនអាចស្តារឡើងវិញបាន។
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark-blue"
+                                                data-bs-dismiss="modal">បោះបង់</button>
+                                            <button type="button" class="btn btn-danger"
+                                                data-bs-dismiss="modal">បិទគណនី</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- schoolarship and job Tab -->
+                        <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
+                            aria-labelledby="v-pills-disabled-tab" tabindex="0">
+                            <h4 class="mt-3">ការស្នើរសុំអាហារូបករណ៍ និងការងារ</h4>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ឈ្មោះពេញ</th>
+                                        <th>Gmail</th>
+                                        <th>ប្រភេទស្នើសុំ</th>
+                                        <th>កាលបរិច្ឆេទស្នើសុំ</th>
+                                        <th>សកម្មភាព</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>លោក សុខា សុភា</td>
+                                        <td>sokha.sophea@gmail.com</td>
+                                        <td>អាហារូបករណ៍</td>
+                                        <td>២០២៣-០៩-០១</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>លោក ស្រីនាង មុនីរ័ត្ន</td>
+                                        <td>sreynang.mony@gmail.com</td>
+                                        <td>ការងារ</td>
+                                        <td>២០២៣-០៩-០២</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>លោក ដារា វិចិត្រា</td>
+                                        <td>dara.vichetr@gmail.com</td>
+                                        <td>អាហារូបករណ៍</td>
+                                        <td>២០២៣-០៩-០៣</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>លោក សុវណ្ណា ចន្ទ្រា</td>
+                                        <td>sovanna.chandra@gmail.com</td>
+                                        <td>ការងារ</td>
+                                        <td>២០២៣-០៩-០៤</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>លោក វិសាល សារុន</td>
+                                        <td>visal.sarun@gmail.com</td>
+                                        <td>អាហារូបករណ៍</td>
+                                        <td>២០២៣-០៩-០៥</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#approverequestModal">អនុម័ត</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#rejectModal">បដិសេធ</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Approve Request Modal -->
+                            <div class="modal fade" id="approverequestModal" tabindex="-1"
+                                aria-labelledby="approveModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-success text-white">
+                                            <h5 class="modal-title" id="approverequestModalLabel">អនុម័តសំណើ</h5>
+                                            <button type="button" class="btn-close btn-close-white"
+                                                data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            តើអ្នកពិតជាចង់ <strong>អនុម័ត</strong> សំណើរនេះមែនទេ?
+                                            <br><small class="text-muted">សូមបញ្ចូលមូលហេតុ (បើចង់):</small>
+                                            <textarea class="form-control mt-2"
+                                                placeholder="សរសេរមូលហេតុ..."></textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">បោះបង់</button>
+                                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">អនុម័ត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Reject Request Modal -->
+                            <div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-danger text-white">
+                                            <h5 class="modal-title" id="rejectModalLabel">បដិសេធសំណើ</h5>
+                                            <button type="button" class="btn-close btn-close-white"
+                                                data-bs-dismiss="modal" aria-label="បិទ"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            តើអ្នកពិតជាចង់ <strong>បដិសេធ</strong> សំណើរនេះមែនទេ?
+                                            <br><small class="text-muted">សូមបញ្ចូលមូលហេតុ:</small>
+                                            <textarea class="form-control mt-2"
+                                                placeholder="សរសេរមូលហេតុ..."></textarea>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">បោះបង់</button>
+                                            <button type="button" class="btn btn-danger">បដិសេធ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Messages Tab -->
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                            aria-labelledby="v-pills-messages-tab" tabindex="0">
+                            <h4>Messages content here</h4>
+                        </div>
+
+                        <!-- Settings Tab -->
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                            aria-labelledby="v-pills-settings-tab" tabindex="0">
+                            <h4>Settings content here</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../js/script-folder.js"></script>
+
+    <script>
+        // Animate counter when tab is shown
+        function animateCounter(element) {
+            var $this = $(element),
+                countTo = $this.attr("data-countto"),
+                countDuration = parseInt($this.attr("data-duration")) * 1000;
+
+            $({ counter: 0 }).animate({ counter: countTo }, {
+                duration: countDuration,
+                easing: "linear",
+                step: function () {
+                    $this.text(Math.floor(this.counter));
+                },
+                complete: function () {
+                    $this.text(this.counter);
+                }
+            });
+        }
+
+        // Animate counters in visible tab on load
+        $(".tab-pane.active .counter").each(function () {
+            animateCounter(this);
+        });
+
+        // Animate counters when tab becomes visible
+        $('button[data-bs-toggle="pill"]').on('shown.bs.tab', function (e) {
+            var target = $(e.target).data('bs-target'); // get target tab pane
+            $(target).find(".counter").each(function () {
+                animateCounter(this);
+            });
+        });
+
+        //chart 
+        document.addEventListener("DOMContentLoaded", () => {
+            const ctx = document.getElementById("revenueChart").getContext("2d");
+
+            new Chart(ctx, {
+                type: "line",  // you can use 'bar', 'pie', 'doughnut', etc.
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], // X-axis labels
+                    datasets: [{
+                        label: "មធ្យមភាគ",
+                        data: [1200, 1900, 3000, 2500, 3200, 4000, 4500], // Y-axis values
+                        borderColor: "rgba(75, 192, 192, 1)",
+                        backgroundColor: "rgba(75, 192, 192, 0.2)",
+                        fill: true,
+                        tension: 0.3 // curve smoothness
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+
+        //total
+        document.addEventListener("DOMContentLoaded", () => {
+            const ctx = document.getElementById("userDistributionChart").getContext("2d");
+
+            new Chart(ctx, {
+                type: "doughnut",  // can also use "pie"
+                data: {
+                    labels: ["Logged In", "Not Logged In"],
+                    datasets: [{
+                        data: [50, 75], // Example values
+                        backgroundColor: ["#28a745", "#dc3545"], // green & red
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: "bottom"
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
