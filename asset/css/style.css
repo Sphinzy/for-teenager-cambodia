@@ -491,3 +491,8 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before 
     box-shadow: none !important;
     color: #1d263e !important;
 }
+.modal-dialog.modal-sm {
+    max-width: 300px;
+    margin: 1rem auto 0;
+    /* Top margin, center horizontally */
+}

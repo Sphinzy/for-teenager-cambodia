@@ -244,19 +244,6 @@
     <main>
         <!-- modal  -->
         <section>
-            <div class="modal fade" id="topModal" tabindex="-1" aria-labelledby="topModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <div class="modal-header bg-success text-white">
-                            <h5 class="modal-title" id="topModalLabel">ជោគជ័យ</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            សកម្មភាពរបស់អ្នកបានជោគជ័យ!
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="toast-container position-fixed top-0 end-0 start-0 m-auto p-3">
                 <div id="liveToast" class="toast bg-success-subtle text-success rounded-3 border border-success"
                     role="alert" aria-live="assertive" aria-atomic="true">
@@ -403,7 +390,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-dark-blue" data-bs-dismiss="modal">បិទ</button>
-                            <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#topModal">រក្សាទុក</button>
+                            <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal">រក្សាទុក</button>
                         </div>
                     </div>
                 </div>
@@ -429,125 +416,9 @@
                         <!-- Modal Footer -->
                         <div class="modal-footer">
                             <button type="button" class="btn btn-outline-dark-blue" data-bs-dismiss="modal">បោះបង់</button>
-                            <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#topModal">ស្តារឡើងវិញ</button>
+                            <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal">កំលាត់ឡើងវិញ</button>
                         </div>
             
-                    </div>
-                </div>
-            </div>
-            <!-- File Request Modal -->
-            <div class="modal fade" id="fileRequestModal" tabindex="-1" aria-labelledby="fileRequestModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content shadow-lg border-0">
-            
-                        <!-- Header -->
-                        <div class="modal-header bg-footer text-white">
-                            <h5 class="modal-title" id="fileRequestModalLabel">ពិនិត្យការស្នើសុំឯកសារ</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="បិទ"></button>
-                        </div>
-            
-                        <!-- Body -->
-                        <div class="modal-body">
-                            <p><strong>ឈ្មោះអ្នកស្នើសុំ៖</strong> លោក សុខា សុភា</p>
-                            <p><strong>ឯកសារត្រូវបានស្នើសុំ៖</strong> ExampleFile.pdf</p>
-                            <p><strong>ប្រភេទស្នើសុំ៖</strong> អាហារូបករណ៍</p>
-                            <p><strong>កាលបរិច្ឆេទស្នើសុំ៖</strong> ២០២៣-០៩-០១</p>
-            
-                            <div class="mb-3">
-                                <label for="requestNote" class="form-label">កំណត់ចំណាំ / សេចក្តីអធិប្បាយ</label>
-                                <textarea class="form-control bg-card-theme" id="requestNote" rows="3" placeholder="សរសេរព័ត៌មានបន្ថែម..."
-                                    readonly></textarea>
-                            </div>
-            
-                            <div class="mb-3">
-                                <label for="filePreview" class="form-label">Preview ឯកសារ</label>
-                                <iframe id="filePreview" src="example.pdf" class="w-100 bg-card-theme" style="height:200px;"
-                                    frameborder="0"></iframe>
-                            </div>
-                        </div>
-            
-                        <!-- Footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-dark-blue" data-bs-dismiss="modal">មិនយល់ព្រម</button>
-                            <button type="button" class="btn btn-dark-blue" id="approveFileBtn" data-bs-toggle="modal" data-bs-target="#topModal">យល់ព្រម</button>
-                        </div>
-            
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal: Create Event -->
-            <div class="modal fade" id="createEventModal" tabindex="-1" aria-labelledby="createEventModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content shadow-lg rounded-3 border-0">
-            
-                        <!-- Header -->
-                        <div class="modal-header bg-footer text-white">
-                            <h5 class="modal-title" id="createEventModalLabel">បង្កើតព្រឹត្តិការណ៍ថ្មី</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                                aria-label="បិទ"></button>
-                        </div>
-            
-                        <!-- Body -->
-                        <div class="modal-body">
-                            <form>
-                                <!-- img  -->
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="custom-file-wrapper small-file ">
-                                            <input type="file" class="custom-file-input" id="smallFile">
-                                            <label for="smallFile" class="custom-file-label">
-                                                <div class="file-icon">
-                                                    <i class="fa fa-plus"></i>
-                                                </div>
-                                                <div class="file-text">
-                                                    <h5>Add File</h5>
-                                                    <p>Compact version</p>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Event Name -->
-                                <div class="mb-3">
-                                    <label for="eventName" class="form-label">ឈ្មោះព្រឹត្តិការណ៍</label>
-                                    <input type="text" class="form-control border border-1 border-dark" id="eventName"
-                                        placeholder="បញ្ចូលឈ្មោះព្រឹត្តិការណ៍">
-                                </div>
-            
-                                <!-- Event Date -->
-                                <div class="mb-3">
-                                    <label for="eventDate" class="form-label">កាលបរិច្ឆេទ និងម៉ោង</label>
-                                    <input type="datetime-local" class="form-control border border-1 border-dark" id="eventDate">
-                                </div>
-            
-                                <!-- Event Location -->
-                                <div class="mb-3">
-                                    <label for="eventLocation" class="form-label">ទីតាំង</label>
-                                    <input type="text" class="form-control border border-1 border-dark" id="eventLocation"
-                                        placeholder="សូមបញ្ចូលទីតាំង">
-                                </div>
-            
-                                <!-- Event Description -->
-                                <div class="mb-3">
-                                    <label for="eventDescription" class="form-label">ខ្លឹមសារ</label>
-                                    <textarea id="eventDescription" class="form-control border border-1 border-dark" rows="4"
-                                        placeholder="បញ្ចូលខ្លឹមសារព្រឹត្តិការណ៍"></textarea>
-                                </div>
-            
-                                <!-- Upload File -->
-                                <div class="mb-3">
-                                    <label for="eventFile" class="form-label">ភ្ជាប់ឯកសារ (បើមាន)</label>
-                                    <input type="file" class="form-control border border-1 border-dark" id="eventFile">
-                                </div>
-                            </form>
-                        </div>
-            
-                        <!-- Footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-dark-blue" data-bs-dismiss="modal">បោះបង់</button>
-                            <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#topModal">រក្សាទុក</button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -559,19 +430,19 @@
                     <div class="nav flex-column nav-pills bg-card-theme shadow-sm position-fixed top-0 start-0 z-1 px-4 rounded-0 pt-20"
                         style="width: 250px; height: 100vh; z-index: 5;" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
-                        <button class="nav-link active text-start" id="v-pills-home-tab" data-bs-toggle="pill"
+                        <button class="nav-link text-start" id="v-pills-home-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                             aria-selected="true"><i class="bi bi-speedometer2 me-2"></i> ការគ្រប់គ្រងទិន្នន័យ</button>
                         <!-- Dashboard / Overview -->
 
                         <button class="nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
-                            aria-selected="false"><i class="bi bi-people me-2"></i> អ្នកប្រើប្រាស់</button>
+                            aria-selected="false"><i class="bi bi-journal-text me-2"></i> ការកក់ត្រា</button>
                         <!-- Booking / Records -->
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link text-start" id="userManage-tab" data-bs-toggle="pill" data-bs-target="#tab-userManage" type="button"
+                            <button class="nav-link active text-start" id="userManage-tab" data-bs-toggle="pill" data-bs-target="#tab-userManage" type="button"
                                 role="tab" aria-controls="tab-userManage" aria-selected="false">
-                                <i class="bi bi-journal-text me-2"></i> ការកក់ត្រា
+                                <i class="bi bi-people me-2"></i> អ្នកប្រើប្រាស់
                             </button>
                         </li>
                         <!-- User Management -->
@@ -602,10 +473,10 @@
                     <!-- Tab Content -->
                     <div class="tab-content flex-grow-1 w-100 p-3" id="v-pills-tabContent">
                         <!-- Overview Tab -->
-                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+                        <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
                             tabindex="0">
                             <div class="container">
-                                <h3 class="my-4">ការគ្រប់គ្រងទិន្នន័យ</h3>
+                                <h1>ការគ្រប់គ្រងទិន្នន័យ</h1>
                                 <p>សូមស្វាគមន៍ការត្រឡប់មកវិញ! នេះជាអ្វីដែលកំពុងកើតឡើងជាមួយគេហទ័ពររបស់អ្នកនៅថ្ងៃនេះ។</p>
                                 <div class="row g-5">
                                     <div class="col-lg-4">
@@ -681,7 +552,7 @@
                             </div>
                         </div>
 
-                        <!--  user -->
+                        <!-- booking user -->
                         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                             aria-labelledby="v-pills-profile-tab" tabindex="0">
                             <div class="container">
@@ -863,8 +734,10 @@
                                                     <td>Appeal Account</td>
                                                     <td>២០២៣-០៩-១៥</td>
                                                     <td>
-                                                        <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal"
-                                                            data-bs-target="#fileRequestModal">ពិនិត្យមើល</button>
+                                                        <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#approveModal">អនុម័ត</button>
+                                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#cancelModal">បដិសេធ</button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -873,8 +746,10 @@
                                                     <td>Appeal Account</td>
                                                     <td>២០២៣-០៩-១៦</td>
                                                     <td>
-                                                        <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal"
-                                                            data-bs-target="#fileRequestModal">ពិនិត្យមើល</button>
+                                                        <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                            data-bs-target="#approveModal">អនុម័ត</button>
+                                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#cancelModal">បដិសេធ</button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -949,7 +824,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-dark-blue"
                                                     data-bs-dismiss="modal">បោះបង់</button>
-                                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#topModal"
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
                                                     >បិទគណនី</button>
                                             </div>
                                         </div>
@@ -958,18 +833,19 @@
                             </div>
                         </div>
 
-                        <!-- booking user  -->
-                        <div class="tab-pane fade" id="tab-userManage" role="tabpanel" aria-labelledby="userManage-tab">
+                        <!-- user  -->
+                        <div class="tab-pane fade show active" id="tab-userManage" role="tabpanel" aria-labelledby="userManage-tab">
                             <div class="container">
-                                <h3 class="my-4">គ្រប់គ្រងអ្នកប្រើប្រាស់</h3>
+                                <h4 class="pt-4">គ្រប់គ្រងអ្នកប្រើប្រាស់</h4>
                                 <table class="table table-striped mt-3">
                                     <thead>
                                         <tr>
                                             <th>ឈ្មោះពេញ</th>
                                             <th>Gmail</th>
                                             <th>ស្ថានភាព</th>
-                                            <th>កាលបរិច្ឆេទចូល</th>
-                                            <th>កាលបរិច្ឆេទចុងក្រោយ</th>
+                                            <th>កាលបរិច្ឆេទចូលចុងក្រោយ</th>
+                                            <th>ផ្លាស់ប្តូរពាក្យសម្ងាត់</th>
+                                            <th>សកម្មភាព</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -979,7 +855,12 @@
                                             <td><span class="text-dark">ប្ដូរពាក្យសម្ងាត់</span></td>
                                             <td>២០២៣-០៩-០១</td>
                                             <td>ចុងក្រោយ: ២០២៥-០៨-២០</td>
-                                            
+                                            <td>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteallModal1"
+                                                    data-username="សុខា សុភា">
+                                                    បិទគណនី
+                                                </button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>ស្រីនាង មុនីរ័ត្ន</td>
@@ -988,6 +869,10 @@
                                             <td>២០២៣-០៩-០២</td>
                                             <td>ចុងក្រោយ: ២០២៥-០៨-១៨</td>
                                             <td>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteallModal1"
+                                                    data-username="ស្រីនាង មុនីរ័ត្ន">
+                                                    បិទគណនី
+                                                </button>
                                             </td>
                                         </tr>
                                         <!-- Add more users -->
@@ -1000,32 +885,7 @@
                         <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
                             aria-labelledby="v-pills-disabled-tab" tabindex="0">
                             <div class="container">
-                                <h3 class="mt-4 mb-5">ការស្នើរសុំអាហារូបករណ៍ និងការងារ</h3>
-                                <div class="row g-2 mb-4">
-                                    <div class="col-md-4">
-                                        <input type="text" class="form-control bg-card-theme" placeholder="ស្វែងរកព្រឹត្តិការណ៍...">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <select class="form-select  bg-card-theme">
-                                            <option selected>តម្រៀបតាម...</option>
-                                            <option value="1">កាលបរិច្ឆេទថ្មី → ចាស់</option>
-                                            <option value="2">កាលបរិច្ឆេទចាស់ → ថ្មី</option>
-                                            <option value="3">ឈ្មោះ A → Z</option>
-                                            <option value="4">ឈ្មោះ Z → A</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <select class="form-select bg-card-theme">
-                                            <option selected>Filter តាមទីកន្លែង...</option>
-                                            <option value="phnompenh">ភ្នំពេញ</option>
-                                            <option value="siemreap">សៀមរាប</option>
-                                            <option value="battambang">បាត់ដំបង</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <button class="btn btn-outline-dark-blue w-100"><i class="bi bi-funnel me-1"></i> Filter</button>
-                                    </div>
-                                </div>
+                                <h4 class="mt-3">ការស្នើរសុំអាហារូបករណ៍ និងការងារ</h4>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -1043,8 +903,10 @@
                                             <td>អាហារូបករណ៍</td>
                                             <td>២០២៣-០៩-០១</td>
                                             <td>
-                                                <button type="button" class="btn btn-dark-blue" 
-                                                    data-bs-toggle="modal" data-bs-target="#fileRequestModal">ពិនិត្យមើល</button>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1053,8 +915,10 @@
                                             <td>ការងារ</td>
                                             <td>២០២៣-០៩-០២</td>
                                             <td>
-                                                <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal"
-                                                    data-bs-target="#fileRequestModal">ពិនិត្យមើល</button>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1063,8 +927,10 @@
                                             <td>អាហារូបករណ៍</td>
                                             <td>២០២៣-០៩-០៣</td>
                                             <td>
-                                                <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal"
-                                                    data-bs-target="#fileRequestModal">ពិនិត្យមើល</button>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1073,8 +939,10 @@
                                             <td>ការងារ</td>
                                             <td>២០២៣-០៩-០៤</td>
                                             <td>
-                                                <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal"
-                                                    data-bs-target="#fileRequestModal">ពិនិត្យមើល</button>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1083,8 +951,10 @@
                                             <td>អាហារូបករណ៍</td>
                                             <td>២០២៣-០៩-០៥</td>
                                             <td>
-                                                <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal"
-                                                    data-bs-target="#fileRequestModal">ពិនិត្យមើល</button>
+                                                <button class="btn btn-sm btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#approverequestModal">អនុម័ត</button>
+                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                    data-bs-target="#rejectModal">បដិសេធ</button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -1146,10 +1016,15 @@
                         <div class="tab-pane fade " id="v-pills-messages" role="tabpanel"
                             aria-labelledby="v-pills-messages-tab" tabindex="0">
                             <div class="container">
-                                <h4 class="py-4">ព្រឹត្តិការណ៏</h4>
+                                <h4>ព្រឹត្តិការណ៏</h4>
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill"
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">បង្កើតព្រឹត្តិការណ៍</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                                             data-bs-target="#pills-profile" type="button" role="tab"
                                             aria-controls="pills-profile"
                                             aria-selected="false">បញ្ជីព្រឹត្តិការណ៍</button>
@@ -1158,14 +1033,125 @@
                                 <hr class="mt-6 mb-4">
 
                                 <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab" tabindex="0">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="custom-file-wrapper small-file ">
+                                                    <input type="file" class="custom-file-input" id="smallFile">
+                                                    <label for="smallFile" class="custom-file-label">
+                                                        <div class="file-icon">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                        <div class="file-text">
+                                                            <h5>Add File</h5>
+                                                            <p>Compact version</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <h4 class="pt-3">ចំណងជើងព្រឹត្តិការណ៏</h4>
+                                                <textarea name="" id="" class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                                    style="resize: vertical; min-height: 100px;"></textarea>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <h4 class="pt-3">កាលបរិច្ឆេទ</h4>
+                                                <div class="card bg-card-theme border-0 shadow-sm mt-4">
+                                                    <div class="card-body">
+                                                        <form>
+                                                            <div class="mb-3">
+                                                                <label for="datetime" class="form-label">ថ្ងៃខែឆ្នាំ​
+                                                                    និង
+                                                                    ​ម៉ោង</label>
+                                                                <input type="datetime-local" class="form-control"
+                                                                    id="datetime" name="datetime">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="container mt-4">
+                                                    <label for="location" class="form-label">ទីតាំង</label>
+                                                    <textarea name="" id=""
+                                                        class="w-100 border-0 shadow-sm rounded-3 p-3"
+                                                        style="resize: vertical; min-height: 130px;"
+                                                        placeholder="សូមជ្រើសរើសទីតាំង"></textarea>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <h4 class="pt-3">ខ្លឹមសារនៃព្រឹត្តិការណ៏</h4>
+                                                <textarea name="" id="" class="w-100 border-1 shadow-sm rounded-3 p-3"
+                                                    style="resize: vertical; min-height: 100px;"></textarea>
+                                            </div>
+                                            <div class="col-lg-12 text-end">
+                                                <button class="btn btn-dark-blue mt-4 mb-5" data-bs-toggle="modal"
+                                                    data-bs-target="#eventModal">បញ្ចូនព្រឹត្តិការណ៍</button>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content shadow-lg rounded-3 border-0">
+
+                                                    <!-- Header -->
+                                                    <div class="modal-header bg-footer text-white">
+                                                        <h5 class="modal-title">បញ្ចូលព្រឹត្តិការណ៍ថ្មី</h5>
+                                                        <button type="button" class="btn-close btn-close-white"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+
+                                                    <!-- Body -->
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="mb-3">
+                                                                <label for="eventName"
+                                                                    class="form-label">ឈ្មោះព្រឹត្តិការណ៍</label>
+                                                                <input type="text"
+                                                                    class="form-control border border-1 border-dark"
+                                                                    id="eventName"
+                                                                    placeholder="បញ្ចូលឈ្មោះព្រឹត្តិការណ៍">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="eventDate" class="form-label">កាលបរិច្ឆេទ
+                                                                    និង
+                                                                    ម៉ោង</label>
+                                                                <input type="datetime-local"
+                                                                    class="form-control border border-1 border-dark"
+                                                                    id="eventDate">
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label for="eventLocation"
+                                                                    class="form-label">ទីកន្លែង</label>
+                                                                <input type="text"
+                                                                    class="form-control  border border-1 border-dark"
+                                                                    id="eventLocation" placeholder="សូមជ្រើសរើសទីតាំង">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+
+                                                    <!-- Footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-dark-blue"
+                                                            data-bs-dismiss="modal">បោះបង់</button>
+                                                        <button type="button" class="btn btn-dark-blue"
+                                                            data-bs-dismiss="modal">រក្សាទុក</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                                         aria-labelledby="pills-profile-tab" tabindex="0">
                                         <div class="container">
                                             <!-- Search & Filter -->
                                             <div class="row g-2 mb-4">
-                                                <div class="col-lg-12 text-end py-4">
-                                                    <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#createEventModal">បង្កើតថ្មី</button>
-                                                </div>
                                                 <div class="col-md-4">
                                                     <input type="text" class="form-control bg-card-theme"
                                                         placeholder="ស្វែងរកព្រឹត្តិការណ៍...">
@@ -1427,7 +1413,7 @@
                         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                             aria-labelledby="v-pills-settings-tab" tabindex="0">
                             <div class="container">
-                                <h3 class="my-4">ការកំណត់មាតិកានៅទីនេះ</h3>
+                                <h4>ការកំណត់មាតិកានៅទីនេះ</h4>
                                 <ul class="nav nav-pills mb-3" id="1" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link active" id="pills-1-home-tab" data-bs-toggle="pill"
@@ -1584,7 +1570,7 @@
                                                                 <button type="button" class="btn btn-outline-dark-blue"
                                                                     data-bs-dismiss="modal">បោះបង់</button>
                                                                 <button type="button" class="btn btn-dark-blue"
-                                                                    data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#topModal"   >រក្សាទុក</button>
+                                                                    data-bs-dismiss="modal">រក្សាទុក</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2018,7 +2004,7 @@
                         <!-- trash  -->
                         <div class="tab-pane fade" id="trash" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                             <div class="container">
-                                <h3 class="my-5">ធ្វើឡើងវិញ</h3>
+                                <h4 class="pt-5">ធ្វើឡើងវិញ</h4>
                             
                                 <!-- Nav Pills -->
                                 <ul class="nav nav-pills mb-3" id="event-tab" role="tablist">
@@ -2042,7 +2028,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-lg-12 text-end mb-3">
-                                                    <button class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#restoreModal">ស្តារឡើងវិញ</button>
+                                                    <button class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#restoreModal">កំលាត់ឡើងវិញ</button>
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <table class="table align-middle mb-0">
@@ -2081,7 +2067,7 @@
                                             <div class="row">
                                                 <div class="col-lg-12 text-end mb-3">
                                                     <button class="btn btn-dark-blue" data-bs-toggle="modal"
-                                                        data-bs-target="#restoreModal">ស្តារឡើងវិញ</button>
+                                                        data-bs-target="#restoreModal">កំលាត់ឡើងវិញ</button>
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <table class="table align-middle mb-0">
