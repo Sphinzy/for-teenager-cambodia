@@ -122,5 +122,5 @@ function setThemeCustom(theme) {
 
 AOS.init({
     duration: 800, // animation duration
-    once: true // animate only once when scrolling
+    // once: true // animate only once when scrolling
 });
