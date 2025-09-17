@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/profile.css" />
 
-     <!-- Light mode favicon -->
+    <!-- Light mode favicon -->
     <link rel="icon" type="image/png" href="../../image/project-logo/logo01.png"
-        media="(prefers-color-scheme: light)">
+      media="(prefers-color-scheme: light)">
 
     <!-- Dark mode favicon -->
     <link rel="icon" type="image/png" href="../../image/project-logo/logo02.png"
-        media="(prefers-color-scheme: dark)">
+      media="(prefers-color-scheme: dark)">
     <!-- icon -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -277,7 +277,7 @@
             <div class="row h-100 pb-5">
               <h3 class="fw-semibold mb-3">ការកំណត់</h3>
               <div class="col-4 h-100">
-                <aside class="p-3 h-100 bg-body-theme rounded overflow-y-scroll aside">
+                <aside class="option p-3 h-100 bg-body-theme rounded overflow-y-scroll aside">
                   <div class="nav flex-column gap-2 nav-pills" id="v-pills-tab" role="tablist"
                     aria-orientation="vertical">
                     <button class="nav-link d-flex gap-2 text-start active" id="v-pills-profile-tab"
@@ -312,6 +312,14 @@
                       <i class="bi bi-unlock2-fill"></i>
                       <span>លេខសម្ងាត់</span>
                     </button>
+                    <button class="nav-link d-flex gap-2 text-start" id="v-pills-device-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-device" type="button" role="tab"
+                      aria-controls="v-pills-device"
+                      aria-selected="true">
+                      <i class="bi bi-usb-symbol"></i>
+                      <span>គ្រប់គ្រងឧបករណ៌</span>
+                    </button>
                     <a href="../../../index.html"
                       class="nav-link d-flex gap-2 text-start text-danger">
                       <i class="fa-solid fa-right-from-bracket"></i>
@@ -321,7 +329,8 @@
                 </aside>
               </div>
               <div class="col-8 h-100">
-                <article class="bg-body-theme p-3 rounded h-100 overflow-x-hidden overflow-y-scroll article">
+                <article
+                  class="bg-body-theme p-3 rounded h-100 overflow-x-hidden overflow-y-scroll article">
                   <div class="tab-content" id="v-pills-tabContent">
                     <!--* profile -->
                     <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel"
@@ -993,6 +1002,61 @@
                             <a href="../login/OTP.html" type="submit"
                               class="btn btn-outline-dark-blue">ផ្លាស់ប្ដូរលេខសម្ងាត់</a>
                           </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!--* device -->
+                    <div class="tab-pane fade" id="v-pills-device" role="tabpanel"
+                      aria-labelledby="v-pills-device-tab" tabindex="0">
+                      <div class="row">
+                        <h5 class="fw-semibold mb-3">គ្រប់គ្រងឧបករណ៌</h5>
+                        <div class="col-12">
+                          <div class="card flex-row">
+                            <div class="card-header bg-transparent border-0">
+                              <i class="bi bi-laptop-fill fs-3"></i>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title">Windows PC</h6>
+                              <div class="d-flex">
+                                <p class="card-text">Phnom Penh, Cambodia</p>
+                                &nbsp; &bull; &nbsp;
+                                <p class="card-text text-success">កំពុងដំណើរការលើឧបករណ៌នេះ</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row my-3">
+                        <h5 class="fw-semibold mb-3">ចូលនៅលើឧបករណ៍ផ្សេងទៀត</h5>
+                        <div class="col-12">
+                          <div class="card flex-row">
+                            <div class="card-header bg-transparent border-0">
+                              <i class="bi bi-phone-fill fs-3"></i>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title">iPhone 12</h6>
+                              <div class="d-flex">
+                                <p class="card-text">Phnom Penh, Cambodia</p>
+                                &nbsp; &bull; &nbsp;
+                                <p class="card-text">ចូលទៅកាន់លើឧបករណ៍នេះ</p>
+                              </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 align-self-center">
+                              <button type="button" class="btn btn-danger"
+                                id="terminateBtn">បញ្ចប់ឧបករណ៍នេះ</button>
+                              <div
+                                class="toast-container position-fixed top-0 end-0 start-0 m-auto p-3">
+                                <div id="terminate-success"
+                                  class="toast bg-success-subtle text-success rounded-3 border border-success"
+                                  role="alert" aria-live="assertive" aria-atomic="true">
+                                  <div class="toast-body">
+                                    <i class="bi bi-check"></i>
+                                    <span>បញ្ចប់ឧបករណ៍នេះជោគជ័យ</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1759,5 +1823,17 @@
   <!-- aos link -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="../../js/script-folder.js"></script>
+
+  <script>
+  const toastTrigger = document.getElementById('terminateBtn')
+  const toastLiveExample = document.getElementById('terminate-success')
+
+  if (toastTrigger) {
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastTrigger.addEventListener('click', () => {
+      toastBootstrap.show()
+    })
+  }
+  </script>
 
 </html>
