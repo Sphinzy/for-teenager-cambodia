@@ -50,7 +50,7 @@ body[data-bs-theme="light"] .bg-card-theme {
     /* White in light mode */
     color: #212529 !important;
     /* Dark text */
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; */
     border: none !important;
 }
 
