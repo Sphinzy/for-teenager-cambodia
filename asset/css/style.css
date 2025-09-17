@@ -36,7 +36,7 @@ body[data-bs-theme="dark"] {
     /* Text color */
     --bs-card-bg: #212529;
     /* Card = dark like body */
-    --bs-card-color: #e6e6e6;
+    --bs-card-color: #fff;
     /* Card text = white */
 }
 
@@ -50,7 +50,7 @@ body[data-bs-theme="light"] .bg-card-theme {
     /* White in light mode */
     color: #212529 !important;
     /* Dark text */
-    /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
     border: none !important;
 }
 

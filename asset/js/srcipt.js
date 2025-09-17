@@ -17,7 +17,7 @@
         }
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
-    
+
 
     const setTheme = theme => {
         if (theme === 'auto') {
@@ -103,6 +103,7 @@ function setThemeCustom(theme) {
     localStorage.setItem("theme", theme);
 
     const logo = document.getElementById("logo");
+    const logo2 = document.getElementById("logo2");
 
     // Rotate both icons
     rotation += 180;
@@ -113,11 +114,12 @@ function setThemeCustom(theme) {
     if (theme === "light") {
         themeIcon.className = "bi bi-brightness-high-fill icon-animate";
         themeIcon2.className = "bi bi-brightness-high-fill icon-animate";
-        logo.src = "asset/image/project-logo/logo01.png";
+        logo2.src = "asset/image/project-logo/logo01.png";
     } else {
         themeIcon.className = "bi bi-moon-fill icon-animate";
         themeIcon2.className = "bi bi-moon-fill icon-animate";
         logo.src = "asset/image/project-logo/logo02.png";
+        logo2.src = "asset/image/project-logo/logo02.png";
     }
 }
 AOS.init();
