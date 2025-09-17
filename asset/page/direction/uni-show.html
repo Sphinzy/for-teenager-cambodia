@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>សាកលវិទ្យាល័យ</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/theme.css">
@@ -26,10 +26,10 @@
 </style>
 
 <body class="bg-body-theme" data-bs-theme="light">
-    <header class="sticky-top z-3">
+     <header class="sticky-top z-3">
         <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../us/home.html">
                     <img id="logo" src="../../image/project-logo/logo01.png" alt="Logo" style="width: 75px;">
                 </a>
                 <div class="d-flex">
@@ -52,7 +52,7 @@
                                 </i>
                             </a>
 
-                            <ul class="dropdown-menu ms-n20 border-0 shadow-sm">
+                            <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-card-theme">
                                 <li>
                                     <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
                                         style="width: 320px;">
@@ -151,7 +151,7 @@
                     <div class="offcanvas-body bg-body-theme align-items-center">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link px-3" aria-current="page" href="../home.html"><i
+                                <a class="nav-link px-3" aria-current="page" href="../us/home.html"><i
                                         class="bi bi-house-fill mx-1"></i>ទំព័រដើម</a>
                             </li>
                             <div class="dropdown">
@@ -161,7 +161,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
-                                    <li><a class="dropdown-item" href="#">មុខជំនាញ</a>
+                                    <li><a class="dropdown-item" href="major.html">មុខជំនាញ</a>
                                     </li>
                                     <li><a class="dropdown-item" href="university.html">សកលវិទ្យាល័យ</a></li>
                                 </ul>
@@ -187,11 +187,16 @@
 
                                 <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
                                     <li><a class="dropdown-item" href="../work/public-work.html">ការងាររដ្ឋ</a></li>
-                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងារឯកជន</a></li>
+                                    <li><a class="dropdown-item" href="../work/private-work.html">ការងារឯកជន</a></li>
                                     <li><a class="dropdown-item" href="../work/volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
                                     </li>
                                 </ul>
                             </div>
+                            <li class="nav-item">
+                                <a href="../us/event.html" class="nav-link px-3 ">
+                                    <i class="bi bi-calendar-event-fill me-1"></i>ព្រឹត្តិការណ៏
+                                </a>
+                            </li>
                         </ul>
 
                     </div>
@@ -206,7 +211,7 @@
                     <div class="dropdown">
                         <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <i class="bi bi-bell px-2 position-relative fs-5">
+                            <i class="bi bi-bell position-relative fs-5">
                                 <span
                                     class="position-absolute translate-middle bg-danger border border-light rounded-circle"
                                     style="left: 21px; padding: 4px; top: 1px;">
@@ -216,7 +221,7 @@
                             </i>
                         </a>
 
-                        <ul class="dropdown-menu ms-n20 border-0 shadow-sm">
+                        <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-card-theme">
                             <li>
                                 <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
                                     style="width: 320px;">
@@ -402,13 +407,13 @@
                 <h4 class="py-3" data-aos="fade-up">សកលវិទ្យាល័យ</h4>
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" data-aos="fade-up">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
-                            type="button" role="tab" aria-controls="pills-all"
+                        <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all"
                             aria-selected="false">សកលវិទ្យាល័យទាំងអស់</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                            type="button" role="tab" aria-controls="pills-home"
                             aria-selected="true">ព័ត៌មានវិទ្យា</button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -425,479 +430,502 @@
 
                 <div class="tab-content" id="pills-tabContent">
                     <!-- All Universities Tab -->
-                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
-                        tabindex="0">
-                        <div class="row g-3">
-                        <!-- rupp  -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="150">
-                                <a href="uni-detail.html" class="text-decoration-none ">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/rupp.jpg"
-                                                            class="card-img object-fit-cove uni-img" alt="">
+                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel"
+                        aria-labelledby="pills-all-tab" tabindex="0">
+                        <div class="row g-3 wrap-noti">
+                            <div class="notification-wrapper">
+                                <!-- rupp  -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="150">
+                                    <a href="uni-detail.html" class="text-decoration-none ">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/rupp.jpg"
+                                                                class="card-img object-fit-cove uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (Royal University of Phnom Penh
-                                                            - RUPP)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">ជាសាកលវិទ្យាល័យរដ្ឋធំជាងគេនៅកម្ពុជា។
-                                                            </li>
-                                                            <li class="clamp-1">មហាវិទ្យាល័យវិទ្យាសាស្ត្រកុំព្យូទ័រ
-                                                                មានជំនាញ ព័ត៌មានវិទ្យា (Computer Science), ស្ថិតិ
-                                                                (Statistics) និង វិស្វកម្មកុំព្យូទ័រ។</li>
-                                                            <li class="clamp-1">មានកម្មវិធីបរិញ្ញាបត្រ
-                                                                និងអនុបណ្ឌិតផងដែរ។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- puc  -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="200">
-                                <a href="uni-detail.html" class="text-decoration-none ">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/puc.jpg"
-                                                            class="card-img object-fit-cover uni-img" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យភ្នំពេញ (Paññāsāstra University of Cambodia -
-                                                            PUC)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">ជាសាកលវិទ្យាល័យឯកជន
-                                                                ដែលប្រើភាសាអង់គ្លេសជាមូលដ្ឋានក្នុងការសិក្សា។
-                                                            </li>
-                                                            <li class="clamp-1">ផ្តល់ជំនាញ Information Technology (IT),
-                                                                Computer Science, និង Management Information Systems
-                                                                (MIS)។</li>
-                                                            <li class="clamp-1">គោលការណ៍សិក្សាផ្អែកលើស្តង់ដារអន្តរជាតិ។
-                                                            </li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (Royal University of Phnom
+                                                                Penh
+                                                                - RUPP)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">ជាសាកលវិទ្យាល័យរដ្ឋធំជាងគេនៅកម្ពុជា។
+                                                                </li>
+                                                                <li class="clamp-1">មហាវិទ្យាល័យវិទ្យាសាស្ត្រកុំព្យូទ័រ
+                                                                    មានជំនាញ ព័ត៌មានវិទ្យា (Computer Science), ស្ថិតិ
+                                                                    (Statistics) និង វិស្វកម្មកុំព្យូទ័រ។</li>
+                                                                <li class="clamp-1">មានកម្មវិធីបរិញ្ញាបត្រ
+                                                                    និងអនុបណ្ឌិតផងដែរ។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- nu  -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="250">
-                                <a href="uni-detail.html" class="text-decoration-none ">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/nu.jpg"
-                                                            class="card-img object-fit-cover  uni-img" alt="">
+                                    </a>
+                                </div>
+                                <!-- puc  -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="200">
+                                    <a href="uni-detail.html" class="text-decoration-none ">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/puc.jpg"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យ Norton (Norton University - NU)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">ជាសាកលវិទ្យាល័យឯកជនដំបូងៗនៅកម្ពុជា។
-                                                            </li>
-                                                            <li class="clamp-1">មានមហាវិទ្យាល័យព័ត៌មានវិទ្យា ផ្តល់ជំនាញ
-                                                                IT, Software Engineering, Computer Networking។</li>
-                                                            <li class="clamp-1">
-                                                                ផ្តោតលើការបណ្តុះបណ្តាលជំនាញអនុវត្តន៍សម្រាប់ទីផ្សារការងារ។
-                                                            </li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- card  -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="300">
-                                <a href="uni-detail.html" class="text-decoration-none ">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/cadt.webp"
-                                                            class="card-img object-fit-cover   uni-img" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            វិទ្យាស្ថានជាតិប្រៃសណីយ៍ ទូរគមនាគមន៍ និងបច្ចេកវិទ្យា
-                                                            (NIPTICT)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">ជាវិទ្យាស្ថានជាតិ
-                                                                ដែលស្ថិតក្រោមក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍។
-                                                            </li>
-                                                            <li class="clamp-1">ផ្តោតលើ ICT, Telecommunications,
-                                                                E-Commerce, Digital Business, Cybersecurity។</li>
-                                                            <li class="clamp-1">មានវគ្គបណ្តុះបណ្តាលពិសេស
-                                                                និងសហការណ៍ជាមួយប្រទេសជិតខាង។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យភ្នំពេញ (Paññāsāstra University of Cambodia
+                                                                -
+                                                                PUC)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">ជាសាកលវិទ្យាល័យឯកជន
+                                                                    ដែលប្រើភាសាអង់គ្លេសជាមូលដ្ឋានក្នុងការសិក្សា។
+                                                                </li>
+                                                                <li class="clamp-1">ផ្តល់ជំនាញ Information Technology
+                                                                    (IT),
+                                                                    Computer Science, និង Management Information Systems
+                                                                    (MIS)។</li>
+                                                                <li class="clamp-1">
+                                                                    គោលការណ៍សិក្សាផ្អែកលើស្តង់ដារអន្តរជាតិ។
+                                                                </li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- University of Health Sciences -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="150">
-                                <a href="uni-detail.html" class="text-decoration-none">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/uhs.png"
-                                                            class="card-img object-fit-cover uni-img" alt="">
+                                    </a>
+                                </div>
+                                <!-- nu  -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="250">
+                                    <a href="uni-detail.html" class="text-decoration-none ">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/nu.jpg"
+                                                                class="card-img object-fit-cover  uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យវិទ្យាសាស្ត្រសុខភាព (University of Health
-                                                            Sciences - UHS)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">
-                                                                ជាសាកលវិទ្យាល័យរដ្ឋឯកទេសផ្នែកវេជ្ជសាស្ត្រធំបំផុតនៅកម្ពុជា។
-                                                            </li>
-                                                            <li class="clamp-1">មានមហាវិទ្យាល័យវេជ្ជសាស្ត្រ, ទន្តពេទ្យ,
-                                                                ឱសថសាស្ត្រ, សុខាភិបាលសាធារណៈ។</li>
-                                                            <li class="clamp-1">ផ្តល់បរិញ្ញាបត្រ, អនុបណ្ឌិត និងបណ្ឌិត។
-                                                            </li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យ Norton (Norton University - NU)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">ជាសាកលវិទ្យាល័យឯកជនដំបូងៗនៅកម្ពុជា។
+                                                                </li>
+                                                                <li class="clamp-1">មានមហាវិទ្យាល័យព័ត៌មានវិទ្យា
+                                                                    ផ្តល់ជំនាញ
+                                                                    IT, Software Engineering, Computer Networking។</li>
+                                                                <li class="clamp-1">
+                                                                    ផ្តោតលើការបណ្តុះបណ្តាលជំនាញអនុវត្តន៍សម្រាប់ទីផ្សារការងារ។
+                                                                </li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
+                                <!-- card  -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="300">
+                                    <a href="uni-detail.html" class="text-decoration-none ">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/cadt.webp"
+                                                                class="card-img object-fit-cover   uni-img" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                វិទ្យាស្ថានជាតិប្រៃសណីយ៍ ទូរគមនាគមន៍ និងបច្ចេកវិទ្យា
+                                                                (NIPTICT)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">ជាវិទ្យាស្ថានជាតិ
+                                                                    ដែលស្ថិតក្រោមក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍។
+                                                                </li>
+                                                                <li class="clamp-1">ផ្តោតលើ ICT, Telecommunications,
+                                                                    E-Commerce, Digital Business, Cybersecurity។</li>
+                                                                <li class="clamp-1">មានវគ្គបណ្តុះបណ្តាលពិសេស
+                                                                    និងសហការណ៍ជាមួយប្រទេសជិតខាង។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- University of Health Sciences -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="150">
+                                    <a href="uni-detail.html" class="text-decoration-none">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/uhs.png"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យវិទ្យាសាស្ត្រសុខភាព (University of Health
+                                                                Sciences - UHS)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">
+                                                                    ជាសាកលវិទ្យាល័យរដ្ឋឯកទេសផ្នែកវេជ្ជសាស្ត្រធំបំផុតនៅកម្ពុជា។
+                                                                </li>
+                                                                <li class="clamp-1">មានមហាវិទ្យាល័យវេជ្ជសាស្ត្រ,
+                                                                    ទន្តពេទ្យ,
+                                                                    ឱសថសាស្ត្រ, សុខាភិបាលសាធារណៈ។</li>
+                                                                <li class="clamp-1">ផ្តល់បរិញ្ញាបត្រ, អនុបណ្ឌិត
+                                                                    និងបណ្ឌិត។
+                                                                </li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
 
-                            <!-- University of Puthisastra -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="200">
-                                <a href="uni-detail.html" class="text-decoration-none">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/uop.jpg"
-                                                            class="card-img object-fit-cover uni-img" alt="">
+                                <!-- University of Puthisastra -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="200">
+                                    <a href="uni-detail.html" class="text-decoration-none">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/uop.jpg"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យអន្តរជាតិអាស៊ីសុខាភិបាល (University of
-                                                            Puthisastra - UP)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">ផ្តល់ជំនាញ វេជ្ជសាស្ត្រ, ទន្តពេទ្យ,
-                                                                ឱសថសាស្ត្រ, Nursing និង Laboratory Sciences។</li>
-                                                            <li class="clamp-1">មានមជ្ឈមណ្ឌលគ្លីនិកសាកល្បង
-                                                                និងប្រើភាសាអង់គ្លេសក្នុងការបង្រៀន។</li>
-                                                            <li class="clamp-1">
-                                                                សហការណ៍ជាមួយសាកលវិទ្យាល័យអន្តរជាតិជាច្រើន។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យអន្តរជាតិអាស៊ីសុខាភិបាល (University of
+                                                                Puthisastra - UP)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">ផ្តល់ជំនាញ វេជ្ជសាស្ត្រ, ទន្តពេទ្យ,
+                                                                    ឱសថសាស្ត្រ, Nursing និង Laboratory Sciences។</li>
+                                                                <li class="clamp-1">មានមជ្ឈមណ្ឌលគ្លីនិកសាកល្បង
+                                                                    និងប្រើភាសាអង់គ្លេសក្នុងការបង្រៀន។</li>
+                                                                <li class="clamp-1">
+                                                                    សហការណ៍ជាមួយសាកលវិទ្យាល័យអន្តរជាតិជាច្រើន។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
 
-                            <!-- Western University -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="250">
-                                <a href="uni-detail.html" class="text-decoration-none">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/western.png"
-                                                            class="card-img object-fit-cover uni-img" alt="">
+                                <!-- Western University -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="250">
+                                    <a href="uni-detail.html" class="text-decoration-none">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/western.png"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យ Western (Western University)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">មានមហាវិទ្យាល័យ វេជ្ជសាស្ត្រ, ទន្តពេទ្យ,
-                                                                ឱសថសាស្ត្រ និងសុខាភិបាលសាធារណៈ។</li>
-                                                            <li class="clamp-1">
-                                                                ផ្តោតលើការបណ្តុះបណ្តាលសម្រាប់ទីផ្សារការងារក្នុង
-                                                                និងក្រៅប្រទេស។</li>
-                                                            <li class="clamp-1">មានគ្រូបង្រៀនជំនាញ
-                                                                និងកម្មវិធីអនុវត្តន៍ពេញលេញ។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យ Western (Western University)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">មានមហាវិទ្យាល័យ វេជ្ជសាស្ត្រ,
+                                                                    ទន្តពេទ្យ,
+                                                                    ឱសថសាស្ត្រ និងសុខាភិបាលសាធារណៈ។</li>
+                                                                <li class="clamp-1">
+                                                                    ផ្តោតលើការបណ្តុះបណ្តាលសម្រាប់ទីផ្សារការងារក្នុង
+                                                                    និងក្រៅប្រទេស។</li>
+                                                                <li class="clamp-1">មានគ្រូបង្រៀនជំនាញ
+                                                                    និងកម្មវិធីអនុវត្តន៍ពេញលេញ។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
 
-                            <!-- Norton University - Faculty of Health Sciences -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="150">
-                                <a href="uni-detail.html" class="text-decoration-none">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/nu.jpg"
-                                                            class="card-img object-fit-cover uni-img" alt="">
+                                <!-- Norton University - Faculty of Health Sciences -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="150">
+                                    <a href="uni-detail.html" class="text-decoration-none">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/nu.jpg"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យ Norton (Faculty of Health Sciences)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">មានមហាវិទ្យាល័យសុខភាពផ្តល់ជំនាញ Public
-                                                                Health, Nursing និង Medical Laboratory Technology។</li>
-                                                            <li class="clamp-1">
-                                                                បណ្តុះបណ្តាលសិស្សឲ្យមានជំនាញប្រកបដោយអនុវត្តន៍។</li>
-                                                            <li class="clamp-1">សហការណ៍ជាមួយមន្ទីរពេទ្យ
-                                                                និងអង្គការសុខភាព។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- RUPP -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="200">
-                                <a href="uni-detail.html" class="text-decoration-none">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/rupp.jpg"
-                                                            class="card-img object-fit-cover uni-img" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (Royal University of Phnom Penh
-                                                            - RUPP)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">មានមហាវិទ្យាល័យវិទ្យាសាស្ត្រធម្មជាតិ។
-                                                            </li>
-                                                            <li class="clamp-1">ផ្តល់ជំនាញ ជីវវិទ្យា (Biology), ជីវគីមី
-                                                                (Biochemistry), ជីវបច្ចេកវិទ្យា (Biotechnology)។</li>
-                                                            <li class="clamp-1">មានកម្មវិធីបរិញ្ញាបត្រ
-                                                                និងអនុបណ្ឌិតផងដែរ។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យ Norton (Faculty of Health Sciences)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">មានមហាវិទ្យាល័យសុខភាពផ្តល់ជំនាញ
+                                                                    Public
+                                                                    Health, Nursing និង Medical Laboratory Technology។
+                                                                </li>
+                                                                <li class="clamp-1">
+                                                                    បណ្តុះបណ្តាលសិស្សឲ្យមានជំនាញប្រកបដោយអនុវត្តន៍។</li>
+                                                                <li class="clamp-1">សហការណ៍ជាមួយមន្ទីរពេទ្យ
+                                                                    និងអង្គការសុខភាព។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
+                                <!-- RUPP -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="200">
+                                    <a href="uni-detail.html" class="text-decoration-none">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/rupp.jpg"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (Royal University of Phnom
+                                                                Penh
+                                                                - RUPP)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">
+                                                                    មានមហាវិទ្យាល័យវិទ្យាសាស្ត្រធម្មជាតិ។
+                                                                </li>
+                                                                <li class="clamp-1">ផ្តល់ជំនាញ ជីវវិទ្យា (Biology),
+                                                                    ជីវគីមី
+                                                                    (Biochemistry), ជីវបច្ចេកវិទ្យា (Biotechnology)។
+                                                                </li>
+                                                                <li class="clamp-1">មានកម្មវិធីបរិញ្ញាបត្រ
+                                                                    និងអនុបណ្ឌិតផងដែរ។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
 
-                            <!-- UHS -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="250">
-                                <a href="uni-detail.html" class="text-decoration-none">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/uhs.png"
-                                                            class="card-img object-fit-cover uni-img" alt="">
+                                <!-- UHS -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="250">
+                                    <a href="uni-detail.html" class="text-decoration-none">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/uhs.png"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យវិទ្យាសាស្ត្រសុខភាព (University of Health
-                                                            Sciences - UHS)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">ក្រៅពីវេជ្ជសាស្ត្រ
-                                                                ក៏មានជំនាញជីវវិទ្យាពាក់ព័ន្ធសុខភាព។</li>
-                                                            <li class="clamp-1">ផ្តោតលើ Human Biology, Molecular
-                                                                Biology, Immunology។</li>
-                                                            <li class="clamp-1">មានវគ្គស្រាវជ្រាវ
-                                                                និងបណ្តុះបណ្តាលកម្រិតខ្ពស់។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យវិទ្យាសាស្ត្រសុខភាព (University of Health
+                                                                Sciences - UHS)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">ក្រៅពីវេជ្ជសាស្ត្រ
+                                                                    ក៏មានជំនាញជីវវិទ្យាពាក់ព័ន្ធសុខភាព។</li>
+                                                                <li class="clamp-1">ផ្តោតលើ Human Biology, Molecular
+                                                                    Biology, Immunology។</li>
+                                                                <li class="clamp-1">មានវគ្គស្រាវជ្រាវ
+                                                                    និងបណ្តុះបណ្តាលកម្រិតខ្ពស់។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
 
-                            <!-- University of Puthisastra -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="300">
-                                <a href="uni-detail.html" class="text-decoration-none">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/uop.jpg"
-                                                            class="card-img object-fit-cover uni-img" alt="">
+                                <!-- University of Puthisastra -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="300">
+                                    <a href="uni-detail.html" class="text-decoration-none">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/uop.jpg"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យអន្តរជាតិអាស៊ីសុខាភិបាល (University of
-                                                            Puthisastra - UP)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">មានជំនាញ Biomedical Sciences និង
-                                                                Laboratory Sciences។</li>
-                                                            <li class="clamp-1">ផ្តោតលើការសិក្សា
-                                                                និងអនុវត្តជីវវិទ្យាផ្នែកសុខភាព។</li>
-                                                            <li class="clamp-1">
-                                                                ប្រើភាសាអង់គ្លេសជាមូលដ្ឋានក្នុងការបង្រៀន។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យអន្តរជាតិអាស៊ីសុខាភិបាល (University of
+                                                                Puthisastra - UP)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">មានជំនាញ Biomedical Sciences និង
+                                                                    Laboratory Sciences។</li>
+                                                                <li class="clamp-1">ផ្តោតលើការសិក្សា
+                                                                    និងអនុវត្តជីវវិទ្យាផ្នែកសុខភាព។</li>
+                                                                <li class="clamp-1">
+                                                                    ប្រើភាសាអង់គ្លេសជាមូលដ្ឋានក្នុងការបង្រៀន។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
 
-                            <!-- Norton University -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="350">
-                                <a href="uni-detail.html" class="text-decoration-none">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/nu.jpg"
-                                                            class="card-img object-fit-cover uni-img" alt="">
+                                <!-- Norton University -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="350">
+                                    <a href="uni-detail.html" class="text-decoration-none">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/nu.jpg"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            សាកលវិទ្យាល័យ Norton (Norton University - NU)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">មាន Faculty of Science ដែលបង្រៀន Biology
-                                                                និង Environmental Science។</li>
-                                                            <li class="clamp-1">ផ្តោតលើការសិក្សា
-                                                                និងការស្រាវជ្រាវផ្នែកជីវវិទ្យា។</li>
-                                                            <li class="clamp-1">ផ្តល់បរិញ្ញាបត្រ
-                                                                និងវគ្គបណ្តុះបណ្តាលពិសេស។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                សាកលវិទ្យាល័យ Norton (Norton University - NU)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">មាន Faculty of Science ដែលបង្រៀន
+                                                                    Biology
+                                                                    និង Environmental Science។</li>
+                                                                <li class="clamp-1">ផ្តោតលើការសិក្សា
+                                                                    និងការស្រាវជ្រាវផ្នែកជីវវិទ្យា។</li>
+                                                                <li class="clamp-1">ផ្តល់បរិញ្ញាបត្រ
+                                                                    និងវគ្គបណ្តុះបណ្តាលពិសេស។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
 
-                            <!-- ITC -->
-                            <div class="col-lg-12" data-aos="fade-right" data-aos-delay="600">
-                                <a href="uni-detail.html" class="text-decoration-none">
-                                    <div class="card border-0 bg-card-theme shadow-sm">
-                                        <div class="card-body">
-                                            <div class="row g-4">
-                                                <div class="col-md-4">
-                                                    <div class="card border-0">
-                                                        <img src="../../image/university/itc.webp"
-                                                            class="card-img object-fit-cover uni-img" alt="">
+                                <!-- ITC -->
+                                <div class="col-lg-12" data-aos="fade-right" data-aos-delay="600">
+                                    <a href="uni-detail.html" class="text-decoration-none">
+                                        <div class="card border-0 bg-card-theme shadow-sm mb-3">
+                                            <div class="card-body">
+                                                <div class="row g-4">
+                                                    <div class="col-md-4">
+                                                        <div class="card border-0">
+                                                            <img src="../../image/university/itc.webp"
+                                                                class="card-img object-fit-cover uni-img" alt="">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card p-3 border-0 bg-card-theme">
-                                                        <h4 class="card-title clamp-1 my-2">
-                                                            វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា (Institute of Technology of
-                                                            Cambodia - ITC)
-                                                        </h4>
-                                                        <ul>
-                                                            <li class="clamp-1">មានជំនាញ Biotechnology, Food Science and
-                                                                Technology, Environmental Biology។</li>
-                                                            <li class="clamp-1">ផ្តោតលើជីវវិទ្យាបច្ចេកវិទ្យា
-                                                                និងអនុវត្តក្នុងឧស្សាហកម្ម។</li>
-                                                            <li class="clamp-1">សហការណ៍ជាមួយសាកលវិទ្យាល័យអន្តរជាតិ
-                                                                និងវិស័យឧស្សាហកម្ម។</li>
-                                                        </ul>
-                                                        <span class="text-end d-block">មើលបន្ថែម <i
-                                                                class="bi bi-arrow-right-short"></i></span>
+                                                    <div class="col-md-8">
+                                                        <div class="card p-3 border-0 bg-card-theme">
+                                                            <h4 class="card-title clamp-1 my-2">
+                                                                វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា (Institute of Technology
+                                                                of
+                                                                Cambodia - ITC)
+                                                            </h4>
+                                                            <ul>
+                                                                <li class="clamp-1">មានជំនាញ Biotechnology, Food Science
+                                                                    and
+                                                                    Technology, Environmental Biology។</li>
+                                                                <li class="clamp-1">ផ្តោតលើជីវវិទ្យាបច្ចេកវិទ្យា
+                                                                    និងអនុវត្តក្នុងឧស្សាហកម្ម។</li>
+                                                                <li class="clamp-1">សហការណ៍ជាមួយសាកលវិទ្យាល័យអន្តរជាតិ
+                                                                    និងវិស័យឧស្សាហកម្ម។</li>
+                                                            </ul>
+                                                            <span class="text-end d-block">មើលបន្ថែម <i
+                                                                    class="bi bi-arrow-right-short"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="see-more-btn w-100 my-4">
+                                <input type="checkbox" name="see-more"
+                                    class="btn btn-outline-dark-blue w-100 py-3 see-more">
                             </div>
                         </div>
                     </div>
 
-                    <div class="tab-pane fade show" id="pills-home" role="tabpanel"
-                        aria-labelledby="pills-home-tab" tabindex="0">
+                    <div class="tab-pane fade show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                        tabindex="0">
                         <div class="row g-3">
                             <!-- rupp  -->
                             <div class="col-lg-12" data-aos="fade-right" data-aos-delay="150">
@@ -1422,22 +1450,20 @@
         </section>
     </main>
 
-    <footer class="bg-footer ">
+    <footer class="bg-footer">
         <div class="container py-5">
             <div class="row text-white">
                 <div class="col-11 col-lg-5 col-xl-4">
                     <a class="navbar-brand" href="#">
-                        <img src="../../image/project-logo/logo02.png" alt="Logo" style="width: 75px;">
+                        <img src="../../image/project-logo/logo02.png" alt="Logo" style="width: 75px" />
                     </a>
                     <p class="footer-text clamp-3">
                         "ប្រធានបទ “សម្រាប់យុវជនកម្ពុជា” ត្រូវបានជ្រើសរើស
                         ដោយសារនិស្សិតបរិញ្ញាបត្រកើនឡើង
-                        ប៉ុន្តែមានបញ្ហាក្នុងការជ្រើសរើសជំនាញ។
-                        ដើម្បីដោះស្រាយ បញ្ហានេះ
-                        គេបង្កើតគេហទំព័រមួយដែលអាចប្រើប្រាស់បានលើ Browser
-                        និងទូរស័ព្ទចល័ត។
-                        គេហទំព័រនេះផ្តល់ព័ត៌មានអំពីមុខជំនាញ
-                        វិស័យការងារ សាកលវិទ្យា អាហារូបករណ៍ និងឱកាសការងារ
+                        ប៉ុន្តែមានបញ្ហាក្នុងការជ្រើសរើសជំនាញ។ ដើម្បីដោះស្រាយ បញ្ហានេះ
+                        គេបង្កើតគេហទំព័រមួយដែលអាចប្រើប្រាស់បានលើ Browser និងទូរស័ព្ទចល័ត។
+                        គេហទំព័រនេះផ្តល់ព័ត៌មានអំពីមុខជំនាញ វិស័យការងារ សាកលវិទ្យា
+                        អាហារូបករណ៍ និងឱកាសការងារ
                         ដើម្បីជួយសិស្សសម្រេចចិត្តជ្រើសរើសជំនាញដែលខ្លួនចូលចិត្ត
                         និងរកការងារផ្ទាល់ខ្លួនបន្ទាប់ពីបញ្ចប់ការសិក្សា។"
                     </p>
@@ -1451,16 +1477,16 @@
                     <ul class="navbar-nav">
                         <h5 class="nav-title fw-bold">ព័ត៌មានអំពីយើង</h5>
                         <li class="nav-item">
-                            <a href="../about.html" class="nav-link text-white">អំពីយើង</a>
+                            <a href="../us/about.html" class="nav-link text-white">អំពីយើង</a>
                         </li>
                         <li class="nav-item">
-                            <a href="../contact.html" class="nav-link text-white">ទំទាក់ទំទងមកយើង</a>
+                            <a href="../us/contact.html" class="nav-link text-white">ទំទាក់ទំទងមកយើង</a>
                         </li>
                         <li class="nav-item">
                             <a href="../direction/major.html" class="nav-link text-white">ការតម្រង់ទិស</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-white">ព្រឹត្តិការណ៏</a>
+                            <a href="../us/event.html" class="nav-link text-white">ព្រឹត្តិការណ៏</a>
                         </li>
                     </ul>
                 </div>
@@ -1487,32 +1513,35 @@
                         <h5 class="nav-title fw-bold">អាស័យដ្ឋានរបស់យើង</h5>
                         <li class="nav-item">
                             <a href="https://www.google.com/maps/search/%2386B,+Street+313+corner+606,+Sangkat+Boeungk%C3%A2k+2,+Khan+Toulkok,+Phnom+Penh/@11.5659433,104.8975444,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D"
-                                class="nav-link text-white">#86B, Street 313
-                                corner 606, Sangkat Boeungkâk 2, Khan
-                                Toulkok, Phnom Penh</a>
+                                class="nav-link text-white">#86B, ផ្លូវលេខ 313 កែង 606, សង្កាត់ បឹងកក់ ២, ខណ្ឌ
+                                ទួលគោក, ភ្នំពេញ</a>
                         </li>
                         <li class="nav-item">
-                            <p class="nav-link text-white">Email: <a href="mailto:freeteenagercambodia@gmail.com"
-                                    class="text-decoration-none text-white">freeteenagercambodia@gmail.com</a></p>
+                            <p class="nav-link text-white">
+                                Email:
+                                <a href="mailto:freeteenagercambodia@gmail.com"
+                                    class="text-decoration-none text-white">freeteenagercambodia@gmail.com</a>
+                            </p>
                         </li>
                         <li class="nav-item">
-                            <p class="nav-link text-white">លេខទូរស័ព្ទ: <a
-                                    class="fw-bold text-decoration-none text-white" href="tel:+11234567890">(+885) 456
-                                    7890</a></p>
+                            <p class="nav-link text-white">
+                                លេខទូរស័ព្ទ:
+                                <a class="fw-bold text-decoration-none text-white" href="tel:+11234567890">(+885) 456
+                                    7890</a>
+                            </p>
                         </li>
                         <li class="nav-link">
                             <a href="#" class="nav-item"><img src="assets/image/app1 (1).png" class="img-fluid img-app"
-                                    alt></a>
+                                    alt="" /></a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <hr class="text-white py-1">
+            <hr class="text-white py-1" />
             <div class="row">
                 <div class="col-12 footer-copyright d-flex justify-content-between">
-                    <p class="text-white">&copy; រក្សាសិទ្ធិដោយ: FTC
-                        2025</p>
+                    <p class="text-white">&copy; រក្សាសិទ្ធិដោយ: FTC 2025</p>
                 </div>
             </div>
         </div>
