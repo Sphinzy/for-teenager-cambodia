@@ -352,7 +352,14 @@ body[data-bs-theme="dark"] .btn-gunmetal:hover {
             /* Slide to correct position */
         }
 }
-
+/* Enable dropdown on hover for large screens */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        /* remove the gap */
+    }
+}
 
 .swiper {
     width: 100%;
