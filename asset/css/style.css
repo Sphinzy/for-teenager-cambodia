@@ -41,7 +41,7 @@ body[data-bs-theme="dark"] {
 }
 
 /* Custom theme for cards */
-body[data-bs-theme="light"] .bg-card-theme {
+body[data-bs-theme="light"] .bg-card-theme , body[data-bs-theme="light"] .form-control{
     background-color: #ffffff !important;
     /* White in light mode */
     color: #212529 !important;
@@ -54,7 +54,7 @@ body[data-bs-theme="light"] .bg-card-theme {
     border: none !important;
 }
 
-body[data-bs-theme="dark"] .bg-card-theme {
+body[data-bs-theme="dark"] .bg-card-theme, body[data-bs-theme="dark"] .form-control {
     background-color: #343a40 !important;
     /* Dark in dark mode */
     color: #e6e6e6 !important;
@@ -495,4 +495,7 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before 
     max-width: 300px;
     margin: 1rem auto 0;
     /* Top margin, center horizontally */
+}
+.form-control{
+
 }

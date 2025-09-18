@@ -375,6 +375,16 @@
     </div>
 
     <main>
+        <!-- success modal  -->
+        <section>
+            <div class="modal fade" id="topModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content border-0  shadow p-4 bg-success text-white text-center">
+                        <i class="bi bi-check2-circle" style="font-size: 3rem;"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="py-10">
             <div class="container">
                 <div class="row g-3">
@@ -804,7 +814,7 @@
                             <div class="col-12">
                                 <textarea class="form-control mt-3" placeholder="បញ្ចេញមតិរបស់អ្នក" name=""
                                     id=""></textarea>
-                                <button class="btn bg-footer text-white mt-3" type="button">បញ្ចេញមតិ</button>
+                                <button class="btn bg-footer text-white mt-3" type="button" data-bs-toggle="modal" data-bs-target="#topModal">បញ្ចេញមតិ</button>
                             </div>
                         </div>
 
