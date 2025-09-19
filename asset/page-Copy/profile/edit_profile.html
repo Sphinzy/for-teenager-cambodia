@@ -152,6 +152,127 @@
             </div>
           </div>
         </div>
+        <!--* add skill -->
+        <div class="modal fade" id="add-skill" tabindex="-1" aria-labelledby="add-skill "
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addSkill">បន្ថែមជំនាញ និងមុខវិជ្ជាសិក្សា</h1>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action>
+                  <div class="mb-3">
+                    <label for="input-skill" class="form-label">បន្ថែមជំនាញ
+                      និងមុខវិជ្ជាសិក្សា</label>
+                    <input type="text" class="form-control shadow-none border border-dark"
+                      id="input-skill"
+                      aria-describedby="add-skill">
+                  </div>
+                  <button type="submit" class="btn btn-dark-blue d-block ms-auto">បន្ថែម</button>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <!--* add works -->
+        <div class="modal fade" id="add-work" tabindex="-1" aria-labelledby="add-work "
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addWork">បន្ថែមស្នាដែ</h1>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="custom-file-wrapper small-file">
+                  <input type="file" class="custom-file-input" id="smallFile">
+                  <label for="smallFile" class="custom-file-label">
+                    <div class="file-icon">
+                      <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="file-text">
+                      <h5>Add File</h5>
+                      <p>Compact version</p>
+                    </div>
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-dark-blue d-block ms-auto"
+                  data-bs-dismiss="modal">បន្ថែម</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--* add course -->
+        <div class="modal fade" id="add-course" tabindex="-1" aria-labelledby="add-course "
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addCourse">បន្ថែមវគ្គសិក្សា</h1>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action>
+                  <div class="custom-file-wrapper small-file">
+                    <input type="file" class="custom-file-input" id="smallFile">
+                    <label for="smallFile" class="custom-file-label">
+                      <div class="file-icon">
+                        <i class="fa fa-plus"></i>
+                      </div>
+                      <div class="file-text">
+                        <h5>Add File</h5>
+                        <p>Compact version</p>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="mb-3">
+                    <label for="title" class="form-label">ជំនាញឬមុខវិជ្ជា</label>
+                    <input type="ext" class="form-control border-dark shadow-none" id="title"
+                      aria-describedby="title">
+                  </div>
+                </form>
+                <button type="submit" class="btn btn-dark-blue d-block ms-auto"
+                  data-bs-dismiss="modal">បន្ថែម</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--* add education -->
+        <div class="modal fade" id="add-education" tabindex="-1" aria-labelledby="add-education "
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addEducation">បន្ថែមបទពិសោធន៍</h1>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action>
+
+                  <div class="mb-3">
+                    <label for="date" class="form-label">បទពិសោធន៍</label>
+                    <input type="text" class="form-control border-dark shadow-none" id="experience"
+                      aria-describedby="title">
+                  </div>
+                  <div class="mb-3">
+                    <label for="date" class="form-label">កាលបរិច្ឆេទ</label>
+                    <input type="date" class="form-control border-dark shadow-none" id="date"
+                      aria-describedby="title">
+                  </div>
+                </form>
+                <button type="submit" class="btn btn-dark-blue d-block ms-auto"
+                  data-bs-dismiss="modal">បន្ថែម</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!--* desktop -->
@@ -162,7 +283,7 @@
               class="btn border border-2 border-secondary rounded-circle p-2 shadow-none btn-close my-10 ms-2"
               target="_self"></a>
           </div>
-          <div class="bg-card-theme bg-card-theme p-3 shadow overflow-hidden" style="height: 70vh;">
+          <div class="bg-card-theme p-3 shadow overflow-hidden" style="height: 70vh;">
             <div class="row h-100 pb-5">
               <h3 class="fw-semibold mb-3">ការកំណត់</h3>
               <div class="col-4 h-100">
