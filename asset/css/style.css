@@ -36,12 +36,12 @@ body[data-bs-theme="dark"] {
     /* Text color */
     --bs-card-bg: #212529;
     /* Card = dark like body */
-    --bs-card-color: #e6e6e6;
+    --bs-card-color: #fff;
     /* Card text = white */
 }
 
 /* Custom theme for cards */
-body[data-bs-theme="light"] .bg-card-theme {
+body[data-bs-theme="light"] .bg-card-theme , body[data-bs-theme="light"] .form-control{
     background-color: #ffffff !important;
     /* White in light mode */
     color: #212529 !important;
@@ -50,11 +50,11 @@ body[data-bs-theme="light"] .bg-card-theme {
     /* White in light mode */
     color: #212529 !important;
     /* Dark text */
-    /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
     border: none !important;
 }
 
-body[data-bs-theme="dark"] .bg-card-theme {
+body[data-bs-theme="dark"] .bg-card-theme, body[data-bs-theme="dark"] .form-control {
     background-color: #343a40 !important;
     /* Dark in dark mode */
     color: #e6e6e6 !important;
@@ -352,7 +352,14 @@ body[data-bs-theme="dark"] .btn-gunmetal:hover {
             /* Slide to correct position */
         }
 }
-
+/* Enable dropdown on hover for large screens */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        /* remove the gap */
+    }
+}
 
 .swiper {
     width: 100%;
@@ -490,4 +497,12 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before 
     background-color: transparent !important;
     box-shadow: none !important;
     color: #1d263e !important;
+}
+.modal-dialog.modal-sm {
+    max-width: 300px;
+    margin: 1rem auto 0;
+    /* Top margin, center horizontally */
+}
+.form-control{
+
 }

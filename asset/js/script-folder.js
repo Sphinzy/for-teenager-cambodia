@@ -124,3 +124,11 @@ AOS.init({
     duration: 800, // animation duration
     once: true // animate only once when scrolling
 });
+
+const topModal = document.getElementById('topModal');
+topModal.addEventListener('shown.bs.modal', () => {
+    setTimeout(() => {
+        const modalInstance = bootstrap.Modal.getInstance(topModal);
+        modalInstance.hide();
+    }, 300); // 2000ms = 2 seconds
+});

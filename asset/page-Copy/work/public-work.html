@@ -12,7 +12,6 @@
     <link rel="icon" type="image/png" href="../../image/project-logo/logo01.png" media="(prefers-color-scheme: light)">
     
     <!-- Dark mode favicon -->
-    <link rel="icon" type="image/png" href="../../image/project-logo/logo02.png" media="(prefers-color-scheme: dark)">
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -57,8 +56,8 @@
     <header class="sticky-top z-3">
         <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
             <div class="container">
-                <a class="navbar-brand" href="../us/home.html">
-                    <img id="logo" src="../../image/project-logo/logo01.png" alt="Logo" style="width: 75px;">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" src="asset/image/project-logo/logo01.png" alt="Logo" style="width: 75px" />
                 </a>
                 <div class="d-flex">
                     <!-- profile lg-none  -->
@@ -66,100 +65,19 @@
                         <button id="themeToggle" class="theme-toggle border-0 px-3 bg-transparent">
                             <i id="themeIcon" class="bi bi-brightness-high-fill icon-animate"></i>
                         </button>
-                        <!-- notification  -->
-                        <div class="dropdown">
-                            <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="bi bi-bell px-2 position-relative fs-5">
-                                    <span
-                                        class="position-absolute translate-middle bg-danger border border-light rounded-circle"
-                                        style="left: 21px; padding: 3px; top: 1px;">
-                                        <span class="visually-hidden">New
-                                            alerts</span>
-                                    </span>
-                                </i>
-                            </a>
-
-                            <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-card-theme">
-                                <li>
-                                    <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
-                                        style="width: 320px;">
-                                        <div class="p-2">
-                                            <h5>សារជូនដំណឹង</h5>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- list notification  -->
-                                <li>
-                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="../../image/project-logo/pf-2.svg"
-                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt>
-                                        <div class="notification">
-                                            <p class="text clamp-2">
-                                                ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
-                                            </p>
-                                        </div>
-                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="../../image/project-logo/pf-3.jpg"
-                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt>
-                                        <div class="notification">
-                                            <p class="text clamp-2">
-                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
-                                            </p>
-                                        </div>
-                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                        <img src="../../image/project-logo/pf-1.png"
-                                            class="img-fluid rounded-circle me-3" style="width: 50px; height: 50px;"
-                                            alt>
-                                        <div class="notification">
-                                            <p class="text clamp-2">
-                                                អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
-                                            </p>
-                                        </div>
-                                        <i class="bi bi-dot text-danger display-6 mt-n2"></i>
-                                    </a>
-                                </li>
-                                <div>
-                                    <a href="../profile/notification.html"
-                                        class="nav-link text-end text-primary p-2 pe-4">See
-                                        all</a>
-                                </div>
-                            </ul>
-                        </div>
-                        <!-- profile  -->
-                        <div class="dropdown">
-                            <a class="nav-link px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../../image/project-logo/profile-img.jpg" class="img-fluid rounded-circle object-fit-cover"
-                                    style="width: 40px; height: 40px;" alt />
-                            </a>
-                        
-                            <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
-                                <li><a class="dropdown-item" href="../profile/proflie.html"><i
-                                            class="bi bi-person-circle me-2"></i>មើលប្រវត្តិរូប</a></li>
-                                <li><a class="dropdown-item" href="../profile/edit_profile.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a>
-                                </li>
-                                <li><a class="dropdown-item" href="../profile/favorite.html"><i class="bi bi-bookmark me-2"></i>រក្សាទុក</a>
-                                </li>
-                                <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#logoutModal"><i
-                                            class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
-                            </ul>
-                        </div>
+                        <a href="/asset/page/login/login.html" class="text-white text-decoration-none d-none d-md-block">
+                            <button class="btn btn-dark-blue ">
+                                ចូលគណនី
+                            </button>
+                        </a>
+                        <a href="/asset/page/login/register.html" class="ps-2 text-white text-decoration-none d-none d-md-block">
+                            <button class="btn btn-outline-dark-blue">
+                                បង្កើតគណនី
+                            </button>
+                        </a>
                     </div>
                     <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                        aria-label="Toggle navigation">
-
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
@@ -167,68 +85,66 @@
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <div class="d-flex justify-content-end align-items-center d-flex d-lg-none" role="search">
-                            <!-- profile  -->
-                            <div class="profile">
-                                <a href="../profile/proflie.html">
-                                    <img src="../../image/project-logo/profile-img.jpg"
-                                        class="img-fluid rounded-circle object-fit-cover"
-                                        style="width: 40px; height: 40px;" alt />
-                                </a>
-                            </div>
-                            <h5 class="pt-3 ps-2">សួស្តី!​​ តុលា</h5>
-                        </div>
-
                         <h5 class="offcanvas-title bg-body-theme" id="offcanvasNavbarLabel">
-                            <a class="navbar-brand" href="#"><img src="assets/image/logo.png" class="img-fluid"
-                                    style="width: 60px" alt /></a>
+                            <a class="navbar-brand" href="#"><img src="../../image/project-logo/logo01.png" id="logo2"
+                                    class="img-fluid" style="width: 60px" alt /></a>
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-
+    
                     <div class="offcanvas-body bg-body-theme align-items-center">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link px-3" aria-current="page" href="../us/home.html"><i
+                                <a class="nav-link px-3" aria-current="page" href="../../../index.html"><i
                                         class="bi bi-house-fill mx-1"></i>ទំព័រដើម</a>
                             </li>
                             <div class="dropdown">
-                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     <i class="bi bi-lightbulb-fill mx-1"></i>តម្រង់ទិស
                                 </a>
-
-                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
-                                    <li><a class="dropdown-item" href="../direction/major.html">មុខជំនាញ</a>
+    
+                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme" data-bs-theme="light">
+                                    <li>
+                                        <a class="dropdown-item" href="../direction/major.html">មុខជំនាញ</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="../direction/university.html">សាកលវិទ្យាល័យ</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="../direction/university.html">សកលវិទ្យាល័យ</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="dropdown">
-                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link px-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     <i class="bi bi-mortarboard-fill mx-1"></i>អាហារូបករណ៍
                                 </a>
-
-                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
-                                    <li><a class="dropdown-item"
-                                            href="../schoolarship/schoolarship-in.html">អាហារូបករណ៍ក្នងស្រុក</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="../schoolarship/schoolarship-out.html">អាហារូបករណ៍ក្រៅស្រុក</a></li>
+    
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="../schoolarship/schoolarship-in.html">អាហារូបករណ៍ក្នងស្រុក</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="../schoolarship/schoolarship-out.html">អាហារូបករណ៍ក្រៅស្រុក</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="dropdown">
-                                <a class="nav-link px-3 active dropdown-toggle" href="#" role="button"
+                                <a class="nav-link active px-3 dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-buildings-fill me-1"></i>ឱកាសការងារ
                                 </a>
-
-                                <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
-                                    <li><a class="dropdown-item" href="../work/public-work.html">ការងាររដ្ឋ</a></li>
-                                    <li><a class="dropdown-item" href="../work/private-work.html">ការងារឯកជន</a></li>
-                                    <li><a class="dropdown-item" href="../work/volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
+    
+                                <ul class="dropdown-menu border-0 shadow-sm bg-white" data-bs-theme="light">
+                                    <li><a class="dropdown-item" href="public-work.html">ការងាររដ្ឋ</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="private-work.html">ការងារឯកជន</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="volunteer.html">ការងារស័គ្ម្រចិត្ត</a>
                                     </li>
                                 </ul>
+    
                             </div>
                             <li class="nav-item">
                                 <a href="../us/event.html" class="nav-link px-3 ">
@@ -236,102 +152,36 @@
                                 </a>
                             </li>
                         </ul>
-
+                        <div
+                            class="d-flex justify-content-center pt-5 align-items-center d-flex d-lg-none bg-body-theme d-md-none ">
+                            <a href="/asset/page/login/login.html" class="text-white text-decoration-none">
+                                <button class="btn btn-dark-blue">ចូលគណនី</button>
+                            </a>
+                            <a href="/asset/page/login/register.html" class="ps-2 text-white text-decoration-none">
+                                <button class="btn btn-outline-dark-blue">
+                                    បង្កើតគណនី
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
+    
                 <!-- profile lg-flex  -->
                 <div class="d-flex justify-content-end align-items-center d-none d-lg-flex">
                     <button id="themeToggle2" class="theme-toggle border-0 px-3 bg-transparent">
                         <i id="themeIcon2" class="bi bi-brightness-high-fill icon-animate"></i>
                     </button>
-                    <!-- notification  -->
-                    <div class="dropdown">
-                        <a class="btn border-0 mt-1 me-2" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="bi bi-bell position-relative fs-5">
-                                <span
-                                    class="position-absolute translate-middle bg-danger border border-light rounded-circle"
-                                    style="left: 21px; padding: 4px; top: 1px;">
-                                    <span class="visually-hidden">New
-                                        alerts</span>
-                                </span>
-                            </i>
-                        </a>
-
-                        <ul class="dropdown-menu ms-n20 border-0 shadow-sm bg-card-theme">
-                            <li>
-                                <div class="px-3 mb-3 d-flex justify-content-between align-items-center border-1 border-bottom"
-                                    style="width: 320px;">
-                                    <div class="p-2">
-                                        <h5>សារជូនដំណឹង</h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <!-- list notification  -->
-                            <li>
-                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                    <img src="../../image/project-logo/pf-2.svg" class="img-fluid rounded-circle me-3"
-                                        style="width: 50px; height: 50px;" alt>
-                                    <div class="notification">
-                                        <p class="text clamp-2">
-                                            ជំរាបសួរ! ខ្ញុំចង់សួរអំពីការចុះឈ្មោះសម្រាប់វគ្គសិក្សាថ្មី។
-                                        </p>
-                                    </div>
-                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                    <img src="../../image/project-logo/pf-3.jpg" class="img-fluid rounded-circle me-3"
-                                        style="width: 50px; height: 50px;" alt>
-                                    <div class="notification">
-                                        <p class="text clamp-2">
-                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
-                                        </p>
-                                    </div>
-                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href class="nav-link d-flex justify-content-between p-2 border-bottom">
-                                    <img src="../../image/project-logo/pf-1.png" class="img-fluid rounded-circle me-3"
-                                        style="width: 50px; height: 50px;" alt>
-                                    <div class="notification">
-                                        <p class="text clamp-2">
-                                            អរគុណច្រើន សម្រាប់ព័ត៌មាន។ តើមានអាហារូបករណ៍សម្រាប់និស្សិតថ្មីទេ?
-                                        </p>
-                                    </div>
-                                    <i class="bi bi-dot text-danger display-6 mt-n2"></i>
-                                </a>
-                            </li>
-                            <div>
-                                <a href="../profile/notification.html"
-                                    class="nav-link text-end text-primary p-2 pe-4">See
-                                    all</a>
-                            </div>
-                        </ul>
-                    </div>
-                    <!-- profile  -->
-                    <div class="dropdown">
-                        <a class="nav-link px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../../image/project-logo/profile-img.jpg" class="img-fluid rounded-circle object-fit-cover"
-                                style="width: 40px; height: 40px;" alt />
-                        </a>
-                    
-                        <ul class="dropdown-menu border-0 shadow-sm bg-body-theme">
-                            <li><a class="dropdown-item" href="../profile/proflie.html"><i class="bi bi-person-circle me-2"></i>មើលប្រវត្តិរូប</a></li>
-                            <li><a class="dropdown-item" href="../profile/edit_profile.html"><i class="bi bi-gear me-2"></i>ការកំណត់</a></li>
-                            <li><a class="dropdown-item" href="../profile/favorite.html"><i class="bi bi-bookmark me-2"></i>រក្សាទុក</a></li>
-                            <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a></li>
-                        </ul>
-                    </div>
+                    <a href="/asset/page/login/login.html" class="text-white text-decoration-none">
+                        <button class="btn btn-dark-blue">ចូលគណនី</button>
+                    </a>
+                    <a href="/asset/page/login/register.html" class="ps-2 text-white text-decoration-none">
+                        <button class="btn btn-outline-dark-blue">
+                            បង្កើតគណនី
+                        </button>
+                    </a>
                 </div>
             </div>
-            
         </nav>
-        
     </header>
     <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -357,16 +207,6 @@
         </div>
     </div>
     <main>
-        <!-- success modal  -->
-        <section>
-            <div class="modal fade" id="topModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-sm modal-dialog-centered">
-                    <div class="modal-content border-0  shadow p-4 bg-success text-white text-center">
-                        <i class="bi bi-check2-circle" style="font-size: 3rem;"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="mb-7">
             <div class="container">
                 <div class="row">
@@ -462,11 +302,11 @@
                                                 <h4 class="card-title">គ្រូបឋមសិក្សា</h4>
                                                 <p class="card-text">សាលាបឋមសិក្សា ហ៊ុនសែន ស្លាកេតុ</p>
                                                 <p class="card-text"><i class="bi bi-pin-map"></i> ទីតាំង​: ខេត្តកណ្ដាល
-                                                </p>    
+                                                </p>
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ១,២០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -485,7 +325,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ១,២០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -505,7 +345,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ១,២០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -523,7 +363,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ១,៥០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -541,7 +381,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ១,៥០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -560,7 +400,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ១,២០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -585,7 +425,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ២,៥០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -604,7 +444,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ៤,០០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -617,13 +457,13 @@
                                             <div class="card-body">
                                                 <h4 class="card-title">
                                                     ពេទ្យធ្មេញ</h4>
-                                                <p class="card-text">សាកលវិទ្យាល័យ វិទ្យាសាស្ត្រសុខាភិបាល</p>
+                                                <p class="card-text">សកលវិទ្យាល័យ វិទ្យាសាស្ត្រសុខាភិបាល</p>
                                                 <p class="card-text"><i class="bi bi-pin-map"></i> ទីតាំង​: ភ្នំពេញ
                                                 </p>
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ២,៥០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -636,13 +476,13 @@
                                             <div class="card-body">
                                                 <h4 class="card-title">
                                                     ពេទ្យធ្មេញ</h4>
-                                                <p class="card-text">សាកលវិទ្យាល័យ វិទ្យាសាស្ត្រសុខាភិបាល</p>
+                                                <p class="card-text">សកលវិទ្យាល័យ វិទ្យាសាស្ត្រសុខាភិបាល</p>
                                                 <p class="card-text"><i class="bi bi-pin-map"></i> ទីតាំង​: ភ្នំពេញ
                                                 </p>
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ៣,០០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -662,7 +502,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ២,០០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -681,7 +521,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ២,០០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -722,7 +562,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ៣,២០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -741,7 +581,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ២,០០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -759,7 +599,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ៣,៥០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -782,7 +622,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ៤,០០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -800,7 +640,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ៣,០០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -818,7 +658,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ៣,៥០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -836,7 +676,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ៣,៥០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -848,13 +688,13 @@
                                             <img src="../../image/job-img/accounting.webp" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
                                             <div class="card-body">
                                                 <h4 class="card-title">គ្រូផ្នែកគណនេយ្យ</h4>
-                                                <p class="card-text">សាកលវិទ្យាល័យ វ៉ាន់ដា</p>
+                                                <p class="card-text">សកលវិទ្យាល័យ វ៉ាន់ដា</p>
                                                 <p class="card-text"><i class="bi bi-pin-map"></i> ទីតាំង​: ភ្នំពេញ
                                                 </p>
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ២,០០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -872,7 +712,7 @@
                                                 <p class="card-text"><i class="bi bi-coin"></i> ប្រាក់ខែ: ១,២០០,០០០ រៀល
                                                 </p>
                                                 <div class="d-flex">
-                                                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#topModal"><i class="bi bi-bookmark fs-4"></i></button>
+                                                    <a href="#" class="text-dark"><i class="bi bi-bookmark fs-4"></i></a>
                                                     <a href="private-detail.html" class="btn btn-dark-blue d-block ms-auto"><i
                                                             class="bi bi-arrow-right"></i> មើលព័ត៍មានលម្អិត</a>
                                                 </div>
@@ -889,72 +729,84 @@
         </section>
         <section class="my-5">
             <div class="container">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button bg-card-theme rounded-0" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                aria-controls="collapseOne">
-                                អ្វីដែលអ្នកត្រូវមានមុនដាក់ពាក្យសុំការងារ
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>រៀបចំប្រវត្តិរូបសង្ខេប (CV) ឱ្យបានត្រឹមត្រូវ:</strong> ត្រូវធ្វើបច្ចុប្បន្នភាព
-                                CV
-                                របស់អ្នកឱ្យថ្មីជានិច្ច ហើយត្រូវប្រាកដថាព័ត៌មានបទពិសោធន៍
-                                និងកម្រិតសិក្សារបស់អ្នកត្រឹមត្រូវ។ CV ដែលមានព័ត៌មានច្បាស់លាស់
-                                នឹងជួយនិយោជកងាយស្រួលក្នុងការពិនិត្យមើល។
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed bg-card-theme rounded-0" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                aria-controls="collapseTwo">
-                                អ្វីដែលអ្នកត្រូវដឹកមុនពេលដាក់ពាក្យសុំការងារ
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>អានព័ត៌មានលម្អិតពីការងារ:</strong> ត្រូវអានពីការពិពណ៌នាការងារ (Job Description)
-                                ឱ្យបានច្បាស់លាស់
-                                មុននឹងដាក់ពាក្យ។ ត្រូវប្រាកដថាជំនាញ និងបទពិសោធន៍របស់អ្នកស៊ីគ្នានឹងតម្រូវការការងារ។
-
-                                <strong>ស្វែងយល់ពីប្រវត្តិក្រុមហ៊ុន:</strong> ការស្វែងយល់ពីប្រវត្តិ
-                                និងសេវាកម្មរបស់ក្រុមហ៊ុន
-                                មុនពេលដាក់ពាក្យ នឹងជួយអ្នកនៅពេលសម្ភាសន៍។
-                                ការដឹងពីក្រុមហ៊ុនអាចឱ្យអ្នករៀបចំចម្លើយដែលសមស្របទៅនឹងវប្បធម៌ និងតម្រូវការរបស់ពួកគេ។
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed bg-card-theme rounded-0" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                aria-controls="collapseThree">
-                                ជម្រើសក្រៅពីការដាក់ពាក្យសុំការងារ
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-
-                                <strong>ចូលរួមពិព័រណ៍ការងារ:</strong>
-                                ពិព័រណ៍ការងារជាឱកាសមួយដែលអនុញ្ញាតឱ្យអ្នកជួបសម្ភាសន៍ផ្ទាល់ជាមួយក្រុមហ៊ុនធំៗ។
-                                ការជួបផ្ទាល់នឹងផ្តល់ឱកាសឱ្យអ្នកបង្ហាញពីខ្លួនឯងបានប្រសើរជាងមុន។
-                            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+            
+                <!-- Accordion Item 1 -->
+                <div class="accordion-item bg-card-theme border-0 shadow-sm mt-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-card-theme" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            ១. អ្វីដែលអ្នកត្រូវមានមុនដាក់ពាក្យសុំការងារ
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <strong>រៀបចំប្រវត្តិរូបសង្ខេប (CV):</strong> ត្រូវធ្វើបច្ចុប្បន្នភាព CV របស់អ្នកឱ្យថ្មីជានិច្ច
+                            ហើយប្រាកដថាព័ត៌មានបទពិសោធន៍ និងកម្រិតសិក្សារបស់អ្នកត្រឹមត្រូវ។ CV ដែលមានព័ត៌មានច្បាស់លាស់
+                            នឹងជួយនិយោជកងាយស្រួលក្នុងការពិនិត្យមើល។
                         </div>
                     </div>
                 </div>
+            
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item bg-card-theme border-0 shadow-sm mt-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-card-theme" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            ២. អ្វីដែលអ្នកត្រូវដឹកមុនពេលដាក់ពាក្យសុំការងារ
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <strong>អានព័ត៌មានលម្អិតពីការងារ:</strong> ត្រូវអាន Job Description ឱ្យច្បាស់លាស់
+                            មុនដាក់ពាក្យ។ ប្រាកដថាជំនាញ និងបទពិសោធន៍របស់អ្នកស៊ីគ្នានឹងតម្រូវការការងារ។
+                            <br>
+                            <strong>ស្វែងយល់ពីប្រវត្តិក្រុមហ៊ុន:</strong> ការស្វែងយល់ពីប្រវត្តិ និងសេវាកម្មរបស់ក្រុមហ៊ុន
+                            មុនពេលដាក់ពាក្យ នឹងជួយអ្នកនៅពេលសម្ភាសន៍។
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Accordion Item 3 -->
+                <div class="accordion-item bg-card-theme border-0 shadow-sm mt-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-card-theme" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            ៣. ជម្រើសក្រៅពីការដាក់ពាក្យសុំការងារ
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <strong>ចូលរួមពិព័រណ៍ការងារ:</strong> ពិព័រណ៍ការងារជាឱកាសមួយដែលអនុញ្ញាតឱ្យអ្នក
+                            ជួបសម្ភាសន៍ផ្ទាល់ជាមួយក្រុមហ៊ុនធំៗ។ ការជួបផ្ទាល់នឹងផ្តល់ឱកាសឱ្យអ្នកបង្ហាញខ្លួនឯងបានល្អប្រសើរ។
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Accordion Item 4 (Example: New Information) -->
+                <div class="accordion-item bg-card-theme border-0 shadow-sm mt-2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-card-theme" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            ៤. ជំនាញដែលត្រូវមានសម្រាប់ការងារ
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <strong>ជំនាញទាក់ទងនឹងការងារ:</strong> អ្នកគួរមានជំនាញក្នុងការប្រើប្រាស់កុំព្យូទ័រ,
+                            ការគ្រប់គ្រងទិន្នន័យ និងការទំនាក់ទំនងល្អ ជាពិសេសសម្រាប់ការងារដែលទាមទារពហុជំនាញ។
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
                 <form action="">
                     <label for="" class="fs-5 mt-6">កន្លែងសំណូមពរពី Website របស់់យើង</label><br>
                     <textarea name="" id="" class="p-3 border-0 shadow-sm rounded-3 " placeholder="Text comment in here..."
                         style="min-height: 100px; width: 100%; resize: none; overflow: hidden scroll;"
                         rows="10"></textarea>
                 </form>
-                <button type="button" class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#topModal">ផ្ញើរសារ</button>
+                <a href="/asset/page/login/login.html" class="btn btn-dark-blue" >ផ្ញើរសារ</a>
             </div>
         </section>
     </main>
@@ -988,7 +840,7 @@
                             <a href="../us/about.html" class="nav-link text-white">អំពីយើង</a>
                         </li>
                         <li class="nav-item">
-                            <a href="../us/contact.html" class="nav-link text-white">ទំនាក់ទំនងមកយើង</a>
+                            <a href="../us/contact.html" class="nav-link text-white">ទំទាក់ទំទងមកយើង</a>
                         </li>
                         <li class="nav-item">
                             <a href="../direction/major.html" class="nav-link text-white">ការតម្រង់ទិស</a>
