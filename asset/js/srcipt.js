@@ -120,3 +120,6 @@ function setThemeCustom(theme) {
     }
 }
 AOS.init();
+document.querySelectorAll("#myForm [required]").forEach(el => {
+    el.required = false; // disables the "required" rule
+});

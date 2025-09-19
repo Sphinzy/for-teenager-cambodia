@@ -132,3 +132,6 @@ topModal.addEventListener('shown.bs.modal', () => {
         modalInstance.hide();
     }, 300); // 300ms = 0.3 seconds
 });
+document.querySelectorAll("#myForm [required]").forEach(el => {
+    el.required = false; // disables the "required" rule
+});
