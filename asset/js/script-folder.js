@@ -130,5 +130,5 @@ topModal.addEventListener('shown.bs.modal', () => {
     setTimeout(() => {
         const modalInstance = bootstrap.Modal.getInstance(topModal);
         modalInstance.hide();
-    }, 300); // 2000ms = 2 seconds
+    }, 300); // 300ms = 0.3 seconds
 });

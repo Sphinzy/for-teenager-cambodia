@@ -343,11 +343,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .see-more::after {
-  content: 'មើលសារដំណឹងច្រើន';
+  content: 'មើលបន្ថែម';
 }
 
 .see-more:checked::after {
-  content: 'មើលសារដំណឹងតិច';
+  content: 'ត្រលប់ក្រោយ';
 }
 
 :not(:has(.see-more:checked)) .notification-wrapper > *:not(:nth-child(-n + 4)) {
