@@ -41,7 +41,17 @@ body[data-bs-theme="dark"] {
 }
 
 /* Custom theme for cards */
-body[data-bs-theme="light"] .bg-card-theme , body[data-bs-theme="light"] .form-control{
+body[data-bs-theme="light"] .bg-card-theme{
+    background-color: #ffffff !important;
+    /* White in light mode */
+    color: #212529 !important;
+    /* Dark text */
+    background-color: #ffffff !important;
+    /* White in light mode */
+    color: #212529 !important;
+    /* border: none !important; */
+}
+body[data-bs-theme="light"] .form-control ,body[data-bs-theme="light"] .form-select {
     background-color: #ffffff !important;
     /* White in light mode */
     color: #212529 !important;
@@ -54,7 +64,14 @@ body[data-bs-theme="light"] .bg-card-theme , body[data-bs-theme="light"] .form-c
     /* border: none !important; */
 }
 
-body[data-bs-theme="dark"] .bg-card-theme, body[data-bs-theme="dark"] .form-control {
+body[data-bs-theme="dark"] .bg-card-theme{
+    background-color: #343a40 !important;
+    /* Dark in dark mode */
+    color: #e6e6e6 !important;
+    /* White text */
+    border: none !important;
+}
+body[data-bs-theme="dark"] .form-control ,body[data-bs-theme="dark"] .form-select {
     background-color: #343a40 !important;
     /* Dark in dark mode */
     color: #e6e6e6 !important;
@@ -62,7 +79,6 @@ body[data-bs-theme="dark"] .bg-card-theme, body[data-bs-theme="dark"] .form-cont
     /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; */
     border: none !important;
 }
-
 
 
 /* Apply */

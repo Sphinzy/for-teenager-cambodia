@@ -23,13 +23,75 @@
     <!-- swiper  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-    
+<style>
+    /* ---- Sliding Card for University List ---- */
+
+    /* 1. Set the parent container as the positioning reference */
+    .text-list {
+        position: relative;
+    }
+
+    /* 2. Style the text item itself and prepare it for layering */
+    .text-item {
+        position: relative;
+        /* Needed for z-index to work correctly */
+        z-index: 1;
+        /* Ensures text content stays on top */
+        padding: 1rem;
+        /* Adds some space around the text */
+        border-radius: var(--bs-border-radius-lg);
+        /* Matches the background's curve */
+    }
+
+    /* 3. Style the background card element */
+    .text-item .bg {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bs-tertiary-bg);
+        /* A theme-friendly color */
+        border-radius: var(--bs-border-radius-lg);
+        /* Rounded corners */
+        z-index: -1;
+        /* Places it BEHIND the text */
+        opacity: 0;
+        /* Hidden by default */
+        transform: scale(0.9);
+        /* Start slightly smaller */
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+
+    /* 4. Show the background card when the text item is active */
+    .text-item.active .bg {
+        opacity: 1;
+        transform: translateX(0);
+        /* Move to final position */
+    }
+
+    /* --- Make University Swiper Match Text Height --- */
+
+    /* 1. Make the main swiper container fill the full height of its column */
+    .custom-swiper-container {
+        height: 350px;
+    }
+
+    /* 2. Make the image fill its container without stretching */
+    .custom-swiper-container .swiper-slide img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        /* This is the key part: it crops the image to fit, preserving its aspect ratio */
+    }
+</style>
 
 <body>
     <header class="sticky-top z-3">
         <nav class="navbar navbar-expand-lg border-bottom bg-body-theme">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../../../index.html">
                     <img id="logo" src="asset/image/project-logo/logo01.png" alt="Logo" style="width: 75px" />
                 </a>
                 <div class="d-flex">
