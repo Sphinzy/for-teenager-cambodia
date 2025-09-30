@@ -121,6 +121,7 @@ function setThemeCustom(theme) {
 }
 
 AOS.init({
+    disable: 'mobile', // disables AOS on phones & tablets
     duration: 800, // animation duration
     once: true // animate only once when scrolling
 });

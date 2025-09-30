@@ -119,4 +119,6 @@ function setThemeCustom(theme) {
         logo.src = "asset/image/project-logo/logo02.png";
     }
 }
-AOS.init();
+AOS.init({
+    disable: 'mobile' // disables AOS on phones & tablets
+});
