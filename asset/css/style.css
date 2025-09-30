@@ -60,7 +60,7 @@ body[data-bs-theme="light"] .form-control ,body[data-bs-theme="light"] .form-sel
     /* White in light mode */
     color: #212529 !important;
     /* Dark text */
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; */
     /* border: none !important; */
 }
 
@@ -76,7 +76,7 @@ body[data-bs-theme="dark"] .form-control ,body[data-bs-theme="dark"] .form-selec
     /* Dark in dark mode */
     color: #e6e6e6 !important;
     /* White text */
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; */
     border: none !important;
 }
 
