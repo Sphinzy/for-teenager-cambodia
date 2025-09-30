@@ -151,7 +151,7 @@
                     </button>
                     <!-- notification  -->
                     <div>
-                        <a class="btn btn-gunmetal" href="../login/login-admin.html" ><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a>
+                        <button type="button" class="btn btn-gunmetal" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</button>
                     </div>
                     <!-- profile  -->
                     <div class="profile">
@@ -166,7 +166,30 @@
             </div>
         </nav>
     </header>
-
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+    
+                <div class="modal-header bg-footer text-white">
+                    <h5 class="modal-title" id="logoutModalLabel">បញ្ជាក់ការចេញ</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="បិទ"></button>
+                </div>
+    
+                <div class="modal-body">
+                    តើអ្នកពិតជាចង់ចេញឬទេ?
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal">បោះបង់</button>
+                    <!-- ផ្លាស់ប្តូរ href ទៅ script logout របស់អ្នក -->
+                    <a href="../login/login.html" class="btn btn-danger">បាទ/ចាស</a>
+                </div>
+    
+            </div>
+        </div>
+    </div>
     <main>
         <!-- modal  -->
         <section>
@@ -450,7 +473,14 @@
                     </div>
                 </div>
             </div>
-
+            <!-- success modal -->
+            <div class="modal fade" id="topModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content border-0  shadow p-4 bg-success text-white text-center">
+                        <i class="bi bi-check2-circle" style="font-size: 3rem;"></i>
+                    </div>
+                </div>
+            </div>
             <!-- Modal: Create Event -->
             <div class="modal fade" id="createEventModal" tabindex="-1" aria-labelledby="createEventModalLabel"
                 aria-hidden="true">
@@ -1489,7 +1519,7 @@
                                                             </div>
                                                             <div class="col-lg-12 text-end">
                                                                 <button class="btn btn-dark-blue mt-4 mb-5"
-                                                                    data-bs-toggle="modal" data-bs-target="#eventModal">
+                                                                    data-bs-toggle="modal" data-bs-target="#topModal">
                                                                     ធ្វើបច្ចុប្បន្នភាព
                                                                 </button>
                                                             </div>
@@ -1643,7 +1673,7 @@
                                                                     class="w-100 border-1 shadow-sm rounded-3 p-3"
                                                                     style="resize: vertical; min-height: 100px"></textarea>
                                                             </div>
-                                                            <div class="col-lg-6">
+                                                            <div class="col-lg-12">
                                                                 <h4 class="pt-3">កាលបរិច្ឆេទ</h4>
                                                                 <div class="card bg-card-theme border-0 shadow-sm mt-4">
                                                                     <div class="card-body">
@@ -1660,18 +1690,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-6">
-                                                                <div class="container mt-4">
-                                                                    <label for="location"
-                                                                        class="form-label">ទីតាំង</label>
-                                                                    <textarea name="" id=""
-                                                                        class="w-100 border-0 shadow-sm rounded-3 p-3"
-                                                                        style="
-                                        resize: vertical;
-                                        min-height: 130px;
-                                      " placeholder="សូមជ្រើសរើសទីតាំង"></textarea>
-                                                                </div>
-                                                            </div>
                                                             <div class="col-lg-12">
                                                                 <h4 class="pt-3">ខ្លឹមសារនៃព្រឹត្តិការណ៍</h4>
                                                                 <textarea name="" id=""
@@ -1681,7 +1699,7 @@
                                                             <div class="col-lg-12 text-end">
                                                                 <button class="btn btn-dark-blue mt-4 mb-5"
                                                                     data-bs-toggle="modal"
-                                                                    data-bs-target="#createModal">
+                                                                    data-bs-target="#topModal">
                                                                     ធ្វើបច្ចុប្បន្នភាព
                                                                 </button>
                                                             </div>
