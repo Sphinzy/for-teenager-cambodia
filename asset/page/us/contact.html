@@ -339,6 +339,14 @@
         </div>
     </div>
     <main>
+        <div class="modal fade" id="topModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content border-0  shadow p-4 bg-success text-white text-center">
+                    <i class="bi bi-check2-circle" style="font-size: 3rem;"></i>
+                    <p class="fs-4">ទទួលបានជោគជ័យ!</p>
+                </div>
+            </div>
+        </div>
         <section class="mt-15">
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="text-center pb-5" data-aos="fade-up" data-aos-delay="100">
@@ -439,7 +447,7 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center flex-wrap mt-4">
-                                        <button type="submit" class="btn btn-dark-blue">
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#topModal" class="btn btn-dark-blue">
                                             បញ្ជូនសារ
                                         </button>
                                         <div class="social-links d-flex gap-3">
