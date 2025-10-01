@@ -9,6 +9,7 @@
 body {
     font-family: "Poppins", "Kantumruy Pro" !important;
     /* background-color: #f2f2f2 !important; */
+    overflow-x: hidden !important;
 }
 
 /* our color  */
@@ -356,6 +357,7 @@ body[data-bs-theme="dark"] .btn-gunmetal:hover {
             /* Slide slightly up */
             transition: all 0.5s ease;
             /* Smooth animation */
+            width: 30% !important;
         }
     
         /* When dropdown has .show class (Bootstrap toggles this on click) */
@@ -495,6 +497,18 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link:focus::before,
 body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before {
     width: 83%;
 }
+/* ---------- For phone screens ---------- */
+@media (max-width: 991px) {
+
+    body[data-bs-theme="light"] .offcanvas-body .navbar-nav .nav-link:hover::before,
+    body[data-bs-theme="light"] .offcanvas-body .navbar-nav .nav-link:focus::before,
+    body[data-bs-theme="light"] .offcanvas-body .navbar-nav .nav-link.active::before,
+    body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link:hover::before,
+    body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link:focus::before,
+    body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before {
+        width: 30%;
+    }
+}
 #logo{
     width: 50px !important;
 }
@@ -518,4 +532,11 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before 
     max-width: 300px;
     margin: 1rem auto 0;
     /* Top margin, center horizontally */
+}
+@media (max-width: 768px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
