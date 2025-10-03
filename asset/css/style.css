@@ -510,7 +510,7 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before 
     }
 }
 #logo{
-    width: 50px !important;
+    width: 75px !important;
 }
 .accordion-button {
     background-color: transparent !important;
@@ -532,11 +532,4 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before 
     max-width: 300px;
     margin: 1rem auto 0;
     /* Top margin, center horizontally */
-}
-@media (max-width: 768px) {
-    [data-aos] {
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
-    }
 }
