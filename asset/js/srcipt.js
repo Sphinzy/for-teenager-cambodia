@@ -122,3 +122,15 @@ function setThemeCustom(theme) {
 AOS.init({
     disable: 'mobile' // disables AOS on phones & tablets
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const autoCloseModals = document.querySelectorAll(".auto-close");
+
+    autoCloseModals.forEach(modalEl => {
+        modalEl.addEventListener("shown.bs.modal", function () {
+            setTimeout(() => {
+                const modal = bootstrap.Modal.getInstance(modalEl);
+                if (modal) modal.hide();
+            }, 1000);
+        });
+    });
+});

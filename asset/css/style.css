@@ -10,8 +10,11 @@ body {
     font-family: "Poppins", "Kantumruy Pro" !important;
     /* background-color: #f2f2f2 !important; */
     overflow-x: hidden !important;
+    line-height: 2 !important;
 }
-
+p{
+    color: var(--bs-secondary-color);
+}
 /* our color  */
 .bg-footer {
     background-color: #1d263e !important;
@@ -106,6 +109,16 @@ body[data-bs-theme="light"] .btn-dark-blue {
     color: #ffffff !important;
     font-weight: 500;
 
+}
+/* text  */
+/* Light mode */
+body[data-bs-theme="light"] .text{
+    color: #1d263e;
+}
+
+/* Dark mode */
+body[data-bs-theme="dark"] .text{
+    color: #fff;
 }
 
 body[data-bs-theme="light"] .btn-dark-blue:hover {
@@ -532,4 +545,26 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before 
     max-width: 300px;
     margin: 1rem auto 0;
     /* Top margin, center horizontally */
+}
+.card-hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) !important;
+    opacity: 1 !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+}
+@media (max-width: 576px) {
+    .dropdown-menu {
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto;
+        max-width: 95%;
+    }
+
+    .notification p {
+        font-size: 14px;
+    }
 }

@@ -32,6 +32,38 @@
   <main>
     <!--* modal -->
     <section>
+      <!-- success modal -->
+      <div class="modal fade auto-close" id="topModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+          <div class="modal-content border-0  shadow p-4 bg-success text-white text-center">
+            <i class="bi bi-check2-circle" style="font-size: 3rem;"></i>
+            <span class="fs-4">ទទួលបានជោគជ័យ!</span>
+          </div>
+        </div>
+      </div>
+      <!-- delete  -->
+      <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+      
+            <div class="modal-header bg-footer text-white">
+              <h5 class="modal-title" id="logoutModalLabel">បញ្ជាក់ការលុប</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="បិទ"></button>
+            </div>
+      
+            <div class="modal-body">
+              តើអ្នកពិតជាចង់លុបឬទេ?
+            </div>
+      
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal">បោះបង់</button>
+              <!-- ផ្លាស់ប្តូរ href ទៅ script logout របស់អ្នក -->
+              <button type="button" data-bs-toggle="modal" data-bs-target="#topModal" class="btn btn-danger">បាទ/ចាស</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
       <!-- otp  -->
       <div class="modal fade" id="otp" tabindex="-1" aria-labelledby="changeLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -114,13 +146,13 @@
         </div>
       </div>
       <!-- success modal -->
-      <div class="modal fade" id="topModal" tabindex="-1" aria-hidden="true">
+      <!-- <div class="modal fade" id="topModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-dialog-centered">
           <div class="modal-content border-0  shadow p-4 bg-success text-white text-center">
             <i class="bi bi-check2-circle" style="font-size: 3rem;"></i>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- logout modal  -->
       <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -172,7 +204,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-dark-blue" data-bs-dismiss="modal">បិទ</button>
-              <button type="submit" class="btn btn-dark-blue">ផ្លាស់ប្ដូររូបភាព</button>
+              <button type="button" class="btn btn-dark-blue" data-bs-dismiss="modal">ផ្លាស់ប្ដូររូបភាព</button>
             </div>
           </div>
         </div>
@@ -430,10 +462,12 @@
                                           <div class="card-body p-2">
                                             <img
                                               src="https://i.pinimg.com/1200x/5f/26/81/5f26813372e8df83a35831389b757450.jpg"
-                                              alt class="card-img border">
+                                              alt class="card-img border" style="height: 240px;">
                                           </div>
-                                          <button type="submit" class="btn btn-danger fs-5"><i
-                                              class="bi bi-trash"></i>&nbsp; Delete</button>
+                                          <div class="d-flex">
+                                            <button type="button" class="btn btn-outline-dark-blue w-50 m-2" data-bs-toggle="modal" data-bs-target="#add-work"><i class="bi bi-pencil-fill"></i>&nbsp; កែប្រែ</button>
+                                            <button type="button" class="btn btn-danger w-50 m-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i>&nbsp; លុប</button>
+                                          </div>
                                         </div>
                                       </div>
                                       <div class="col-6">
@@ -444,8 +478,12 @@
                                               src="https://i.pinimg.com/736x/f3/84/2e/f3842ec7d0c5545aa03b531e9e3df9b4.jpg"
                                               alt class="card-img border">
                                           </div>
-                                          <button type="submit" class="btn btn-danger fs-5"><i
-                                              class="bi bi-trash"></i>&nbsp; Delete</button>
+                                          <div class="d-flex">
+                                            <button type="button" class="btn btn-outline-dark-blue w-50 m-2" data-bs-toggle="modal" data-bs-target="#add-work"><i
+                                                class="bi bi-pencil-fill"></i>&nbsp; កែប្រែ</button>
+                                            <button type="button" class="btn btn-danger w-50 m-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                                                class="bi bi-trash"></i>&nbsp; លុប</button>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
@@ -472,8 +510,12 @@
                                           <div
                                             class="card-footer border-0 bg-transparent d-flex align-items-end justify-content-between">
                                             <h6 class="card-title">HTML</h6>
-                                            <button type="submit" class="btn btn-danger"><i
-                                                class="bi bi-trash"></i> Delete</button>
+                                          </div>
+                                          <div class="d-flex">
+                                            <button type="button" class="btn btn-outline-dark-blue w-50 m-2" data-bs-toggle="modal" data-bs-target="#add-work"><i
+                                                class="bi bi-pencil-fill"></i>&nbsp; កែប្រែ</button>
+                                            <button type="button" class="btn btn-danger w-50 m-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                                                class="bi bi-trash"></i>&nbsp; លុប</button>
                                           </div>
                                         </div>
                                       </div>
@@ -488,8 +530,12 @@
                                           <div
                                             class="card-footer border-0 bg-transparent d-flex align-items-center justify-content-between">
                                             <h6 class="card-title">CSS</h6>
-                                            <button type="submit" class="btn btn-danger"><i
-                                                class="bi bi-trash"></i>Delete</button>
+                                          </div>
+                                          <div class="d-flex">
+                                            <button type="button" class="btn btn-outline-dark-blue w-50 m-2" data-bs-toggle="modal" data-bs-target="#add-work"><i
+                                                class="bi bi-pencil-fill"></i>&nbsp; កែប្រែ</button>
+                                            <button type="button" class="btn btn-danger w-50 m-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                                                class="bi bi-trash"></i>&nbsp; លុប</button>
                                           </div>
                                         </div>
                                       </div>
@@ -504,8 +550,12 @@
                                           <div
                                             class="card-footer border-0 bg-transparent d-flex align-items-center justify-content-between">
                                             <h6 class="card-title">Javascript</h6>
-                                            <button type="submit" class="btn btn-danger"><i
-                                                class="bi bi-trash"></i>Delete</button>
+                                          </div>
+                                          <div class="d-flex">
+                                            <button type="button" class="btn btn-outline-dark-blue w-50 m-2" data-bs-toggle="modal" data-bs-target="#add-work"><i
+                                                class="bi bi-pencil-fill"></i>&nbsp; កែប្រែ</button>
+                                            <button type="button" class="btn btn-danger w-50 m-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                                                class="bi bi-trash"></i>&nbsp; លុប</button>
                                           </div>
                                         </div>
                                       </div>
@@ -534,8 +584,12 @@
                                           <div
                                             class="card-footer border-0 bg-transparent d-flex align-items-end justify-content-between">
                                             <h6 class="card-title">React JS</h6>
-                                            <button type="submit" class="btn btn-danger"><i
-                                                class="bi bi-trash"></i> Delete</button>
+                                          </div>
+                                          <div class="d-flex">
+                                            <button type="button" class="btn btn-outline-dark-blue w-50 m-2" data-bs-toggle="modal" data-bs-target="#add-work"><i
+                                                class="bi bi-pencil-fill"></i>&nbsp; កែប្រែ</button>
+                                            <button type="button" class="btn btn-danger w-50 m-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                                                class="bi bi-trash"></i>&nbsp; លុប</button>
                                           </div>
                                         </div>
                                       </div>
@@ -550,8 +604,12 @@
                                           <div
                                             class="card-footer border-0 bg-transparent d-flex align-items-center justify-content-between">
                                             <h6 class="card-title">Node.js</h6>
-                                            <button type="submit" class="btn btn-danger"><i
-                                                class="bi bi-trash"></i>Delete</button>
+                                          </div>
+                                          <div class="d-flex">
+                                            <button type="button" class="btn btn-outline-dark-blue w-50 m-2" data-bs-toggle="modal" data-bs-target="#add-work"><i
+                                                class="bi bi-pencil-fill"></i>&nbsp; កែប្រែ</button>
+                                            <button type="button" class="btn btn-danger w-50 m-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                                                class="bi bi-trash"></i>&nbsp; លុប</button>
                                           </div>
                                         </div>
                                       </div>
@@ -566,8 +624,12 @@
                                           <div
                                             class="card-footer border-0 bg-transparent d-flex align-items-center justify-content-between">
                                             <h6 class="card-title">Python</h6>
-                                            <button type="submit" class="btn btn-danger"><i
-                                                class="bi bi-trash"></i>Delete</button>
+                                          </div>
+                                          <div class="d-flex">
+                                            <button type="button" class="btn btn-outline-dark-blue w-50 m-2" data-bs-toggle="modal" data-bs-target="#add-work"><i
+                                                class="bi bi-pencil-fill"></i>&nbsp; កែប្រែ</button>
+                                            <button type="button" class="btn btn-danger w-50 m-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                                                class="bi bi-trash"></i>&nbsp; លុប</button>
                                           </div>
                                         </div>
                                       </div>
@@ -582,8 +644,12 @@
                                           <div
                                             class="card-footer border-0 bg-transparent d-flex align-items-center justify-content-between">
                                             <h6 class="card-title">Laravel</h6>
-                                            <button type="submit" class="btn btn-danger"><i
-                                                class="bi bi-trash"></i>Delete</button>
+                                          </div>
+                                          <div class="d-flex">
+                                            <button type="button" class="btn btn-outline-dark-blue w-50 m-2" data-bs-toggle="modal" data-bs-target="#add-work"><i
+                                                class="bi bi-pencil-fill"></i>&nbsp; កែប្រែ</button>
+                                            <button type="button" class="btn btn-danger w-50 m-2" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                                                class="bi bi-trash"></i>&nbsp; លុប</button>
                                           </div>
                                         </div>
                                       </div>
@@ -607,15 +673,17 @@
                                             <h5>បញ្ចប់ការប្រឡងឌីប្លូម</h5>
                                             <h6 class="float-right">28 August, 2019</h6>
                                             <p></p>
-                                            <button type="button" class="btn btn-danger fs-6"><i
-                                                class="bi bi-trash"></i></button>
+                                            <button type="button" class="btn btn-outline-dark-blue fs-6"><i class="bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#add-work"></i></button>
+                                            <button type="button" class="btn btn-danger fs-6"><i class="bi bi-trash" data-bs-toggle="modal" data-bs-target="#deleteModal"></i></button>
                                           </li>
                                           <li>
                                             <h5>បញ្ចប់ការប្រឡងបាក់ឌុប</h5>
                                             <h6 class="float-right">4 November, 2022</h6>
                                             <p></p>
-                                            <button type="button" class="btn btn-danger fs-6"><i
-                                                class="bi bi-trash"></i></button>
+                                            <button type="button" class="btn btn-outline-dark-blue fs-6"><i class="bi bi-pencil-fill" data-bs-toggle="modal"
+                                                data-bs-target="#add-work"></i></button>
+                                            <button type="button" class="btn btn-danger fs-6"><i class="bi bi-trash" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal"></i></button>
                                           </li>
                                         </ul>
                                         <button type="button"
@@ -638,15 +706,19 @@
                                             <h5>បញ្ចប់ការប្រឡងឌីប្លូម</h5>
                                             <h6 class="float-right">28 August, 2019</h6>
                                             <p></p>
-                                            <button type="button" class="btn btn-danger fs-6"><i
-                                                class="bi bi-trash"></i></button>
+                                            <button type="button" class="btn btn-outline-dark-blue fs-6"><i class="bi bi-pencil-fill" data-bs-toggle="modal"
+                                                data-bs-target="#add-work"></i></button>
+                                            <button type="button" class="btn btn-danger fs-6"><i class="bi bi-trash" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal"></i></button>
                                           </li>
                                           <li>
                                             <h5>បញ្ចប់ការប្រឡងបាក់ឌុប</h5>
                                             <h6 class="float-right">4 November, 2022</h6>
                                             <p></p>
-                                            <button type="button" class="btn btn-danger fs-6"><i
-                                                class="bi bi-trash"></i></button>
+                                            <button type="button" class="btn btn-outline-dark-blue fs-6"><i class="bi bi-pencil-fill" data-bs-toggle="modal"
+                                                data-bs-target="#add-work"></i></button>
+                                            <button type="button" class="btn btn-danger fs-6"><i class="bi bi-trash" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal"></i></button>
                                           </li>
                                         </ul>
                                         <button type="button"
@@ -792,7 +864,7 @@
                               <button class="btn btn-outline-danger" data-bs-toggle="modal"
                                 data-bs-target="#disableAcc">បិទគណនី</button>
                               <button class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#deleteAcc"><i class="bi bi-trash"></i>&nbsp;
+                                data-bs-target="#disableAcc"><i class="bi bi-trash"></i>&nbsp;
                                 លុបគណនី</button>
                             </div>
                           </div>
@@ -930,21 +1002,21 @@
                             <div class="mb-3">
                               <label for="current"
                                 class="form-label fw-medium">លេខសម្ងាត់បច្ចុប្បន្ន</label>
-                              <input type="text"
+                              <input type="password"
                                 class="form-control bg-card-theme border-secondary rounded shadow-none"
                                 id="current" aria-describedby="current">
                             </div>
                             <div class="mb-3">
                               <label for="newPass"
                                 class="form-label fw-medium">លេខសម្ងាត់ថ្មី</label>
-                              <input type="text"
+                              <input type="password"
                                 class="form-control bg-card-theme border-secondary rounded shadow-none"
                                 id="newPass">
                             </div>
                             <div class="mb-3">
                               <label for="confirm"
                                 class="form-label fw-medium">បញ្ជាក់លេខសម្ងាត់</label>
-                              <input type="text"
+                              <input type="password"
                                 class="form-control bg-card-theme border-secondary rounded shadow-none"
                                 id="confirm">
                             </div>
@@ -1034,7 +1106,7 @@
                   <input type="text" class="form-control shadow-none border border-dark" id="input-skill"
                     aria-describedby="add-skill">
                 </div>
-                <button type="submit" class="btn btn-dark-blue d-block ms-auto">បន្ថែម</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#topModal" class="btn btn-dark-blue d-block ms-auto">បន្ថែម</button>
               </form>
             </div>
           </div>
@@ -1193,7 +1265,7 @@
                           style="width: 150px; height: 150px;">
                           <img src="../../image/project-logo/profile-img.jpg" alt class="w-100 h-100 object-fit-cover">
                         </div>
-                        <button type="button" class="btn btn-dark-blue mt-3" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-dark-blue mt-3" data-bs-dismiss="modal" data-bs-toggle="modal"
                           data-bs-target="#change-pfp" title="change profile"><i class="bi bi-camera-fill"></i>&nbsp;
                           ផ្លាស់ប្ដូររូបភាព</button>
                       </div>

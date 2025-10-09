@@ -133,3 +133,15 @@ topModal.addEventListener('shown.bs.modal', () => {
         modalInstance.hide();
     }, 300); // 300ms = 0.3 seconds
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const autoCloseModals = document.querySelectorAll(".auto-close");
+
+    autoCloseModals.forEach(modalEl => {
+        modalEl.addEventListener("shown.bs.modal", function () {
+            setTimeout(() => {
+                const modal = bootstrap.Modal.getInstance(modalEl);
+                if (modal) modal.hide();
+            }, 1000);
+        });
+    });
+});
