@@ -417,7 +417,7 @@ body[data-bs-theme="dark"] .btn-gunmetal:hover {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.bi-facebook:hover {
+/* .bi-facebook:hover {
     transform: scale(1.1) !important;
     color: #320ded !important;
 }
@@ -435,7 +435,7 @@ body[data-bs-theme="dark"] .btn-gunmetal:hover {
 .bi-github:hover {
     transform: translateY(-5px) !important;
     color: #171515 !important;
-}
+} */
 
 /* Default (inactive) bullets */
 .swiper-pagination-bullet {
@@ -555,6 +555,9 @@ body[data-bs-theme="dark"] .offcanvas-body .navbar-nav .nav-link.active::before 
     opacity: 1 !important;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+}
+.img-scale {
+    transition: all 0.3s ease;
 }
 @media (max-width: 576px) {
     .dropdown-menu {
